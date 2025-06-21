@@ -1,0 +1,10 @@
+<div class="fullscreen" scrollY="false">
+  <img src="../assets/images/splashScreen_BG_B.jpeg"  class="full-image" />
+  <div class="text-overlay">
+    <span *ngFor="let letter of letters; let i = index" [ngStyle]="{'opacity': i < displayedLetters ? 1 : 0}" [ngClass]="{'fade-in': i < displayedLetters}">
+      {{ letter }}
+    </span>
+  </div>
+</div>
+
+

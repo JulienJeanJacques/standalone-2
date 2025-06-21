@@ -1,0 +1,622 @@
+
+
+
+<BR><B>La
+parallaxe astronomique (Rappel).</B>
+<BR><I><B>a)
+L’erreur de parallaxe, un atout pour l’astronome.</B></I>
+<BR>Généralement,
+un observateur situé à la surface de la Terre repère la position
+des astres en mesurant des angles. Par exemple, en choisissant le
+Système de Coordonnées Horizontales qui est le plus naturel des
+systèmes de repérage, on détermine à la fois la hauteur de
+l’astre, qui est l’angle mesuré par rapport au plan de
+l'horizon, et son azimut qui est l’angle mesuré par rapport au
+méridien local (Voir Chapitre 6&nbsp;: Astrométrie, Question 6d,
+Question 4c).
+<BR>Mais
+ces deux mesures souffrent d’un inconvénient majeur, elles
+dépendent du lieu de l’observation. La hauteur apparente de
+l’objet observé diffère d’un lieu à un autre. Deux
+observateurs terrestres fortement éloignés l’un de l’autre et
+regardant en même temps un même astre suffisamment proche de la
+Terre par rapport à un fond d’étoiles plus lointaines, ne
+peuvent positionner l’astre observé dans le même repère. Les
+mesures de sa position sont nécessairement entachées d’erreurs
+de parallaxe.
+
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_1.jpg" NAME="graphics10" ALIGN=BOTTOM WIDTH=623 HEIGHT=202 BORDER=0>
+
+<BR>Si
+la parallaxe altère, en effet, le repérage des astres, elle se
+révèle fort utile pour le calcul des distances. L’erreur de
+parallaxe devient un atout pour l’astronome.
+<BR>Aussi,
+les astronomes ont-ils donné une définition spécifique et précise
+de la parallaxe d’un astre dont l’énoncé est le suivant&nbsp;:
+<BR><I><B>b)
+Définition de la parallaxe astronomique.</B></I>
+<BR>On
+appelle «&nbsp;<I>Parallaxe
+d’un astre&nbsp;»</I>,
+l’angle sous lequel pourrait se voir depuis cet astre une certaine
+longueur, conventionnellement choisie comme référence.
+<BR>Cette
+définition peut paraître surprenante pour ne pas dire
+déconcertante.
+<BR>D’une
+part, on demande de déterminer un angle, non pas à partir d’un
+lieu d’observation terrestre, donc accessible, mais à partir d’un
+astre qui justement par hypothèse n’est pas accessible&nbsp;! 
+
+<BR>Aussi
+curieux que paraisse ce procédé, il est cependant parfaitement
+bien adapté aux calculs des distances des astres par rapport à la
+Terre, comme nous le montrerons plus loin. 
+
+<BR>D’autre
+part, la définition de la Parallaxe d’un astre fait aussi
+intervenir une certaine longueur arbitraire dite de référence. 
+
+<BR>Généralement,
+pour le calcul des parallaxes astronomiques, on choisit l’une des
+deux longueurs suivantes&nbsp;: soit le rayon du globe terrestre,
+soit le rayon de l’orbite terrestre.
+<BR>Voyons
+ce qui justifie ce choix, <I>a
+priori</I> arbitraire. 
+
+<BR><I><B>c)
+Justification du choix conventionnel des rayons.</B></I>
+<BR>Ce
+choix conventionnel se justifie de la façon suivante&nbsp;: 
+
+<BR>Pour
+réaliser la parallaxe d’un astre, l’observateur doit
+normalement se déplacer sur la surface du globe terrestre&nbsp;;
+mais il peut aussi bien rester immobile sur place et profiter des
+deux mouvements naturels de la Terre que sont&nbsp;: sa Rotation sur
+elle-même et sa Révolution autour du Soleil. 
+
+<BR>En
+effet, par rapport aux étoiles lointaines, la position d’un
+observateur, resté immobile à l’équateur, s’est déplacée
+d’un diamètre terrestre au bout une demi journée, puisque la
+Terre a alors fait un demi tour. De même, au bout de six mois, sa
+position par rapport aux étoiles lointaines se trouvera
+diamétralement à l’opposé de l’orbite terrestre. 
+
+<BR>Ainsi,
+tout en restant immobile sur son lieu d’observation, l’astronome
+peut bénéficier d’une erreur de parallaxe grâce aux seuls
+mouvements de la Terre.
+<BR><I><B>d)
+Deux rayons = deux types de parallaxes.</B></I>
+<BR>Les
+deux mouvements principaux de la Terre décrivent des courbes qui
+peuvent être assimilées à des cercles. Un point sur l’équateur
+terrestre décrit en une journée un cercle de rayon égal à celui
+de la Terre. Le centre de la Terre décrit en une année un cercle
+qui a pour rayon la distance Terre – Soleil.
+<BR>Comme
+la méthode de calcul de la parallaxe dépend du choix de ce rayon,
+terrestre ou orbital, il convient de distinguer deux types de
+parallaxes astronomiques. L’une est appelée&nbsp;: «&nbsp;Parallaxe
+Diurne&nbsp;» la seconde «&nbsp;Parallaxe Annuelle&nbsp;».
+<BR>Ces
+deux parallaxes sont étudiées à la suite de ce paragraphe, mais
+l’on trouvera aussi un exercice et un complément d’information
+au niveau expert, ainsi qu’une application dans le cas de la Lune
+au chapitre la concernant (Chapitre 2&nbsp;: Observation du Ciel,
+Question 11e et Chapitre 9&nbsp;: Observation de la Lune, Question
+1e).
+<BR>
+<BR><B>La
+parallaxe diurne.</B>
+<BR><I><B>a)
+Astres concernés.</B></I>
+<BR>Lorsque
+l’astre, dont on désire calculer la parallaxe, fait partie du
+système solaire (planètes, satellites, comètes, etc.), autrement
+dit, lorsque l’astre n’est pas trop éloigné de la Terre, on
+choisit comme longueur de référence pour mesurer une parallaxe, le
+rayon équatorial de la Terre. 
+
+<BR>Rappelons
+que la Terre étant légèrement aplatie aux pôles, son rayon est
+de 6378,14 Km à l’Équateur, de 6356,8 Km aux pôles et son rayon
+moyen&nbsp;est de 6371 Km.
+<BR><I><B>b)
+Définition.</B></I>
+<BR>Par
+définition, on appelle «<I>
+parallaxe diurne&nbsp;»</I>
+l’angle qui, depuis l’astre, sous-tend le rayon de la Terre au
+niveau de son équateur (6378,14 Km).
+<BR>Autrement
+dit, observé depuis un astre, la parallaxe diurne de cet astre est
+l’angle de visée qui intercepte le rayon équatorial apparent de
+la Terre.<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_2.jpg" NAME="Image 70" ALIGN=BOTTOM WIDTH=623 HEIGHT=345 BORDER=0>
+<BR><I><B>c)
+Mesure depuis un horizon terrestre.</B></I>
+<BR>Naturellement,
+la mesure de cet angle n’est pas directement accessible à
+l’observateur terrestre puisqu’il lui est impossible d’en
+effectuer la mesure depuis l’astre concerné.
+<BR>Aussi,
+est-il contraint d’en évaluer la grandeur depuis son horizon
+terrestre, ce qu’il ne peut réaliser sans rencontrer certaines
+difficultés théoriques et pratiques. Ainsi remplace-t-on
+l’impossibilité d’une mesure directe depuis l’astre par une
+procédure complexe mettant en jeu plusieurs mesures directes depuis
+la Terre.
+<BR><I><B>d)
+Parallaxe horizontale.</B></I>
+<BR>Lorsqu’un
+observateur, qui n’est pas nécessairement situé sur l’équateur
+terrestre, aperçoit un astre au raz de son horizon, il peut
+considérer l’angle formé par son horizon et l’axe reliant
+l’astre et le centre de la Terre.
+<BR>Cet
+angle dépend de la valeur du rayon de la Terre à la latitude du
+lieu de l’observation. Cependant, l’écart entre le rayon moyen
+de la Terre (6371 Km) et son rayon à l’équateur (6356,8 Km) est
+négligeable  par rapport à l’éloignement de l’astre, si bien
+que cet angle est approximativement égal à la parallaxe diurne de
+l’astre.
+<BR>La
+parallaxe d’un astre à l’horizon est une notion purement
+théorique, puisqu’en vérité, l’on ne peut pas la mesurer
+expérimentalement. Mais cette grandeur inaccessible est un
+intermédiaire de calcul qui se révèle d’un intérêt capital
+pour la suite des opérations.
+<BR>Cette
+parallaxe porte le nom de «&nbsp;<I>parallaxe
+horizontale&nbsp;</I>»,
+dite parfois aussi «&nbsp;<I>parallaxe
+horizontale équatoriale&nbsp;</I>»
+lorsque l’observateur se trouve à l’Équateur.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_3.jpg" NAME="Image 71" ALIGN=BOTTOM WIDTH=623 HEIGHT=366 BORDER=0>
+<BR><I><B>e)
+Parallaxe de hauteur.</B></I>
+<BR>Mais
+l’astre dont on désire mesurer la parallaxe n’est pas toujours
+situé dans le prolongement de l’horizon, une situation d’ailleurs
+peu confortable pour les mesures. Dans la pratique, l’observateur
+ne se déplace pas jusqu’à l’équateur, ni n’attend le
+passage à l’horizon de l’astre&nbsp;choisi !
+<BR>Lorsque
+l’astre se trouve au-dessus de l’horizon d’un lieu quelconque
+du globe terrestre, on introduit une nouvelle grandeur appelée
+«&nbsp;<I>parallaxe de
+hauteur&nbsp;</I>». 
+
+<BR>Cet
+angle, noté <I>p</I>,
+est encore défini par l’axe de visée de l’astre et son rayon
+au centre de la Terre, comme le montre le croquis ci-dessous. 
+
+<BR>Notons
+que la désignation&nbsp;«&nbsp;parallaxe de hauteur&nbsp;» est un
+abus de langage, puisque cet angle n’est plus véritablement une
+parallaxe au sens astronomique du terme (La droite (OA) n’est pas
+tangente à la sphère terrestre comme le montre le croquis
+ci-dessous).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_4.jpg" NAME="Image 78" ALIGN=BOTTOM WIDTH=623 HEIGHT=368 BORDER=0>
+<BR>Remarquons
+que si l’astre est observé au zénith, sa parallaxe de hauteur
+est nulle.
+<BR>De
+même, si l’astre est observé à l’horizon, sa parallaxe de
+hauteur est égale à sa parallaxe horizontale.
+<BR>La
+parallaxe de hauteur varie donc en fonction de la hauteur de l’astre
+au-dessus de l’horizon&nbsp;; plus l’astre est haut dans le ciel
+plus sa parallaxe de hauteur est faible. 
+
+<BR>La
+parallaxe horizontale est donc une parallaxe de hauteur maximale,
+que nous noterons par la suite&nbsp;: <I>p</I><SUB>max</SUB>.
+<BR>Il
+existe donc bien un lien entre la parallaxe de hauteur <I>p</I>
+et la distance zénithale <I>z</I>
+d’un astre (Pour des raisons évidentes de visibilité, on
+préférera toujours, en astronomie, mesurer expérimentalement une
+distance zénithale que son complémentaire, la hauteur).
+<BR>Etablissons
+ce lien en commençant par remarquer que la distance zénithale
+notée <I>z</I>
+(angle AOZ, où Z est un point de l’axe zénithale) vaut -
+l’angle AOT (angle supplémentaire).
+<BR>L’idée
+consiste à trouver une relation entre la parallaxe de hauteur <I>p</I>
+et la parallaxe de hauteur maximale <I>p</I><SUB>max</SUB>,
+c’est-à-dire, la parallaxe horizontale.
+<BR><I><B>f)
+Relation entre la parallaxe de hauteur et la parallaxe horizontale.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_5.jpg" NAME="Image 75" ALIGN=BOTTOM WIDTH=623 HEIGHT=379 BORDER=0>La
+loi des sinus appliquée dans le triangle OAT nous permet d’écrire&nbsp;:
+<BR><SUB>&lt;$1&gt;</SUB>
+<BR>Dans
+le triangle rectangle OA<SUB>0</SUB>T
+nous avons :
+<BR>&lt;$2&gt;
+<BR>Si
+bien que&nbsp;: &lt;$3&gt; 
+
+<BR>Or
+d’une part : &lt;$4&gt;.
+<BR>Et
+d’autre part&nbsp;: <I>AT
+= A</I><SUB><I>0</I></SUB><I>T</I>.
+(Distance de l’astre au centre de la Terre).
+<BR>Si
+bien qu’en notant <I>p</I>
+l’angle <I>OAT</I>
+qui est par définition la parallaxe de hauteur, et <I>p</I><SUB>max</SUB>
+l’angle <I>OA</I><SUB><I>0</I></SUB><I>T</I>
+qui est par définition la parallaxe horizontale, nous pouvons
+écrire&nbsp;:
+<TABLE WIDTH=208 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#00ff00">
+<TR>
+<TD WIDTH=191 VALIGN=TOP BGCOLOR="#00ff00" STYLE="border-top: 2.25pt solid #000001; border-bottom: none; border-left: 2.25pt solid #000001; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.09in; padding-right: 0in">
+<P ALIGN=CENTER STYLE="margin-left: 0.05in"><SUB><FONT FACE="Times New Roman, serif">&lt;$$5&gt;</FONT></SUB></P>
+</TD>
+</TR>
+</TABLE>
+<BR>Ainsi
+le sinus de la parallaxe de hauteur est égal au produit des sinus
+de la parallaxe horizontale et de la distance azimutale.
+<BR><I><B>g)
+Principe général de la méthode.</B></I>
+<BR>Rappelons
+que le but de l’opération est de parvenir à calculer la
+parallaxe horizontale <I>p</I><SUB>max</SUB>
+qui, en négligeant l’aplatissement de la Terre aux pôles, est
+égale à la parallaxe diurne<I>
+p</I> de l’astre.
+<BR>Toute
+la méthode repose sur la remarque suivante, qui peut paraître
+triviale mais qui n’en est pas moins essentielle&nbsp;: la
+parallaxe horizontale ne dépend pas du lieu, elle est invariable
+quel que soit l’horizon choisi. 
+
+<BR>En
+effet, le nombre &lt;$6&gt; est constant quel que soit le point O
+choisi à la surface de la Terre (La Terre est assimilée à une
+sphère parfaite).
+<BR>Le
+principe de la méthode consiste alors à effectuer deux mesures de
+parallaxe de hauteur en deux endroits différents de la Terre, de
+sorte à faire apparaître la parallaxe horizontale qui est une
+valeur commune aux deux mesures.
+<BR>Plus
+précisément, ce ne sont pas les parallaxes de hauteur que l’on
+mesure (une parallaxe ne se mesure pas expérimentalement, elle se
+calcule), mais les distances zénithales de l’astre observé en
+deux lieux différents.
+<BR>Généralement
+et historiquement, ces deux mesures se font simultanément par deux
+observateurs situés à des latitudes différentes mais sur une même
+longitude (ou non, si l’on sait parfaitement mesurer le décalage
+horaire).
+<BR><I><B>h)
+Les deux mesures.</B></I>
+<BR>Deux
+observateurs sont situés sur le même méridien terrestre, l’un
+en <I>O</I><SUB>1</SUB>
+à une latitude <I>l</I><SUB>1</SUB>,
+le second en <I>O</I><SUB>2</SUB>
+à une latitude <I>l</I><SUB>2</SUB>.
+
+
+<BR>Naturellement,
+il faut faire en sorte, d’une part, que les deux observateurs
+soient suffisamment éloignés l’un de l’autre et d’autre
+part, qu’ils puissent avoir la possibilité d’observer en même
+temps l’astre commun visé, c’est-à-dire l’astre levé au
+dessus des deux horizons.
+<BR>Dans
+ces conditions, depuis leur lieu respectif, les deux astronomes
+peuvent relever la distance zénithale de l’astre, noté <I>z</I><SUB>1</SUB>
+pour celui en <I>O</I><SUB>1</SUB>
+et <I>z</I><SUB>2</SUB>
+pour celui en <I>O</I><SUB>2.</SUB>,
+comme le montre le croquis ci-dessous.<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_6.jpg" NAME="Image 79" ALIGN=BOTTOM WIDTH=623 HEIGHT=494 BORDER=0>
+<BR><I><B>i)
+Le calcul.</B></I>
+<BR>Nous
+savons que &lt;$7&gt; pour tout point O, donc y compris en <I>O</I><SUB>1
+</SUB>et <I>O</I><SUB>2</SUB>.
+<BR>Or,
+d’après la relation entre la parallaxe de hauteur et la parallaxe
+horizontale, la mesure des deux observateurs nous donne&nbsp;:
+<BR>Pour
+l’observateur en <I>O</I><SUB>1</SUB>&nbsp;:
+&lt;$8&gt; .
+<BR>Pour
+l’observateur en <I>O</I><SUB>2</SUB>&nbsp;:
+&lt;$9&gt;.
+<BR>D’autre
+part, dans le quadrilatère <I>T
+O</I><SUB><I>1</I></SUB><I>A
+O</I><SUB><I>2</I></SUB>,
+la somme de tous ses angles intérieurs vaut 2
+(360°). Par conséquent, nous pouvons écrire, en tenant compte des
+angles supplémentaires&nbsp;:
+<BR><I>p</I><SUB>1
+</SUB>+ <I>p</I><SUB>2</SUB>
++ ( 
+- <I>z</I><SUB>1</SUB>
+)+ ( 
+- <I>z</I><SUB>2</SUB>
+) + <I>l</I><SUB>1</SUB>
++<I> l</I><SUB>2</SUB>
+= 2.
+<BR>C’est–à-dire&nbsp;:
+<I>p</I><SUB>1
+</SUB>+ <I>p</I><SUB>2</SUB>
+= (<I>z</I><SUB>1</SUB>+
+<I>z</I><SUB>2</SUB>)
+– (<I>l</I><SUB>1</SUB>
++<I> l</I><SUB>2</SUB>).
+
+
+<BR>Or,
+la parallaxe astronomique est nécessairement un angle très faible,
+de l’ordre de la seconde d’arc, puisque le rapport entre le
+rayon de la Terre et la distance des astres, même les plus proches,
+est très faible également. Par conséquent, il est parfaitement 
+légitime d’utiliser l’approximation de Gauss&nbsp;: &lt;$10&gt;.
+<BR>Nous
+obtenons donc&nbsp;: &lt;$11&gt;  et &lt;$12&gt;.
+<BR>Ainsi
+: &lt;$13&gt;.
+<BR>D’où&nbsp;:
+&lt;$14&gt;.
+<BR>Enfin,
+puisque&nbsp;: &lt;$15&gt;, nous en déduisons&nbsp;:
+<TABLE WIDTH=183 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#00ff00">
+<TR>
+<TD WIDTH=166 VALIGN=TOP BGCOLOR="#00ff00" STYLE="border-top: 2.25pt solid #000001; border-bottom: none; border-left: 2.25pt solid #000001; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.09in; padding-right: 0in">
+<P ALIGN=CENTER STYLE="margin-left: 0.05in">&lt;$16&gt;</P>
+</TD>
+</TR>
+</TABLE>
+<BR>Comme
+nous l’avons déjà signalé au début, il est légitime de
+confondre la valeur de la parallaxe horizontale<I>
+p</I><SUB>max</SUB>
+avec la parallaxe diurne de l’astre dans la mesure où l’on
+néglige le faible effet d’aplatissement de la Terre (Le rayon à
+l’Équateur est légèrement supérieur à celui des pôles).
+<BR><I><B>j)
+Commentaire.</B></I>
+<BR>La
+mesure expérimentale des deux distances zénithales <I>z</I><SUB>1
+</SUB>et <I>z</I><SUB>2</SUB>,
+devra tenir compte de la réfraction atmosphérique (Voir Chapitre
+6&nbsp;: Astrométrie, Question 5e).
+<BR>On
+constate que les formules intermédiaires permettent de ramener au
+centre de la Terre, les mesures faites en un point de sa surface.
+<BR>On
+peut remarquer qu’à aucun moment on n’a eu besoin de connaître
+le rayon de la Terre, ni la distance qui sépare l’astre de la
+Terre.
+<BR>Cette
+distance, qui sépare l’astre de la Terre, constitue d’ailleurs
+le principal intérêt pratique du calcul des parallaxes
+astronomiques, comme nous allons le voir maintenant.
+<BR><I><B>k)
+Distance de l’astre.</B></I>
+<BR>La
+relation &lt;$17&gt;  montre que la parallaxe diurne fait intervenir
+deux distances, si bien qu’il faut en connaître une, pour
+déterminer l’autre.
+<BR>Le
+rayon terrestre <I>R</I>
+= <I>OT</I>
+est connu depuis fort longtemps, avec une précision qui n’a pas
+cessé de s’améliorer au cours des siècles. Le connaissant, on
+en déduit immédiatement la distance <I>AT</I>
+qui sépare de centre de la Terre de l’astre étudié.
+<BR>En
+effet&nbsp;: &lt;$18&gt;  et par suite&nbsp;:
+<TABLE WIDTH=189 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#00ff00">
+<TR>
+<TD WIDTH=172 VALIGN=TOP BGCOLOR="#00ff00" STYLE="border-top: 2.25pt solid #000001; border-bottom: none; border-left: 2.25pt solid #000001; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.09in; padding-right: 0in">
+<P ALIGN=CENTER STYLE="margin-left: 0.05in">&lt;$19&gt;</P>
+</TD>
+</TR>
+</TABLE>
+<BR>L’imprécision
+de la distance <I>AT</I>
+de l’astre ne provient pas tant de la valeur estimée du rayon <I>R</I>
+terrestre, mais de la parallaxe diurne qui est très sensible aux
+erreurs de mesure des distances zénithales.
+<BR><I><B>l)
+L’exemple du Soleil.</B></I>
+<BR>La
+parallaxe horizontale équatoriale du Soleil vaut environ 8,8
+secondes d’arc. 
+
+<BR>Cela
+revient à dire que depuis le Soleil, le rayon équatorial de la
+Terre serait vu sous un angle de&nbsp;8,8 secondes d’arc. 
+
+<BR>Autrement
+dit, un observateur situé à 150 millions de Km de la Terre
+(distance moyenne Soleil – Terre), verrait la Terre (son diamètre)
+sous un angle d’environ 17,6  secondes d’arc, c’est-à-dire&nbsp;:
+0,005° (1 seconde d'arc = 1/3600° = 0,00027777 degré). 
+
+<BR>Par
+conséquent, si le Soleil est bien visible de la Terre avec un
+diamètre apparent énorme de 0,5° (comme la Lune), réciproquement,
+la Terre est totalement invisible à l’œil nu depuis le Soleil
+avec un diamètre apparent 100 fois plus petit (0,005°). En effet,
+le pouvoir de résolution de l'œil humain est d'environ une minute
+d'arc (60 secondes d'arc), c’est-à-dire de 0,017°.
+<BR><I><B>m)
+Aspect historique.</B></I>
+<BR>En
+occident, le principe de la parallaxe diurne est connu depuis
+l’antiquité. Mais à l’origine, il servait plutôt d’argument
+pour réfuter certaines thèses, comme l’héliocentrisme par
+exemple, et n’était pas encore utilisé pour estimer les
+distances.
+<BR>D’ailleurs,
+jusqu'au XVII<SUP>e</SUP>
+siècle, on ne disposait pas d’instruments capables d’effectuer
+des mesures suffisamment précises des distances zénithales, pour
+obtenir une valeur raisonnable de la parallaxe diurne. 
+
+<BR>Même
+la distance de la Lune n'était pas accessible par cette méthode.
+<BR>En
+1673, Jean-Dominique Cassini et Jean Richer, le premier depuis Paris
+le second en Guyane, parviennent à mesurer la parallaxe diurne de
+la planète Mars (24 secondes d’arc). (Cf. Chapitre 8&nbsp;:
+Observation des planètes, Question 2e et Question 10e).
+<BR>On
+remarque, que même pour les objets proches de la Terre, comme Mars,
+la parallaxe est un angle excessivement petit. Sa détermination,
+toujours par des méthodes indirectes, nécessite donc de nombreuses
+mesures très délicates.
+<BR>
+<BR><B>La
+parallaxe annuelle.</B>
+<BR><I><B>a)
+Astres concernés.</B></I>
+<BR>La
+parallaxe diurne pour des astres en dehors du système solaire est
+si proche de zéro qu’elle est inutilisable. On change alors de
+longueur de référence en prenant comme nouvelle échelle la
+longueur de l’orbite terrestre. 
+
+<BR>Mais
+même avec cette nouvelle unité de référence, cette parallaxe qui
+reste de type géométrique n’est valable que pour les étoiles
+les plus proches du soleil, à savoir quelques centaines de milliers
+d'étoiles, tout de même.
+<BR><I><B>b)
+Définition.</B></I>
+<BR>On
+appelle «&nbsp;<I>parallaxe
+annuelle</I>&nbsp;»
+l’angle qui, depuis l’astre, sous-tend le demi-grand axe de
+l’orbite elliptique de la Terre (environ 149,898 millions de km).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c2//2c11//c11_src_0.jpg" NAME="Image 33" ALIGN=BOTTOM WIDTH=623 HEIGHT=580 BORDER=0>
+<BR>Cette
+longueur de référence qui est la moitié de la distance séparant
+l'aphélie
+(distance maximale entre la Terre et le Soleil) et le périhélie
+(distance minimale entre la Terre et le Soleil), est une valeur
+moyenne qui a longtemps servi d’Unité Astronomique (u.a.). Mais
+depuis août 2012,
+l'Union Astronomique Internationale (UAI) a définitivement fixé la
+valeur de l’Unité
+Astronomique à&nbsp;exactement
+: 149&nbsp;597&nbsp;870 700&nbsp;mètres.
+<BR><I><B>c)
+Distance des astres.</B></I>
+<BR>Connaissant
+la parallaxe annuelle d’une étoile, on en déduit immédiatement
+la distance de l’étoile par la formule&nbsp;:
+<BR>Distance
+de l’étoile = 150 millions de km&nbsp;÷ sin (parallaxe de
+l’étoile).
+<BR>Cette
+méthode est cependant limitée aux étoiles dites «&nbsp;proches&nbsp;»,
+c’est-à-dire dont la distance est inférieure à 1000 années
+lumière. 
+
+<BR><I><B>d)
+Origine historique.</B></I>
+<BR>L'idée
+de se servir du mouvement annuel de la Terre pour déterminer les
+distances qui la séparent des étoiles remonte à Copernic, qui
+cherchait en outre, une confirmation de son système héliocentrique
+en utilisant cette fois-ci des étoiles. 
+
+<BR>Plus
+tard, pendant le procès de Galilée, l’inquisiteur lui reprocha
+aussi de ne point observer de parallaxes d’étoiles dont
+l’existence devait pourtant confirmer la rotation de la Terre
+autour du Soleil (la rotation de la terre autour du soleil devant
+obligatoirement entraîner un déplacement apparent des étoiles
+proches par rapport aux étoiles éloignées). Galilée répondit
+que cette mesure trop faible n’était pas accessible aux
+instruments de l’époque. (Déjà dès l'Antiquité, Aristarque de
+Samos et les pythagoriciens avaient proposé un système
+héliocentrique, mais ils furent rabroués par leurs contemporains
+pour la même raison, l’absence de parallaxe stellaire).
+<BR><I><B>e)
+Premières mesures fiables.</B></I>
+<BR>Ainsi,
+malgré tout le soin que portèrent aux mesures plusieurs
+générations d'astronomes, la détermination de parallaxes
+annuelles fiables, même pour les étoiles les plus proches, a été
+un échec patent. 
+
+<BR>Il
+fallut attendre le début du XIX<SUP>e</SUP>
+siècle pour disposer enfin de la première mesure admissible et
+reconnue exacte. On doit à Friedrich
+Wilhelm Bessel (1784 -1846),
+mathématicien et astronome allemand, la première mesure de
+parallaxe annuelle et donc la première mesure de distance d’une
+étoile. 
+
+<BR>En
+1838, Bessel calcule la
+parallaxe annuelle de l’étoile 61 Cygni qui est à peine visible
+à l’œil nu, mais qui est relativement proche (10 années
+lumière) et dont la rapidité de son mouvement propre avait attiré
+son attention. Il trouve
+une parallaxe annuelle de 0,374 seconde d’arc (valeur actuelle
+0,289’’), ce qui est un véritable exploit en regard de la
+petitesse de l’angle (0.0001°).
+<BR>Un
+an plus tard, Thomas Henderson mesure la parallaxe annuelle d’Alpha
+du Centaure A qui atteint 0,71 seconde d’arc. Pendant longtemps
+cette parallaxe resta la plus grande valeur obtenue, désignant
+ainsi Alpha du Centaure A l'étoile la plus proche du Soleil (et
+visible à l’œil nu). Mais en 1915, R. T. Innes découvre dans la
+même région du ciel, Proxima Centauri (dite aussi Alpha du
+Centaure C) qui avec une parallaxe annuelle de 0,76 seconde d’arc
+(valeur actuelle 0,772’’) fait de cette étoile la plus proche
+de nous, à 4,22&nbsp;années-lumière, mais invisible à l’œil
+nu.
+<BR><I><B>f)
+Mesures hors atmosphère.</B></I>
+<BR>Pendant
+tout le XX<SUP>e</SUP>
+siècle, on a continué péniblement de mesurer des parallaxes
+stellaires depuis la Terre, mais à cause de la turbulence
+atmosphérique, la marge d’incertitude était énorme (on comptait
+seulement moins de mille parallaxes avec une incertitude inférieure
+à 5% ). 
+
+<BR>Mais
+lorsque l'Agence spatiale européenne, a lancé en 1989,&nbsp;le
+satellite astrométrique Hipparcos pour calculer les parallaxes
+annuelles depuis l’espace, les résultats furent fabuleux&nbsp;!
+En moins de dix ans, on obtenait près de 120 000 parallaxes
+stellaires, avec une précision de 25 millisecondes d'arc. 
+
+<BR>Aujourd’hui
+on en est à plus de trois millions d’astres avec des précisions
+de parallaxes encore vingt fois meilleures. Avec le projet GAIA,
+lancé en 2013, la précision sera de l’ordre de la microseconde
+d’arc. 
+
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+

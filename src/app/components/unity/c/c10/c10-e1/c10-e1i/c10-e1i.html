@@ -1,0 +1,1365 @@
+<div class="information">
+<div class="textInformation">
+
+
+
+<BR><B>Mesurer
+le temps qui passe.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_1.jpg" NAME="Image 9" ALIGN=BOTTOM WIDTH=623 HEIGHT=412 BORDER=0>
+<BR>Il
+existe de très nombreuses façons de mesurer le temps comme en
+témoigne la riche histoire des horloges&nbsp;: horloge à eau, à
+sable, à ombre, à
+encens, à pendule, à quartz,
+etc. (Cf. Chapitre 5&nbsp;:
+Les mouvements de la Terre, Question 10c. Comment mesurer le temps,
+l’étalonner, le conserver et l’afficher). Mais la mesure du
+temps par les astres est certainement la plus féconde et
+probablement aussi la plus ancienne. Dès les débuts de l’Humanité,
+les hommes ont cherché à mesurer le temps en se servant de la
+périodicité des astres comme étalon de mesure, en particulier la
+périodicité de Sirius, de la Lune et du Soleil.
+<BR>Ce
+type de mesure du temps par les astres est couramment appelé
+«&nbsp;Temps astronomique&nbsp;».
+<BR>Le
+cas du «&nbsp;temps solaire&nbsp;» mérite une attention toute
+particulière dans la mesure où il va jouer, et joue encore
+aujourd’hui, un rôle essentiel dans l’organisation de la vie
+sociale. 
+
+<BR>Son
+étude trouve naturellement sa place dans ce chapitre consacré
+uniquement à l’observation du Soleil (Dans le Chapitre 7&nbsp;:
+Usage du cherche-étoile, Question&nbsp;5d et Question 1c, on trouve
+également des développements concernant l’heure solaire et
+l’heure civile, avec des exemples d’applications pratiques de
+conversion de l’heure solaire en l’heure civile et
+réciproquement). Néanmoins, si nous avons regroupé dans ce
+chapitre les échelles de temps qui se construisent à partir de
+l’observation du mouvement du Soleil dans le ciel, nous avons
+également mentionné les échelles de temps qui s’en démarquent.
+
+
+<BR>En
+effet, le temps solaire a récemment cédé sa place au temps dit
+«&nbsp;Temps atomique&nbsp;» dont la régularité infiniment plus
+précise est déconnectée de celle du Soleil. Mais, comme nous le
+verrons, une échelle de temps qui se veut adaptée aux activités
+humaines ne peut se soustraire entièrement de la présence du
+Soleil, si bien qu’il dicte encore sa loi, non pour le seul
+plaisir de l’astronome amateur, mais à la satisfaction de
+l’humanité entière.  
+
+<BR>Comme
+la notion d’heure est un concept intimement lié à celui
+d’échelle de temps, commençons par quelques réflexions
+générales la concernant.
+<BR>
+<BR><B>Notion
+d’heure.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_2.jpg" NAME="Image 64" ALIGN=BOTTOM WIDTH=623 HEIGHT=467 BORDER=0>
+<BR><I>La
+persistance de la mémoire, par Salvador Dali, 1931.</I>
+<BR>Pour
+définir «&nbsp;l’heure&nbsp;» en tant que durée (quantité
+cardinale), par exemple&nbsp;dans l’expression : «&nbsp;ce film
+dure trois heures&nbsp;», il faut se donner une échelle de temps
+construite à partir d’un phénomène cyclique et périodique,
+astronomique ou non.
+<BR>L’heure
+est alors une unité de mesure de cette échelle de temps, obtenue
+par division ou multiplication de la période (Cf. Chapitre 5&nbsp;:
+Les mouvements de la Terre, Question 10c&nbsp;: Mesurer le temps,
+partager le temps). Par conséquent, la durée de l’unité
+«&nbsp;heure&nbsp;» dépend du phénomène périodique choisi. Par
+exemple&nbsp;: heure sidérale, heure solaire, heure temporaire,
+heure de la montre.
+<BR>Pour
+définir «&nbsp;l’heure&nbsp;» en tant que repère dans le temps
+(quantité ordinale) il faut fixer une origine. Par exemple&nbsp;:
+il est 12 heures quand le Soleil franchit le méridien, autrement
+dit, c’est la douzième heure après l’apparition d’une autre
+événement considéré comme origine du temps ;  ou bien encore, il
+est 0 heure UTC lorsqu’il est minuit à Greenwich. 
+
+<BR>L’ordre
+chronologique des heures suppose, en effet, de définir un instant
+de référence comme dans l’expression «&nbsp;Il est 5 heures&nbsp;»
+(Quantité ordinale), ce qui n’est pas le cas de l’expression
+«&nbsp;Ce trajet dure 5 heures&nbsp;» (Quantité cardinale).
+<BR>En
+outre, l’ordre horaire est un ordre croissant («&nbsp;flèche
+du temps&nbsp;»,&nbsp;<I>timeline
+</I>en anglais), mais par
+convention et par commodité il est cyclique. En effet,
+généralement, on réinitialise l’horloge à 0h dès qu’elle
+atteint la vingt-quatrième heure (congruence modulo 24).
+<BR>En
+réalité, l’heure est d’abord communément perçue comme une
+subdivision de la quantité «&nbsp;jour&nbsp;» dont le terme assez
+ambigu mérite une précision.
+<BR>
+<BR><B>Le
+mot «&nbsp;Jour&nbsp;».</B>
+<BR>Il
+existe en effet, une ambiguïté concernant le mot «&nbsp;jour&nbsp;»,
+qui prend deux sens dans le langage courant.
+<BR>Tantôt,
+il désigne la période durant laquelle le ciel est éclairé par le
+Soleil, c’est-à-dire le moment de présence du Soleil dans le
+ciel en un lieu donné et ce terme s’oppose ainsi à «&nbsp;nuit&nbsp;».
+Dans ce cas, la durée du «&nbsp;jour&nbsp;» est égale à celle
+qui s’écoule entre le lever et le coucher du Soleil (durée
+d’ensoleillement théorique), elle est donc variable selon les
+saisons et les latitudes.
+<BR>Tantôt,
+il désigne une unité de temps dont la durée est d’environ 24h,
+correspondant approximativement à la période de rotation de la
+Terre. Afin de le différencier du sens précédent, le mot «&nbsp;jour&nbsp;»
+utilisé dans ce contexte est parfois remplacé par le terme&nbsp;savant
+: «&nbsp;<I>nycthémère</I>&nbsp;»&nbsp;(du
+grec <I>nukthêmeron,</I>
+mot composé à partir de <I>nuktos</I>,
+« nuit », et <I>hêmera</I>,
+« jour ») ; nous ne le ferons pas.
+<BR>Pour
+lever cette ambiguïté, sauf mention contraire ou de bon sens, nous
+entendrons toujours par «&nbsp;jour&nbsp;» ou «&nbsp;journée&nbsp;»,
+la durée d’une rotation de la Terre sur elle-même&nbsp;;
+c’est-à-dire un intervalle de temps d’environ 24h. Cette durée
+dépend du référentiel choisi (étoile lointaine pour jour
+sidéral, Soleil pour jour solaire, par exemples), mais pas
+seulement, car même dans un référentiel fixé cette durée n’est
+pas rigoureusement stable dans le temps, comme nous allons le voir
+dans le cas du repère «&nbsp;Soleil&nbsp;».
+<BR>
+<BR><B>Le
+Temps Solaire Vrai.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_3.jpg" NAME="Image 45" ALIGN=BOTTOM WIDTH=623 HEIGHT=478 BORDER=0>
+
+<I>Claude
+Monet, Impression, soleil levant, 1872.</I>
+
+<BR><I><B>a)
+Le Soleil en guise d’horloge.</B></I>
+<BR>L’alternance
+des jours<A CLASS="sdfootnoteanc" NAME="sdfootnote1anc" HREF="#sdfootnote1sym"><SUP>1</SUP></A>
+et des nuits donne naissance à la notion de Temps Solaire et de son
+unité de mesure&nbsp;: le jour.
+<BR>De
+même, les variations de la hauteur du Soleil dans la journée
+invitent à fractionner le jour par intervalles de temps. Le partage
+du jour a d’abord été approximatif et sommaire&nbsp;; on s’est
+longtemps contenté de moments vagues comme la matinée, qui
+commence avec le lever du Soleil, et la soirée, qui se termine avec
+son coucher.
+<BR>Le
+découpage de la journée en des tranches de temps égaux est apparu
+plus tard et progressivement. On trouve les premiers exemples chez
+les Mésopotamiens qui partitionnent grossièrement le jour par
+tranches régulières de deux à trois heures environ. Plus tard, en
+Occident, la journée est divisée par six (les&nbsp;: <I>horae</I>&nbsp;)
+de durée inégale selon les saisons. La division rigoureuse par 24,
+d’intervalles réguliers, n’apparaîtra pas avant le XIV<SUP>e</SUP>
+siècle (bien que la division du jour par 24, d’intervalles
+inégaux et variables dans l’année, soit un héritage de l’Égypte
+ancienne).
+<BR>Pour
+réussir à fragmenter le jour en des intervalles de temps égaux,
+il est nécessaire de savoir repérer une position particulière du
+Soleil dans le ciel. L’idée de faire coïncider le méridien
+local avec le milieu de la journée sera une étape décisive, mais
+ne sera unanimement et définitivement retenue que tardivement, car
+bien d’autres repères ont été envisagés comme le coucher du
+Soleil par exemple (heures italiques).
+<BR><I><B>b)
+Le milieu de la journée.</B></I>
+<BR>En
+plantant verticalement un simple bâton dans le sol, on peut
+déterminer à quel moment survient le milieu de la journée (Voir
+le «&nbsp;gnomon&nbsp;» dans ce Chapitre 10&nbsp;: Observation du
+Soleil, Question 10d). En effet, en un lieu donné, le Soleil
+culmine toujours dans le plan passant par la verticale de ce lieu
+contenant le pôle céleste&nbsp;; ce plan est appelé : plan
+méridien du lieu.
+Lorsque le Soleil le traverse, il est au plus haut dans le ciel et
+marque donc précisément l’instant qui sépare la journée en
+deux moments d’égale durée (apparemment et approximativement).
+Ce moment se nomme midi.  
+
+<BR>Par
+conséquent, le plan méridien est un repère essentiel pour mesurer
+le temps solaire. Dans la pratique, il est obtenu lorsque l’ombre
+portée du bâton sur le sol est minimale dans la journée (moment
+pas toujours facile à détecter, heureusement il existe d’autres
+méthodes).
+<BR> 
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_4.jpg" NAME="Image 4" ALIGN=BOTTOM WIDTH=623 HEIGHT=310 BORDER=0>
+<BR>A
+partir de là, il devient possible d’étalonner l’écoulement du
+temps, puisque la longueur et la direction de l’ombre portée sont
+variables au cours de la journée à cause de la déclinaison du
+Soleil (dans le sens ici de déclinaison par rapport à l’horizon
+et non la déclinaison en tant que coordonnée équatoriale). Il
+suffit de tracer à même le sol, des traits correctement disposés
+et espacés (ancêtre du cadran solaire) en fonction de la
+déclinaison journalière (par rapport à l’horizon) du Soleil. 
+
+<BR>Ce
+dispositif constitue certainement la première horloge solaire
+(Naturellement, on peut mesurer l’écoulement du temps sans avoir
+recours au Soleil, par exemple avec un sablier, un pendule simple,
+une horloge hydraulique
+ou électronique, mais aussi avec l’aide d’autres astres comme
+la Lune ou Sirius).
+<BR><I><B>c)
+Durée vraie du jour.</B></I>
+<BR>Comme
+on le sait, l’ombre portée du bâton au moment de sa longueur
+minimale, se confond avec ce que l’on appelle la «&nbsp;méridienne&nbsp;»
+du lieu (Cf. dans ce Chapitre&nbsp;10&nbsp;: Observation du Soleil,
+Question 5c et Question 6c). Cette ligne imaginaire n’est que la
+projection orthogonale sur le sol du méridien local géographique
+(Intersection entre le plan méridien et le plan du sol).
+<BR>Le
+moment du passage du Soleil au méridien local définit ce que l’on
+nomme&nbsp;: le midi solaire vrai (pas le midi de la montre donc). A
+cet instant précis le Soleil culmine en ce lieu.
+<BR>Disposant
+de ce repère, on peut alors définir une durée, c’est-à-dire un
+intervalle de temps, appelé&nbsp;: «&nbsp;jour solaire vrai&nbsp;».
+<BR>La
+durée du jour solaire vrai est, par
+définition, la durée
+entre deux passages consécutifs du Soleil traversant le plan
+méridien d’un lieu (rappel&nbsp;: le plan méridien est le
+plan passant par la verticale de ce lieu et le pôle céleste, voir
+Chapitre 6&nbsp;: Astrométrie, Question 4d).
+En d’autres termes, le jour solaire vrai est la durée qui
+s’écoule entre deux culminations consécutives du Soleil&nbsp;;
+de fait, c’est donc une durée qui se base sur le déplacement
+apparent du Soleil au cours d’une seule journée.
+<BR><I><B>d)
+Temps solaire vrai.</B></I>
+<BR>La
+durée «&nbsp;jour solaire vrai&nbsp;» est une unité de temps que
+l’on peut multiplier ou diviser. Autrement dit, elle permet de
+définir une échelle de temps que les astronomes nomment «&nbsp;Temps
+Solaire Vrai&nbsp;» (en anglais&nbsp;: <I>true
+solar time</I>). Sa
+subdivision par 24, apparue au XIV<SUP>e</SUP>
+siècle, délivre l’unité
+de temps dérivée appelée «&nbsp;heure solaire vraie&nbsp;» (la
+division du jour par 24, date des Egyptiens de l’antiquité, mais
+pas la division en heure de durée constante&nbsp;; en effet, les
+heures archaïques ne sont généralement pas de durée constante).
+<BR>Le
+Temps Solaire Vrai se mesure donc à l’aide d’un cadran solaire
+qui a pour fonction d’indiquer la progression de l’angle horaire
+du Soleil au cours de la journée. C’est pour cette raison, qu’en
+astronomie, il est préférable de ne pas considérer le Temps
+Solaire Vrai comme un véritable temps (concept par ailleurs très
+difficile à cerner), mais plutôt comme un angle&nbsp;; un angle
+qui justement varie en fonction du temps (dans le sens d’un temps
+absolu, pas celui défini par le Soleil&nbsp;!). Le Temps Solaire
+Vrai n’est finalement qu’une grandeur physique parmi d’autres,
+dont la valeur à chaque instant se confond avec celle de l’angle
+horaire du Soleil. En assimilant le temps à un angle, on s’évite
+ainsi bien des questions embarrassantes concernant la nature
+philosophique de ce concept (certains physiciens affirment même que
+le temps ne présentant aucune matérialité physique, il convient
+donc d’en nier l’existence, fut-elle purement conceptuelle). 
+
+<BR>Un
+cadran solaire correctement installé fournit donc le moyen matériel
+de mesurer le temps et si, en outre, il est judicieusement étalonné,
+il donne l’heure exacte du lieu, même si cet instrument n’est
+généralement pas d’une précision remarquable.
+<BR>Ce
+temps fût d'un usage très courant jusqu'au XVIII<SUP>ème</SUP>
+siècle, avant le développement de moyens de communication plus
+rapides qui rendirent obligatoire l'adoption d'une autre échelle de
+temps solaire, moins versatile, comme nous le verrons plus loin. 
+
+<BR><I><B>e)
+Un temps local.</B></I>
+<BR>Le
+Temps Solaire Vrai est bien entendu local, puisqu’il se mesure à
+partir du méridien local d’un lieu géographique terrestre.
+<BR>Quand
+il est midi sur votre méridien local, il ne l’est pas sur celui
+de votre voisin situé en dehors de votre méridien. Un décalage en
+longitude provoque nécessairement un décalage horaire de l’heure
+solaire vraie. En revanche l’heure solaire vraie est conservée en
+tout lieu du méridien de même longitude (Voir aussi Chapitre 7&nbsp;:
+Usage du Cherche-étoiles, Question 1c).
+<BR>Ce
+n’est donc pas «&nbsp;<I>Chercher
+midi à quatorze heure&nbsp;</I>»
+que de prétendre que l’heure solaire ne peut-être que locale&nbsp;!
+Si l’origine de l’expression populaire «&nbsp;<I>voir
+midi à sa porte&nbsp;</I>»
+vient de ce que les cadrans solaires disposés au dessus des portes
+d’entrée des maisons n’indiquaient pas exactement la même
+heure pour cause d’installation incorrecte, l’expression prend
+tout son sens puisque, de toutes façons, le midi solaire ne pouvait
+avoir lieu au même instant dans deux villages distants non situés
+sur le même méridien.
+<BR>Pendant
+longtemps, chaque clocher d’église «&nbsp;possédait&nbsp;» sa
+propre heure, l’heure de son cadran solaire.
+<BR><I><B>f)
+Un temps instable.</B></I>
+<BR>Non
+seulement, le Temps Solaire Vrai n’est pas géographiquement
+universel, mais il n'est
+pas non plus uniforme dans la durée. Ce qui signifie que la durée
+du jour n’est pas stable de jour en jour. L’unité de mesure
+«&nbsp;Jour Solaire Vrai » n’est donc pas constante, ce qui pose
+un sérieux problème théorique pour créer une échelle de temps.
+<BR>Newton
+est probablement le premier à avoir découvert l’absence
+d’uniformité de la rotation de la Terre sur elle-même. Dans son
+livre des Principes (1686), il invite les astronomes à corriger le
+temps vrai fourni par l'observation du Soleil. Puis dans un éclair
+de génie qui lui est propre, il ajoute de façon prémonitoire&nbsp;:
+«&nbsp;<I>il est
+probable qu'il n'existe aucun mouvement uniforme par lequel le temps
+puisse être mesuré avec une infime précision&nbsp;</I>».
+Kant en 1754, puis Lalande en 1771 émettront aussi des doutes quant
+à l'uniformité à long terme du mouvement de la rotation de la
+Terre sur elle-même, et par voie de conséquence de celui du Soleil
+dans le ciel. 
+
+<BR><I><B>g)
+Faible variation de la longueur du jour solaire vrai.</B></I>
+<BR>La
+variation de la longueur du jour n’est d’ailleurs pas
+spectaculaire. Au cours d’une année, la durée du «&nbsp;jour
+solaire vrai&nbsp;» varie entre 24 h 00 min 30 sec et 23 h 59 min
+40 sec, une variation de moins d’une minute donc. Par exemple, le
+jour solaire vrai du 22 décembre est plus long de 50 secondes que
+celui du 23 septembre (Il dure 24h + 29,9s le 22 décembre et 24h
+-21,1s le 23 septembre). D’une manière générale, les jours
+solaires vrais sont plus courts en mars et septembre qu'en juin et
+décembre.
+<BR>Prenons
+comme exemple l’année 2012. Le tableau suivant montre cette
+faible variation de la durée du jour au cours de l’année, en
+précisant, pour chaque jour indiqué, l’écart par rapport à une
+durée de 24 heures (avec pour définition de l’heure celle
+établie aujourd’hui, c’est-à-dire celle d’une horloge
+mécanique ou atomique).
+<BR>
+<div style="text-align:center;">
+<TABLE WIDTH=339 CELLPADDING=4 CELLSPACING=0>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1.00pt solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>9
+février</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1.00pt solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures exactement</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>24
+mars</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures − 19,1 secondes</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>13
+mai</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures exactement</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>19
+juin</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures + 13,1 secondes</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>25
+juillet</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures exactement</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>13
+septembre</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures − 22,3 secondes</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>2
+novembre</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures exactement</FONT></FONT></P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=113 BGCOLOR="#3366ff" STYLE="border-top: 1px solid #00000a; border-bottom: 1.00pt solid #00000a; border-left: 1.00pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif"><B>21
+décembre</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=208 BGCOLOR="#ffff00" STYLE="border-top: 1px solid #00000a; border-bottom: 1.00pt solid #00000a; border-left: 1px solid #00000a; border-right: 1.00pt solid #00000a; padding-top: 0.08in; padding-bottom: 0.04in; padding-left: 0.04in; padding-right: 0.08in">
+<P STYLE="widows: 0; orphans: 0"><FONT COLOR="#1a1a1a"><FONT FACE="Times New Roman, serif">24
+heures + 29,9 secondes</FONT></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</div>
+<BR><I><B>h)
+Les deux causes de la variation de la durée du jour solaire vrai.</B></I>
+<BR>La
+raison principale de cette variation est de nature géométrique
+(cinématique), deux causes en sont responsables&nbsp;:
+l’inclinaison et l’excentricité. 
+
+<BR>L’inclinaison
+de l’axe de rotation de la Terre combinée, avec sa vitesse
+variable sur son orbite elliptique autour du Soleil provoque
+l’irrégularité du jour. Autrement dit, d’un point de vue
+géocentrique, les variations saisonnières de la vitesse du Soleil
+dans le ciel (obliquité de l’axe) et l’excentricité de la
+trajectoire du Soleil dans le ciel (orbite elliptique) sont les deux
+principaux paramètres qui, combinés, modifient la durée du jour
+solaire de jour en jour. Rappelons (Cf. Chapitre 4&nbsp;: Les
+mouvements de la Voute Céleste, Question 6d et 2e) que l’obliquité
+de la Terre provoque l’existence des saisons astronomiques et que
+l’excentricité de son orbite engendre l’inégalité de leur
+longueur, si bien que la durée du jour est effectivement liée aux
+saisons.
+<BR>Le
+Soleil passera donc au méridien, soit en avance lorsque son
+déplacement apparent dans le ciel est plus rapide, soit en retard
+quand il ralentit, par rapport à une vitesse apparente moyenne. Au
+cours d’une année, la variation de la durée du jour ne dépasse
+pas la minute, mais le décalage du midi (en heure du Soleil moyen,
+voir plus loin) au méridien peut lui dépasser le quart d’heure
+certains jours de l’année, car ces petits retards ou ces petites
+avances quotidiennes de quelques secondes finissent par s’accumuler
+tout en s’annulant quatre fois par an (Cf. Equation du Temps dans
+ce Chapitre 10&nbsp;: Observation du Soleil, Question&nbsp;4c et
+voir aussi Chapitre 7&nbsp;: Usage du Cherche-étoiles, Question
+1c).
+<BR>A
+plus long terme, d’autres causes viennent accentuer le phénomène,
+notamment le frottement des marées océaniques sur l'écorce
+terrestre qui ralentit la rotation terrestre.
+Il s’ensuit une
+augmentation séculaire de la durée du jour d'environ deux
+millisecondes par siècle et un éloignement de la Lune de
+3,84&nbsp;centimètres par an (Cf. Chapitre 4&nbsp;: Les mouvements
+de la Voute Céleste, Question 9d et Chapitre 5&nbsp;: Les
+mouvements de la Terre, Question 9c).
+<BR>
+<BR><B>Le
+Temps Solaire Moyen.</B>
+<BR><I><B>a)
+Qui dit unité de mesure, dit constante.</B></I>
+<BR>Une
+unité de mesure se doit d’être parfaitement stable, c’est-à-dire
+ne pas évoluer elle-même au cours du temps, <I>a
+fortiori</I> lorsque
+cette unité concerne le temps lui-même (D’où le problème de la
+recherche d’un temps absolu, c’est-à-dire indépendant du
+temps&nbsp;solaire, par exemple !).
+<BR>Or,
+si l’on considère comme unité de temps le jour solaire vrai, il
+n’est justement pas tout à fait constant au cours de l’année,
+comme nous venons de le voir. Surgissent alors deux difficultés
+majeures.
+<BR>La
+première vient de l’embarras du choix. Puisque les jours de
+l’année sont tantôt plus courts, tantôt plus longs au cours de
+l’année (jour «&nbsp;<I>nycthémère</I>&nbsp;»
+et non jour par opposition à nuit, Cf. <I>supra</I>),
+quel jour doit-on alors choisir dans l’année pour servir d’étalon
+de mesure de l’unité de temps appelée jour&nbsp;?
+<BR>La
+seconde difficulté est plus gênante encore. En prenant un jour
+solaire vrai comme base de temps, on s’expose à une dérive
+certaine. Les multiples de cette unité finiront, à termes, par
+provoquer un déphasage entre la position réelle du Soleil au
+méridien et sa position calculée avec cette unité de mesure.
+<BR><I><B>b)
+Recherche d’un temps stable.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_5.jpg" NAME="Image 80" ALIGN=BOTTOM WIDTH=623 HEIGHT=439 BORDER=0>
+
+<I>Lloyd
+on clock</I>
+
+<BR>Les
+astronomes ont alors cherché, à partir du XVIII<SUP>e
+</SUP>siècle, une autre
+base de temps beaucoup plus stable que le jour solaire vrai. Ils ont
+fini tout simplement par l’inventer artificiellement&nbsp;!
+<BR>Comme
+ils souhaitaient conserver le Soleil comme repère, ils ont imaginé
+un Soleil virtuel. 
+
+<BR>Naturellement,
+ils lui ont donné toutes les propriétés qu’ils souhaitaient, à
+savoir&nbsp;: ce Soleil fictif doit se comporter dans le ciel de
+telle façon qu’en tout méridien terrestre, la durée entre deux
+retours consécutifs du Soleil au méridien soit la même tous les
+jours de l’année. 
+
+<BR>Cette
+durée constante est alors arbitrairement appelée&nbsp;: 24 heures.
+<BR><I><B>c)
+Un artifice réfléchis.</B></I>
+<BR>L’apparente
+naïveté de ce tour de passe-passe&nbsp;dissimule en réalité une
+idée simple et féconde, qui ne pouvait mûrir qu’après
+l’adoption du système héliocentrique de Copernic.
+<BR>Puisque
+la principale responsable de la variation de la durée du jour dans
+l’année est l’inclinaison de la Terre sur son orbite écliptique
+autour du Soleil, il suffit de modifier cette géométrie pour en
+élimer la conséquence.
+<BR>En
+effet, si la Terre orbitait sur un cercle et non sur une ellipse,
+avec un axe perpendiculaire à l’Écliptique, le Soleil se
+déplacerait dans le ciel le long de l’Équateur céleste (et non
+le long de l’Écliptique) à une vitesse parfaitement constante
+(et non faiblement fluctuante). Dans ces conditions, la durée du
+jour deviendrait stable tout au long de l’année (car la vitesse
+de la Rotation de la Terre est, elle, quasiment constante
+puisqu’elle ne varie que deux
+millisecondes par siècle environ. Ce n’est pas la vitesse propre
+de la Rotation de la
+Terre qui est en cause mais sa vitesse mesurée par rapport au
+Soleil).
+<BR>Aussi
+suffit-il de considérer un Soleil fictif dont le mouvement apparent
+dans le ciel apparaît  toujours dans le plan de l’équateur
+terrestre, ce qui en réalité n’est réalisé pour le vrai Soleil
+qu’aux moments des équinoxes.
+<BR>Mais,
+cet artifice n’est intellectuellement acceptable que si l’on
+sait mathématiquement passer de l’orbite fictive (théorique) de
+la Terre à son orbite réelle. Naturellement, les astronomes se
+sont empressés, dès le XVIII<SUP>e</SUP>
+siècle, de relever le défi. Ils sont parvenus à concevoir une
+formule que l’on appelle l’«&nbsp;<I>Équation
+du Temps&nbsp;</I>»
+(Voir dans ce Chapitre 10&nbsp;: Observation du Soleil, Question 4c)
+qui permet d’établir la correspondance entre la durée du jour
+réel et celle du jour fictif.
+<BR><I><B>d)
+Une moyenne.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_6.jpg" NAME="Image 75" ALIGN=BOTTOM WIDTH=567 HEIGHT=378 BORDER=0>
+<BR>En
+outre, il est aussi possible de montrer que la durée du jour obtenu
+par ce Soleil fictif est très proche de la moyenne calculée sur
+l’ensemble des durées des «&nbsp; jours vrais&nbsp;» d’une
+année. Durant l’année, la position du Soleil à midi (avec un
+midi défini à l’aide de ce nouveau temps stable) s’écarte de
+part et d’autre du méridien. Les écarts à droite du méridien
+sont alors compensés par ceux qui ont lieu à gauche.
+<BR>C’est
+la raison pour laquelle, on baptisera la durée de ce jour théorique
+et artificiel&nbsp;: <I>«&nbsp;Jour
+Solaire Moyen</I>&nbsp;».
+L’échelle de temps associée à cette nouvelle unité de mesure
+du temps sera aussi appelé&nbsp;: «&nbsp;<I>Temps
+Solaire Moyen&nbsp;</I>»
+(en anglais&nbsp;: <I>mean
+solar time</I>).
+<BR><I><B>e)
+Un destin prometteur.</B></I>
+<BR>Cette
+invention artificielle du «&nbsp;Temps Solaire Moyen&nbsp;», dans
+le courant du XVIII<SUP>ème</SUP>
+siècle, connaitra une heureuse et longue destinée.
+<BR>Pour
+commencer, on lui doit la
+première définition astronomique de la seconde. Celle-ci est alors
+définie comme étant la 86 400<SUP>ème</SUP>
+partie du Jour Solaire Moyen. Cette définition de la seconde
+restera en vigueur jusqu’en 1960<A CLASS="sdfootnoteanc" NAME="sdfootnote2anc" HREF="#sdfootnote2sym"><SUP>2</SUP></A>.
+<BR>Ensuite,
+les scientifiques disposeront désormais d’une unité stable de la
+mesure du temps, qui servira de référence jusqu’au milieu de XX<SUP>e</SUP>
+siècle. La précision de cette unité de mesure reste suffisante
+pour la plupart des besoins scientifiques de l’époque car, même
+si la Terre ralentit sa rotation à cause du phénomène des marées,
+la précision de la durée de ce jour moyen est de l’ordre de 5,2
+× 10<SUP>-13 </SUP>seconde
+(retard de moins d’une seconde sur une période de plus de 3000
+siècles).
+<BR>En
+outre, le Temps Solaire Moyen&nbsp;n’est pas seulement une
+acquisition théorique pour les besoins des scientifiques, il trouve
+aussi une application pratique qui va révolutionner l’organisation
+de la vie sociale. En effet, cette unité de temps permet
+d’étalonner correctement le mouvement régulier des horloges
+mécaniques et des montres qui font office de «&nbsp;gardes
+temps&nbsp;»&nbsp;; car désormais, avec cette unité de temps, 24
+heures exactement séparent deux midi consécutifs, tous les jours
+de l’année. L’introduction de cette unité de temps dans les
+horloges donnera naissance, au XIX<SUP>e</SUP>
+siècle, à l’heure dite «&nbsp;civile ».
+<BR><I><B>f)
+Un temps local.</B></I>
+<BR>Cependant,
+le Temps Solaire Moyen est un temps local, si bien que l’heure
+restera encore, jusqu’au milieu du XIX<SUP>e</SUP>
+siècle, une heure locale. Lorsqu’il est midi, il ne l’est au
+même instant qu’en un lieu donné (sur un même méridien). 
+
+<BR>En
+effet, l’heure «&nbsp;du Soleil moyen » n’est que l’heure
+«&nbsp;du Soleil vrai » corrigée des inégalités de l'ascension
+droite du Soleil au cours de l’année. Ces inégalités sont
+corrigées à l’aide de l’«&nbsp;<I>Équation
+du Temps&nbsp;</I>»,
+dont on trouve les premières tables dès 1650 (Voir plus loin). Or
+le Temps Solaire Moyen conserve la partie linéaire du Temps Solaire
+Vrai, il est donc bien toujours tributaire du lieu.
+<BR><B>L’heure
+civile.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_7.jpg" NAME="Image 81" ALIGN=BOTTOM WIDTH=623 HEIGHT=351 BORDER=0>
+<BR>Comme
+nous venons de le dire, le Temps Solaire Moyen présente encore un
+inconvénient, il est local. 
+
+<BR>Jusqu’au
+milieu du XIX<SUP>e</SUP>
+siècle l’on s’en contentait et chaque village avait son heure
+locale affichée sur les façades des bâtiments publics et
+religieux. Si l’heure des cadrans solaire était parfois corrigée
+à l’aide de l’Équation du temps (qui ne dépend pas du lieu,
+mais de la date) afin d’indiquer le temps moyen, plus régulier,
+l’heure officielle restait locale. 
+
+<BR>Cependant,
+avec le développement du chemin de fer, il devenait nécessaire de
+définir une heure qui soit valable, au même moment, sur tout un
+territoire, c’est-à-dire adopter le principe d'un temps unique
+pour tout un pays. Ce projet fût réalisé pour la première fois
+par les chemins de fer britanniques, le 1<SUP>er</SUP>
+décembre&nbsp;1847, grâce à l’invention du télégraphe en
+1832, par Samuel Morse (1791 – 1872). Cet appareil permettait en
+effet de transmettre à la vitesse de la lumière les signaux
+nécessaires à la réalisation d’une synchronisation simultanée
+des horaires.
+<BR>Après
+avoir déterminé le Temps Solaire Moyen de l'<A HREF="http://fr.wikipedia.org/wiki/Observatoire_royal_de_Greenwich">Observatoire
+Royal de Greenwich</A> (<I>Greenwich
+mean time</I> en anglais,
+abrégé en GMT) celui-ci fut adopté comme heure légale du
+transport ferroviaire britannique le 2&nbsp;août 1880. Comme le
+Temps Solaire Moyen débute à midi (par nécessité d’observer la
+culmination du Soleil vrai&nbsp;!) il est convenu de l’augmenter
+de 12 heures afin de faire commencer la journée à minuit, horaire
+qui sied davantage aux activités humaines courantes (Coïncidence
+avec le passage d’une date à une autre, par exemple). 
+
+<BR>Dès
+lors, l’heure GMT augmentée de 12 heures devint l’heure
+officielle de toute l’Angleterre. 
+
+<BR>Ce
+principe d'un temps unique pour tout un pays, réglé sur le Temps
+Solaire Moyen de l'une de ses villes, est rapidement adopté par de
+nombreux pays. Chaque pays possède ainsi son propre temps civil.
+<BR>Naturellement,
+on choisit une ville de référence suffisamment centrale
+(généralement la capitale) de sorte que le Temps Solaire Moyen ne
+s’écarte pas trop du Temps Solaire Vrai d’un lieu du territoire
+national. Ainsi, en France à partir du XIX<SUP>e</SUP>
+siècle, l’heure de la gare ferroviaire d’une ville indique
+l’heure de Paris et non plus l’heure locale qui reste parfois
+encore affichée au sommet de certains édifices publics et
+religieux.
+<BR>
+<BR><B>Le
+Temps Moyen de Greenwich (GMT)</B>
+<BR><I><B>a)
+La genèse.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_8.jpg" NAME="Image 14" ALIGN=BOTTOM WIDTH=624 HEIGHT=375 BORDER=0>
+<BR><I>Le
+méridien de Greenwich à Greenwich.</I>
+<BR>Le
+Temps Moyen de Greenwich (<I>Greenwich
+Mean Time </I>ou comme on
+le dira parfois plus tard :<I>
+Greenwich </I><I>Meridian</I><I>
+Time</I>) est, comme son
+nom le désigne, le Temps Solaire Moyen établi à l'<A HREF="http://fr.wikipedia.org/wiki/Observatoire_royal_de_Greenwich">Observatoire
+Royal de Greenwich</A>.
+<BR>Il
+indique donc l’heure locale tout le long du méridien de Greenwich
+dans l’échelle du Temps Solaire Moyen.
+<BR>Le
+méridien actuellement tracé à Greenwich date de 1850, il est
+l’œuvre de l’astronome anglais George Biddell Airy (1801 –
+1892). Ce méridien sera admis comme référence internationale en
+1884 par la conférence de Washington réunissant vingt-cinq pays.<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_9.jpg" NAME="Image 97" ALIGN=LEFT HSPACE=12 WIDTH=254 HEIGHT=378 BORDER=0>
+<BR>Grâce
+au système GPS embarqué dans des satellites munis d’horloges
+atomiques, on sait aujourd’hui que sa position est décalé de
+102,5 mètres vers l'Ouest par rapport à ce qui devrait être sa
+position théorique (l'angle du méridien aux Pôles est décalé de
+5,3 secondes vers l'Ouest).
+L’imprécision des mesures de l’époque en est la cause
+principale. Si ce décalage a été détecté dès 1960, ce n’est
+que très récemment (2015) que l’on a compris d’où venait
+l’erreur. Sir
+George Airy avait retenu une valeur moyenne de la gravité
+de surface de 9,81
+m/s², or celle-ci diffère légèrement en ce lieu à cause de la
+forte inhomogénéité
+de la croute terrestre entourant
+le site de Greenwich. Toutefois cette erreur ne porte guère à
+conséquence dans la mesure où d’une part, les 20 000 km qui
+prolongent ce morceau de méridien tracé à Greenwich pour entourer
+complètement le globe terrestre ne semblent pas être affectés par
+ce décalage et d’autre part, il est bien plus important de
+réussir à faire adopter ce méridien par le plus grand nombre que
+de parvenir à le localiser rigoureusement. 
+
+<BR>A
+l’origine, ce méridien avait été choisi par les marins
+britanniques au XIX<SUP>e</SUP>
+siècle pour calculer leur longitude. Non sans mal, les britanniques
+vont l’imposer au monde entier, comme référence des longitudes.
+<BR>Une
+convention entérinant ce choix sera adoptée en 1883 à la
+conférence de Rome, avec pour argument que ce méridien traverse le
+minimum de terres émergées, ce qui facilite son repérage sur
+terre. A la fin de ce siècle, ce méridien sera utilisé par plus
+de 65% des navires en circulation à travers le monde.
+<BR>Ayant
+gagné la bataille du «&nbsp;méridien&nbsp;», les anglais vont
+remporter aussi celle de «&nbsp;l’heure universelle&nbsp;».
+<BR><I><B>b)
+L’idée de l’heure universelle.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_10.jpg" NAME="Image 355" ALIGN=BOTTOM WIDTH=623 HEIGHT=350 BORDER=0>
+<BR>Pour
+de très nombreuses raisons, scientifiques, commerciales, voire
+politiques, il apparaissait judicieux de coordonner ensemble les
+horaires civils de chaque pays.
+<BR>Pour
+y parvenir, il fallait réussir à trouver un procédé qui
+permettait d’obtenir, par une seule formule simple, les heures
+civiles de chaque pays en fonction d’une heure locale du Temps
+Solaire Moyen choisie comme référence. Après plusieurs tentatives
+infructueuses, on s’accorda sur le système ingénieux des fuseaux
+horaires.
+<BR><I><B>c)
+Les fuseaux horaires.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_11.jpg" NAME="Image 43" ALIGN=BOTTOM WIDTH=623 HEIGHT=348 BORDER=0>
+<BR>En
+1858, le mathématicien italien Quirico Filopanti crée le système
+des fuseaux horaires. Il imagine une répartition, autour de la
+Terre, de 24 bandes terrestres longitudinales. L’ensemble est
+réparti uniformément d’Ouest en Est et chaque bande est séparée
+par une ligne imaginaire parallèle aux méridiens. Ce partage du
+globe terrestre en 24 fuseaux horaires sera adopté par la
+convention de Washington d'octobre en 1884.
+<BR>A
+l’intérieur de chaque fuseau est conservée l’heure civile,
+afin de préserver le principe de l’heure unique sur toute une
+portion du territoire. Cependant, l’heure légale n’est plus
+réglée sur l’heure locale d’une ville particulière comme on
+le pratiquait alors, mais sur l’heure locale que traverse la ligne
+médiane de chaque fuseau.
+<BR>Comme
+la largeur des fuseaux est constante et fait 15° (15°x24=360°) on
+passe d’une ligne médiane à une autre en ajoutant (ou
+retranchant) une heure (15° = 1h). Ainsi l’heure légale d’une
+médiane d’un fuseau peut être définie comme un multiple d’une
+heure de référence.
+<BR>Reste
+donc à choisir l’heure de référence de sorte que l’heure de
+chaque fuseau ne soit pas trop décalée de son heure locale du
+Temps Solaire Moyen.
+<BR>Comme
+on peut s’en douter, l’affaire ne fut pas simple, non pas tant à
+cause de la difficulté technique, mais bien pour des raisons de
+susceptibilités politiques.
+<BR><I><B>d)
+Choix d’une origine du temps.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_12.jpg" NAME="Image 83" ALIGN=BOTTOM WIDTH=623 HEIGHT=205 BORDER=0>
+<BR>Comme
+on l’a compris, choisir une origine du temps solaire c’est
+choisir une origine géographique, c’est-à-dire un méridien
+particulier. Or, Il n'existe pas de méridien remarquable qui peut
+être considèré comme une origine naturelle des longitudes, à
+la différence des latitudes qui s’appuient sur un parallèle
+particulier, l'Équateur terrestre. 
+
+<BR>C’est
+l'ingénieur et géographe canadien Sir Sandford Fleming qui, en
+1876, proposa le méridien de Greenwich comme origine des temps pour
+toute la planète. Cette initiative paraît assez logique dans la
+mesure où le méridien de Greenwich servait déjà d’origine des
+longitudes pour un grand nombre de pays.
+<BR>Naturellement
+la France rechigna (avec d’autre pays) mais finit par l’accepter
+tardivement en 1914, contre une éventuelle adoption de son système
+métrique par l’Angleterre qui, finalement n’aura jamais lieu,
+comme on le sait&nbsp;!
+<BR>Au
+niveau international, le
+choix de ce méridien fut définitivement adopté le
+9 mars 1911. Mais c’est à
+partir de 1929, que la grande majorité des pays souscrivit enfin au
+principe des fuseaux horaires et consentit à prendre le méridien
+de Greenwich comme origine des temps et des longitudes. 
+
+<BR><I><B>e)
+Principe et notation de l’heure universelle.</B></I>
+<BR>Le
+principe de l’heure universelle repose sur les deux règles
+suivantes&nbsp;:
+
+<BR>1°-
+L’heure de référence.
+
+<BR>L’heure
+de référence, commune à tous les états, est l’heure locale
+donnée par le Temps Solaire Moyen de Greenwich. Cette heure est
+augmentée de 12h afin de la faire commencer à minuit pour des
+raisons évidentes de commodités pratiques de la vie sociale (GMT
+commençant nécessairement à midi au Soleil).
+<BR>L’heure
+légale en vigueur dans tout le fuseau horaire associé au méridien
+de Greenwich est désignée par la notation UTC (voir plus bas la
+signification de ce sigle). Lorsqu'il est « 0 heure » UTC, il est
+minuit à Greenwich en heure du Temps Solaire Moyen.
+
+<BR>2°-
+L’heure d’un pays.
+
+<BR>Chaque
+État définit l'heure légale sur son territoire en ajoutant un
+nombre entier d'heures égal au nombre de fuseaux qui le sépare du
+méridien de Greenwich, si son fuseau se situe à l’Est de
+Greenwich. Dans le cas contraire, si son fuseau se situe à l’Ouest
+de Greenwich, l'heure légale est obtenue en retranchant un nombre
+entier d'heures égal au nombre de fuseaux qui le séparent du
+méridien de Greenwich.
+<BR>Ce
+système conduit à associer à chaque fuseau horaire une heure
+universelle notée UTC ± n (avec n un entier positif) où n désigne
+le nombre de fuseaux horaires qui le sépare du fuseau horaire de
+Greenwich. Ainsi, UTC + n désigne un fuseau horaire en avance de n
+heures sur UTC et UTC - n. désigne un fuseau horaire en retard de n
+heures sur UTC (Voir des applications pratiques et des compléments
+d’information dans le Chapitre 7&nbsp;: Usage du Cherche-étoile,
+Question 5d et Question 1c).
+<BR><I><B>f)
+Du principe à la réalité.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_13.jpg" NAME="Image 87" ALIGN=BOTTOM WIDTH=590 HEIGHT=302 BORDER=0>
+<BR><I>Carte
+montrant le non respect des fuseaux horaires théoriques dans le
+monde.</I>
+<BR>Naturellement,
+les frontières des pays ne suivent pas les lignes parfaites des
+fuseaux horaires et peuvent même couvrir plusieurs fuseaux.
+<BR>Ce
+dernier cas ne présente aucune difficulté théorique. Les pays
+très étendus, comme les USA, le Canada, la Russie ou la Chine par
+exemples, traversés par plusieurs fuseaux horaires, adoptent sur
+leur territoire autant d’heures légales que nécessaire. D’autres
+préfèrent toutefois choisir un décalage en nombre entier de
+demi-heures (Inde).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_14.jpg" NAME="graphics1" ALIGN=BOTTOM WIDTH=605 HEIGHT=529 BORDER=0>
+
+<I>Les
+fuseaux horaires du Canada.</I>
+<I>Par
+Phoenix B 1of3 — Travail personnel based on Time Zone map at the
+Atlas of Canada website, CC BY-SA 3.0,
+https://commons.wikimedia.org/w/index.php?curid=17186718</I>
+
+<BR>Cependant,
+les entorses à la règle sont assez nombreuses. Nombre de pays,
+sans pour autant rejeter le principe de l’heure universelle,
+choisissent un fuseau horaire en dehors de leur territoire&nbsp;; ce
+qui a pour conséquence de décaler sérieusement l’heure
+officielle avec l’heure du Temps Solaire Moyen de leur lieu. 
+
+<BR>Ce
+sont là encore des raisons historiques et économiques qui ont
+justifié ce choix contre nature. C’est, par exemple, le cas de la
+France et de nombreux pays de l’Union Européenne.
+<BR>Mais
+il existe une entorse à la règle des fuseaux horaires encore plus
+pernicieuse, car elle modifie l’heure officielle locale non pas
+seulement en fonction de l’arbitrage d’un choix de fuseau
+horaire, mais en fonction de la date et plus précisément de la
+saison. Cette dérogation porte le nom d’«&nbsp;heure avancée&nbsp;».
+<BR><I><B>g)
+L’heure avancée.</B></I>
+<BR>Il
+semblerait que l’idée d’instaurer le décalage d’une heure en
+période d’été pour économiser l’énergie (pas l’électricité
+qui n’a été inventée qu’en 1822&nbsp;!) a été émise pour
+la première fois en 1784 (dans le quotidien français <I>Le
+journal de Paris</I>) par
+l'inventeur du paratonnerre, l’américain Benjamin Franklin (1706
+– 1790). 
+
+<BR>Toutefois,
+c’est l’Allemagne qui met en œuvre pour la première fois le 30
+avril 1916 cette pratique. Elle va même instaurer entre 1947 et
+1949 une «&nbsp;<I>hochsommerzeit&nbsp;</I>»,
+c’est-à-dire un décalage d’une heure supplémentaire entre les
+dates du 11 mai au 29 juin. 
+
+<BR>L’Allemagne
+est rapidement suivie par le Royaume-Uni le 21 mai 1916. En France,
+l’introduction d’une heure d’été est proposée en 1916,
+votée en 1917, devançant de peu les États-Unis qui adopteront le
+changement d’heure en 1918.
+<BR>A
+ce jour (2020), 76 pays ont adopté l’heure avancée, la majorité
+en Europe et aux États unis, mais 106 États ne l’appliquent pas,
+la plupart se trouvant en Asie et en Afrique. D’ailleurs 65 pays
+l’avaient adoptée avant d'y renoncer, comme par exemple la
+Turquie, l’Afrique du Sud, la Tunisie, l’Égypte, la Chine,
+l’Argentine ainsi que la Russie qui a finalement instauré
+l'horaire d'été de façon permanente en 2011. Aux États-Unis,
+chaque État reste libre de décider de conserver ou non ce système.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_15.jpg" NAME="Image 363" ALIGN=BOTTOM WIDTH=623 HEIGHT=349 BORDER=0>
+<BR>Au
+sein de l’Union européenne, et <I>a
+priori</I> jusqu'en 2021,
+tous les pays passent par un changement d’heure en automne et au
+printemps, l’harmonisation de la date des changements d’heures
+n’a cependant été décrétée qu’en 1998.
+<BR>Dans
+la pratique, si chaque citoyen doit avancer sa montre d’une heure
+au printemps et la reculer en automne, l’heure légale de chaque
+pays, établie à l’Observatoire de Paris, est modifiée
+automatiquement. 
+
+<BR><I><B>h)
+Cas de la France.</B></I>
+<div style="text-align:center;">
+<TABLE WIDTH=610 CELLPADDING=3 CELLSPACING=0>
+<TR>
+<TD COLSPAN=2 WIDTH=598 VALIGN=TOP BGCOLOR="#800080" STYLE="border-top: 4.50pt solid #660066; border-bottom: 2.25pt solid #00000a; border-left: 4.50pt solid #660066; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.03in; padding-right: 0in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT COLOR="#ffffff"><FONT SIZE=4><B>EUROPE
+CONTNENTALE</B></FONT></FONT></FONT></P>
+</TD>
+</TR>
+<TR></TR>
+<TR VALIGN=TOP>
+<TD WIDTH=262 BGCOLOR="#ffffff" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 2.25pt solid #00000a; border-left: 4.50pt solid #660066; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.03in; padding-right: 0in">
+<P><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_16.jpg" NAME="Image 85" ALIGN=BOTTOM WIDTH=269 HEIGHT=276 BORDER=0></P>
+</TD>
+<TD WIDTH=331 BGCOLOR="#ffffff" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.03in; padding-right: 0in">
+<P><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_17.jpg" NAME="Image 86" ALIGN=BOTTOM WIDTH=339 HEIGHT=276 BORDER=0></P>
+</TD>
+</TR>
+<TR></TR>
+<TR>
+<TD WIDTH=262 BGCOLOR="#ffff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #660066; border-left: 4.50pt solid #660066; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.03in; padding-right: 0in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><I><B>Fuseaux
+horaires théoriques</B></I></FONT></P>
+</TD>
+<TD WIDTH=331 BGCOLOR="#ffff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #660066; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.03in; padding-right: 0in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><I><B>Fuseaux
+horaires en vigueur actuellement</B></I></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</div>
+<BR>Pourtant
+couverte par le fuseau horaire de Greenwich, la France n’est pas
+aujourd’hui à l’heure de Greenwich, mais à l’heure du fuseau
+suivant. Actuellement, la France suit le régime horaire d'Europe
+Centrale. 
+
+<BR>Elle
+avait néanmoins accepté depuis la loi du 9 mars 1911, le principe
+de l’échelle de temps basée sur le Temps Solaire Moyen de
+Greenwich puisqu’officiellement elle retranchait du Temps Solaire
+Moyen de Paris les 9 minutes et 21 secondes qui séparent les deux
+instants de cumulation du Soleil sur les méridiens respectifs de
+Paris et de Greenwich. En revanche, c’est son fuseau horaire
+qu’elle n’a pas toujours respecté.
+<BR>En
+effet, de 1911 à 1916, la France est à l’heure de Greenwich, et
+de 1917 à 1940 elle se met avec l’Angleterre à l’heure d’été
+à UTC +1h (Loi du 19/3/1917). Mais de juin 1940 à août 1945, la
+France occupée vit à l'heure allemande, c’est-à-dire +1h en
+hiver et à +2h en été. Or, à la libération en août 1945 (heure
+d'été donc) le Gouvernement provisoire de la République française
+abandonne le principe de l'heure d'été pour mettre la France toute
+l'année à l’heure du fuseau horaire +1h et non pas +0h, calée
+sur celui de Greenwich (un premier décret du 14/8/1945 fixe l'heure
+d'été à UTC+1h et l'heure d'hiver à UTC, mais un second décret
+en date du 5 novembre 1945 conserve le fuseau UTC+1h pour heure
+légale d'hiver). 
+
+<BR>Pourquoi&nbsp;?
+Sans doute pour signifier à la «&nbsp;perfide Albion&nbsp;»
+qu’elle n’a toujours pas adopté le système métrique français
+promis à l’époque en échange de l’adoption de son méridien&nbsp;!
+Depuis, cette heure perdurera jusqu’en 1976 où l’heure d’été
+réapparait. C’est ainsi que la France vit aujourd’hui, à
+l'heure GMT +1h en hiver (géographiquement absurde&nbsp;!) et à
+GMT +2h en été (principe de plus en plus contesté&nbsp;!).
+Jusqu’en 1995, le passage à l’heure d’hiver a lieu le dernier
+dimanche de septembre à 3 heures du matin. Mais depuis 1996, il
+s’effectue le dernier dimanche d’octobre et prolonge la période
+d’heure d’été durant une partie de l’automne.
+<BR>Il
+n’est d’ailleurs pas impossible que d’ici peu, l’heure
+d’hiver disparaisse pour ne conserver que l’heure d’été, ou
+le contraire. En effet, il est prévu que le changement d'heure sera
+supprimé à compter de 2021 et que les pays membres de l'U.E.
+pourront choisir souverainement de rester à l'heure d'hiver ou à
+l'heure d'été, ce qui posera un sérieux problème pour les pays
+voisins qui, éventuellement, ne se retrouveront plus dans le même
+fuseau horaire.
+<BR><I><B>i)
+Cas des pôles.</B></I>
+<BR>Comment
+définir une heure aux Pôles&nbsp;? Lieux de rencontre de tous les
+méridiens, y compris celui de Greenwich&nbsp;! 
+
+<BR>Comme
+il y a toujours un méridien que le Soleil traverse, il est donc
+toujours midi à tous moments lorsque l’on se trouve exactement à
+l’un des deux pôles (situation, au demeurant, assez rare, pour le
+commun des mortels&nbsp;!). 
+
+<BR>Ou
+bien, on peut considérer que toutes les heures sont possibles car
+toutes les heures associées aux longitudes s’y regroupent en ces
+deux lieux. Dans les deux cas c’est absurde, on ne peut définir
+d’heures au deux pôles, ni au Nord, ni au Sud&nbsp;! (cas que
+l’on retrouve avec la définition de l’azimut). Au Groenland,
+comme dans l'Antarctique, on a donc décidé d’utiliser l’heure
+de Greenwich.
+<BR>
+<BR><B>Le
+Temps Universel (TU ou UT&nbsp;: </B><I><B>Universal
+Time</B></I><B>)</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_18.jpg" NAME="Image 311" ALIGN=BOTTOM WIDTH=623 HEIGHT=523 BORDER=0>
+<BR>L’emploi
+du sigle GMT est désormais désuet, il a été officiellement
+remplacé le 1<SUP>er</SUP>
+janvier 1972 par le sigle UT qui signifie&nbsp;: <I>Universal
+Time</I> ou en français
+par TU&nbsp;: <I>Temps
+Universel</I>.
+<BR>Cependant,
+GMT est encore utilisé dans l’aviation civile européenne qui a
+d’ailleurs remplacé le terme «&nbsp;moyen&nbsp;» (<I>Mean</I>)
+par le terme «&nbsp;méridien&nbsp;» (<I>Meridian</I>).
+<BR>L’échelle
+de temps UT a été définie jusqu’en 1956 comme étant la
+fraction 1/ 86 400 du Jour Solaire Moyen.
+<BR>En
+réalité, il existe plusieurs dénominations du Temps Universel,
+comme UT0, UT1, UT1R, UT2, dont les subtilités n’intéressent que
+les spécialistes.
+<BR>Le
+Temps Universel est une échelle de temps qui, comme le GMT donc, se
+base sur la Rotation de la Terre. Mais, il existe tout de même une
+différence entre GMT et UT.
+<BR>Dans
+le cas du GMT, la Rotation de la Terre est mesurée par rapport à
+un Soleil Moyen franchissant le méridien de Greenwich&nbsp;(Soleil
+fictif parcourant l’Équateur à vitesse constante) ; tandis que
+dans le cas de l’UT, cette rotation est mesurée par rapport à
+une étoile lointaine franchissant le méridien de Greenwich. Comme
+cette mesure s’effectue à l’aide d’un interféromètre
+perfectionné, sa précision est bien meilleure, elle est de l’ordre
+de la microseconde. Il va de soi que pour les usages courants, on
+peut confondre Temps Solaire Moyen et Temps Universel.
+<BR>En
+outre, l’UT peut-être défini par une relation mathématique en
+fonction du temps sidéral. Lorsqu’il est ainsi rapporté à un
+pôle fixe de la Terre, il se nomme UT0 et lorsqu’il est rapporté
+au pôle céleste des
+éphémérides il est
+noté UT1.
+<BR>Comme
+cette échelle de temps reste liée à la Rotation terrestre, elle
+demeure fort utile pour les mesures astronomiques, notamment la
+mesure de la période des pulsars, des durées d’éclipses et de
+toutes sortes d’occultations.
+<BR>Par
+ailleurs, la navigation maritime et la navigation spatiale se
+servent fréquemment de cette échelle de temps UT, d’autant
+qu’elle a longtemps servi (jusqu’en 1984) comme base de temps
+pour établir le temps légal.
+<BR>
+<BR><B>Temps
+Atomique International (TAI).</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_19.jpg" NAME="Image 356" ALIGN=BOTTOM WIDTH=604 HEIGHT=302 BORDER=0>
+<BR><I>Horloge
+atomique la plus précise du monde (1 sec de retard en 13,8
+milliards d'années&nbsp;!)</I>
+<BR>Avec
+l’arrivée des horloges atomiques la mesure de la seconde est
+infiniment plus précise. Aujourd’hui, une horloge atomique banale
+dérive d’une seconde en 30 millions d’années ! 
+
+<BR>En
+1967, on définit un nouveau temps dit : Temps Atomique
+International (TAI), qui ne se réfère plus au mouvement de la
+Terre, mais à des fréquences de transition dans l'atome de Cesium
+133. Désormais, la mesure du temps (plus précisément de son
+unité) ne sera plus déterminée à partir d’une période
+astronomique, mais atomique ! D’une certaine manière, on peut
+dire que les horloges atomiques ne se contentent pas de mesurer le
+temps, mais le fabriquent.
+<BR>Ce
+temps est calculé par le BIPM (Bureau International des Poids et
+Mesures) à partir des données de plus de 200 horloges atomiques
+situées dans des Instituts de Métrologie ou des Observatoires de
+plus de 30 pays. Il est essentiellement réservé à un usage
+scientifique et aucun signal horaire ne le diffuse directement sur
+les ondes radios des particuliers. Cependant l’heure officielle
+annoncée dans un pays, par l’intermédiaire d’une horloge
+parlante par exemple, est directement liée à une horloge atomique.
+<BR>Actuellement,
+par rapport à une hypothétique horloge idéale, le TAI ne diffère
+pas plus d'un dixième de microseconde (0.0000001 seconde) par an,
+en avance ou en retard.
+On construit
+aujourd’hui, des horloges atomiques dont l’exactitude défie
+toute imagination. En 2018, des physiciens américains ont conçu
+l'horloge atomique expérimentale la plus précise au monde&nbsp;;
+elle est capable de varier de moins d'une seconde en 13,8 milliards
+d'années, c’est-à-dire l'âge estimé de l'univers&nbsp;!
+(Problème&nbsp;: sa trop grande précision l’empêche de se
+synchroniser avec les autres horloges atomiques, sauf à l’envoyer
+très loin dans l’Espace).
+<BR>Pour
+obtenir l’heure en TAI, on a choisit comme origine des temps du
+TAI l’heure égale à l’UT le
+1er janvier 1958.&nbsp;
+<BR>Désormais
+le TAI est officiellement
+la référence pour dater tous les événements, astronomiques ou
+non. 
+
+<BR>Signalons,
+enfin, que la comparaison de l’UT avec le TAI permet de mettre en
+évidence les irrégularités de la Rotation de la Terre.
+<BR>
+<BR><B>Le
+Temps universel coordonné (UTC).</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_20.jpg" NAME="Image 310" ALIGN=BOTTOM WIDTH=613 HEIGHT=340 BORDER=0>
+<BR><I><B>a)
+Désynchronisation naturelle des temps&nbsp;: astronomique et
+atomique.</B></I>
+<BR>En
+introduisant l’échelle de temps TAI, les physiciens se sont
+emparés du temps et se sont libérés des caprices du temps
+stellaire. Mais ce faisant, le temps atomique étant déconnecté du
+temps astronomique, ils ont pris le risque de voir à terme se
+décaler l’horloge astronomique de l’horloge atomique. 
+
+<BR>À
+plus ou moins long terme, les effets de cette désynchronisation
+vont se faire ressentir. Par exemple, l’heure de passage du Soleil
+sur le méridien de Greenwich, ne sera plus la même selon l’échelle
+de temps choisie.
+<BR>En
+effet, l’UT est directement lié à la Rotation de la Terre et
+donc aux alternances jours – nuits, qui rythment de façon
+naturelle la vie sur Terre. En se décalant progressivement du TAI,
+il arrivera bien un jour, lointain certes, où midi sonnera à
+minuit&nbsp;!
+<BR>En
+outre, de nombreuses activités humaines ont encore besoin de se
+référer quotidiennement au temps astronomique. Il
+est donc important qu’une échelle de temps reste en phase avec
+l’UT. 
+
+<BR><I><B>b)
+Synchronisation artificielle des temps&nbsp;: astronomique et
+atomique.</B></I>
+<BR>Aussi,
+pour éviter que le divorce n’ait lieu entre ces deux échelles de
+temps indépendantes, les astronomes et les physiciens ont alors
+créé une nouvelle échelle de temps qu’ils ont appelé&nbsp;:
+Temps Universel coordonné, désignée dans toutes les langues&nbsp;par
+: UTC (<I>Coordinated
+Universal Time</I>).
+<BR>En
+conservant la grande stabilité du TAI, c’est-à-dire en se basant
+sur la durée précise et stable de la seconde qu’offre le TAI,
+ces savants ont construit l’UTC de sorte qu’il diffère du TAI<I>
+</I>d’un nombre entier
+de secondes. Ce nombre entier, qui varie, est actualisé certaines
+années de sorte que l’UTC ne s’écarte pas plus de 0,9 seconde
+de l’UT (en réalité de UT1). Ce nombre, c’est-à-dire la
+différence entre l’UTC et le TAI est actuellement de 34 secondes
+(UTC = TAI – 34 secondes), il était de 22 secondes de 1985 à
+1988 et de 32 secondes de 1999 à 2006, par exemple. Au cours de ces
+deux périodes, on a donc rajouté une seconde, de sorte que les 34
+secondes et les 32 secondes ne diffèrent pas en valeur absolue de
+0,9 seconde par rapport à l’échelle du temps universel UT.
+<BR>Ces
+secondes intercalaires (<I>leap
+second</I>) sont
+insérées à l'initiative du SIRT (Service International de la
+Rotation Terrestre). L’opération a lieu à une date précise
+calculée à l’avance et intervient juste avant minuit. Par
+exemple, l’année 2015 a bénéficié d’une seconde
+supplémentaire le 30 juin à exactement 23h 59’59’’. Ces
+secondes supplémentaires garantissent qu’en moyenne au cours des
+ans, le Soleil traverse le plan méridien de Greenwich à exactement
+12:00:00 UTC à 0,9 seconde près.
+<BR>Ce
+réglage provoque parfois
+de sérieux bugs informatiques, notamment lorsqu’il faut
+synchroniser tous les satellites artificiels de la Terre pour ne pas
+provoquer, par exemple, un regrettable incident de missiles !
+<BR><I><B>c)
+UTC = Réconciliation de l’heure atomique et astronomique.</B></I>
+<BR>Le
+Temps Universel Coordonné (UTC) est donc le successeur de l’ancêtre
+Temps Moyen de Greenwich (GMT) qui était utilisé quand le jour
+solaire moyen fournissait l'unité de temps.
+<BR>Il
+a été adoptée depuis 1972, comme base du temps civil
+international par la majorité des pays du globe. Ainsi l’heure
+UTC permet de dater les événements scientifiques et en particulier
+les observations astronomiques.
+<BR>L’UTC
+est aussi la seule échelle de temps mondiale directement accessible
+aux observateurs. L’heure diffusée par les stations de radio
+nationales et les horloges parlantes est donc l’heure UTC à
+laquelle on ajoute ou retranche un nombre entier d’heures tenant
+compte du fuseau horaire du lieu.
+<BR>Dans
+un pays qui respecte son fuseau horaire, l’UTC donne donc l’heure
+légale ou civile, c’est-à-dire l’heure de nos montres&nbsp;;
+quand celle-ci n’est pas modifiée d’une à deux heures pour
+tenir compte de l’heure d’hiver et d’été (les Américains
+parlent de &quot;<I>Daylight
+Saving(s) Time</I>&quot; 
+qui peut se traduire par &quot;temps pour profiter de la lumière du
+jour&quot;, qu’ils ont instauré comme les Canadiens, dès 1966,
+bien avant le premier choc pétrolier). 
+
+<BR>Dans
+le cas de l’Europe, on devrait donc théoriquement obtenir la
+répartition suivante&nbsp;:
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_21.jpg" NAME="Image 350" ALIGN=BOTTOM WIDTH=619 HEIGHT=478 BORDER=0>
+<BR>Mais
+chacun sait qu’il n’en est rien&nbsp;!
+<BR>
+<BR><B>En
+guise de conclusion.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c1//c1_src_0.jpg" NAME="Image 316" ALIGN=BOTTOM WIDTH=622 HEIGHT=354 BORDER=0>
+<BR>L’astronome
+amateur n’a guère besoin de tenir compte de toutes les subtilités
+qui différencient  ces échelles de temps. Pour son usage
+personnel, il s’en tiendra&nbsp;aux dispositions suivantes :
+<BR><I><B>a)
+Dispositions générales. </B></I>
+
+<BR>Pour
+ses besoins quotidiens, il peut confondre sans inconvénients
+majeurs&nbsp;l’heure UT (<I>a
+fortiori</I>&nbsp;: UT0,
+UT1, UT1R, UT2), et l’heure UTC, et même GMT.
+<BR>En
+revanche, il devra garder à l’esprit la différence entre l’heure
+du Soleil vrai et l’heure du Soleil moyen (l’Équation du
+temps).
+<BR>L’heure
+légale de sa montre sera généralement l’heure UTC 
+n, en fonction de son fuseau horaire, à laquelle il devra ajouter
+une ou deux heures selon la réglementation de l’heure avancée de
+son pays (improprement dites heures d’été ou d’hiver).
+<BR><I><B>b)
+dispositions pratiques. </B></I>
+
+<BR>Pour
+les besoins d’une observation astronomique, l’astronome amateur
+retiendra que le Soleil franchit le méridien de Greenwich à 12h
+UTC.
+<BR>Réciproquement,
+il devra convertir l’heure officielle de sa montre en heure UTC
+pour savoir à quel moment le Soleil franchira le méridien de
+Greenwich.
+<BR>Loin
+du méridien d’origine, il corrigera son heure UTC en appliquant
+la règle simple suivante&nbsp;:
+<BR>1-
+Ajoutez quatre minutes à l'heure UTC pour chaque degré à l'Est du
+méridien de Greenwich.
+<BR>2-
+Retirez quatre minutes à l'heure UTC pour chaque degré à l'Ouest
+du méridien de Greenwich.
+<BR>Pour
+tous les aspects pratiques de conversion&nbsp;: l'heure officielle
+en heure solaire, heure d’été, correction en longitude,
+relations entre les différents temps, etc., nous renvoyons le
+lecteur au Chapitre 7&nbsp;: Usage du Cherche-étoiles, Question 5d
+et Question 1c.
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+
+<A CLASS="sdfootnotesym" NAME="sdfootnote1sym" HREF="#sdfootnote1anc">1</A><SUP></SUP>
+Naturellement,
+le mot «&nbsp;jour&nbsp;» est ici considéré dans le sens de&nbsp;:
+durée de présence du Soleil en un lieu.
+
+<A CLASS="sdfootnotesym" NAME="sdfootnote2sym" HREF="#sdfootnote2anc">2</A><SUP></SUP>
+En 1960, on décida
+que la
+seconde devait être désormais définie par la fraction
+1/31556925.9747 de l'année tropique pour le 0 janvier 1900 à 12
+heures du temps des éphémérides (Donc la période utilisée n’est
+plus celle de la Rotation mais celle de la Révolution de la Terre).
+En effet, depuis 1952, l'Union Astronomique Internationale avait
+adopté l'équation polynomiale du second degré de Newcomb qui
+donnait numériquement la longitude du Soleil. Cette formule
+permettait d’obtenir une nouvelle échelle de temps appelée
+«&nbsp;temps des éphémérides&nbsp;». Cette nouvelle définition
+de la seconde perdura jusqu’en 1967 avant l’arrivée des
+horloges atomiques.
+
+ </div> 
+</div>

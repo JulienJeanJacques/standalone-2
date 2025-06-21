@@ -1,0 +1,53 @@
+.button-container {
+  display: flex;
+  justify-content: center; 
+}
+ion-toolbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/* Container pour centrer le texte */
+.title-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Style pour le texte */
+.title-text {
+  font-size: 1.2em; /* Ajustez si besoin */
+}
+
+.count-in-use {
+  --background: #f8f8f8;
+  height: 50px; /* ou la hauteur préférée */
+  display: flex; 
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  position: relative; /* pour positionner si besoin */
+  text-align: center; /* pour le texte en bloc si nécessaire */
+}
+
+/* cette div prend toute la place pour garantir le centrage */
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centrer le contenu texte */
+  align-items: center;
+}
+.account {
+  .account.light-theme {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  }
+  .account.dark-theme {
+  --ion-background-color: black;
+  --ion-text-color:white;
+  // Ajoute d'autres variables si besoin
+}
+  }

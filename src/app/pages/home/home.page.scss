@@ -1,0 +1,76 @@
+.ion-toolbar {
+  display: flex; // Utilisation de flexbox pour le toolbar
+  align-items: center; // Aligner verticalement les éléments
+  justify-content: space-between; // Espace entre les éléments
+}
+
+.account-level-container {
+  display: flex; // Afficher les variables et l'image en ligne
+  align-items: center; // Aligner verticalement au centre
+  flex: 1; // Prendre tout l'espace restant
+  margin-left: 80px; // Écarter du bouton de menu
+}
+
+.accountAndLevel {
+  display: flex; // Alignement horizontal
+  flex-direction: column; // Afficher les deux variables l'une sous l'autre
+  color: goldenrod;
+  margin-right: 80px; // Espacement à droite avant l'image
+}
+
+.image-container {
+  display: flex; // Pour centrer l'image verticalement
+  align-items: center; // Aligner l'image au centre verticalement
+}
+
+.chapter-title {
+  flex: 0; // Ne pas occuper d'espace supplémentaire
+  margin-left: 10px; // Ajustez cette marge si besoin
+  color: darkseagreen; 
+  font-weight: bold; 
+}
+
+.red {
+  color: red;
+  font-weight: bold; /* Texte en gras */
+}
+
+.green {
+  color: green;
+  font-weight: bold; /* Texte en gras */
+}
+
+.blue {
+  color: blue;
+  font-weight: bold; /* Texte en gras */
+}
+
+
+.page-container {
+  flex: 1; /* prend tout l'espace disponible */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* autorise le scroll sur cette zone */
+}
+
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;   /* occupe toute la hauteur de l'écran */
+}
+
+ion-content {
+  flex: 1;            /* prend tout l'espace disponible, sauf ce qui est occupé par le footer */
+  display: flex;      
+  flex-direction: column;
+  overflow: hidden;    /* éviter le débordement */
+}
+
+
+/* La zone défilante 'scroll-container' doit permettre le scroll */
+.scroll-container {
+  flex: 1;
+  overflow-y: auto;      
+  -webkit-overflow-scrolling: touch;  /* pour une expérience fluide sur iOS */
+}

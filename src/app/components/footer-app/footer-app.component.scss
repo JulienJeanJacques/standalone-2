@@ -1,0 +1,14 @@
+ion-tabs.light-tabs {
+  /* Thème clair */
+  --ion-tab-bar-background: #ffffff;
+  --ion-tab-bar-color: #666666;
+  --ion-tab-bar-color-selected: #3880ff;
+}
+
+ion-tabs.dark-tabs {
+  /* Thème sombre */
+  --ion-tab-bar-background: #111111;
+  --ion-tab-bar-color: #888888;
+  --ion-tab-bar-color-selected: #0fbcf9;
+}
+

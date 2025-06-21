@@ -1,0 +1,53 @@
+.button-container {
+  display: flex;
+  justify-content: center; 
+}
+
+.custom-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espace entre tous les éléments */
+  padding: 8px; /* ajustez si besoin */
+}
+
+.label {
+  margin-right: 8px; /* espace entre label et select */
+}
+
+.custom-select {
+  flex: 1; /* occupe tout l'espace restant */
+  margin: 0 8px; /* espace autour du select */
+}
+
+.custom-button {
+  margin-left: 8px; /* espace entre le select et le bouton */
+}
+.my-select-narrow {
+  max-width: 80px !important;
+  width: 80px !important;
+
+  &::part(container) {
+    width: 80px !important;
+    max-width: 80px !important;
+  }
+}
+
+
+:host {
+  /* Styles uniquement pour TON popover */
+  ::ng-deep ion-popover.my-select-popover {
+    --offset-x: 0px;
+    --offset-y: 0px;
+    --width: auto;
+  }
+}
+
+.alert-dark {
+  --background: #000000; /* fond noir */
+  --color: #ffffff;      /* texte blanc */
+}
+
+.alert-light {
+  --background: #ffffff; /* fond blanc */
+  --color: #000000;      /* texte noir */
+}

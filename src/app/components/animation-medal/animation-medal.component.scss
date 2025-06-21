@@ -1,0 +1,101 @@
+.podium-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 50px;
+  height: 200px;
+  position: relative;
+}
+
+/* Podiums */
+.podium {
+  width: 60px;
+  height: 80px;
+  margin: 0 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Couleurs pour les 1er, 2e, 3e */
+#gold { background-color: gold; height: 100px; }
+#silver { background-color: silver; height: 80px; }
+#bronze { background-color: #cd7f32; height: 60px; }
+
+/* Personnage qui monte sur le podium */
+.winner {
+  position: absolute;
+  bottom: 15px; /* adapter selon la hauteur du podium */
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: climb;
+  animation-duration: 3s; /* ou plus long si besoin */
+  animation-fill-mode: forwards; /* Rester à la fin de l’animation */
+  animation-iteration-count: 1; /* Ne pas boucler */
+}
+
+
+/* Figure stylisée */
+.figure {
+  width: 20px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* La tête */
+.head {
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Le corps */
+.body {
+  width: 4px;
+  height: 20px;
+  background: #555;
+  margin: 2px auto;
+}
+
+/* Bras levés */
+.arms {
+  position: absolute;
+  top: 8px;
+  left: -10px;
+  width: 40px;
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transform: rotate(20deg); /* bras levés */
+}
+
+.arm {
+  width: 4px;
+  height: 15px;
+  background-color: #555;
+}
+
+.legs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4px;
+}
+
+.leg {
+  width: 4px;
+  height: 15px;
+  background-color: #555;
+}
+
+/* Animation de montée */
+@keyframes climb {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}

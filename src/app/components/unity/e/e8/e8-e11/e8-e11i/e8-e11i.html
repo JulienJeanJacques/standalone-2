@@ -1,0 +1,563 @@
+
+
+
+<BR><B>Rappel&nbsp;:
+période synodique.</B>
+<BR>Pour
+mémoire, rappelons que la période synodique d’une planète est
+l’intervalle de temps (moyen) qui sépare successivement deux
+configurations identiques&nbsp;: Terre-planète-Soleil, observées
+depuis la Terre.
+<BR>Autre
+définition possible&nbsp;: la période synodique d’une planète
+est l’intervalle de temps moyen qui s’écoule entre deux
+passages d'une planète en un même point du ciel, point localisé
+depuis le même lieu sur Terre. 
+
+<BR>En
+d’autres termes, la période synodique d’une planète est sa
+période de révolution apparente.
+<BR>De
+manière pratique, on mesure la durée entre deux apparitions
+consécutives dans la même région du ciel, par exemple son passage
+dans la même constellation.
+<BR>(<I>Cf.</I>
+Chapitre 4&nbsp;: Les mouvement de la voute céleste, Question 1c et
+Question 9c, et dans ce Chapitre 8&nbsp;: Observation des planètes,
+Question 5e).
+<BR>
+<BR><B>Mise
+en équation du problème.</B>
+<BR>Notons
+J<SUB>0</SUB>
+le jour de l’apparition de Mars dans la constellation du Poisson
+et J<SUB>1</SUB>
+le jour de l’apparition simultanée des deux astres dans la
+constellation du Poisson.
+<BR>Nous
+cherchons à déterminer combien de jours séparent ces deux dates.
+Soit <I>x</I>
+ce nombre de jours.
+<BR>Soit
+<I>k</I>
+le nombre de périodes synodiques que Mars a accompli entre le jour
+J<SUB>0</SUB>
+et le jour J<SUB>1</SUB>.
+<BR>Nous
+avons donc&nbsp;: <I>x</I>
+= 780<I>k</I>.
+<BR>De
+même, soit <I>k’</I>
+le nombre de périodes synodiques que Jupiter a accompli entre le
+jour J<SUB>0</SUB>
++ 60 jours et le jour J<SUB>1</SUB>.
+<BR>Nous
+avons donc&nbsp;: <I>x</I>
+- 60 = 400<I>k’</I>,
+c’est-à-dire&nbsp;: <I>x</I>
+= 400<I>k’</I>
++ 60.
+<BR>Ce
+qui revient à résoudre un système de congruence à deux équations
+que l’on peut résoudre à l’aide du théorème dit des «&nbsp;restes
+chinois&nbsp;» dans sa version à deux équations.
+<BR>&lt;$$1&gt;
+<BR><I><B>Remarque</B></I>&nbsp;:
+Nous pourrions très bien résoudre ce problème autrement, par
+exemple en résolvant l’équation diophantienne&nbsp;: 780<I>k</I>
+- 400<I>k’</I>
+= 60&nbsp;(comme dans la Question&nbsp;7e de ce chapitre) ; mais
+d’une part, nous préférons varier les plaisirs et d’autre
+part, le théorème des restes chinois possède de très nombreuses
+applications en astronomie (et dans bien d’autres domaines) qu’il
+serait dommage de ne pas mentionner ici, même dans sa version
+simplifiée à deux équations.
+<BR>
+<BR><B>Théorème
+des restes chinois.</B>
+<BR><I><B>a)
+Origine du théorème.</B></I>
+<BR>De
+nombreux problèmes de congruences sont traités depuis la plus
+haute antiquité, en Europe comme en Orient, en particulier en Inde
+et en Chine.
+<BR>Certains
+de ces problèmes ont directement trait à l’astronomie.
+<BR>On
+ne saurait dire à quelle époque exactement est apparu pour la
+première fois le théorème dit aujourd’hui «&nbsp;des restes
+chinois&nbsp;» ni même s’il est vraiment d’origine chinoise.
+<BR>Cependant,
+il est avéré que l’astronome bouddhiste chinois Yi
+Xing a résolu le problème en l’an 717 dans certains cas
+particuliers (un astéroïde porte son nom, en hommage). 
+
+<BR>Toujours
+est-il que ce théorème d’arithmétique possède de très
+nombreuses applications notamment dans le domaine de l’astronomie
+(Calendriers, par exemple).
+<BR>Comme
+son emploi est assez fréquent pour les calculs de périodes
+astronomiques (mais aussi pour les engrenages des roues dentées des
+appareils optiques et de l’horlogerie&nbsp;; sans compter les
+millions de personnes qui l’utilisent tous les jours sans le
+savoir lorsqu’ils effectuent un paiement sécurisé par le système
+de cryptage RSA), nous proposons une démonstration que nous
+espérons la plus simple possible (un minimum de bagage en
+arithmétique est cependant nécessaire).
+<BR><I><B>b)
+Enoncé dans le cas d’un système à deux équations.</B></I>
+<BR>Considérons
+le système d’équations suivant (Tous les nombres sont des
+entiers)&nbsp;: 
+
+<BR>
+&lt;$$2&gt;
+<BR>
+On suppose 
+<I>n</I>
+et 
+<I>m</I>
+non nuls et on note 
+
+= pgcd(<I>n,m</I>
+)et 
+M= ppcm(
+<I>n,m</I>
+).
+<BR>Le
+théorème annonce qu’il existe une solution si et seulement si 
+
+
+divise <I>b</I>
+– 
+<I>a</I>
+. 
+
+<BR>En
+outre, le système des deux équations peut se réduire à une seule
+équation modulo le plus petit commun multiple 
+<I>M</I>
+de 
+<I>n</I>
+et 
+<I>m</I>
+
+, c’est-à-dire, une équation du type&nbsp;: &lt;$3&gt;.
+<BR>
+Prouvons la condition nécessaire et suffisante.
+
+<BR>Condition
+nécessaire&nbsp;: Supposons l’existence d’une solution <I>x</I>.
+
+<BR>Par
+définition, on a&nbsp;: &lt;$4&gt;
+<BR>D’où&nbsp;:
+&lt;$5&gt; 
+
+<BR>Or
+
+divise <I>n</I>
+et <I>m</I>,
+donc aussi <I>kn</I>
+et <I>k’m</I>
+et par suite 
+divise <I>kn</I>
+- <I>k’m&nbsp;</I>;
+
+
+<BR>c’est-à-dire
+
+divise <I>b</I>
+– <I>a</I>
+(autrement dit&nbsp;: &lt;$6&gt;).
+
+<BR>Condition
+suffisante&nbsp;: Supposons que 
+divise <I>b</I>
+– <I>a</I>.
+
+<BR>Puisque
+
+est le pgcd de <I>n</I>
+et <I>m</I>,
+d’après le lemme de Bézout, 
+
+<BR>il
+existe deux entiers <I>u</I>
+et <I>v</I>
+tel que&nbsp;: <I>u n</I>
++ <I>v m</I>
+= .
+<BR>Faisons
+apparaître les nombre <I>a</I>
+et <I>b</I>
+en utilisant .
+<BR>Par
+hypothèse 
+divise <I>b</I>
+– <I>a</I>.
+Autrement dit &lt;$7&gt; est un entier.
+<BR>Ainsi,&nbsp;par
+division on obtient : &lt;$8&gt; 
+
+<BR>Par
+suite&nbsp;: &lt;$9&gt;. 
+
+<BR>Nous
+avons là deux nombres entiers égaux, notons le &lt;$10&gt; et
+vérifions qu’il est solution du système (S). En effet, on a
+bien&nbsp;: 
+
+<BR>&lt;$11&gt;
+
+<BR>Réduction
+du système&nbsp;: montrons qu’il existe un entier <I>c</I>
+tel que&nbsp;: &lt;$12&gt;.
+
+<BR>Soit
+<I>c</I>
+une solution du système de congruence (S). Elle existe car nous
+supposons que 
+divise <I>b</I>
+– <I>a</I>.
+Nous avons :
+<BR>&lt;$13&gt;
+<BR>Par
+conséquent, <I>x - c</I>
+est un multiple commun à <I>n</I>
+et <I>m</I>.
+Il est donc aussi multiple du plus petit multiple commun de <I>n</I>
+et <I>m</I>,
+d’où il existe un entier <I>q</I>
+tel que&nbsp;: <I>x - c</I>
+= <I>q</I><I></I>.
+<BR>Ainsi,
+&lt;$14&gt; et par suite&nbsp;: &lt;$15&gt;.
+<BR>Nous
+venons de prouver l’existence d’une solution et d’établir
+sous quelles conditions&nbsp;; mais nous n’avons pas montré
+comment on la trouve. Ceci fait l’objet des deux paragraphes
+suivants.
+<BR>On
+procède par étapes, la première consiste à rajouter une
+hypothèse supplémentaire, la seconde montre comment le résultat
+précédent permet de résoudre quand même le problème sans cette
+hypothèse supplémentaire, moyennant quelques transformations
+judicieuses.
+<BR><I><B>c)
+Solution lorsque n et m sont premiers entre eux.</B></I>
+<BR>Dans
+ce paragraphe, on suppose <I>n</I>
+et <I>m</I>
+premiers entre eux, autrement dit&nbsp;: 
+=1.
+<BR>Nous
+avons&nbsp;: &lt;$16&gt;
+<BR>D’après
+le lemme de Bézout, il existe deux entiers <I>u</I>
+et <I>v</I>
+tel que&nbsp;: <I>u n</I>
++ <I>v m</I>
+= 1.
+<BR>(On
+peut remarquer que <I>u</I>
+est l’inverse de <I>n</I>
+modulo <I>m</I>
+et que <I>v</I>
+est l’inverse de <I>m</I>
+modulo <I>n</I>).
+<BR>Il
+faut donc trouver les coefficients <I>u</I>
+et <I>v</I>
+de Bézout&nbsp;: <I>u n</I>
++ <I>v m</I>
+= .
+<BR>Cela
+se fait par l'algorithme d'Euclide étendu qui permet de calculer le
+pgcd&nbsp;: ,
+par une succession de divisions euclidiennes (voir exemple,<I>
+infra</I>).
+<BR>L’astuce
+consiste à multiplier la ligne L<SUB>1</SUB>
+par (<I>v m</I>)
+et la ligne L<SUB>2</SUB>
+par (<I>u n</I>).
+<BR>&lt;$17&gt;
+<BR>Ensuite
+on ajoute les deux lignes.
+<BR>&lt;$18&gt;
+<BR>or,
+<I>u n</I>
++ <I>v m</I>
+= 1, d’où&nbsp;: &lt;$19&gt;
+<BR>Ainsi,
+si x est solution du système de congruences (S), alors&nbsp;: &lt;$20&gt;
+
+
+<BR>La
+réciproque est immédiate, en effet si &lt;$21&gt; alors,
+<BR>D’une
+part&nbsp;: &lt;$22&gt;
+<BR>D’autre
+part&nbsp;: &lt;$23&gt;
+<BR><I><B>d)
+Solution lorsque n et m ne sont pas premiers entre eux.</B></I>
+<BR>On
+a vu, au début, que le système (S) ne possède de solutions que si
+le pgcd de <I>n</I>
+et <I>m</I>
+divise <I>b-a</I>.
+Ce que nous supposerons donc par la suite.
+<BR>Il
+existe plusieurs méthodes, dont celle dite «&nbsp;méthode des
+substitutions successives&nbsp;», ou encore celle dite «&nbsp;méthode
+chinoise&nbsp;» exposée en 1247 par le mathématicien chinois Qin
+Jiushao.
+<BR>Dans
+le cas d’un système à seulement deux équations (c’est notre
+cas), nous pouvons simplifier ces méthodes de la façon suivante&nbsp;:
+<BR>On
+a&nbsp;: &lt;$24&gt; 
+
+<BR>Valeur
+de x que l’on reporte dans &lt;$25&gt;<SUB>
+</SUB>pour obtenir&nbsp;:
+<BR>&lt;$26&gt;
+<BR>Autrement
+dit&nbsp;: &lt;$27&gt;
+<BR>Or,
+par définition 
+divise à la fois <I>n</I>
+et <I>m</I>,
+et par hypothèse 
+divise <I>b-a</I>.
+<BR>D’où&nbsp;:
+&lt;$28&gt;
+<BR>Pour
+alléger l’écriture, notons&nbsp;: &lt;$29&gt;.
+<BR>Remarquons
+que <I>n’</I>
+et <I>m’</I>
+sont nécessairement premier entre eux puisque&nbsp;: 
+
+<BR>&lt;$30&gt;.
+<BR>Montrons
+que <I>n’</I>
+est inversible modulo <I>m’</I>.
+D’après le lemme de Bézout, il existe deux entiers <I>u</I>
+et <I>v</I>
+tel que&nbsp;: &lt;$31&gt;. Il est aisé de trouver <I>u</I>
+et <I>v</I>
+par l'algorithme d'Euclide étendu (Voir exemple, <I>infra</I>).
+<BR>On
+a alors&nbsp;: &lt;$32&gt;.
+<BR>L’inverse
+modulo <I>m’</I>
+de &lt;$33&gt; est donc <I>u</I>.
+<BR>Multiplions
+par <I>u</I>
+la dernière écriture de (L<SUB>2</SUB>),
+il vient&nbsp;:
+<BR>&lt;$34&gt;.
+<BR>Autrement
+dit&nbsp;: &lt;$35&gt;
+<BR>Reportons
+cette valeur de <I>k</I>
+dans la ligne (L<SUB>1</SUB>),
+il vient&nbsp;: 
+
+<BR>&lt;$36&gt;
+<BR>C’est-à-dire&nbsp;:
+&lt;$37&gt;
+<BR>Or
+nous savons que&nbsp;: &lt;$38&gt;
+<BR>D’où
+en simplifiant&nbsp;: &lt;$39&gt;
+<BR>En
+d’autres termes&nbsp;: <SPAN STYLE="background: #00ff00">&lt;$40&gt;</SPAN>.
+<BR>Mais
+nous savons alors (<I>cf</I>
+<I>supra</I>)
+que x est l’unique solution modulo le ppcm de <I>n</I>
+et <I>m</I>&nbsp;;
+avec u l’inverse de &lt;$41&gt;.
+<BR>
+<BR><B>Solution
+détaillée du problème.</B>
+<BR>Compte
+tenu de tout ce qui vient d’être dit, nous allons appliquer le
+résultat au problème concerné par Mars et Jupiter. Dans ce cas
+particulier, la méthode exposée ci-dessus est simple et efficace.
+<BR>Les
+données du problème sont&nbsp;:
+<BR>&lt;$42&gt;
+<BR><I><B>a)
+Pgcd.</B></I>
+<BR>Commençons
+par calculer le pgcd de 780 et de 400 par l'algorithme d'Euclide.
+<BR>780
+= <B>1</B>×400&nbsp;+<B>380</B>
+<BR>400
+= <B>1</B>×380
++ <B>20</B>
+<BR>380
+= <B>19</B>×20
++ <B>0</B>
+<BR>d’où
+le dernier reste non nul est le pgcd de 780 et 400, c’est-à-dire&nbsp;:
+<SPAN STYLE="background: #ffff00"></SPAN><SPAN STYLE="background: #ffff00">
+= 20</SPAN> .
+<BR><I><B>b)
+Coefficient de Bézout.</B></I>
+<BR>Ensuite
+à partir du pgcd on «&nbsp;remonte&nbsp;» en substituant les
+restes de «&nbsp;bas&nbsp;» vers le «&nbsp;haut».
+<BR>20
+= 400 - 1×<B>380</B>
+<BR>20
+= 400 - 1×(<B>780 -
+1×400&nbsp;</B>) = -780
++ 2×400.
+<BR>d'où
+le résultat de l’égalité de Bézout&nbsp;avec <SPAN STYLE="background: #ffff00">u&nbsp;=&nbsp;-1
+et v&nbsp;=&nbsp;2.</SPAN>
+<BR><I><B>c)
+Existence.</B></I>
+<BR>Vérifions
+l’existence d’une solution, c’est-à-dire vérifions que&nbsp;:
+
+divise <I>b</I>
+– <I>a</I>.
+<BR>Or,
+a = 0, b = 60 et 
+= 20. On a bien&nbsp;: 
+= 20 divise 60 – 0.
+<BR><I><B>d)
+Ppcm.</B></I>
+<BR>Pour
+le calcul du ppcm(<I>n</I>,<I>m</I>)
+= ppcm(780,400) nous avons deux méthodes.
+<BR>Soit
+par décomposition en produit de facteurs premiers&nbsp;:
+<BR>780
+= 39×2<SUP>2</SUP>×5
+et 400 = 2<SUP>4</SUP>×5<SUP>2</SUP>
+d’où ppcm(780,400) = 39×2<SUP>4</SUP>×5<SUP>2</SUP>
+= 15 600.
+<BR>Soit
+en utilisant la propriété&nbsp;: &lt;$43&gt;&nbsp;:
+<BR>C’est-à-dire&nbsp;:
+
+= (780×400)/20 = 15 600.
+<BR><I><B>e)
+Solution.</B></I>
+<BR>&lt;$44&gt;
+c’est-à-dire&nbsp;: &lt;$45&gt;
+<BR>&lt;$46&gt;
+d’où <SPAN STYLE="background: #ffff00">&lt;$47&gt;</SPAN>
+
+
+<BR><I><B>f)
+Interprétation astronomique.</B></I>
+<BR>Après
+l’apparition de Mars dans la constellation du Poisson un certain
+jour J<SUB>0</SUB>,
+il faudra attendre environ 13 260 jours plus tard pour apercevoir
+simultanément Mars et Jupiter dans la même constellation du
+Poisson.
+<BR>Convertissons
+13 260 jours en année de 365 jours, soit 36,32 années. Autrement
+dit, l’événement aura lieu dans 36 années et 120 jours environ
+après la date J<SUB>0</SUB>.
+<BR>
+<BR><B>Autre
+solution détaillée du problème.</B>
+<BR>Pour
+ceux qui sont fâchés avec les congruences, ils peuvent (dans ce
+cas particulier) résoudre ce problème en ne faisant appel qu’à
+Bézout et à Gauss (Incontournables en arithmétique, donc en
+astronomie&nbsp;!).
+<BR>Le
+problème s’écrit&nbsp;:
+<BR>&lt;$48&gt;
+<BR>donc&nbsp;si
+<I>x</I>
+est solution du système alors : &lt;$49&gt;
+<BR>ou
+encore&nbsp;: &lt;$50&gt;
+<BR>Nous
+cherchons les inconnues <I>k</I>
+et <I>k’</I>.
+<BR>Or,
+39 et 20 sont premiers entre eux.
+<BR>D’après
+Bézout, il existe <I>u</I>
+et <I>v</I>
+tel que&nbsp;: 39<I>u</I>
++ 20<I>v</I>
+= 1
+<BR>Déterminons
+les par l'algorithme d'Euclide étendu.
+<BR>On
+trouve immédiatement&nbsp;: 39×(−1) + 20×2 = 1.
+<BR>D’où
+le système&nbsp;:
+<BR>&lt;$51&gt;
+<BR>Ou
+encore&nbsp;: &lt;$52&gt;
+<BR>Par
+soustraction, cela implique que : &lt;$53&gt;
+<BR>C’est-à-dire&nbsp;:
+&lt;$54&gt; 
+
+<BR>On
+a donc, 39 divise 20(k’ + 6).
+<BR>Puisque
+39 et 20 sont premiers entre eux, d’après le lemme de Gauss, 39
+divise (k’ + 6).
+<BR>Par
+conséquent, il existe <I>q</I>
+tel que (k’ + 6) = 39<I>q</I>.
+<BR>D’où
+&lt;$55&gt;
+<BR>C’est-à-dire&nbsp;:
+&lt;$56&gt;
+<BR>Donc
+si <I>k </I>et<I>
+k’ </I>sont<I>
+</I>solutions de
+l’équation diophantienne (E) alors nécessairement : 
+
+<BR>&lt;$57&gt;
+<BR>Réciproquement&nbsp;:
+<BR>Soient
+<I>k</I>
+= -3 + 20<I>q</I>
+et <I>k’</I>
+= -6+39<I>q</I>.
+On vérifie bien que :
+<BR>&lt;$58&gt;
+<BR>Le
+couple de solutions est donc (-3 + 20<I>q</I>,
+-6 + 39<I>q</I>).
+
+
+<BR>Finalement.
+
+
+<BR>x
+= 780(-3 + 20<I>q</I>)
+= - 2340 + 15600<I>q</I>
+= 13 260+ 15600 (<I>q</I>-1).
+<BR>Donc&nbsp;:
+<SPAN STYLE="background: #ffff00">&lt;$59&gt;</SPAN>
+
+
+<BR>
+
+
+<BR><BR>
+
+
+

@@ -1,0 +1,562 @@
+
+
+
+<BR><B>Méthode</B>
+<BR>On
+aligne l’heure 00h (24h) de l’ascension droite de l’étoile,
+que l’on repère sur le cercle des ascensions droites, avec les
+24h (minuit) du cercle horaire.
+<BR>Comme
+l’étoile cumule au méridien supérieur, on lit à l’opposé
+dans le prolongement de cette ligne, c’est-à-dire sur la ligne du
+méridien Sud, la date 22 septembre sur le cercle fixe du
+calendrier.
+<BR>Cet
+exercice est similaire au précédent, mais l’hypothèse et la
+conclusion ont été permutées. Il permet de montrer que les
+lectures inverses sont possibles sur un Cherche-étoiles.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c7//7c10//c10_src_0.jpg" NAME="Image 16" ALIGN=BOTTOM WIDTH=623 HEIGHT=808 BORDER=0>
+<BR>
+<BR><B>Vérification
+par le calcul théorique.</B>
+<BR>Lorsque
+l’étoile franchit le méridien, son angle horaire H est nul par
+définition et à ce moment là le Temps Sidéral local TSL vaut
+l’ascension droite 
+de l’étoile (car TSL = 
++ H).
+<BR>Par
+conséquent, la question posée se reformule de la façon suivante&nbsp;:
+à quelle date le Temps Sidéral Local TSL sera égal à 0h00 à
+minuit UTC&nbsp;?
+<BR>Le
+ciel avance à la vitesse sidérale de 23h56min4sec par jour
+solaire, c’est-à-dire par angle horaire de 24h. Donc, en une
+heure solaire, le ciel avance de (24 / 23h56min4sec) = (24 / (23 +
+56/60 + 4/3600) = (24&nbsp;/ 23,93444) = 1,002739 h. (Le temps
+sidéral s'écoule plus vite que le temps universel).
+<BR>En
+une journée solaire (24h), le ciel a parcouru&nbsp;: 24×1,002739
+= 24,065736 h c’est-à-dire 24h + 0,065736 h  = 24h + 3,944
+minutes. Après chaque tour de 24h solaire, le ciel avance de 3,944
+minutes.
+<BR>Par
+conséquent, <B>le Temps
+Sidéral Local avance de 3,944 minutes par jour</B>.
+<BR>Or,
+le jour de l’équinoxe de printemps (Hémisphère Nord), le TSL
+est nul à 12h car le Soleil franchit le méridien local exactement
+au point Vernal.
+<BR>A
+minuit, c’est-à-dire 12h plus tard, le TSL vaut&nbsp;:
+12×1,002739
+= 12,032868 h
+<BR>Le
+lendemain à minuit, après un tour complet, le ciel plus rapide a
+avancé encore de 3,944 minutes (0,065736 h) , donc le TSL vaut&nbsp;:
+0,065736 + 12,032868 h
+<BR>Les
+n jours suivants toujours à minuit, le TSL vaut&nbsp;: 0,065736 n +
+12,032868.
+<BR>On
+cherche en combien de jours n, le TSL vaudra 0h (ascension droite de
+l’étoile qui passe au méridien à minuit). C’est-à-dire&nbsp;:
+0,065736 n + 12,032868 = 0.
+<BR>On
+trouve&nbsp;: n = 183,04 jours. Autrement dit, dans 183 jours après
+l'équinoxe de mars, donc aux environ de 23 mars + 183j = 23 mars +
+6 mois = 23 septembre.
+<BR>Conclusion&nbsp;:
+l’imprécision du Cherche-étoiles s’accorde assez bien avec la
+théorie.
+<BR>
+<BR><B>Choisir
+sa mesure du temps selon le besoin. Heure Solaire, Heure Sidérale.</B>
+<BR>Le
+Soleil rythme l’activité des humains le jour, les étoiles celle
+des astronomes la nuit. A chacun de concevoir une horloge qui lui
+convient.
+<BR>Dans
+de nombreux observatoire astronomiques, même amateurs, deux
+horloges cohabitent, l’une à la cadence du Soleil, la seconde à
+la cadence des étoiles lointaines.
+<BR>Au
+chapitre 6&nbsp;: Astrométrie, Question 9c, nous avons déjà
+introduit les notions de Temps Solaire et de Temps Sidéral, et nous
+avons montré comment l’on peut synchroniser ces deux temps.
+Quitte à nous répéter, nous reprenons en partie ces deux notions,
+mais en insistant sur l’aspect pratique, notamment concernant
+l’usage de l’heure solaire et de l’heure sidérale. 
+
+<BR><I><B>a)
+L’horloge solaire.</B></I>
+<BR>L’horloge
+solaire, comme son nom l’indique, se réfère au Soleil. Elle
+délivre un temps, en heure solaire, dont la précision est, dans
+une grande majorité de cas, parfaitement bien adaptée à
+l’activité humaine.
+<BR>La
+cadence d’une horloge solaire est réglée sur la durée d’une
+journée solaire moyenne qui, par convention, dure exactement 24h.
+Durée qui nous fournit une échelle de temps, dite Temps Solaire
+Moyen.
+<BR>Cette
+journée solaire moyenne est, comme nous le savons, l’intervalle
+de temps entre deux passages consécutifs du Soleil au méridien
+local, corrigé par l’Équation du Temps. C’est aussi la durée
+théorique obtenue par la rotation apparente d’un Soleil
+fictif se déplaçant à vitesse constante sur une orbite circulaire
+dans le plan de l'équateur céleste.
+<BR>C’est
+cette horloge solaire qui permet de définir l’heure universelle
+UT et par conséquent l’heure légale civile d’un lieu,
+c’est-à-dire l’heure de la montre.
+<BR>Si
+la Terre ne tournait pas autour du Soleil et ne possédait que son
+seul mouvement de rotation sur elle-même, alors cette durée de 24h
+serait aussi le temps nécessaire
+pour que le Soleil fasse apparemment un tour complet de 360° autour
+de la Terre.
+<BR>Mais,
+comme on le sait, il n’en n’est rien ! Pendant que la Terre
+tourne sur elle-même, elle avance en même temps sur son orbite de
+révolution autour du Soleil à la vitesse moyenne de 365,25 jours
+par an. Si bien qu’en un jour de 24h, elle parcourt environ 1°
+sur son orbite (360°/365,25 jours = 1 degré par jour). Ceci a pour
+inconvénient fâcheux de provoquer un décalage horaire dans le
+ciel&nbsp;; l’heure des étoiles n’est donc pas celle du
+Soleil&nbsp;! 
+
+<BR>Pour
+tenir compte de ce phénomène, les astronomes ont défini une autre
+échelle de temps, mieux adaptée au mouvement du ciel et conçu une
+horloge spécifique.
+<BR><I><B>b)
+L’horloge sidérale.</B></I>
+<BR>L’horloge
+sidérale, comme son nom l’indique, se réfère aux étoiles. Elle
+délivre un temps, en heure sidérale, dont la précision est, dans
+la majorité des cas, parfaitement bien adaptée aux repérages des
+étoiles.
+<BR>La
+cadence d’une horloge sidérale est réglée sur la durée d’une
+journée sidérale, dont nous rappelons ici la définition et la
+finalité (Cf. Chapitre 4&nbsp;: Les mouvements de la voute céleste,
+Question 8c).
+<BR>Comme
+la vitesse de rotation de la Terre est suffisamment stable
+(contrairement à celle de sa révolution qui s’effectue sur une
+orbite elliptique) on peut de nouveau se servir de la rotation
+terrestre sur elle-même pour établir un
+intervalle de temps constant
+et périodique, mais en changeant de repère. Le Soleil est remplacé
+par l’arrière fond fixe de la voûte céleste, c’est-à-dire
+par le choix d’une étoile supposée fixe, car suffisamment
+lointaine.
+<BR>Ce
+changement de repère offre l’avantage à l’astronome de caler
+le mouvement diurne indépendamment de la révolution terrestre
+autour du Soleil. Cette synchronisation avec les étoiles permet
+alors, de créer une échelle de temps adaptée à la mesure, depuis
+la Terre, du déplacement de la voûte céleste.
+<BR>Ainsi,
+repéré par rapport à
+une quelconque étoile, l’intervalle de temps qu’il faut à la
+Terre pour accomplir un tour complet sur elle-même est appelé jour
+sidéral. Plus précisément, le jour sidéral est l’intervalle de
+temps entre deux passages consécutifs sur un méridien céleste,
+non pas celui d’une quelconque étoile, mais celui du point Vernal
+(l’un des deux points de la sphère céleste où l'équateur
+céleste et l'écliptique se croisent).
+<BR>Dans
+un repère géocentrique dont les axes sont fixes par rapport à la
+voûte céleste, une période de rotation de la Terre est plutôt
+appelée&nbsp;: «&nbsp;Jour Stellaire&nbsp;». Autrement dit, c’est
+aussi le temps qui s’écoule entre deux passages consécutifs
+d’une étoile donnée dans le plan d’un même méridien
+terrestre.
+<BR>Mais
+la différence entre ces deux jours, qui provient de la dérive du
+point Vernal à cause de la précession des équinoxes, n’est que
+de 0,08 seconde&nbsp;! Il est donc légitime de les confondre.
+<BR>A
+partir de cette échelle de temps sidéral, on peut donc créer une
+horloge céleste<B>,</B>
+que l’usage nomme&nbsp;: «&nbsp;Horloge Sidérale&nbsp;». Elle
+permet de savoir à quel moment précis une étoile est visible ou
+non et à quel moment elle franchit un méridien local.
+<BR>Bien
+entendu, il existe une relation simple entre l’heure sidérale et
+le l’heure solaire moyenne. Le calcul
+et des vérifications expérimentales, montrent que la durée d’une
+journée sidérale&nbsp;vaut 23h56min04sec mesurée en temps solaire
+moyen. Autrement dit, l’heure sidérale vaut donc 23h56min04sec /
+24 = 86164sec / 24 = 3590sec = 59,83min = 59min50sec (en temps
+solaire moyen). Ou, si l’on préfère&nbsp;: une seconde sidérale
+vaut 0,997268 seconde solaire et réciproquement, une seconde
+solaire vaut 1/0,997268 = 1,0027389 seconde sidérale.
+<BR>En
+résumé&nbsp;: <B>1h (de
+Temps Solaire) = 1,0027379 h (de Temps Sidéral) </B>
+
+<BR>Comme
+chaque jour sidéral est un peu plus court qu'un jour solaire de 4
+minutes environ (0,997268x24×60
+/&nbsp;360 = 3,989min),
+une horloge sidérale avance donc de quatre minutes par jour par
+rapport à une horloge solaire. Ainsi, le temps sidéral avance sur
+le temps solaire moyen, autrement dit, le temps sidéral s’écoule
+plus vite que le temps solaire moyen (Pour la comparaison et la
+synchronisation de ces deux horloges, on peut aussi consulter le
+Chapitre 6&nbsp;: Astrométrie, Question 9c). 
+
+<BR>On
+en tire une conséquence pratique&nbsp;: tout observateur doit
+anticiper de 4 minutes l’heure d’hier s’il désire voir
+aujourd’hui les étoiles exactement dans la même position que la
+veille.
+<BR>L’horloge
+sidérale possède donc un mouvement propre différent de celui de
+l’horloge solaire.
+<BR>Autrefois,
+chaque observatoire astronomique possédait son horloge sidérale
+qui lui servait de «&nbsp;garde du temps&nbsp;». On trouve encore
+aujourd’hui, dans le commerce, des montres qui affichent sur le
+même cadran, l’heure sidérale et l’heure solaire moyenne.
+<BR><I><B>c)
+Le choix d’une origine</B></I><I>.
+</I>
+
+<BR>Le
+choix d’une origine pour chaque horloge, s’impose. En effet, si
+les horloges permettent de conserver la mesure du temps, il faut
+décider d’une origine des temps pour qu’elles puissent afficher
+un horaire en un lieu donné.
+
+<BR>Pour
+l’horloge solaire, qui délivre finalement l’heure d’un point
+de la Terre, il suffit de choisir un repère terrestre comme
+origine des temps. 
+
+
+<BR>Or
+chaque point terrestre se repère par ses coordonnées en latitude
+et longitude. Comme l’horloge solaire est directement liée à la
+rotation terrestre, c’est-à-dire à la progression dans le temps
+d’un point de l’équateur terrestre, seule la longitude est
+affectée par la progression horaire.
+<BR>En
+choisissant le méridien de Greenwich comme origine des temps, il
+est 12h lorsque le Soleil Moyen le traverse (heure GMT). On en
+déduit l’heure, à un instant donné, en tout lieu terrestre de
+même longitude (Ainsi, l’angle d’une longitude est, à un
+instant donné, «&nbsp;bijectivement&nbsp;» associé à un
+horaire, d’où sa mesure éventuellement en heure).
+<BR>En
+un lieu donné, l’horloge solaire réglée sur le méridien de
+Greenwich, indiquera midi lorsque le Soleil (Moyen) franchira le
+méridien local (Sud). 
+
+
+<BR>Pour
+l’horloge sidérale, qui délivre finalement l’heure d’un
+point de la sphère céleste, il suffit de choisir un repère
+céleste comme origine des temps.
+
+<BR>Or
+chaque point du ciel se repère par ses coordonnées équatoriales,
+déclinaison et ascension droite qui sont des constantes dans ce
+repère indépendant de la rotation terrestre. Mais comme nous
+cherchons, depuis un lieu situé sur Terre, à déterminer un
+horaire local à partir du mouvement de la voûte céleste, il est
+plus judicieux d’utiliser les coordonnées horaires des étoiles
+qui font le lien entre positionnement spatial et mesure du temps
+appuyée sur la rotation terrestre. Autrement dit, d’utiliser le
+repère qui a également pour base, l’équateur céleste et pour
+coordonnées, l’angle horaire et la déclinaison (celle-ci,
+d’ailleurs, n’interviendra pas non plus). 
+
+<BR><I><B>d)
+L’angle horaire.</B></I>
+<BR>L’angle
+horaire d’une étoile est l’angle qui sépare le long de
+l’équateur, le plan méridien Sud local du lieu de l’observation
+et le plan méridien que traverse l’étoile à cet instant
+(c’est-à-dire, le plan contenant le cercle horaire de l’étoile).
+
+
+<BR>Cet
+angle local est dépendant du temps (l’angle horaire croît
+exactement avec la même vitesse et dans le même sens que la
+rotation de la Terre). L’angle horaire d’une étoile indique
+donc, à un instant <I>t</I>
+donné, le temps que mettra cette étoile pour franchir, à la
+vitesse du mouvement diurne, le méridien local, ou bien le temps
+qu’elle a mis depuis qu’elle l’a franchi. 
+
+<BR>Il
+est donc compté en heures sexagésimales de 0h à 24h et par
+convention, positivement d’Est en l’ouest à partir du méridien
+Sud du lieu. (On remarquera que le Temps Solaire vrai est aussi un
+angle horaire, c’est l’angle horaire du Soleil).
+<BR>Mais
+quelle étoile choisir pour marquer l’origine de ce temps&nbsp;?
+Ce ne sera pas une étoile, mais un point particulier de l’espace,
+le point Vernal. En effet, la durée d’un jour sidéral a été
+définie comme étant la période de retour du point vernal à un
+même méridien, il est donc naturel de choisir ce point comme
+origine de ce temps sidéral que nous cherchons à définir.
+<BR><I><B>e)
+Le point Vernal.</B></I>
+<BR>Le
+point Vernal est l’un des deux points d’intersection de
+l’écliptique avec l’équateur céleste. Ce point se repère sur
+la voûte céleste par la position du Soleil au moment de l'équinoxe
+de mars (printemps dans l'hémisphère nord). Le Soleil se lève
+alors exactement à l'Est pour se coucher exactement à l'Ouest, sa
+déclinaison et son ascension droite sont, à ce moment là, toutes
+les deux rigoureusement nulles (Origine du repère équatorial).
+<BR>De
+même que le méridien local est fixe par rapport à la Terre, le
+point Vernal est fixe par rapport aux étoiles. Toutefois, sur une
+plus longue échelle de temps, le point Vernal n’est pas tout à
+fait fixe dans l’espace, car il subit les lents mouvements de
+précession et de nutation de l'axe terrestre. Il remonte à
+reculons les treize constellations du zodiaque. Il est actuellement
+situé dans la constellation des Poissons ;&nbsp; il y est entré
+vers -60 av. J.C et en ressortira vers 2600 pour entrer dans la
+constellation du Verseau.
+<BR><I><B>f)
+Angle horaire du point Vernal.</B></I>
+<BR>Par
+définition, le Temps Sidéral est l’angle horaire du point
+Vernal. 
+
+<BR>La
+mesure de cet angle est locale puisque un angle horaire dépend d’un
+lieu géographique. En outre, le Temps Sidéral, comme tout angle
+horaire, est d’une part fonction du temps, et d’autre part, il
+s’exprime lui aussi en heures sexagésimales de 0h à 24h. (Sur le
+globe terrestre comme sur la sphère céleste, la correspondance
+bijective entre les degrés d’angles et les heures semble assez
+naturelle. C’est aussi une pratique courante chez les pilotes
+d’avion, pour indiquer en heure la direction d’un objet volant).
+<BR>Si
+l’on ne désire pas négliger les lents mouvements de précession
+et de nutation, il faut alors considérer un Temps Sidéral Vrai et
+un Temps Sidéral Moyen. Mais pour un astronome amateur, cette
+distinction n’est guère utile dans la pratique, car l’écart
+mesuré reste très faible.
+<BR><I><B>g)
+Interprétation pratique.</B></I>
+<BR>Que
+signifie, concrètement, une heure de Temps Sidéral&nbsp;? 
+
+<BR>Certes,
+une heure sidérale est la vingt-quatrième
+partie d’un jour sidéral, comme l’heure solaire est la
+vingt-quatrième<B>
+</B>partie d’une
+journée terrestre. Mais quel renseignement pratique un astronome
+peut-il tirer, de la connaissance de l’horaire sidéral sur son
+lieu d’observation&nbsp;?
+<BR>On
+sait qu’un astre céleste peut être repéré par des coordonnées,
+indépendantes de la rotation terrestre, que sont la déclinaison et
+l’ascension droite. Mais sur le lieu de l’observation, ce repère
+n’est pas fixe par rapport à l’observateur. Celui-ci peut
+repérer cet astre par sa déclinaison qui reste indépendante de la
+Rotation terrestre et par son angle horaire qui lui, dépend de la
+Rotation terrestre. En gardant à l’esprit que le premier souci de
+l’astronome est de savoir à quel moment un astre donné est
+visible dans son ciel et de savoir comment le pointer, avec ou sans
+télescope, on comprend tout l’intérêt d’exprimer l’ascension
+droite (information théorique) en fonction de l’angle horaire
+(information pratique) et réciproquement. 
+
+<BR>En
+effet, pour trouver, en un lieu donné, une étoile dont on connaît
+l'ascension droite et la déclinaison, il nous faut connaître à
+chaque instant la position de l'origine des ascensions droites,
+c'est-à-dire le point Vernal. Or, si l’on connaît l’heure
+sidérale, on en déduit immédiatement la position du point Vernal,
+à cet instant.
+<BR>Puisque
+le Temps sidéral est l’angle horaire du point Vernal, lorsque
+celui-ci vient rencontrer le méridien local, son angle horaire est
+nul et par conséquent, à cet instant, le Temps Sidéral aussi.
+<BR>Cela
+se produit à l’équinoxe de&nbsp;mars (Printemps dans
+l’hémisphère Nord) autour du 20 mars, au moment où le Soleil
+rencontre l’équateur céleste au point Vernal&nbsp;; point qui
+sert donc bien d’origine au Temps Sidéral. Mais cette rencontre
+se fait à une date précise, sur un méridien local précis et à
+12h solaire vraie, variable d’ailleurs d’une année à l’autre.
+A ce moment précis, l’ascension droite et la déclinaison du
+centre du Soleil sont simultanément nulles tous les deux (la
+traversée par l’équateur du diamètre du Soleil prend plusieurs
+heures). Le Temps Sidéral, à cet instant précis, est donc nul en
+ce lieu de la Terre et le Soleil culmine sur ce méridien.
+<BR>Toutes
+les étoiles situées, à cet instant, sur ce méridien ont donc une
+ascension droite nulle. Lorsqu’elles franchiront un autre méridien
+plus à l’Ouest, le Temps sidéral en ce lieu sera nul aussi, car
+vu depuis la Terre, le point Vernal aura avancé d’autant dans le
+ciel et l’angle horaire de ce point sera nul au franchissement de
+ce méridien.
+<BR>Ainsi,
+le Temps Sidéral peut être nul et même identique en tout lieu de
+la Terre, mais pas au même moment&nbsp;! La distance angulaire
+parcourue entre deux méridiens à la vitesse de rotation sidérale
+de la Terre donne le décalage horaire entre deux lieux de même
+Temps Sidéral.
+<BR>Par
+exemple, entre deux lieux séparés de 15° de longitude (1h), les
+Temps Sidéraux locaux seront identiques dans un intervalle de temps
+d’un peu moins d’une heure&nbsp;: (15/360)×23h56min04sec
+= (15/360)×(23
++ 56/60 + 4/3600) = (15/360)×(23,93444)
+= 0,99726 heure.
+<BR><I><B>h)
+Relation fondamentale de l’astronomie.</B></I>
+<BR>La
+relation fondamentale de l’astronomie de position permet justement
+de relier Ascension Droite et Angle Horaire. Elle stipule que la
+somme de ces deux angles vaut, en tout instant, le Temps Sidéral du
+lieu. En notant <B></B>
+l’ascension droite et <B>H</B>
+l’angle horaire d’un astre à un instant donné, alors le Temps
+Sidéral noté <B>TS</B>
+vaut&nbsp;:
+
+<B><SPAN STYLE="background: #ffff00">TS
+= </SPAN></B><B><SPAN STYLE="background: #ffff00"></SPAN></B><B><SPAN STYLE="background: #ffff00">
++ H</SPAN></B>
+
+<BR>Cette
+relation particulièrement simple s’explique aisément. 
+
+<BR>Tous
+ces angles se mesurent le long de l’équateur céleste.
+L’ascension droite <B></B><B>
+</B>de l’étoile est un
+angle compris entre le point Vernal (origine) et le point de
+l’équateur rencontrant le plan méridien de l’étoile. Cet
+angle est compté positivement d’Ouest en Est. En tout instant
+donné, l’angle horaire <B>H</B>
+de l’étoile est un angle compris entre le plan méridien Sud
+local et le plan méridien de l’étoile. Et, contrairement à
+l’ascension droite, cet angle est compté positivement d’Est en
+Ouest. 
+
+<BR>La
+somme de ces deux angles est l’angle mesuré le long de
+l’équateur, délimité par le point Vernal et le plan méridien
+Sud local. C’est donc, par définition, le Temps sidéral du lieu
+(Voir aussi Chapitre 6&nbsp;: Astrométrie, Question 8c).
+<BR><I><B>i)
+Passage au méridien local.</B></I>
+<BR>Le
+passage au méridien local d’une étoile dont on connaît
+l’ascension droite <B></B>,
+nous donne immédiatement l’heure sidérale du lieu à l’instant
+même où l’étoile franchit le méridien local. En effet, à cet
+instant précis, l’angle horaire de cette étoile est nul, si bien
+que l’heure sidérale, à cet instant et en ce lieu, vaut
+exactement l’ascension droite <B></B>
+de cette étoile (<B></B><B>
+</B>est constant).
+<BR>D’où
+cette autre définition pratique du Temps sidéral. L’ascension
+droite <B></B><B>
+</B>de toute étoile
+franchissant le méridien local donne exactement l’heure sidérale
+du lieu à cet instant. Évidemment  cette définition n’est pas
+valable pour l’étoile Soleil, car son ascension droite n’est
+pas constante.
+<BR>Connaissant
+l’heure sidérale TS en tout instant de son lieu d’observation,
+on en tire le renseignement très pratique suivant,&nbsp;concernant
+une étoile d’ascension droite <B></B><B>
+</B>:
+<BR>
+<TABLE WIDTH=397 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#00ff00">
+<TR>
+<TD WIDTH=380 VALIGN=TOP BGCOLOR="#00ff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: none; border-left: 2.25pt solid #00000a; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.09in; padding-right: 0in">
+<UL>
+<BR><P STYLE="margin-bottom: 0in"></P>
+<BR><P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Si
+</FONT><FONT FACE="Symbol, serif"><B></B></FONT><FONT FACE="Times New Roman, serif"><B>
+&gt; TS </B></FONT><FONT FACE="Times New Roman, serif">alors
+l’étoile monte vers le méridien local</FONT><FONT FACE="Times New Roman, serif"><B>.</B></FONT></P>
+<BR><P STYLE="margin-bottom: 0in"></P>
+<BR><P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Si
+</FONT><FONT FACE="Symbol, serif"><B></B></FONT><FONT FACE="Times New Roman, serif"><B>
+&lt; TS </B></FONT><FONT FACE="Times New Roman, serif">alors
+l’étoile a déjà franchi le méridien local</FONT><FONT FACE="Times New Roman, serif"><B>.</B></FONT></P>
+</UL>
+<P><BR>
+</P>
+</TD>
+</TR>
+</TABLE>
+<BR> 
+
+<BR><I><B>j)
+Temps Sidéral en un lieu.</B></I>
+<BR>Le
+Temps Sidéral en un lieu de longitude L se déduit aisément à
+condition de connaître le temps sidéral de Greenwich <B>TSG
+</B>au même instant. En
+comptant positivement la longitude <B>L</B>
+à l’Est de Greenwich et en la convertissant en heure, minute et
+seconde, l’heure sidérale locale, notée <B>TSL(</B><I><B>t</B></I><B>),
+</B>du lieu de longitude
+<B>L </B>et
+à tout instant <I><B>t</B></I><B>
+</B>du temps
+universel UT (compris entre 0 et 24h),
+est naturellement&nbsp;donnée par : 
+
+
+<B><SPAN STYLE="background: #ffff00">TSL(</SPAN></B><I><B><SPAN STYLE="background: #ffff00">t</SPAN></B></I><B><SPAN STYLE="background: #ffff00">)
+= TSG(</SPAN></B><I><B><SPAN STYLE="background: #ffff00">t</SPAN></B></I><B><SPAN STYLE="background: #ffff00">)
++ L</SPAN></B>
+
+<BR><I><B>k)
+Concordance.</B></I>
+<BR>Savoir
+relier l’Heure Sidérale au Temps Universel est indispensable pour
+coordonner sa montre avec le temps des étoiles. Dans un
+observatoire on dispose souvent d’une horloge sidérale, mais
+rarement en pleine nature !
+<BR>La
+conversion repose sur deux données extérieures&nbsp;: l’heure
+sidérale de Greenwich TSG(0) généralement connue pour minuit,
+heure UTC de Greenwich (voir éphémérides de l’année en cours
+dans un magazine ou sur Internet) et la longitude précise L de son
+lieu d’observation (obtenue éventuellement avec un GPS).
+<BR>En
+se souvenant que&nbsp;: 1h
+(de Temps Solaire) = 1,0027379 h (de Temps Sidéral), on obtient, à
+tout instant <I>t</I>
+du temps universel UTC (compris entre 0 et 24h) et en un lieu de
+longitude L, le Temps Sidéral TSL(<I>t</I>),
+exprimé en heure du temps universel UT par&nbsp;:
+
+<B>TSL(</B><I><B>t</B></I><B>)
+= </B><B>TSG(0) +
+(</B><B>1,0027379)</B><I><B>
+t</B></I><B>
+</B><B>+ L</B>
+
+<BR> (Voir
+aussi Chapitre 6&nbsp;: Astrométrie, Question 8e)
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+

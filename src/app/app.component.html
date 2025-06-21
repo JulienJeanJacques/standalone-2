@@ -1,0 +1,18 @@
+<ion-app>
+  <!-- Le menu latéral -->
+  <ion-split-pane contentId="main-content">
+    Menu latéral
+    <ion-menu contentId="main-content" menuId="sideMenu" type="overlay">
+      <ion-content>
+        <app-side-menu-router-link></app-side-menu-router-link>
+      </ion-content>
+    </ion-menu>
+    <!-- La zone principale -->
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+
+  <!-- Éventuelle page de bienvenue, en dehors ou dedans selon votre logique -->
+  <div *ngIf="showWelcomeImage"> 
+    <app-welcome-image></app-welcome-image>
+  </div>
+</ion-app>

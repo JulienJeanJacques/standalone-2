@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- Texte centré -->
+    <div class="title-container">
+      <div class="title-text" [ngStyle]="{'color': theme === 'light' ? 'blue' : 'white'}" > <div [style.color]='colorTitle'> {{ textSettings }} </div> </div>
+    </div>
+    <!-- Bouton à droite -->
+    <ion-buttons slot="end">
+      <ion-button>
+        <img src="assets/icons/astrodidactIcon.png" alt="Astrodidact Icon" style="width: 34px; height: 34px;" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label class="textAccount"> {{textAccount}}: </ion-label>
+    <ion-select [(ngModel)]="count" (ionChange)="updateCount($event.detail.value)">
+      <ion-select-option value="1">1-{{textCount1}} </ion-select-option>
+      <ion-select-option value="2">2-{{textCount2}} </ion-select-option>
+      <ion-select-option value="3">3-{{textCount3}} </ion-select-option>
+    </ion-select>
+  </ion-item>
+<!-- [class]="theme === 'dark' ? 'custom-select-dark' : 'custom-select-light'"  -->
+  <ion-item>
+    <ion-label class="textLanguage">{{textLanguage}}: </ion-label>
+    <ion-select 
+                [(ngModel)]="language" 
+                (ionChange)="updateLanguage($event.detail.value)">
+      <ion-select-option value="fr">{{textFrench}}</ion-select-option>
+      <ion-select-option value="en">{{textEnglish}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-item>
+      <ion-label class="textTheme">{{textTheme}}: </ion-label>
+      <ion-select 
+                  [(ngModel)]="theme" (ionChange)="updateTheme($event.detail.value)">
+        <ion-select-option value="light">{{textLight}}</ion-select-option>
+        <ion-select-option value="dark">{{textDark}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  <div class="button-container">
+    <ion-button class="oval-button" (click)="goHome()">{{textYourChoice}}</ion-button>
+  </div>
+</ion-content>

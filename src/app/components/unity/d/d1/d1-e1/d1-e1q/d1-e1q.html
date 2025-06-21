@@ -1,0 +1,38 @@
+ Votre voisin vous montre du doigt une très «&nbsp;grosse étoile&nbsp;».
+Il veut certainement dire&nbsp;:
+<BR>1) Grosse par son
+diamètre apparent.
+<BR>2) Grosse parce que
+proche de la Terre, ce qui la rend plus lumineuse que les autres.
+<BR>3) Grosse par sa
+taille réelle, ce qui la rend plus lumineuse que les autres.
+<BR>4) Grosse,
+simplement parce que bien plus lumineuse que les autres. 
+<BR><BR>
+    <div>
+        Formule 1 : <div #mathContainer1></div>
+    </div>
+       
+    <div>
+        <h2>Formule 2 :</h2>
+        <div #mathContainer2></div>
+    </div>
+    <BR>
+    <BR>
+        <div class="video-container">
+            <video
+              #videoPlayer
+              class="video-small"
+              (click)="pauseVideo()"
+              (ended)="onVideoEnded()"
+              controls  
+            >
+              <source [src]="getImagePath('video.mp4')"  type="video/mp4">
+              Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+          </div>
+    <BR>
+    <BR>
+<IMG [src]="getImagePath('1d1_src_1.jpg')" NAME="Image 58" ALIGN=BOTTOM WIDTH=284 HEIGHT=302 BORDER=0>
+<IMG [src]="getImagePath('1d1_src_2.jpg')" NAME="Image 57" ALIGN=BOTTOM WIDTH=255 HEIGHT=302 BORDER=0>
+<BR><BR>

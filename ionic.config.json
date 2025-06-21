@@ -1,0 +1,7 @@
+{
+  "name": "5_astrodidact-V5-standalone-2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

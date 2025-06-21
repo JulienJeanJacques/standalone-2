@@ -1,0 +1,17 @@
+<ion-tabs [ngClass]="theme">
+  <ion-tab-bar slot="bottom">
+    <p>{{footerContent}}</p>
+    <ion-tab-button (click)="goBackward()">
+      <ion-icon name="arrow-back"></ion-icon>
+      <ion-label>{{footerBackward}}</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="goForward()">
+      <ion-icon name="arrow-forward"></ion-icon>
+      <ion-label>{{footerForward}}</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="saveAndQuitApp()">
+      <ion-icon name="save"></ion-icon>
+      <ion-label>{{footerLeave}}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

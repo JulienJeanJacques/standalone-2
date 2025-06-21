@@ -1,0 +1,13 @@
+<div class="balloon-container">
+  <div class="balloons">
+    <div *ngFor="let b of balloons"
+         class="balloon"
+         [ngStyle]="{
+           'left': b.x + '%',
+           'animation-duration': b.speed + 's',
+           'animation-delay': b.delay + 's',
+           'background': b.colorGradient
+         }">
+    </div>
+  </div>
+</div>

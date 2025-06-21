@@ -1,0 +1,21 @@
+<ion-item lines="none" style="display: flex; align-items: center; flex-direction: column;">
+  <ion-label style="margin-bottom: 8px;">Votre choix :</ion-label>
+  <ion-select
+    interface="popover"
+    [interfaceOptions]="popoverSettings"
+    [(ngModel)]="selectedValue"
+    (ionChange)="selectValue(selectedValue)"
+    style="--width: 80px;"
+  >
+    <ion-select-option value="1">1</ion-select-option>
+    <ion-select-option value="2">2</ion-select-option>
+    <ion-select-option value="3">3</ion-select-option>
+    <ion-select-option value="4">4</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<div class="button-container">
+    <ion-button class="oval-button" (click)="promptValidation()">Valider</ion-button>
+</div>
+

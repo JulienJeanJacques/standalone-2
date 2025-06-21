@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Fermer</ion-button>
+    </ion-buttons> -->
+    <div [style.color]="'blue'" [style.text-align]="'center'" > Attention</div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="attention-content">  {{ message }} </div>>
+  <ion-button expand="block" color="primary" (click)="close()">
+    {{ textCloseButton}}
+  </ion-button>
+</ion-content>
