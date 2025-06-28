@@ -1,0 +1,165 @@
+
+
+
+<BR><B>Solution
+de l'exercice.</B>
+<BR><I><B>a)
+Objectif de l’exercice.</B></I>
+<BR>Il
+s’agit de déterminer les coordonnées équatoriales de l’astre,
+c’est-à-dire son ascension droite et sa déclinaison, à partir
+des données du problème.
+<BR>Pour
+la commodité des calculs et par nécessité des lignes
+trigonométriques, on commence par convertir toutes les données
+numériques en degré sexagésimal ou en heure sexagésimale selon
+les besoins (<I><B>attention&nbsp;:
+</B></I><I>l’</I><I>heure
+sexagésimale </I><I>est
+une unité angulaire et non une unité de temps</I><I>,
+car l’unité de temps est fixée à partir de la définition de la
+seconde de temps</I>).
+<BR>La
+longitude de Montréal&nbsp;: L =  73°35′16″ = (73 + 35/60 +
+16/3600) = (73 + 0,58333 + 0,004444) = 73,5877°, qu’il est
+avantageux de convertir en heure&nbsp;: L = 73,5877° ×
+(24/360) =  4,90585 heures à l’Ouest de Greenwich.
+<BR>Latitude
+de Montréal : 
+= 45°.
+<BR>Angle
+horaire de l’astre&nbsp;à 2h UTC : H(2h) = 8h 11min 34s =&nbsp;8,193
+h =&nbsp;8,193 × (360/24) = 122,895° = 122° 53' 42'' 
+
+<BR>TSGreenwich
+(0h) = 6h 18min 9s = 6 + 18/60 + 9/3600 = 6,3025 h = 6,3025 ×
+(360/24) = 94,5375°.
+<BR>Hauteur
+de l’astre à 2h UTC&nbsp;: <I>h</I>
+= 30° 30’ = 30,5°
+<BR><I><B>b)
+Calcul de l’ascension droite&nbsp;</B></I><I><B></B></I><I><B>
+: </B></I>
+
+<BR>Cette
+coordonnée fait intervenir l’angle horaire et le Temps Sidéral
+du lieu.
+<BR>D’une
+part, on a&nbsp;: TSGreenwich (2h) = TSGreenwich (0h) +2 ×
+1,00273896.
+<BR>D’autre
+part, on a&nbsp;: TSMontréal (2h) = TSGreenwich (2h) – L&nbsp;;
+car Montréal est situé à l’Ouest de Greenwich (L &gt; 0).
+<BR>Si
+bien que&nbsp;:
+<BR>TSMontréal
+(2h) = TSGreenwich (0h) + 2 × 1,00273896 – L.
+<BR>En
+exprimant toutes ces données en heure, il vient&nbsp;:
+<BR>TSMontréal
+(2h) = 6,3025 + 2,00547792 - 4,90585 = 3,4021 heures
+<BR>Or,
+l’ascension droite est donnée par&nbsp;: α = TSMontréal (2h) -
+H(2h).
+<BR>D’où
+: α = 3,4021 - 8,193  = - 4,7908 = 19,2091 heures 
+
+<BR><SPAN STYLE="background: #ffff00">α
+= 19h 12min 33s.</SPAN>
+<BR><I><B>c)
+Calcul la déclinaison </B></I><I><B></B></I><I><B>
+: </B></I>
+
+<BR>On
+utilise la formule fondamentale donnant la hauteur <I>h</I>
+en fonction de la déclinaison ,
+de la latitude 
+et de l’angle horaire H exprimé en degré&nbsp;:
+<BR>&lt;$1&gt;
+<BR>On
+cherche 
+et comme on ne connaît pas l’azimut, on ne dispose que de cette
+formule, ce qui ne facilite pas la résolution. Cependant, en
+faisant preuve d’un peu d’imagination, on parvient à écrire
+l’enchainement&nbsp;suivant :
+<BR>On
+commence par profiter de la latitude «&nbsp;sympathique&nbsp;» du
+lieu&nbsp;: 
+
+<BR>&lt;$2&gt;
+<BR>D’où&nbsp;:
+&lt;$3&gt; 
+
+<BR>Cette
+relation est une expression du type&nbsp;: &lt;$4&gt; qui se traite
+de la façon suivante : 
+
+<BR>&lt;$5&gt;
+
+
+<BR>Et
+comme&nbsp;: &lt;$6&gt; , il existe un nombre réel 
+de sorte que&nbsp;: &lt;$7&gt; , et par conséquent&nbsp;: &lt;$8&gt;,
+ou encore&nbsp;: &lt;$9&gt;.
+<BR>Ainsi,
+en choisissant&nbsp;: &lt;$10, on a d’une part&nbsp;: &lt;$11&gt;
+<BR>Et
+d’autre part&nbsp;l’équation&nbsp;: &lt;$12&gt;, devient&nbsp;:
+
+
+<BR>&lt;$13&gt;
+<BR><A NAME="_MON_1395916207"></A><A NAME="_MON_1395916195"></A><A NAME="_MON_1398852298"></A><A NAME="_MON_1398852284"></A>
+Equation qui n’admet de
+solutions que si et seulement si &lt;$14&gt;&nbsp;; ce qui est le
+cas puisque&nbsp;: &lt;$15&gt;.
+<BR>Les
+solutions formelles sont&nbsp;: 
+
+<BR>&lt;$16&gt;
+ou &lt;$17&gt;
+<BR>avec
+&lt;$18&gt;.
+<BR>En
+tenant compte de&nbsp;: &lt;$19&gt; et de &lt;$20&gt;
+<BR>On
+obtient la solution réelle du problème&nbsp;: 
+
+<BR>&lt;$21&gt;.
+<BR><SPAN STYLE="background: #ffff00"></SPAN><SPAN STYLE="background: #ffff00">
+= 67° 36′ 40″</SPAN>
+<BR><I><B>d)
+Vérification : </B></I>
+
+<BR>Cette
+valeur est bien celle de la déclinaison de l’étoile Altaïs,
+avec une erreur numérique de seulement de 3 minutes d’arc.
+<BR>Ainsi,
+les deux coordonnées 
+et 
+trouvées sont bien celles d’Altaïs, avec&nbsp;: 
+
+<BR>α
+= 19h 12min 33s = 19,2091 heures.
+
+
+<BR> =
+67° 39′ 42″= 67,6616 degrés.
+<BR>Altaïs,
+appelée également&nbsp;:<I>
+</I><I>Nodus Secundus</I>
+et <I>Delta&nbsp;
+Draconis&nbsp;</I>, car
+c’est l’étoile 
+dans la constellation du
+Dragon, est une étoile géante jaune, visible à l’œil nu avec
+une magnitude apparente de 3 et située à une distance de 100
+années – lumière.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e9//e9_src_0.jpg" NAME="Image 10" ALIGN=BOTTOM WIDTH=394 HEIGHT=438 BORDER=0>
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+

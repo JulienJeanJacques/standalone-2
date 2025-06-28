@@ -1,8 +1,7 @@
 import { NgStyle } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+//
+import { Component, OnInit} from '@angular/core';
 import { FormsModule }           from '@angular/forms';
-//rxjs
-import { Subscription }       from 'rxjs';
 //ionic
 import { NavController }      from '@ionic/angular';
 import { IonicModule }        from '@ionic/angular';
@@ -12,7 +11,8 @@ import { SettingsService }   from '../../services/settings.service';
 import { TraductionService } from '../../services/traduction.service'
 import { ConfigThemeService } from '../../services/config-theme.service';
 import { GestionConfigEngFrService}    from 'src/app/services/gestion-config-eng-fr.service';
-
+// my classes
+import { Item }         from '../../classes/item'
 @Component({
   selector: 'app-settings',
   standalone: true,
@@ -25,7 +25,8 @@ import { GestionConfigEngFrService}    from 'src/app/services/gestion-config-eng
 })
 export class SettingsPage implements OnInit {
   count:          string = '1';
-  item:           string = 'd1_1q';
+  nameItem:       string = 'd1_1q';
+  item = new Item(this.nameItem);
   language:       string = 'fr';
   theme:          string = 'light';
   textAccount:    string = 'Account';
@@ -41,6 +42,8 @@ export class SettingsPage implements OnInit {
   textCount2:     string = 'Galilée';
   textCount3:     string = 'Galilée';
   colorTitle:     string = 'white';
+  //
+  public refreshFlag: boolean = true;
   constructor(
     private settingsService:          SettingsService,
     private themeService:             ConfigThemeService,
@@ -51,21 +54,18 @@ export class SettingsPage implements OnInit {
   ) {
 }
   ngOnInit() {
-    this.count    = this.settingsService.getCount();
-    this.language = this.settingsService.getLanguage();
-    this.item     = this.settingsService.getItem();
-    this.theme    = this.settingsService.getTheme();
+      // Réagir à la mise à jour de la configuration
     //
     this.colorTitle    = this.gestionConfigEngFrService.getColorTitle('Settings');
     this.textCount1    = this.gestionConfigEngFrService.getAccountNameOfCount('1');  
     this.textCount2    = this.gestionConfigEngFrService.getAccountNameOfCount('2');  
     this.textCount3    = this.gestionConfigEngFrService.getAccountNameOfCount('3'); 
     //
-    this.updateCount   (this.settingsService.getCount()) 
-    this.updateLanguage(this.settingsService.getLanguage()) 
-    this.updateItem    (this.settingsService.getItem()) 
-    this.updateTheme   (this.settingsService.getTheme()) 
-    this.updateCount   (this.settingsService.getCount()) 
+    this.updateCount   (this.settingsService.getCount()); 
+    this.updateLanguage(this.settingsService.getLanguage()); 
+    this.updateItem    (this.settingsService.getItem()); 
+    this.updateTheme   (this.settingsService.getTheme()); 
+    this.updateCount   (this.settingsService.getCount()); 
   }
 
   updateCount(newCount: string) {
@@ -85,7 +85,8 @@ export class SettingsPage implements OnInit {
     this.settingsService.setLanguage(newLanguage);
     this.textCount1    =  this.gestionConfigEngFrService.getAccountNameOfCount('1'); 
     this.textCount2    =  this.gestionConfigEngFrService.getAccountNameOfCount('2'); 
-    this.textCount3    = this.gestionConfigEngFrService.getAccountNameOfCount('3'); 
+    this.textCount3    =  this.gestionConfigEngFrService.getAccountNameOfCount('3'); 
+    this.language      =  this.settingsService.getLanguage();
   }
 
   updateItem(newItem: string) {

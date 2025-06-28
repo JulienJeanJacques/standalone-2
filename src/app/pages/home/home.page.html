@@ -1,45 +1,46 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button menu="sideMenu"  autoHide="false"></ion-menu-button>
-    </ion-buttons>
-    
-    <div class="account-level-container">
-      <div class="accountAndLevel">
-        <div>{{ accountName }}</div>
-        <div>{{ levelName }}</div>
-      </div>
-      <div class="image-container">
-        <img src="assets/icons/astrodidactIcon.png" alt="Astrodidact Icon" style="width: 45px; height: 45px;" />
-      </div>
-    </div>
-  
-    <div class="chapter-title">
-      {{ titleOfChapter }}
-    </div>
-  </ion-toolbar>
-</ion-header>
-
-<div class="page-wrapper">
-  <ion-content>
-    <div class="scroll-container">
-      <div [ngClass]="getColorClass(item.nature)"> {{ natureOfItem }}{{item.question}}:</div>
-        <app-response *ngIf = "item.nature === 'r'"> </app-response>
-        <ng-container #dynamicComponentContainer></ng-container>
-        <footer-question      *ngIf="showFooter()"></footer-question>
-        <!-- <ng-container  #dynamicAnimationContainer></ng-container> -->
-        <ng-container *ngIf="currentAnimationComponent" [ngComponentOutlet]="currentAnimationComponent"></ng-container>
-    </div>
-  </ion-content>
-
-
-  <ion-footer>
+<app-initial-setup *ngIf="showInitScreen" (setupFinished)="onSetupFinished()"></app-initial-setup>
+<!-- Votre contenu actuel, visible après initialisation -->
+<div *ngIf="!showInitScreen" class="page-wrapper">
+  <ion-header>
     <ion-toolbar>
-      <footer-app></footer-app>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="sideMenu"  autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      
+      <div class="account-level-container">
+        <div class="accountAndLevel">
+          <div>{{ accountName }}</div>
+          <div>{{ levelName }}</div>
+        </div>
+        <div class="image-container">
+          <img src="assets/icons/astrodidactIcon.png" alt="Astrodidact Icon" style="width: 45px; height: 45px;" />
+        </div>
+      </div>
+    
+      <div class="chapter-title">
+        {{ titleOfChapter }}
+      </div>
     </ion-toolbar>
-  </ion-footer>
-</div>
+  </ion-header>
 
+  <div class="page-wrapper">
+    <ion-content>
+      <div class="scroll-container">
+        <div [ngClass]="getColorClass(item.nature)"> {{ natureOfItem }}{{item.question}}:</div>
+          <app-response *ngIf = "item.nature === 'r'"> </app-response>
+          <ng-container #dynamicComponentContainer></ng-container>
+          <footer-question      *ngIf="showFooter()"></footer-question>
+      </div>
+    </ion-content>
+
+
+    <ion-footer>
+      <ion-toolbar>
+        <footer-app></footer-app>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+</div>
 
 
 

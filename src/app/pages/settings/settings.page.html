@@ -30,7 +30,7 @@
   </ion-item>
 <!-- [class]="theme === 'dark' ? 'custom-select-dark' : 'custom-select-light'"  -->
   <ion-item>
-    <ion-label class="textLanguage">{{textLanguage}}: </ion-label>
+    <ion-label class="textLanguage">{{textLanguage}}:</ion-label>
     <ion-select 
                 [(ngModel)]="language" 
                 (ionChange)="updateLanguage($event.detail.value)">

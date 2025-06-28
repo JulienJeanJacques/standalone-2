@@ -1,0 +1,1237 @@
+
+
+
+<BR><B>Convertir
+l’heure du cadran solaire en heure de la montre.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_2.jpg" NAME="Image 33" ALIGN=BOTTOM WIDTH=589 HEIGHT=264 BORDER=0>
+<BR><I>Cadran
+solaire vertical déclinant avec courbe de midi moyen de
+l’Observatoire astronomique de Juvisy-sur-Orge fondé en 1883 par
+l'astronome Camille Flammarion.</I>
+<BR><I><B>a)
+Pourquoi l’heure d’un cadran solaire est rarement celle de la
+montre&nbsp;?</B></I>
+<BR>Pour
+que l’heure indiquée par un cadran solaire coïncide avec celle
+de la montre, il faut que plusieurs conditions soient simultanément
+remplies.
+<BR>Commençons
+par remarquer que s’il y a coïncidence, elle ne peut
+éventuellement avoir lieu qu’à certains jours dans l’année et
+non de façon permanente toute l’année, pour la raison majeure
+suivante&nbsp;: l’écoulement du Temps Solaire Vrai, c’est-à-dire
+celui qui résulte du mouvement apparent du Soleil, n’est pas
+celui du Temps Solaire Moyen qui régule le mécanisme des montres.
+Le premier est irrégulier, tandis que le second est parfaitement
+régulier. 
+
+<BR>Certes,
+l’heure d’une horloge mécanique ou électronique d’aujourd’hui
+n’est plus réglée sur la base du Temps Solaire Moyen mais sur
+celle du Temps Universel Coordonnée UTC. Toutefois, bien que cette
+échelle de temps ne soit plus de nature astronomique, puisqu’elle
+est régularisée par une horloge atomique, elle a été construite
+de sorte à rester toujours proche du Temps Universel UT qui lui est
+directement lié à la Rotation de la Terre, comme le Temps Solaire
+Moyen TSM (Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil,
+Question 1c). Or pour les usages courants, il n’y a pas lieu de
+faire de différence entre ces trois temps&nbsp;: «&nbsp;UTC,
+«&nbsp;UT&nbsp;» et «&nbsp;TSM » dont les nuances
+d’interprétation n’intéressent que les spécialistes et non
+l’astronome amateur. En revanche, on doit garder à l’esprit que
+pour mesurer une durée afin de pouvoir comparer entre eux des types
+de temps, on se réfère à un étalon de temps indépendant de
+toute considération astronomique qui, depuis 1967, est la seconde
+du système international d’unités (Cf.  Temps Atomique
+International dans ce Chapitre 10&nbsp;: observation du Soleil,
+Question 1c).
+<BR>La
+question de la marche du temps de la montre étant réglée, voyons
+comment ce Temps Solaire Moyen si régulier peut s’accorder
+parfois avec ce Temps Solaire Vrai, si capricieux. La réponse est
+immédiate&nbsp;; la coïncidence de l’heure au cours d’une même
+journée entre ces deux horloges que sont le Soleil et la montre, ne
+peut avoir lieu que les jours où l’Équation du Temps s’annule.
+Or, nous avons déjà vu (Cf. dans ce Chapitre 10&nbsp;: Observation
+du Soleil&nbsp;: Question 4c et Question 5c) que seuls quatre jours
+dans l’année réalisent cette condition, à savoir : le 15 avril,
+le 14 juin, le 1<SUP>er</SUP>
+septembre et le 25 décembre (à un jour ou deux près selon les
+années).
+<BR>Mais
+encore faut-il que l’heure de la montre soit réglée sur celle de
+Greenwich et qu’elle respecte son fuseau horaire pour qu’elle
+puisse indiquer l’heure du Soleil durant les jours précédemment
+mentionnés. Autrement dit, la montre doit être préalablement mise
+à l’heure UTC en accord avec la longitude du lieu (Pour une mise
+en œuvre pratique de l’heure UTC ± n, voir le Chapitre 7&nbsp;:
+Usage du Cherche-étoiles, Question 5d et Question 1c). 
+
+<BR>En
+outre, il faudra aussi tenir compte de «&nbsp;l’heure
+administrative&nbsp;» qu’imposent certains pays, comme la France,
+et qui consiste à avancer ou à retrancher une à deux heures selon
+les deux saisons, été ou hiver.
+<BR>Une
+autre question vient alors à l’esprit. Dans ces conditions
+idéales, supposons que la coïncidence ait lieu à 12h de la montre
+lorsque le Soleil culmine à midi, sera-t-il alors 13h au Soleil
+lorsque la montre indiquera 13h&nbsp;? En est-il de même pour les
+autres heures de la journée&nbsp;; en d’autres termes, les deux
+horloges restent-elles en phase toute la journée&nbsp;? La réponse
+dépend de la précision de l’horaire souhaitée. Si l’on exige
+une précision de l’ordre de la seconde (c’est déjà en soi
+absurde pour un cadran solaire), il est alors impossible que les
+autres heures de la journée coïncident, car l’exacte égalité
+de la marche du temps des deux horloges au cours d’une journée
+n’a lieu qu’aux dates du 11 février, 14 mai, 26 juillet et 3
+novembre (Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil&nbsp;:
+Question 5c). Mais avec une tolérance d’une minute, on peut
+affirmer que toutes les heures du cadran solaire respecteront, ce
+jour là, celles de la montre.
+<BR>En
+conclusion, il est extrêmement rare que les heures de la montre
+coïncident avec celles d’un cadran solaire, car dans le meilleur
+des cas, cet évènement n’a lieu que quatre jours dans l’année.
+
+
+<BR><I><B>b)
+Les trois corrections.</B></I>
+<BR>Pour
+obtenir, à partir d’un cadran solaire, l’heure officielle du
+lieu, c’est-à-dire celle de la montre, nous devons ajouter à
+l’heure du cadran solaire trois corrections de natures bien
+différentes (Attention, il existe aujourd’hui des cadrans
+solaires qui convertissent directement l’heure du Soleil en heure
+du Temps Universel de la montre).
+
+<BR>Correction
+d’origine astronomique&nbsp;: décalage horaire engendré par la
+différence de progression du Temps Solaire Vrai et du Temps
+Solaire Moyen. Autrement dit, tenir compte de l’Équation du
+Temps.
+<BR>Correction
+d’origine géographique&nbsp;: décalage horaire occasionné par
+la distance séparant le méridien de Greenwich, choisi comme
+origine du Temps Universel, et le méridien du lieu de la lecture
+du cadran solaire. Autrement dit, tenir compte de la longitude du
+lieu et du fuseau horaire auquel est attaché ce lieu.
+<BR>Correction
+d’origine administratif&nbsp;: décalage horaire arbitraire
+imposé par un gouvernement qui ne respecte pas le principe des
+fuseaux horaires. Autrement dit, appliquer la règle des heures
+d’été et d’hiver.
+
+<BR><I><B>c)
+Correction par l’Équation du temps.</B></I>
+<BR>Pour
+effectuer cette correction, il est nécessaire de se procurer une
+table donnant jour après jour la valeur numérique de l’Équation
+du Temps de l’année en cours ou de disposer d’une courbe
+en&nbsp;«&nbsp;8&nbsp;» suffisamment lisible (analemme).
+<BR>Cependant,
+la précision de la plupart des cadrans solaires étant de l’ordre
+de 1 à 10 minutes (précision qui dépend de la taille du cadran,
+de la finesse du style et des traits, du contraste de l’éclairage,
+de la saison, etc.) il semble assez illusoire d’apporter une
+correction aussi précise que celle fournie par l’abaque complet
+de l’Équation du temps. On peut alors se contenter d’une table
+partielle n’indiquant que le premier jour des douze mois de
+l’année par exemple. 
+
+<BR>Mieux
+encore, sachant que l’écart de temps n’excède jamais 16
+minutes dans l’année, il suffit de ne retenir que quelques dates
+bien ciblées pour estimer de façon raisonnable la correction qu’il
+y a lieu d’effectuer le jour convenu. Comme l’Équation du temps
+ne varie pratiquement pas d’une année à une autre, les valeurs
+associées à ces dates pourront être réutilisées durant
+plusieurs années.
+<BR>Le
+tableau ci-dessous propose un exemple de ce qu’il convient de
+retenir, pour opérer très approximativement la correction due à
+l’Équation du Temps, sans avoir recours à sa table. La
+modification doit être rapportée sur l’heure indiquée par le
+cadran solaire et non sur l’heure de la montre.
+<TABLE WIDTH=633 CELLPADDING=7 CELLSPACING=1>
+<TR VALIGN=TOP>
+<TD WIDTH=55 BGCOLOR="#ffff99" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 4.50pt solid #00000a; border-right: 4.50pt double #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Période
+</B></FONT></FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>de
+l’année</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=55 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 4.50pt double #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in; margin-bottom: 0in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Fin
+décembre</B></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Début
+janvier</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Autour
+du mois de février</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Autour
+de mi avril</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Durant
+le mois de mai</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Durant
+le mois de juin</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Durant
+le mois de juillet</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=58 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Début
+du mois de septembre</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=49 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 1.50pt double #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Début
+octobre Fin novembre</B></FONT></FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=55 BGCOLOR="#ccffcc" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 4.50pt solid #00000a; border-right: 4.50pt double #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Correction
+à apporter </B></FONT></FONT>
+</P>
+</TD>
+<TD WIDTH=55 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 4.50pt double #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Ne
+rien changer</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Ajouter
+5 à 15 minutes</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Ne
+rien changer</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Déduire
+2 à 5 minutes </B></FONT></FONT>
+</P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Ne
+rien changer</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=54 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Ajouter
+2 à 5 minutes</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=58 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Ne
+rien changer</B></FONT></FONT></P>
+</TD>
+<TD WIDTH=49 BGCOLOR="#00ff00" STYLE="border-top: 1.50pt double #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P STYLE="margin-top: 0.08in"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>Déduire
+5 à 15 minutes</B></FONT></FONT></P>
+</TD>
+</TR>
+</TABLE>
+<BR>Bien
+que nous ayons commencé par présenter ce type de correction,
+celle-ci n’est pas prioritaire&nbsp;ni essentielle ; car si le
+lecteur accepte que son cadran solaire donne l’heure à 10 minute
+près, il peut négliger l’effet de l’Équation du Temps et s’en
+tenir aux deux autres corrections que nous allons maintenant
+décrire. 
+
+<BR><I><B>d)
+Correction en longitude.</B></I>
+<BR>Dire
+qu’une montre est «&nbsp;à l’heure&nbsp;» c’est dire
+qu’elle est à l’heure officielle du pays dans lequel nous
+lisons l’heure. Or cette heure officielle est une heure du Temps
+Solaire Moyen (en vérité du temps UT) attachée à un certain
+méridien local choisi comme référence à l’intérieur du fuseau
+horaire normalement dédié à ce pays. 
+
+<BR>Cependant,
+nous savons que si à l’intérieur de ce fuseau l’heure légale
+est la même en tout lieu (c’est l’intérêt de l’heure
+légale), ce n’est évidemment pas le cas de l’heure du Soleil
+Moyen ni de l’heure du Soleil Vrai qui se moquent de l’arbitraire
+de ces fuseaux horaires. Or, généralement on choisit comme
+méridien de référence, pour établir l’heure légale du Soleil
+Moyen, le milieu du fuseau, si bien que l'accord de l’heure de la
+montre avec l’heure du Soleil Moyen ne peut véritablement avoir
+lieu que sur la ligne centrale du fuseau horaire. En dehors de cette
+ligne, l’heure du Soleil Moyen s’écarte de l’heure de la
+montre de plus ou moins trente minutes, puisque la largeur d’un
+fuseau est d’une heure (24 fuseaux horaires autour du globe). 
+
+<BR>Par
+conséquent, nous devons tenir compte du décalage horaire entre le
+méridien où est installé le cadran solaire et le méridien qui
+sert de référence horaire au pays en question. Or, ce décalage
+est mesurable à condition de connaître la longitude du méridien
+où se tient le cadran solaire.
+<BR>En
+effet, la longitude d’un méridien est établie par rapport au
+méridien de Greenwich si bien que nous pouvons associer cette
+longitude à un temps&nbsp;; le temps que prend le Soleil pour
+parcourir le trajet entre sa culmination à midi sur le méridien de
+Greenwich et celle sur le méridien du cadran solaire.
+<BR>A
+raison de 360° en 24h (en heures du Temps Solaire Moyen,
+c’est-à-dire de la montre) d’un tour complet du globe par le
+Soleil Moyen (celui qui se déplace le long de l’Équateur), ce
+dernier parcourt 15° de longitude en une heure, c’est-à-dire 1°
+de longitude en 4 minutes de Temps Moyen. Théoriquement le vrai
+Soleil ne se déplace pas à la même vitesse que celle du Soleil
+Moyen, mais puisque nous corrigeons cette différence grâce à
+l’Équation du Temps, nous pouvons considérer que le vrai Soleil
+balaie également en 4 minutes un secteur de longitude 1°.
+<BR>Ainsi
+lorsque le Soleil culmine sur le méridien de Greenwich, il est 12h
+sur le cadran solaire de Greenwich et 12h UTC sur l’horloge du
+même lieu. Ainsi, en un lieu de longitude °
+situé à l’Ouest de Greenwich, il faut ajouter 4
+minutes à l’heure du cadran solaire de ce lieu pour obtenir
+l’heure UTC de ce lieu. En effet, après avoir culminé sur le
+méridien de Greenwich, le Soleil culminera dans 4
+minutes sur le méridien de longitude °
+Ouest. En ce lieu, il sera alors en heures UTC&nbsp;: midi solaire +
+4
+minutes + Équation du temps. À une heure UTC autre que midi à
+Greenwich, il est en heures UTC&nbsp;: heure du Cadran solaire + 4
+minutes + Équation du temps.
+<BR>Naturellement,
+si le lieu considéré se trouve à une longitude °
+à l’Est de Greenwich, alors il est&nbsp;en heures UTC : heure du
+Cadran solaire - 4
+minutes + Équation du temps. En effet, le Soleil culmine sur ce
+méridien 4
+minutes plus tôt que sur le méridien de Greenwich.
+<BR>Finalement,
+la règle de correction en longitude est assez simple&nbsp;:
+<TABLE WIDTH=633 CELLPADDING=7 CELLSPACING=1>
+<TR VALIGN=TOP>
+<TD ROWSPAN=2 WIDTH=128 BGCOLOR="#ffff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 4.50pt solid #00000a; border-right: 1.50pt double #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">A l’heure
+indiquée sur le cadran solaire</FONT></P>
+</TD>
+<TD WIDTH=462 BGCOLOR="#00ff00" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 3.00pt solid #00000a; border-left: 1.50pt double #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">Ajouter 4
+fois la longitude du lieu s’il est situé à l’Ouest de
+Greenwich.</FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=462 BGCOLOR="#00ff00" STYLE="border-top: 3.00pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 1.50pt double #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">Retrancher 4
+fois la longitude du lieu s’il est situé à l’Est de
+Greenwich.</FONT></P>
+</TD>
+</TR>
+</TABLE>
+<BR>Attention
+aux unités, une longitude est donnée en degré et minute d’arc
+(c’est un angle), pour le convertir en minute de temps, il faut
+d’abord l’écrire en degré décimal. Par exemple&nbsp;: 
+= 5° 14’ = 5° +  14/60 = 5° +  0,23333° =  5,23°. 
+
+<BR>Ainsi,
+4
+= 5,23x4 min = 20,92 min =  20 min + 0,92x60 s = 20 min + 55 s = 20
+min 55 s.
+<BR>On
+trouve facilement sur internet la longitude d’un lieu.
+<BR>Ajoutons
+une dernière remarque. Si l’on connaît le fuseau horaire à
+l’intérieur duquel se situe le cadran solaire, l’heure UTC de
+la montre tient déjà compte du décalage horaire entre le méridien
+de Greenwich et le méridien central du fuseau horaire concerné.
+Par exemple, si le fuseau concerné est le fuseau&nbsp;: UTC + n, la
+différence de longitude entre le milieu de ce fuseau et le méridien
+de Greenwich vaut alors 15n°, puisque la largeur d’un fuseau est
+de 15°. Mais puisque l’heure de la montre est donnée par rapport
+à ce fuseau central, il suffit de calculer le décalage horaire
+entre la position du cadran solaire et le méridien de ce fuseau
+central pour corriger le décalage entre l’heure du cadran solaire
+et l’heure UTC + n de la montre (Voir aussi, pour une mise en
+œuvre pratique de l’heure UTC ± n, le Chapitre 7&nbsp;: Usage du
+Cherche-étoiles, Question 5d et Question 1c).
+<BR><I><B>e)
+Correction administrative en heure légale.</B></I>
+<BR>Après
+avoir corrigé en longitude et par l’Équation du temps l’heure
+du cadran solaire, celle-ci devrait coïncider avec l’heure de la
+montre. Or ce n’est pas toujours le cas, car certains pays ne
+respectent pas à la lettre la convention des fuseaux horaires et
+pratiquent en outre une règle dite de «&nbsp;l’heure avancée&nbsp;»,
+plus connue sous le nom impropre de «&nbsp;heure d’été&nbsp;»
+et «&nbsp;heure d’hiver&nbsp;» (Cf. dans ce Chapitre 10&nbsp;:
+Observation du Soleil, Question 1c).
+<BR>En
+France par exemple, dont le temps légal est obtenu en ajoutant ou
+en retranchant un nombre entier d’heures au Temps Universel
+Coordonné (décret du 9 aout 1978) , il faut ajouter 1h en hiver et
+2h en été par rapport à l’heure UTC de Greenwich. Les dates de
+ces changements sont communiquées par voie de presse, elles ont
+généralement lieu le dernier dimanche de mars à 2h00 du matin
+pour l’heure d’été et le dernier dimanche d'octobre à la
+même heure pour l’heure d’hiver.
+<BR>De
+façon pratique, il faut donc avancer l’aiguille de sa montre
+d’une heure le dernier dimanche de mars car elle était censée
+être à l’heure officielle de la France à l’heure UTC + 1, ce
+qui la mène maintenant à UTC + 2&nbsp;: et la retarder d’une
+heure à partir du dernier dimanche d'octobre.
+<BR>Ainsi,
+dans le cas de la France métropolitaine, pour obtenir l’heure
+légale à partir d’un cadran solaire, il faut obligatoirement
+ajouter à l’heure du cadran solaire, 1h en hiver et 2h en été.
+<BR><I><B>f)
+Relation&nbsp;: heure légale – heure du cadran solaire.</B></I>
+<BR>D’après
+tout ce que nous venons de dire, nous sommes maintenant en mesure
+d’exprimer l’heure légale de la montre en fonction de l’heure
+du cadran solaire selon la relation algébrique suivante, sachant
+que certaines de ces grandeurs peuvent être éventuellement
+négatives&nbsp;:
+<TABLE WIDTH=633 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#ffff00">
+<TR>
+<TD WIDTH=616 VALIGN=TOP BGCOLOR="#ffff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: none; border-left: 2.25pt solid #00000a; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.09in; padding-right: 0in">
+<P><FONT FACE="Times New Roman, serif">Heure légale = Heure du
+cadran solaire + 4xLongitude + Équation du Temps + Heure avancée</FONT></P>
+</TD>
+</TR>
+</TABLE>
+<BR><I><B>g)
+Exemples pratiques.</B></I>
+
+<BR><B>Premier
+exemple&nbsp;</B>: La
+Martinique.
+
+<BR>Le
+1<SUP>er</SUP>
+mars, l’ombre du style d’un cadran solaire installé en
+Martinique à Fort-de-France de longitude 61°04′ Ouest, indique
+11h 25min. Quelle heure est-il en ce lieu&nbsp;? 
+
+<BR>1)
+Correction en longitude&nbsp;: 
+
+<BR>Conversion
+en degrés décimaux&nbsp;: 61°4′ = 61° + 4/60 = 61° + 0,06° =
+61,06°.
+<BR>Conversion
+en minutes&nbsp;: 4x61,06° = 224,24 minutes = 4x60 + 24,24 minutes
+= 4h 24min.
+<BR>Lorsque
+le Soleil culmine à Greenwich, il culminera à Fort-de-France dans
+4h 24min puisque cette ville est située à l’Ouest du méridien
+de Greenwich.
+<BR>Or
+le fuseau horaire de la Martinique se trouve à quatre fuseaux
+horaires de Greenwich, autrement dit, son heure officielle est UTC –
+4.
+<BR>La
+correction en longitude de l’heure du cadran solaire à
+Fort-de-France par rapport au méridien de référence auquel
+appartient le fuseau horaire de la Martinique et donnant l’heure
+officielle dans cette région&nbsp;se réduit donc à : 4h 24min –
+4h = 0h 24min.
+<BR>Il
+faut donc rajouter 24min à l’heure du cadran solaire pour obtenir
+l’heure exacte (en Temps Solaire Moyen, c’est à-dire le temps
+de la montre) en ce lieu. 
+
+<BR>2)
+Correction par l’Équation du Temps. 
+
+<BR>N’ayant
+pas sous les yeux de table de l’Équation du Temps, nous procédons
+à une estimation sachant que le pic de retard maximum du Soleil a
+lieu au milieu du mois de février avec un retard d’environ 15
+minutes. Aussi, nous pouvons estimer à 12 minutes le retard du
+Soleil le 1<SUP>er</SUP>
+mars&nbsp;; temps qu’il faudra donc ajouter à l’heure du cadran
+solaire.
+<BR>3)
+Correction administrative.
+<BR>Bien
+que la Martinique soit un département français, elle ne pratique
+pas la règle de l’heure avancée,&nbsp;ce qui se conçoit puisque
+sa latitude est proche de l’Équateur ; il n’y a donc ni d’heure
+d’hiver, ni d’heure d’été à rajouter.
+<BR>4)
+Conclusion&nbsp;:
+<BR>L’heure
+de la montre à cet instant à Fort-de-France est par conséquent&nbsp;:
+<BR>Heure
+du cadran solaire + correction longitude + Équation du temps +
+correction administrative&nbsp;: 
+
+<BR>11h
+25min + 24min + 12min = 12h 01min.
+<BR>Un
+Foyalais (en créole Fort-de-France se dit <I>Fodfwans</I>)
+qui consulte sa montre à midi en mars peut constater avec amusement
+que le Soleil ne franchira pas le méridien avant une demi-heure&nbsp;!
+
+
+
+<BR><B>Second
+exemple&nbsp;</B>: Noël
+en France métropolitaine.
+
+<BR>Lorsque
+les cloches de toutes les églises de France sonnent midi le 25
+décembre, quelles heures indiquent les cadrans solaires situés à
+Brest, Le Havre, Paris, Dijon&nbsp;et Nice ?
+<BR>Il
+n’y a aucune correction due à l’Équation du Temps, puisque
+nous savons que le 25 décembre le Soleil n’est ni en avance ni en
+retard sur le temps de la montre (Cf. dans ce Chapitre 10&nbsp;:
+Observation du Soleil, Question 4c et Question 6c). En revanche ces
+villes sont trop espacées en longitudes pour ne pas tenir compte de
+cet éloignement. Les longitudes sont&nbsp;: 4° 29′ 08″ Ouest =
+- 4,4860° pour Brest&nbsp;; 0° 6' 28&quot; Est = 0,1079 pour Le
+Havre&nbsp;; 2° 21' 8&quot; Est =  2,3488° pour Paris&nbsp;; 5°
+2' 29&quot; Est =  5,0414° pour Dijon et 7° 15' 43&quot; Est =
+7,2619 pour Nice.
+<BR>Les
+corrections en longitudes par rapport au méridien de Greenwich (qui
+normalement devrait être le centre du fuseau horaire français)
+sont&nbsp;:
+<BR>Brest&nbsp;:
+4,4860°x4 = 17,94 min. (à ajouter à l’heure du Soleil).
+<BR>Le
+Havre: 0.1079 x4 = 0,43 min. (à retrancher à l’heure du Soleil).
+<BR>Paris&nbsp;:
+2,3488 x4 = 9,4 min. (à retrancher à l’heure du Soleil).
+<BR>Dijon&nbsp;:
+5,0414x4 = 20,16 min. (à retrancher à l’heure du Soleil).
+<BR>Nice&nbsp;:
+7,2619x4 = 29,04min. (à retrancher à l’heure du Soleil).
+<BR>Correction
+administrative&nbsp;: 
+
+<BR>L’heure
+légale de la France en hiver est UTC +1, car elle est avancée
+d’une heure par rapport à l’heure au méridien de Greenwich.
+<BR>D’après
+la formule&nbsp;:
+<BR>Heure
+montre = Heure Soleil + Longitude + Équation du Temps + Heure
+avancée.
+<BR>On
+en déduit :
+<BR>Heure
+Soleil = Heure montre – Longitude - Équation du Temps - Heure
+avancée.
+<BR>(Avec
+une longitude positive si la ville est située à l’Ouest de
+Greenwich et négative sinon).
+<BR>Pour
+12h à la montre, on obtient alors l’heure vraie du Soleil dans
+les villes suivantes&nbsp;:
+<BR>Brest&nbsp;:
+12h - 17,94min -1h = 10h 42min. 
+
+<BR>Le
+Havre&nbsp;: 12h + 0,43min -1h = 11h 00min.
+<BR>Paris&nbsp;:
+12h + 9,4min - 1h = 11h 9min.
+<BR>Dijon&nbsp;:
+12h + 20,16min - 1h = 11h 20min.
+<BR>Nice&nbsp;:
+12h + 29,04min - 1h = 11h 30min.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_3.jpg" NAME="Image 34" ALIGN=BOTTOM WIDTH=623 HEIGHT=568 BORDER=0>
+<BR>
+<BR><B>Lignes
+et inscriptions sur un cadran solaire.</B>
+<BR><I><B>a)
+Description générale.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_4.jpg" NAME="Image 35" ALIGN=BOTTOM WIDTH=623 HEIGHT=578 BORDER=0>
+<BR><I><B>b)
+Les arcs diurnes d’un cadran solaire.</B></I>
+<BR>Les
+«&nbsp;arcs diurnes&nbsp;» que l’on nomme aussi «&nbsp;lignes
+de déclinaisons&nbsp;» (sous entendu du Soleil et non du cadran),
+sont des lignes gravées sur un cadran solaire destinées à
+souligner certaines dates particulières dans l’année. 
+
+<BR>Ainsi
+chaque arc diurne marque un jour précis dans l’année et vient
+couper les lignes horaires de ce jour. Il matérialise le parcours
+de l’ombre de l’extrémité du style au cours de la journée,
+d’où son nom «&nbsp;diurne&nbsp;».
+<BR>Naturellement,
+ne sont pas dessinés sur la table du cadran solaire les 365 arcs de
+l’année, mais un nombre très restreint. Lorsque des arcs diurnes
+sont représentés sur un cadran, ce qui n’est pas toujours le
+cas, figurent généralement les trois principaux que sont&nbsp;:
+l’arc diurne du solstice d’été, celui des équinoxes et celui
+du solstice d’hiver. S’ajoutent parfois d’autres arcs diurnes,
+par exemple&nbsp;: les arcs des signes du zodiaque pour signaler la
+date d’entrée du Soleil dans chaque constellation zodiacale, un
+arc pour marquer la date d’anniversaire d’un évènement
+historique propre au lieu, ou plus simplement, dans le cas d’un
+cadran solaire appartenant à un particulier, la date d’anniversaire
+du propriétaire.
+<BR>Concernant
+les cadrans solaires plans, verticaux ou horizontaux, destinés aux
+latitudes moyennes des deux hémisphères terrestres (c’est-à-dire
+entre les deux cercles polaires), les arcs diurnes dessinent des
+hyperboles, sauf pour l’arc d’équinoxe qui se transforme en une
+droite (Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil,
+Question 10d).
+<BR>L’arc
+diurne le plus proche du pied du style est celui du solstice
+d’hiver, si le cadran solaire est vertical, car dans ce cas
+l’ombre la plus courte à lieu en hiver&nbsp;; si le cadran
+solaire est horizontal, l’ombre la plus courte à lieu évidemment
+en été et par conséquent l’hyperbole la plus proche du pied du
+style est celle du solstice d’été. Par sa longueur variable dans
+l’année, l’ombre du style rencontre deux fois les arcs diurnes
+situés entre les solstices.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_5.jpg" NAME="Image 36" ALIGN=BOTTOM WIDTH=624 HEIGHT=468 BORDER=0>
+<BR><I><B>c)
+Marquage des heures et autres inscriptions.</B></I>
+<BR>Le
+marquage des heures par des chiffres romains est à la fois le plus
+ancien et le plus répandu&nbsp;; les chiffres arabes n’apparaissent
+pratiquement que sur les cadrans solaires récents, le mélange des
+deux est assez rare. De par la simplicité rectiligne du tracé, les
+chiffres romains sont d’ailleurs beaucoup plus simples à graver
+sur des supports tel que la pierre ou le bois.
+<BR>Il
+est fréquent de rencontrer les deux formes d’écriture du chiffre
+quatre, tantôt écrit IIII (forme additive), tantôt écrit IV
+(forme soustractive), sans doute pour une raison d’esthétique.
+L’heure du midi est parfois indiquée par un M à la place de XII
+ou de 12.
+<BR>Les
+chiffres sont généralement situés dans le prolongement des lignes
+horaires, pas toujours répartis de façon circulaire à l’instar
+des horloges mécaniques, mais souvent inscrits à la marge dans un
+bandeau rectangulaire.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_6.jpg" NAME="Image 37" ALIGN=BOTTOM WIDTH=623 HEIGHT=467 BORDER=0>
+<BR>Il
+n’est pas rare de rencontrer des cadrans solaires mentionnant la
+longitude et la latitude du lieu, surtout sur ceux construits à
+partir du XIX<SUP>e</SUP>
+siècle, ce qui leur permet de convertir l’heure solaire en heure
+légale de la montre. Les abréviations sont généralement celles
+des astronomes, à savoir 
+pour la latitude et 
+pour la longitude. 
+
+<BR>Sur
+les cadrans déclinants, on trouve parfois une autre indication
+intéressante, celle de la déclinaison gnomonique du cadran,
+autrement dit, la déclinaison du mur sur lequel repose de cadran.
+Cette déclinaison est symbolisée par la lettre D qu’il ne faut
+surtout pas confondre avec 
+la déclinaison du Soleil. Nous en reparlerons dans le prochain
+paragraphe.
+<BR>Il
+extrêmement rare de trouver un cadran solaire sans devise&nbsp;;
+depuis le Moyen Âge, elle orne systématiquement tous les cadrans
+solaires, les plus ancien en latin, les plus récents dans la langue
+régionale où est implanté le cadran. Ces devises sont si
+nombreuses et de natures si variées que nous invitons le lecteur
+intéressé par ce sujet à consulter les ouvrages spécialisés. 
+
+<BR>De
+nombreux cadrans solaires sont datés et certains sont même signés
+du nom du «&nbsp;maître cadranier&nbsp;» (artisans réalisant
+techniquement et artistiquement les cadrans solaires) qui a créé
+l’œuvre. 
+
+<BR><I><B>d)
+Reconnaitre un cadran solaire déclinant.</B></I>
+<BR>On
+appelle cadran déclinant un cadran solaire accroché sur la paroi
+d’un mur vertical, mais dont la façade n’est pas exactement
+orientée plein Sud dans l’hémisphère Nord (plein Nord dans
+l’hémisphère Sud). La très grande majorité des cadrans
+solaires rencontrés dans le monde sont des cadrans verticaux
+déclinants.
+<BR>Ainsi
+la table d’un cadran déclinant est, soit orientée vers l’Ouest,
+soit vers l’Est, de façon plus ou moins prononcée. La grandeur
+numérique appelée «&nbsp;déclinaison gnomonique&nbsp;» permet
+d’exprimer quantitativement cette orientation&nbsp;; elle est sans
+aucun rapport avec la déclinaison du Soleil puisqu’elle
+caractérise, de fait, l’orientation du mur sur lequel est
+accroché le cadran solaire. Par définition, la déclinaison
+gnomonique d’un cadran solaire vertical, souvent désigné par la
+lettre D, est l’angle compris entre le plan perpendiculaire du mur
+vertical sur lequel repose le cadran solaire et le plan méridien du
+lieu. Ce nombre s’exprime en degré d’angle, minute et seconde
+d’arc, avec les conventions suivantes&nbsp;:
+<BR>Pour
+un cadran déclinant vers le Sud-Est, D est compris entre -90° et
+0°.
+<BR>Pour
+un cadran déclinant vers le Sud-Ouest, D est compris entre 0° et
+90°.
+<BR>Pour
+un cadran déclinant vers le Nord-Est, D est compris entre  -180°
+et - 90°.
+<BR>Pour
+un cadran déclinant vers le Nord-Ouest, D est compris entre  90°
+et 180°.
+<BR>Naturellement,
+si D = 0°, le cadran n’est pas déclinant, il est dit
+méridional&nbsp;; si D = 180°, sa face est directement exposée
+plein Nord (Dans l’hémisphère Nord), on le nomme cadran
+septentrional (Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil,
+Question 11d).
+<BR>Trois
+critères permettent de reconnaître immédiatement si un cadran
+solaire est déclinant ou non, ce sont&nbsp;: l’indication de la
+déclinaison gnomonique D, l’orientation du style, la répartition
+des lignes horaires.
+
+<BR>1<SUP>er</SUP>
+critère. 
+
+
+<BR>L’indication
+de la déclinaison gnomonique D est rarement mentionnée, notamment
+pour les cadrans datant d’avant le XVIII<SUP>e
+</SUP>siècle.
+Lorsqu’elle existe, elle est généralement regroupée avec
+l’indication de la position géographique, en latitude et en
+longitude, du cadran solaire. Parfois la déclinaison gnomonique est
+remplacée par l’azimut du mur.
+
+<BR>2<SUP>e</SUP>
+critère.
+
+<BR>L’orientation
+du style par rapport au plan du mur n’est pas toujours facile à
+distinguer, surtout si le cadran est placé à une certaine
+hauteur&nbsp;du sol ; néanmoins la position du style est un bon
+indice d’identification, car elle est obligatoirement corrélée à
+la déclinaison du cadran.
+<BR>Rappelons
+en effet, que le style est toujours dirigé selon un axe parallèle
+à l’axe de rotation de la Terre&nbsp;; dans l’hémisphère
+Nord, il pointe donc toujours vers l’étoile Polaire. 
+
+<BR>Pour
+un cadran vertical accroché à un mur, on en déduit que
+l’extrémité du style pointe vers le sol lorsque le cadran fait
+en partie face au Sud et, vers le ciel, si au contraire, le cadran
+fait en partie face au Nord. Plus précisément, si le cadran est
+déclinant Sud-Est ou Nord-Est, le style est orienté vers la gauche
+du cadran et pointe respectivement le sol ou le ciel&nbsp;; si le
+cadran est déclinant Sud-Ouest ou Nord-Ouest, le style est orienté
+vers la droite du cadran et pointe respectivement le sol ou le ciel.
+
+<BR>3<SUP>e</SUP>
+critère.
+
+<BR>La
+répartition des lignes horaires demeure le moyen de reconnaissance
+le plus pertinent et le plus efficace pour identifier un cadran
+solaire déclinant, car la singularité du tracé est immédiatement
+reconnaissable. En effet, les secteurs angulaires séparant deux
+lignes horaires ne sont ni régulières, ni symétriques par rapport
+à la ligne du midi, ce qui procure à cette horloge un aspect bien
+étrange. 
+
+<BR>La
+dissymétrie est d’autant plus forte que la déclinaison est
+grande. Les lignes horaires s’inclinent de plus en plus par
+rapport à la verticalité du mur à mesure qu’elles s’écartent
+du midi, qui est dans tout cadran la seule ligne à rester dans
+l’alignement vertical du mur. En outre, plus le cadran est
+déclinant, plus les lignes deviennent parallèles entre elles.
+<BR>Un
+cadran déclinant à l’Est n’indiquera que les heures du matin
+et si en outre le cadran est septentrional la ligne de midi sera
+même absente&nbsp;; un cadran déclinant à l’Ouest ne marquera
+que les heures du soir et s’il est septentrional, les heures de
+l’après midi seront aussi absentes.
+<BR>En
+résumé&nbsp;:
+<TABLE WIDTH=633 CELLPADDING=7 CELLSPACING=2>
+<TR>
+<TD COLSPAN=5 WIDTH=613 VALIGN=TOP BGCOLOR="#00ffff" STYLE="border-top: 4.50pt solid #00000a; border-bottom: 6.00pt double #00000a; border-left: 4.50pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 16pt">Cadran
+solaire vertical déclinant</FONT></FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=130 BGCOLOR="#000000" STYLE="border-top: 6.00pt double #00000a; border-bottom: 5.25pt double #00000a; border-left: 4.50pt solid #00000a; border-right: 2.25pt solid #ffffff; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">Orientation
+géographique de la table</FONT></P>
+</TD>
+<TD WIDTH=78 BGCOLOR="#000000" STYLE="border-top: 6.00pt double #00000a; border-bottom: 5.25pt double #00000a; border-left: 2.25pt solid #ffffff; border-right: 2.25pt solid #ffffff; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Déclinaison
+gnomonique</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">D</FONT></P>
+</TD>
+<TD WIDTH=71 BGCOLOR="#000000" STYLE="border-top: 6.00pt double #00000a; border-bottom: 5.25pt double #00000a; border-left: 2.25pt solid #ffffff; border-right: 2.25pt solid #ffffff; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">Orientation
+du style par rapport au méridien et au sol</FONT></P>
+</TD>
+<TD WIDTH=60 BGCOLOR="#000000" STYLE="border-top: 6.00pt double #00000a; border-bottom: 5.25pt double #00000a; border-left: 2.25pt solid #ffffff; border-right: 2.25pt solid #ffffff; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">Lecture
+possible des heures</FONT></P>
+</TD>
+<TD WIDTH=210 BGCOLOR="#000000" STYLE="border-top: 6.00pt double #00000a; border-bottom: 5.25pt double #00000a; border-left: 2.25pt solid #ffffff; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Exemples</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">de cadrans
+verticaux déclinants</FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=130 BGCOLOR="#ffff00" STYLE="border-top: 5.25pt double #00000a; border-bottom: 2.25pt solid #00000a; border-left: 4.50pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>SUD - EST</B></FONT></P>
+</TD>
+<TD WIDTH=78 BGCOLOR="#ffff00" STYLE="border-top: 5.25pt double #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">de
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">-
+90°</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">à
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">0°</FONT></P>
+</TD>
+<TD WIDTH=71 BGCOLOR="#ffff00" STYLE="border-top: 5.25pt double #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in">A gauche du méridien</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT COLOR="#000000">Vers le </FONT><FONT COLOR="#000000"><FONT FACE="Wingdings, serif"></FONT></FONT></P>
+</TD>
+<TD WIDTH=60 BGCOLOR="#ffff00" STYLE="border-top: 5.25pt double #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Matin</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Midi</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Après-midi</FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+<TD WIDTH=210 BGCOLOR="#ffff00" STYLE="border-top: 5.25pt double #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_7.jpg" NAME="Image 38" ALIGN=BOTTOM WIDTH=189 HEIGHT=189 BORDER=0></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=130 BGCOLOR="#00ff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 2.25pt solid #00000a; border-left: 4.50pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>SUD -
+OUEST</B></FONT></P>
+</TD>
+<TD WIDTH=78 BGCOLOR="#00ff00" STYLE="border: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">de
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">0°</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">à
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">90°</FONT></P>
+</TD>
+<TD WIDTH=71 BGCOLOR="#00ff00" STYLE="border: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in">A droite  du méridien</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT COLOR="#000000">Vers le </FONT><FONT COLOR="#000000"><FONT FACE="Wingdings, serif"></FONT></FONT></P>
+</TD>
+<TD WIDTH=60 BGCOLOR="#00ff00" STYLE="border: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Midi</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Après-midi</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">Soir</FONT></P>
+</TD>
+<TD WIDTH=210 BGCOLOR="#00ff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_8.jpg" NAME="Image 39" ALIGN=BOTTOM WIDTH=186 HEIGHT=204 BORDER=0></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=130 BGCOLOR="#0000ff" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 2.25pt solid #00000a; border-left: 4.50pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>NORD - EST</B></FONT></P>
+</TD>
+<TD WIDTH=78 BGCOLOR="#0000ff" STYLE="border: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">de
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">-
+180°</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">à
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">- 90°</FONT></P>
+</TD>
+<TD WIDTH=71 BGCOLOR="#0000ff" STYLE="border: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT COLOR="#ffffff">A
+gauche du méridien</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT COLOR="#ffffff">Vers le </FONT><FONT COLOR="#ffffff"><FONT FACE="Wingdings, serif"></FONT></FONT></P>
+</TD>
+<TD WIDTH=60 BGCOLOR="#0000ff" STYLE="border: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><FONT COLOR="#ffffff">Matin</FONT></FONT></P>
+</TD>
+<TD WIDTH=210 BGCOLOR="#0000ff" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_9.jpg" NAME="Image 40" ALIGN=BOTTOM WIDTH=185 HEIGHT=151 BORDER=0></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=130 BGCOLOR="#800080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 4.50pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>NORD -
+OUEST</B></FONT></P>
+</TD>
+<TD WIDTH=78 BGCOLOR="#800080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">de
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">90°</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">à
+</FONT>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif">180°</FONT></P>
+</TD>
+<TD WIDTH=71 BGCOLOR="#800080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT COLOR="#ffffff">A
+droite  du méridien</FONT></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT COLOR="#ffffff">Vers le </FONT><FONT COLOR="#ffffff"><FONT FACE="Wingdings, serif"></FONT></FONT></P>
+</TD>
+<TD WIDTH=60 BGCOLOR="#800080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><FONT COLOR="#ffffff">Soir</FONT></FONT></P>
+</TD>
+<TD WIDTH=210 BGCOLOR="#800080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 4.50pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 4.50pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_10.jpg" NAME="Image 41" ALIGN=BOTTOM WIDTH=183 HEIGHT=147 BORDER=0></P>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR><B>6)
+Solution de l’exercice.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c7//c7_src_0.jpg" NAME="Image 42" ALIGN=BOTTOM WIDTH=624 HEIGHT=572 BORDER=0>
+<BR><I><B>a)
+Première affirmation.</B></I>
+<BR><I>«&nbsp;Ce
+cadran solaire est prévu pour fonctionner dans l’hémisphère
+Sud&nbsp;».</I>
+<BR>Cette
+affirmation est fausse pour la seule et bonne raison que la latitude
+est explicitement indiquée&nbsp;; elle vaut 
+= 43° 31’ 57’’ N avec bien entendu N pour signifier que ce
+cadran fonctionne dans l’hémisphère Nord.
+<BR><I><B>b)
+Deuxième affirmation.</B></I>
+<BR><I>«&nbsp;Ce
+cadran solaire est fortement déclinant avec une déclinaison
+Sud-Est&nbsp;».</I>
+<BR>Cette
+affirmation est fausse pour quatre raisons qui se complètent.
+<BR>D’une
+part, la déclinaison gnomonique est explicitement indiquée sur ce
+cadran, elle vaut D = 2° 13’ W. Autrement dit, l’angle entre la
+normale du plan de la table et le plan méridien est non seulement
+très faible puisqu’il dépasse à peine 2°, mais de plus vers la
+droite. Autrement dit, ce cadran est faiblement déclinant vers
+l’Ouest, il est même presque méridional.
+<BR>La
+seconde raison se déduit de la position du style. Le décor en
+arrière plan montre que le cadran repose le long d’un tronc
+d’arbre, ce qui prouve que ce cadran est de type vertical. Or
+l’axe du style dirigé vers le sol n’est que très peu incliné
+vers la droite par rapport à la ligne du midi, celle qui est
+d’ailleurs occupé par un analemme.
+<BR>La
+troisième raison est encore plus convaincante&nbsp;; elle se lit
+dans l’affichage des lignes horaires. Ces dernières se
+répartissent de manière très symétrique de part et d’autre de
+la ligne des XII heures, avec un accroissement très faible et
+régulier. Tout le contraire donc d’un cadran solaire très
+déclinant.
+<BR>Enfin,
+la quatrième raison achève la preuve. Si le cadran était
+déclinant alors l’arc diurne des équinoxes se présenterait
+selon une droite très inclinée par rapport à la ligne horaire du
+midi. Or, dans le cas présent, elle est quasiment perpendiculaire.
+<BR><I><B>c)
+Troisième affirmation.</B></I>
+<BR><I>«&nbsp;La
+photographie de ce cadran solaire a été prise un jour d’été&nbsp;».</I>
+<BR>Pour
+un cadran solaire vertical, les arcs diurnes marquant le début des
+quatre saisons se répartissent toujours de la façon suivante.
+L’hyperbole du solstice d’hiver se trace toujours proche du pied
+du style tandis que celle du solstice d’été reste toujours l’arc
+diurne le plus éloigné du pied. La droite des deux équinoxes, qui
+est d’autant plus inclinée que le cadran est déclinant, se
+maintient entre ces deux arcs.
+<BR>Or,
+l’extrémité de l’ombre du style atteint l’arc du solstice
+d’hiver. Cette ombre parcourra donc toutes les heures d’une
+journée d’hiver et non d’été.
+<BR><I><B>d)
+Quatrième affirmation.</B></I>
+<BR><I>«&nbsp;Cette
+photographie a été prise le&nbsp;21 décembre à&nbsp;11h&nbsp;36min,
+heure légale du lieu&nbsp;».</I>
+<BR>Vérifions
+cette dernière affirmation.
+<BR>L’extrémité
+de l’ombre du style atteint précisément l’arc diurne du
+solstice d’hiver, la photographie a donc été prise un 21
+décembre. Reste à calculer à quelle heure de la montre.
+<BR>L’ombre
+du style vient à peine de franchir la ligne horaire de la première
+heure de l’après-midi&nbsp;; estimons cette heure à 13h 05min,
+heure solaire évidemment. 
+
+<BR>Convertissons
+cette heure du Soleil vrai en heure légale du lieu. Trois
+corrections sont nécessaires.
+
+<BR>1<SUP>er</SUP>
+correction&nbsp;: l’Équation du Temps. 
+
+
+<BR>Nous
+savons (Cf. dans ce Chapitre 10, Question 6c) que théoriquement la
+courbe en «&nbsp;8&nbsp;» rencontre la méridienne le 25 décembre
+et que par conséquent l’Équation du Temps est nulle ce jour là.
+Or la courbe en «&nbsp;8&nbsp;» gravée sur ce cadran solaire est
+centrée sur la méridienne de sorte que le sommet de la boucle du
+«&nbsp;8&nbsp;» coïncide avec la ligne horaire du midi. Cette
+position est parfaitement légitime dans la mesure où l’on a
+tracé un analemme de midi. Ce qui ne l’est pas en revanche, c’est
+de constater que ce sommet semble rencontrer l’arc diurne du 21
+décembre (solstice d’hiver) à la place de l’arc diurne du 25
+décembre. Mais il est évident que les dimensions de ce cadran
+solaire ne nous permettent pas de distinguer, à cette échelle,
+deux arcs diurnes séparés seulement de quatre jours, car
+l’épaisseur du trait contient pratiquement tous les jours compris
+entre le 21 et 25 décembre. 
+
+<BR>Néanmoins,
+si l’Équation du Temps du 21 décembre ne nous est pas accessible
+à cause de l’imprécision de cet analemme, il est aisé de
+l’estimer car ces deux dates sont très proches.
+<BR>En
+se souvenant que durant le mois de décembre jusqu’au 25, le temps
+du Soleil est en avance sur le temps de la montre et que cette
+avance diminue de jour en jour jusqu’à s’annuler le 25
+décembre, il est raisonnable d’évaluer l’Équation du Temps à
+- 2 minutes. De toute façon, il est rare que l’heure d’un
+cadran solaire soit aussi précise.
+
+<BR>2°
+correction&nbsp;: le décalage en longitude.
+
+<BR>Pour
+convertir l’heure du Soleil en heure légale UTC de la montre, il
+nous faut savoir d’une part, dans quel fuseau horaire appartient
+le lieu où est installé le cadran solaire et d’autre part le
+temps (en temps solaire moyen) que prendra le Soleil pour aller du
+méridien du cadran solaire au méridien du centre du fuseau horaire
+concerné.
+<BR>L’indication
+de la longitude sur ce cadran solaire devient alors une donnée
+essentielle (dans la pratique sur le terrain, on s’en dispense,
+car l’on sait généralement dans quel fuseau horaire on observe
+un cadran horaire, mais convertir l’heure à partir d’une
+photographie nécessite cette information). 
+
+<BR>Situé
+à l’Est et à avec une longitude de seulement 5° 24’ 21’’,
+ce cadran solaire est nécessairement attaché au fuseau horaire de
+Greenwich, autrement dit, sans tenir compte pour l’instant de
+l’éventuelle «&nbsp;heure avancée&nbsp;», l’heure de la
+montre est l’heure UTC + 0, c’est-à-dire l’heure du Temps
+Solaire Moyen de Greenwich.
+<BR>Il
+nous reste donc à calculer en combien de temps le Soleil passe du
+méridien où se maintient le cadran solaire au méridien de
+Greenwich. Or, nous savons (Voir <I>supra</I>)
+que cette durée vaut quatre fois la longitude de ce lieu&nbsp;et
+qu’il faut la retrancher de l’heure du cadran solaire, puisque
+ce lieu est situé à l’Est de Greenwich.
+<BR>Pour
+convertir cette longitude en unité de temps nous devons exprimer
+d’abord la longitude en degré sexagésimal&nbsp;: 5° 24’ = 5°
++ 24/60 = 5° + 0,4° = 5,4°.
+<BR>La
+correction due à la longitude est donc de&nbsp;: 4x5,4° = 21,6
+min, qui faut retrancher à l’heure du cadran solaire.
+
+<BR>3°
+correction&nbsp;: la contrainte administrative.
+
+<BR>Nous
+savons que, pour diverses raisons, de nombreux pays ne respectent
+pas l’heure du Soleil vrai et moyen, mais pas davantage l’heure
+de leur fuseau horaire pourtant licite sur toute l’étendue du
+fuseau.
+<BR>Pour
+savoir si ce cadran solaire est concerné par ce cas, nous devons le
+localiser géographiquement. Sa longitude 5° 24’ 21’’et sa
+latitude 43° 31’ 57’’ inscrite sur sa table nous permettent
+de le situer en France, proche d’Aix-en-Provence.
+<BR>Or
+la France pratique l’heure avancée à raison d’une heure en
+hiver et de deux heures en été. Il nous faut donc ajouter 1h à
+l’heure indiquée par ce cadran solaire puisque la photographie a
+été prise en hiver.
+
+<BR>Bilan.
+
+<BR>La
+relation entre l’heure légale de la montre et l’heure du cadran
+solaire est donnée par la formule&nbsp;(Voir <I>supra</I>)
+:
+<BR>Heure
+légale = Heure du cadran solaire + 4xLongitude + Équation du Temps
++ Heure avancée.
+<BR>Dans
+notre cas, on obtient donc&nbsp;:
+<BR>Heure
+légale = 13h 05min - 21,6 min – 2min + 1h = 696,4 min = 11h
+36min.
+<BR>Cette
+photographie a donc été prise le 21 décembre à 11h 36min.
+<BR>(Naturellement,
+il n’y a aucun moyen de savoir en quelle année&nbsp;!).
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+

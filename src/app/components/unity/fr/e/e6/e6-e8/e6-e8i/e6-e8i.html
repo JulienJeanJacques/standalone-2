@@ -1,0 +1,276 @@
+
+
+
+<BR><B>Le
+Temps Sidéral à Greenwich.</B>
+<BR><I><B>a)
+Un angle variable en temps et en lieu.</B></I>
+<BR>Par
+définition, le Temps Sidéral est l’angle horaire du point
+Vernal. Nous savons que cet angle varie en fonction du lieu et de
+l’heure de l’observation. Or une mesure de cet angle sur le
+terrain n’est pas toujours commode, voire souvent inaccessible. En
+effet, la position du point Vernal n’est pas nécessairement
+visible en un lieu donné et à une heure donnée. 
+
+<BR>Certes,
+on peut aussi, pour obtenir le Temps Sidéral, attendre la
+culmination d’un astre dont on connaît l’ascension droite, mais
+cette méthode n’est guère plus confortable. 
+
+<BR><I><B>b)
+Principe de la méthode.</B></I>
+<BR>Il
+a donc fallu trouver un moyen plus efficace de se procurer cet angle
+horaire.
+<BR>Le
+procédé qui a été retenu est assez simple. On choisit
+arbitrairement un des méridiens terrestres comme ligne de référence
+dont on calcule à chaque instant le Temps Sidéral en ce lieu.
+<BR>Le
+Temps Sidéral de chaque autre méridien peut alors se rapporter au
+Temps Sidéral de ce méridien de référence, par le biais d’un
+simple calcul de longitude.
+<BR>Cette
+méthode est en effet parfaitement légitime puisque le Temps
+Sidéral est égal au même instant en tout lieu du même méridien
+(Un angle horaire se mesure le long de l’Equateur, ligne
+perpendiculaire à tous les méridiens).
+<BR>L’idée
+est d’ailleurs empruntée à celle qui a permis d’établir le
+«&nbsp;Temps Universel&nbsp;» valable en tout lieu du globe
+terrestre (Cf. Chapitre 7&nbsp;: Usage du Cherche-étoiles, Question
+1c). La méthode est assez similaire, mais avec cette différence
+que l’on ne découpe par le globe terrestre par tranches horaires
+de largeur fixe comme le fait le système des 24 fuseaux horaires.
+Car le Temps Sidéral est une fonction continue de la longitude, ce
+qui n’est pas le cas du Temps Universel civil, puisque l’heure
+Universelle reste constante à l’intérieur d’une tranche d’un
+fuseau horaire (Le Temps Universel civil est une fonction en
+escalier, constante sur chaque fuseau). 
+
+<BR>Le
+calcul du Temps Sidéral suppose donc de connaître précisément la
+longitude du lieu au degré près.
+<BR><I><B>c)
+Choisir un méridien comme origine.</B></I>
+<BR>Aussi,
+a-t-on naturellement choisit comme origine du repère des temps
+sidéraux le même méridien que celui des fuseaux horaires, à
+savoir le méridien de Greenwich. Ce choix commun offre l’avantage
+d’associer à chaque longitude d’un point de la Terre, à la
+fois un horaire en Temps Universel (UT) et un horaire en Temps
+Sidéral.
+<BR>En
+effet, le Temps Universel (UT) est une échelle de temps qui sert de
+référence à tous les temps locaux. Il permet de fixer la position
+d’un point de la Terre dans son mouvement de rotation. Par
+convention internationale, il est défini comme étant le temps
+solaire moyen de Greenwich (intervalle de temps entre deux passages
+consécutifs du Soleil moyen au méridien de  Greenwich) augmenté
+de 12 heures afin de faire commencer le début d’un jour à minuit
+et non à midi (heure civile).
+<BR>Ainsi,
+en tout lieu de la Terre de longitude L, on peut associer une heure
+locale obtenue en ajoutant à l’heure de Greenwich une durée
+égale à la longitude convertie en unité d’heure (360° en 24h).
+<BR><I><B>d)
+Le temps Sidéral dépend aussi du temps.</B></I>
+<BR>La
+question d’un temps universel pour tous les méridiens étant
+résolue, on peut maintenant envisager de concevoir un Temps Sidéral
+de référence. 
+
+<BR>En
+effet, comme nous l’avons déjà signalé plus haut, le Temps
+Sidéral ne dépend pas seulement d’un lieu mais aussi du temps.
+<BR>Commençons
+donc par le définir en un lieu fixé, celui de Greenwich, puisque
+les autres lieux s’y référeront.
+<BR><I><B>e)
+Temps sidéral de Greenwich à une heure donnée.</B></I>
+<BR>Chaque
+jour, le Temps Sidéral de Greenwich que nous noterons dorénavant
+TSGreen, est calculé à 00h UT par la formule suivante&nbsp;(Agréé
+par l’Union Astronomique International) :
+<BR>TSGreen(0<SUP>h</SUP>)
+= 6h 41min 50,54841s + (8640184,812866s)T + (0,093104s)T<SUP>2</SUP>
+– (0,0000062s)T<SUP>3</SUP>.
+
+
+<BR>Avec
+T = (JJ – 2451545,0) / 36525 où JJ est le Jour Julien à 00h UT
+du jour.
+<BR>Il
+va sans dire que l’astronome amateur n’a nullement besoin de
+retenir cette «&nbsp;horrible&nbsp;» formule&nbsp;; car on se
+procure facilement sur internet le Temps Sidéral de Greenwich pour
+tous les jours de la semaine. On peut aussi facilement programmer
+cette formule sur son ordinateur en négligeant même les termes en
+T<SUP>2</SUP>
+et T<SUP>3</SUP>.
+<BR>Ensuite,
+connaissant TSGreen(0<SUP>h</SUP>),
+on détermine le temps sidéral de Greenwich, noté TSGreen(<I>t</I>),
+à tout heure <I>t</I>
+(UT) de cette même journée par la formule habituelle qui tient
+compte du décalage sidéral&nbsp;:
+
+<SPAN STYLE="background: #00ff00">TSGreen(t</SPAN><SUP><SPAN STYLE="background: #00ff00">h</SPAN></SUP><SPAN STYLE="background: #00ff00">)
+= TSGreen(0</SPAN><SUP><SPAN STYLE="background: #00ff00">h</SPAN></SUP><SPAN STYLE="background: #00ff00">)
++ 1,0027389 t</SPAN>
+
+<BR><I><B>f)
+Temps sidéral de Greenwich à une heure et un jour donnés.</B></I>
+<BR>On
+peut même faire mieux ! 
+
+<BR>Connaissant
+seulement le Temps Sidéral de Greenwich à minuit un jour dans
+l'année, on peut l'estimer, avec une bonne approximation, <I>n</I>
+jours plus tard. 
+
+<BR>En
+effet, il suffit d'ajouter le terme tenant compte de la progression
+journalière d'un temps sidéral. Celui-ci, comme nous l'avons déjà
+vu, est un multiple de 0,065735. Si bien que nous pouvons écrire
+que <I>n </I>jours
+plus tard le Temps Sidéral de Greenwich à l'instant <I>t</I>
+en heure (UT), vaudra :
+
+<SPAN STYLE="background: #00ff00">TSGreen(t</SPAN><SUP><SPAN STYLE="background: #00ff00">h</SPAN></SUP><SPAN STYLE="background: #00ff00">
++ n jours) = TSGreen(0</SPAN><SUP><SPAN STYLE="background: #00ff00">h</SPAN></SUP><SPAN STYLE="background: #00ff00">)
++ 1,0027389 t + 0,065735n</SPAN>
+
+<BR>
+<BR><B>Le
+TSL partout ailleurs.</B>
+<BR><I><B>a)
+Le TSL en un lieu.</B></I>
+<BR>Connaissant
+le temps sidéral de Greenwich à un instant <I>t</I>
+(UT), il est possible d’établir le temps sidéral local d’un
+lieu sur Terre au même instant <I>t</I>,<I>
+</I>si l’on connaît la
+longitude L de ce lieu.
+<BR>Précisons,
+tout de suite, qu’il existe deux conventions concernant le signe à
+attribuer à la longitude.
+<BR><I><B>b)
+Convention du signe des longitudes.</B></I>
+<BR>Certains
+considèrent qu’une longitude est positive lorsque le méridien
+concerné se trouve à l’Ouest du méridien de Greenwich et donc
+elle est comptée négative à l’Est du méridien de Greenwich.
+Dans ce cas, le temps sidéral local du lieu de longitude L est
+donné par&nbsp;: 
+
+<BR>TSL(t)
+= TSGreen(t) – L.
+<BR>Mais
+la tendance actuelle penche plutôt pour la convention contraire, à
+savoir&nbsp;: la longitude est comptée négative à l’Ouest de
+Greenwich et positive à l’Est de Greenwich.
+<BR>Ce
+choix semble plus cohérent dans la mesure où les longitudes Ouest
+ont des heures sidérales qui précèdent celle de Greenwich et les
+longitudes Est ont des heures sidérales plus tardives. 
+
+<BR>En
+effet, plus la longitude est à l’Ouest, plus l'angle horaire du
+point Vernal diminue puisque tout angle horaire croît dans le sens
+de la rotation terrestre.
+<BR><I><B>c)
+Le TSL le long d’une longitude donnée.</B></I>
+<BR>Ainsi
+dans ce cas, le temps sidéral local du lieu de longitude L est
+donné par&nbsp;: 
+
+<TABLE WIDTH=482 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#ffff00">
+<TR>
+<TD WIDTH=466 VALIGN=TOP BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT FACE="Times New Roman, serif">Temps sidéral local =
+temps sidéral à Greenwich + Longitude du lieu</FONT></P>
+</TD>
+</TR>
+</TABLE>
+<BR>C’est-à-dire,
+à tout heure <I>t</I>
+d’une journée (0 
+<I>t</I>
+
+24 heures UT)
+
+<SPAN STYLE="background: #00ff00">TSL(t)
+= TSGreen(</SPAN><I><SPAN STYLE="background: #00ff00">t</SPAN></I><SPAN STYLE="background: #00ff00">)
++ L</SPAN>.
+
+<BR>Bien
+que le choix entre ces deux formules n’ait aucune importance si
+l’on respecte la convention des signes, nous adopterons par la
+suite la seconde formule. En revanche, il est important de toujours
+convertir la longitude en heure sexagésimale, alors que
+généralement elle est donnée en degré, (La conversion consiste à
+diviser les degrés par 15 pour obtenir des heures).
+<BR>Finalement,
+en tenant compte du TSL à Greenwich, le Temps Sidéral Local à une
+heure donnée <I>t</I>
+(UT) et à une longitude L donnée (longitude comptée positivement
+vers l'Est et convertie en heure), est&nbsp;donnée par : 
+
+
+<SPAN STYLE="background: #00ff00">TSL(</SPAN><I><SPAN STYLE="background: #00ff00">t</SPAN></I><SPAN STYLE="background: #00ff00">)
+= TSGreen(0) + L + 1,00273896 </SPAN><I><SPAN STYLE="background: #00ff00">t</SPAN></I><I>
+</I>.
+
+<BR>En
+toute rigueur, on devrait aussi exprimer la longitude en heure
+sidérale (c’est-à-dire, diviser l’angle en degré par 15,04 et
+non par 15), mais cette précision est assez illusoire.
+<BR>
+<BR><B>Corrigé
+de l’exercice.</B>
+<BR>Les
+données du problème sont&nbsp;:
+<BR>A
+minuit le premier janvier, à Greenwich&nbsp;: TSGreen(<I>0</I>)
+= 2h 46min 32sec = 2,7775h.
+<BR>Longitude&nbsp;de
+Berlin : 13°24′37″ Est = +13,41° = 0,884h = 0h 53min 38s.
+<BR>A
+minuit le premier janvier, à Berlin&nbsp;: TSL (<I>0</I>)
+= TSGreen(<I>0</I>)
++ L
+<BR>A
+21h (UT) le premier janvier, à Berlin&nbsp;: TSL (<I>21</I><SUP><I>h</I></SUP>)
+= TSGreen(<I>0</I>)
++ L + 1,00273896 × 21
+<BR>A
+21h (UT) le 15 janvier, à Berlin&nbsp;: 
+
+<BR>TSL
+(<I>21</I><SUP><I>h</I></SUP><I>
++15j</I>) = TSGreen(<I>0</I>)
++ L + 1,00273896 × 21 + 0,065735x15
+<BR>Car
+chaque jour le TSL avance
+de : 0,065735 heure (24 ×
+1,00273896, (voir Question 11c du même chapitre).
+<BR>Finalement&nbsp;:
+<BR>TSL
+(<I>21</I><SUP><I>h</I></SUP><I>
++15j</I>) = 2,777h +
+0,884h + 21,057h + 0,986h  = 25,704h = 25h 42min&nbsp;;
+<BR>Autrement
+dit, le temps sidéral de Berlin le 15 janvier à 21h (UT) est de&nbsp;:
+1h 42min.
+<BR><SPAN STYLE="background: #ffff00">TSLBerlin
+(</SPAN><I><SPAN STYLE="background: #ffff00">21</SPAN></I><SUP><I><SPAN STYLE="background: #ffff00">h</SPAN></I></SUP><I><SPAN STYLE="background: #ffff00">
+</SPAN></I><SPAN STYLE="background: #ffff00">le
+</SPAN><I><SPAN STYLE="background: #ffff00">15
+janvier</SPAN></I><SPAN STYLE="background: #ffff00">)
+= 1h 42min</SPAN>.
+<BR>
+
+
+

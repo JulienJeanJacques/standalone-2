@@ -1,0 +1,492 @@
+
+
+
+<BR><B>Le casse tête de l’heure.</B>
+<BR>Pour savoir quel type d’heures
+doit-on afficher sur un Cherche-étoiles, il nous faut au préalable
+préciser certaines notions concernant l’heure. A ce niveau, nous
+nous contenterons d’une description sommaire, en privilégiant
+l’aspect pratique&nbsp;; des détails plus théoriques et
+techniques sont développés au niveau confirmé de ce Chapitre 7&nbsp;:
+Usage du Cherche-étoiles, Question 1c, et surtout dans le Chapitre
+10&nbsp;: Observation du Soleil, Question 1c). 
+
+<BR><I><B>a) L’heure UTC</B></I><B>.</B>
+<BR>L'heure dite UTC<A CLASS="sdfootnoteanc" NAME="sdfootnote2anc" HREF="#sdfootnote2sym"><SUP>2</SUP></A>&nbsp;:
+Temps Universel Coordonné (En anglais&nbsp;: Universal Time
+Coordinated), est l'heure de référence internationale. Elle est
+calculée à Paris, au <I>Bureau International des Poids et Mesures</I>
+(BIPM), à partir des données d'environ deux cents horloges
+atomiques, réparties dans le monde entier. Le <I>Time Service
+Department, U.S. Naval Observatory</I>, (aux USA), se charge de
+diffuser l'heure UTC en temps réel.
+<BR>L’essentiel de ce qu’il
+faut retenir d’un point de vue pratique est contenu dans les deux
+phrases&nbsp;suivantes :
+<BR>Lorsqu'il est «&nbsp;0 heure&nbsp;»
+UTC, il est minuit à Greenwich (situé en Angleterre, sur le
+méridien de longitude zéro).
+<BR>Lorsqu'il est «&nbsp;1 heure&nbsp;»
+UTC, il est 1 heure à Greenwich et ainsi de suite.
+<BR><I><B>b) L’heure UTC ± n</B></I><B>.</B>
+<BR>L’indication&nbsp;: <I>UTC ±
+n</I> (avec <I>n</I> un entier positif) désigne l’heure en
+vigueur à l’intérieur d’un fuseau horaire. En effet, il s’agit
+maintenant d’indiquer l’heure par rapport à Greenwich, mais en
+un lieu de longitude différente de Greenwich.
+<BR>Pour cela on a divisé le globe
+terrestre en 24 fuseaux horaires (donc d’une heure chacun).
+<BR>L’heure UTC + 0, ou plus
+simplement dite&nbsp;: heure UTC, est l’heure de Greenwich. Cette
+heure est déterminée à partir de «&nbsp;l’heure solaire
+moyenne locale&nbsp;» de Greenwich, concept qu’il n’est pas
+nécessaire de développer maintenant (il le sera au niveau confirmé
+de ce chapitre et dans le Chapitre 10&nbsp;: Observation du Soleil).
+Le méridien de Greenwich sert donc à la fois, d’origine des
+longitudes et d’origine du temps universel.
+<BR>Pour un lieu situé dans un
+fuseau horaire à l’Est de Greenwich, on ajoute à l’heure dite
+UTC de Greenwich, autant d’heures que de nombres entiers <I>n </I>de
+fuseaux horaires qui les séparent. En ce lieu, on dit qu’on est à
+l’heure UTC + <I>n</I>.
+<BR>Ainsi, UTC + <I>n</I> désigne
+un fuseau horaire en avance de <I>n</I> heures sur UTC.
+<BR>Par exemple, un lieu dit à
+l’heure UTC + 3 signifie que trois fuseaux horaires séparent le
+méridien de Greenwich situé à l’Ouest de ce lieu. A l’intérieur
+de ce fuseau horaire, l’heure est en avance de 3 heures par
+rapport à l’heure UTC de Greenwich (La Terre tourne d’Ouest en
+Est quand la voute céleste tourne apparemment d’Est en Ouest). 
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//d7//7d5//d5_src_1.jpg" NAME="Image 35" ALIGN=BOTTOM WIDTH=589 HEIGHT=646 BORDER=0>
+<BR>Par exemple, s’il est 18h en
+ce lieu à UTC + 3, au même instant il est 15h à Greenwich.
+<BR>De même, en un lieu situé à
+l’Ouest de Greenwich, on retranche à l’heure dite UTC de
+Greenwich, autant d’heures que de nombres entiers n de fuseaux
+horaires les séparent. En ce lieu, on dit qu’on est à l’heure
+UTC - n.
+<BR>Ainsi, UTC - <I>n</I>. désigne
+un fuseau horaire en retard de <I>n</I> heures sur UTC.
+<BR>Par exemple, un lieu dit à
+l’heure UTC – 5 signifie que ce fuseau horaire est situé à
+l’Ouest de Greenwich&nbsp;avec 5 heures de retard sur l’heure de
+Greenwich. 
+
+<BR>S’il est 7h à Montréal (UTC
+– 5 en ce lieu&nbsp;: <I>HNE - Heure Normale de l'Est</I>), il est
+13h à Greenwich, au même instant.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//d7//7d5//d5_src_2.jpg" NAME="Image 14" ALIGN=BOTTOM WIDTH=623 HEIGHT=145 BORDER=0>
+<BR><I><B>c) Des fuseaux horaires
+pas toujours respectés.</B></I>
+<BR>En principe, la zone couverte
+par un fuseau horaire, limitée par deux méridiens distants de 15°,
+fixe l’heure officielle des pays concernés par ce fuseau. A
+l’intérieur d’un fuseau, l'heure est imposée, identique en
+tout lieu, c’est l’heure officielle. Elle est donc différente
+de l’heure solaire vraie locale&nbsp;; l’objectif étant de ne
+pas trop s’en éloigner. (Voir niveau confirmé dans ce chapitre
+et le Chapitre 10&nbsp;: Observation du Soleil, Question 1c). 
+
+<BR>Naturellement, les frontières
+territoriales n’épousent pas les lignes méridiennes, aussi
+choisit-on le fuseau horaire qui couvre au mieux la surface du pays.
+Certains pays très étendus, comme les Etats-Unis et la Russie,
+définissent donc plusieurs heures légales sur leur territoire.
+<BR>Néanmoins, malgré ces
+précautions, certains pays ne jouent pas le jeu. Quelques uns n’ont
+pas accepté comme heure officielle le système de l’heure
+universelle <I>UTC ± n </I>; d’autres, qui sont pourtant à
+l’origine de la création de ce système, s’octroient le droit
+de déroger à la règle&nbsp;!
+<BR>C’est le cas de la France
+dont l’heure officielle est à UTC + 1, alors que Bordeaux et
+Cherbourg se trouvent à l’Ouest du Méridien de Greenwich&nbsp;!
+La France est restée à l’heure allemande comme sous l’occupation
+alors qu’elle devrait être théoriquement à l’heure anglaise
+(UTC + 0). Les raisons de cette entorse à la règle sont évidemment
+d’origine politique (Représailles de la France envers
+l’Angleterre qui n’a toujours pas accepté son système métrique
+en échange de l’acceptation de Greenwich comme origine de l’heure
+UTC).
+<BR>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//d7//7d5//d5_src_3.jpg" NAME="Image 12" ALIGN=BOTTOM WIDTH=623 HEIGHT=330 BORDER=0>
+<BR><I>Par
+TimeZonesBoy — US Central Intelligence Agency, Domaine public.</I>
+<BR><I><B>d) L’heure avancée.</B></I>
+<BR>Pour compliquer l’affaire,
+les hommes politiques ont aussi inventé «&nbsp;l’heure
+avancée&nbsp;». (Naturellement, il existe des raisons
+respectables, plutôt économiques que politiques, mais de plus en
+plus controversées, qui justifient ce choix arbitraire contre
+nature).
+<BR>De nombreux pays, comme la
+France, ajoutent à leur heure UTC une heure supplémentaire en été.
+<BR>Ainsi, en un lieu, l’heure
+officielle qui était l’heure UTC ± n en hiver, devient en été&nbsp;:
+UTC ± n + 1. C’est ce décalage horaire saisonnier que l’on
+nomme&nbsp;couramment par les expressions : «&nbsp;l’heure
+avancée&nbsp;» ou «&nbsp;heure d’été&nbsp;».
+<BR>Par exemple, au Canada qui
+pratique l’heure avancée (dans la plupart de ses provinces),
+lorsqu’il est 14h à Montréal en été, il est 14h – 5h +1h =
+10h à Greenwich, heure UTC. Heure UTC, parce qu’en réalité à
+Greenwich l’heure légale affiche 11h et non 10h, puisque
+l’Angleterre pratique aussi l’heure avancée d’été.
+<BR>Concernant la France
+métropolitaine, dont l’heure aberrante est UTC + 1, le décalage
+avec l’heure solaire est pire, puisqu’en été il est de deux
+heures.
+<BR>Tout astronome qui observe
+depuis la France métropolitaine se doit d’en tenir compte. Aussi,
+est-il nécessaire qu’il prenne connaissance des dates auxquelles
+ont lieu ces changements d’heures, notamment pour ses calculs de
+prévision astronomique. Généralement, la période d’été
+commence à partir du dernier dimanche de mars et se termine au
+dernier dimanche d’octobre, si bien qu’il existe, en France, 7
+mois d'heure d'été pour 5 mois d'heure d'hiver.
+<BR>Cependant, il est heureux que
+la majorité des pays d’Europe, et de leur coté, les pays
+d’Amérique du Nord, s’accordent pour appliquer à la même
+date, ces changements d’horaires d’été et d’hiver&nbsp;!
+<BR><I><B>e) L’heure du
+Cherche-étoiles.</B></I>
+<BR>Le Cherche-étoiles n’est
+évidemment pas un instrument de haute précision, ses prétentions
+sont assez modestes. Il se contente d’offrir, à portée de main,
+un moyen efficace de repérer rapidement, sur le terrain
+d’observation, les objets célestes que l’astronome amateur
+recherche. Sa première fonction consiste en effet, à dégrossir le
+travail de recherche à l’œil nu, une nécessité avant tout
+pointage d’un télescope. Même les astronomes les plus aguerris
+n’hésitent pas à s’en servir surtout lorsqu’ils observent un
+ciel à une latitude moins familière pour eux. En outre, le
+Cherche-étoiles est un excellent outil pédagogique, qui se révèle
+fort bien adapté à une étude du ciel sur le terrain.
+<BR>Cependant, construire une carte
+du ciel valable pour le plus grand nombre et pour plusieurs années
+fut un pari audacieux qui ne pouvait se réaliser sans accepter
+quelques compromis concernant la précision de la localisation de
+l’observateur. 
+
+<BR>Néanmoins, pour une
+observation courante à l’œil nu, la concordance du
+Cherche-étoiles avec le ciel du lieu se satisfait d’une large
+marge de tolérance. Le Cherche-étoiles est certes conçu pour une
+latitude donnée, mais avons déjà vu qu’une variation
+raisonnable de la latitude de l’observateur par rapport à celle
+du Cherche-étoiles ne faisait que modifier la perception de son
+horizon. Sa fenêtre de visibilité est alors légèrement décalée
+par rapport à son ovale de visibilité.
+<BR>Concernant la localisation en
+longitude de l’observateur, la coïncidence avec le
+Cherche-étoiles n’est qu’une question de temps et donc de mise
+à l’heure du Cherche-étoiles.
+<BR>Deux Cherche-étoiles
+parfaitement identiques présentent le même ciel en deux lieux de
+même latitude mais séparés de x° de longitude, si la différence
+des heures indiquées sur les deux Cherches-étoiles est de x /15
+heures.
+<BR>Par exemple, Montréal et Lyon
+sont à la même latitude (45,30°) et sont séparés en longitude
+de 78,3° (73,5° Ouest + 4,8° Est). Si Véga culmine à Lyon à
+13h UTC, elle culminera à Montréal à 18h13min UTC, car 78,3 / 15
+= 5,22 = 5h13min. 
+
+<BR>On peut constater que le
+décalage horaire officiel entre Montréal et Lyon est assez bien
+respecté (Montréal&nbsp;: UTC – 5). Mais surtout, on commence à
+mieux comprendre tout l’intérêt d’adopter l’heure
+Universelle. L’heure locale étant par définition attachée au
+lieu, comparer la cartographie du ciel de deux lieux différents ne
+peut se réaliser aisément que par rapport à une heure de
+référence, en l’occurrence celle de Greenwich.
+<BR>Le problème est de savoir si
+le Cherche-étoiles est lui même étalonné sur l’heure de
+Greenwich qui donne l’heure solaire en ce lieu. En effet, si le
+Cherche-étoiles était conçu pour l’heure officielle en France,
+lorsqu’il est 13h à l’heure légale de la montre à Lyon
+(disons en hiver pour simplifier), il ne serait plus vrai qu’à
+Montréal à 18h13min heure locale, Véga culminerait. Car la France
+ne respecte pas l’heure de sa longitude tandis que le Canada s’y
+conforme&nbsp;!
+<BR>Pour une utilisation locale du
+Cherche-étoiles, ce décalage de l’heure de Greenwich, avec
+l’heure légale qui ne la respecte ni en été, ni en hiver, ne
+porterait pas à conséquence, si le fabricant du Cherche-étoiles
+indiquait clairement le type d’heures&nbsp;: UTC ou légale, qu’il
+faut utiliser. Mais cette information capitale fait défaut sur la
+plupart des Cherche-étoiles&nbsp;; tout juste si certains
+fabricants daignent signaler le piège de l’heure avancée. 
+
+<BR>Même l’excellent
+Cherche-étoiles BROQUET, fort répandu en France métropolitaine et
+au Canada (avec lequel nous illustrons tous nos exercices), laisse
+planer un doute à ce sujet (bien qu’il mentionne le cas de
+l’heure d’été). Ce défaut d’information au dos de la carte,
+qui cause<I><SPAN STYLE="background: #00ff00"> </SPAN></I>fréquemment
+une gêne à l’utilisateur français, s’explique. Le
+Cherche-étoiles BROQUET a été conçu au Québec, or l’heure
+officielle du Québec<A CLASS="sdfootnoteanc" NAME="sdfootnote3anc" HREF="#sdfootnote3sym"><SUP>3</SUP></A>,
+respecte l’heure UTC, si bien que l’utilisateur québécois n’a
+rien à corriger,&nbsp;puisque ce célèbre Cherche-étoiles se cale
+effectivement sur l’heure UTC de Greenwich, autrement dit sur
+l’heure du soleil local de Greenwich (On peut aussi le vérifier
+expérimentalement avec le Soleil ou bien en utilisant le logiciel
+Stellarium à condition de le paramétrer en heure UTC, car
+généralement ce logiciel intègre l’heure de l’ordinateur).
+<BR><I><B>f) Conclusion pratique.</B></I>
+<BR>Pour ceux qui observent dans un
+pays dont l’heure légale respecte le fuseau horaire, l’heure de
+leur montre (si elle est à l’heure&nbsp;!) coïncide
+&nbsp;vraisemblablement<I> </I>avec l’horaire de leur
+Cherche-étoiles (du moins en principe, car nous ne l’avons pas
+vérifié sur tous les Cherches-étoiles, dans toutes les langues&nbsp;!)
+<BR>Pour ceux qui, en France
+métropolitaine, utilisent les cherches-étoiles BROQUET Alpha 2000
+et ses variantes (de fabrication canadienne), l’heure légale de
+leur montre n’est pas synchronisée avec le cercle horaire de ce
+Cherche-étoiles. En hiver, pendant la période
+officielle<I>&nbsp;</I>correspondante, ils doivent retirer une heure
+à leur montre pour s’aligner à l’heure UTC de Greenwich et
+donc du Soleil. A l’heure d’été, ils doivent retirer deux
+heures à leur montre (Il en est de même avec le logiciel
+Stellarium).
+<BR>Toutefois, pour un simple
+repérage grossier du ciel et en particulier pour une première
+prise en main de cette carte, nous conseillons aux débutants de ne
+pas se soucier de ce réglage horaire, autrement dit d’appliquer
+la consigne suivante&nbsp;: 
+
+<BR>
+<TABLE WIDTH=491 CELLPADDING=7 CELLSPACING=1>
+<TR VALIGN=TOP>
+<TD ROWSPAN=2 WIDTH=135 HEIGHT=1 BGCOLOR="#ff0000" STYLE="border-top: 6.00pt double #660066; border-bottom: 6.00pt double #660066; border-left: 6.00pt double #660066; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><I><B>Pour une
+observation grossière, valable</B></I></P>
+<P ALIGN=CENTER><I><B>en tout lieu sur Terre</B></I></P>
+</TD>
+<TD WIDTH=323 BGCOLOR="#00ff00" STYLE="border-top: 6.00pt double #660066; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 6.00pt double #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4><B>Prendre
+l’heure de sa montre…</B></FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=323 BGCOLOR="#000080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 6.00pt double #660066; border-left: 2.25pt solid #00000a; border-right: 6.00pt double #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4>Pour
+ajuster l’heure du Cherche-étoiles.</FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>Pour une observation du ciel
+plus réaliste avec son Cherche-étoiles en France métropolitaine,
+il est préférable de retenir la règle plus précise suivante&nbsp;:
+<BR>
+<TABLE WIDTH=491 CELLPADDING=7 CELLSPACING=1>
+<TR VALIGN=TOP>
+<TD ROWSPAN=2 WIDTH=135 HEIGHT=1 BGCOLOR="#ff0000" STYLE="border-top: 6.00pt double #660066; border-bottom: 6.00pt double #660066; border-left: 6.00pt double #660066; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER><I><B>Pour une observation plus fine, valable    
+en France Métropolitaine</B></I></P>
+</TD>
+<TD COLSPAN=2 WIDTH=323 BGCOLOR="#00ff00" STYLE="border-top: 6.00pt double #660066; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 6.00pt double #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4><B>Retirer
+à sa montre…</B></FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=162 BGCOLOR="#0000ff" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 6.00pt double #660066; border-left: 2.25pt solid #00000a; border-right: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">1h
+</FONT><FONT SIZE=4>en hiver</FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+<TD WIDTH=147 BGCOLOR="#ffff00" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 6.00pt double #660066; border-left: 1px solid #00000a; border-right: 6.00pt double #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4 STYLE="font-size: 16pt">2h</FONT>
+<FONT SIZE=4>en été</FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+</TABLE>
+<BR>
+<BR><I><B>g) Vers une précision
+accrue&nbsp;: correction en longitude.</B></I>
+<BR>Nous avons dit que l’heure du
+Cherche-étoiles se cale sur l’heure UTC de Greenwich. Or, sauf
+exception de la part des pays qui ne jouent pas le jeu, l’heure
+officielle d’un pays respecte l’heure UTC ± n. Par conséquent,
+l’heure du Cherche-étoiles est bien généralement celle de
+l’heure officielle de la montre.
+<BR>Mais plus l’observateur se
+rapproche de la ligne médiane de l’un des 24 fuseaux horaires (Le
+méridien, au milieu de la tranche du fuseau), meilleure sera la
+concordance de ces deux heures.
+<BR>Par exemple, à exactement 45°
+de longitude à l’Est de Greenwich, donc au milieu du troisième
+fuseau horaire, si l’heure officielle de la montre est l’heure
+de Greenwich à + 3h (S’il est 17h UTC en ce lieu, il est 14h UTC
+à Greenwich au même instant), l’heure du Cherche-étoiles est
+bien mieux synchronisée avec l’heure UTC du lieu. En d’autres
+termes, la configuration du ciel local, à une date et à une heure
+donnée (officielle), se rapproche davantage de la configuration du
+ciel visible du Cherche-étoiles, calibré à la même date et à la
+même heure.
+<BR>A l’inverse, en s’éloignant
+de la ligne médiane d’un fuseau tout en restant à l’intérieur
+de la tranche de ce fuseau, on ne modifie pas l’heure officielle
+qui, à un instant donné, est fixe en tout lieu de cette tranche,
+tandis que la véritable heure locale varie selon la longitude du
+lieu d’observation. Il s’ensuit que l’heure du
+Cherche-étoiles, et donc du ciel, n’est plus exactement l’heure
+officielle de la montre.
+<BR>Cependant, en connaissant
+précisément sa longitude, l’observateur peut aisément corriger
+l’écart entre son heure officielle et l’heure qu’il doit
+indiquer à son Cherche-étoiles.
+<BR>A raison de 15° par heure
+(360° / 24h) ou bien de 4 min par degré de longitude (60min /
+15°), il lui suffit de connaître l’écart entre la longitude de
+son fuseau horaire et la longitude exacte du lieu de son observation
+pour corriger le décalage.
+<BR>Par exemple, la longitude de
+Malé aux Maldives est de 73° Est. L’heure officielle est l’heure
+UTC + 5&nbsp;; elle respecte donc l’heure de son fuseau horaire
+dont la longitude vaut 75° à l’Est du méridien de Greenwich (75
+/ 15 = 5). Deux degrés (à l’Ouest) séparent la longitude de
+Malé de la longitude de son fuseau horaire officiel. Ainsi, un
+observateur à Malé devra avancer l’heure de son Cherche-étoiles
+de 8 minutes par rapport à sa montre. Si celle-ci indique 21h18min,
+il est en réalité, pour son ciel, 21h10min.
+<BR>De même, un observateur à
+Dijon (France), de longitude 5° Ouest, devra retarder sa montre
+d’une heure en hiver et de deux heures en été pour se mettre à
+l’heure de Greenwich, mais devra également l’avancer de 20
+minutes pour se mettre à l’heure du Soleil (4min x 5°).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//d7//7d5//d5_src_4.jpg" NAME="Image 19" ALIGN=BOTTOM WIDTH=532 HEIGHT=484 BORDER=0>
+<BR>Naturellement, pour une
+recherche à l’œil nu cette précision reste assez dérisoire,
+bien que selon le lieu, l’erreur puisse tout de même atteindre
+plus d’une demie heure&nbsp;(dans ce cas il est préférable d’en
+tenir compte). En revanche, pour une recherche qui se destine à une
+observation aux jumelles ou au télescope, par exemple la recherche
+d’un objet du ciel profond par la méthode dite du «&nbsp;saut
+d’étoiles&nbsp;» (<I>Star hopping</I>), la correction de l’heure
+sur le Cherche-étoiles ou sur tout autre carte céleste devient
+alors une nécessité.
+<BR>Aussi nous retenons la règle
+pratique suivante&nbsp;:
+<BR>
+<TABLE WIDTH=491 CELLPADDING=7 CELLSPACING=1>
+<TR VALIGN=TOP>
+<TD ROWSPAN=2 WIDTH=135 HEIGHT=1 BGCOLOR="#ff0000" STYLE="border-top: 6.00pt double #660066; border-bottom: 6.00pt double #660066; border-left: 6.00pt double #660066; border-right: 2.25pt solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><I><B>Pour une
+observation plus réaliste, valable</B></I></P>
+<P ALIGN=CENTER><I><B>en tout lieu sur Terre</B></I></P>
+</TD>
+<TD WIDTH=323 BGCOLOR="#00ff00" STYLE="border-top: 6.00pt double #660066; border-bottom: 2.25pt solid #00000a; border-left: 2.25pt solid #00000a; border-right: 6.00pt double #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4><B>Prendre
+l’heure de son fuseau horaire, corrigée de 4 minutes par degré
+de longitude …</B></FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=323 BGCOLOR="#000080" STYLE="border-top: 2.25pt solid #00000a; border-bottom: 6.00pt double #660066; border-left: 2.25pt solid #00000a; border-right: 6.00pt double #660066; padding-top: 0in; padding-bottom: 0in; padding-left: 0.11in; padding-right: 0.08in">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4>Pour
+ajuster l’heure du Cherche-étoiles.</FONT></P>
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+</TABLE>
+<BR> 
+
+<BR>
+<BR><B>Réponse à la question.</B>
+<BR>La manipulation, qui est ici
+fort simple, est la suivante&nbsp;:
+<BR>On commence par repérer la
+date du 11 décembre sur le cercle (fixe) des mois de l’année
+gradué en jours (une graduation = un jour solaire moyen). 
+
+<BR>On fixe cette date avec l’aide
+de la réglette des déclinaisons (la petite règle radiale mobile
+appelée aussi index mobile) que l’on fait tourner jusqu’à ce
+que sa ligne fléchée rencontre cette date.
+<BR>Pour éviter que la réglette
+ne bouge par la suite, on la maintient avec le doigt sur le bord du
+disque fixe.
+<BR>Puis, on repère la graduation
+24 sur le cercle horaire (mobile), que l’on fait tourner jusqu’à
+confondre les deux lignes radiales&nbsp;; les deux repères&nbsp;:
+24h et 11 décembre sont alors alignés.
+<BR>Ensuite il n’y a plus qu’à
+lire le nom de l’étoile inscrit à coté du petit rond désignant
+le Zénith (au milieu de l’ovale qui est la partie visible du ciel
+à cette date).
+<BR>Attention, pour un français en
+métropole, il est 1h du matin le 12 décembre&nbsp;à
+sa montre (heure d’hiver), puisque l’on suppose ici qu’il
+observe le ciel le 11 décembre à minuit, heure UTC !
+
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//d7//7d5//d5_src_0.jpg" NAME="graphics2" ALIGN=BOTTOM WIDTH=623 HEIGHT=468 BORDER=0>
+
+<BR>
+<BR><B>L’étoile CAPELLA.</B>
+<BR>Capella qui signifie
+«&nbsp;chevrette&nbsp;» en latin, se trouve dans la constellation
+du Cocher (qui est censé la porter sur son dos).
+<BR>Avec une magnitude apparente de
+0,08, elle est la troisième plus brillante de l’hémisphère Nord
+et la sixième pour toute la voute céleste.
+<BR>Elle est assez proche de
+l’étoile Polaire si bien qu’à partir des latitudes supérieures
+à 44°, elle est circumpolaire.
+<BR>A l’œil nu on ne voit qu’une
+étoile, mais en réalité c’est un système stellaire composé de
+deux paires d’étoiles doubles situées à environ 42
+années-lumière de la Terre. Deux sont des géantes (dix fois le
+diamètre du Soleil), et les deux autres sont des naines rouges.
+
+<BR><BR>
+
+<BR><BR>
+
+
+<BR><BR>
+
+
+
+<A CLASS="sdfootnotesym" NAME="sdfootnote2sym" HREF="#sdfootnote2anc">2</A><SUP><I></I></SUP><I>
+</I><I>Le sigle&nbsp;: GMT (Greenwich Mean Time) est
+désormais à proscrire car tombé en désuétude. Cependant, son
+rôle historique n’est pas négligeable si bien qu’un paragraphe
+lui est consacré dans le chapitre 10&nbsp;: Observation du Soleil.</I>
+
+<A CLASS="sdfootnotesym" NAME="sdfootnote3sym" HREF="#sdfootnote3anc">3</A><SUP></SUP>
+A noter toutefois, que d’autres régions du Canada,
+voire certains cantons, ne respectent pas l’heure UTC.
+

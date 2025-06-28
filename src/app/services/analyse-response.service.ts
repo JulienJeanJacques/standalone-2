@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
+// my classes
+import { Item } from '../classes/item';
 // my interfaces
-import { RESULTS } from '../interfaces/types';
+import { APP_PARAMS_GOOD_RESPONSES_D } from '../interfaces/constantes';
+import { APP_PARAMS_GOOD_RESPONSES_C } from '../interfaces/constantes';
+import { APP_PARAMS_GOOD_RESPONSES_E } from '../interfaces/constantes';
+// my types
+import { Row145 } from '../interfaces/types'
 //my services
-import { StringsService }  from './strings.service';
 import { SettingsService } from './settings.service';
 
 
@@ -12,18 +17,29 @@ import { SettingsService } from './settings.service';
 export class AnalyseResponseService {
 
   constructor(
-    private stringsService:  StringsService,
-    private settingsService: SettingsService,
-  ) { }
+     private settingsService: SettingsService,
+  ) { 
+   
+  }
 
-
-nature(charRep:string): string {
-  if(charRep === '-2'){return 'good-second passage'};
-  if(charRep === '-1'){return 'good-first passage'};
-  if(charRep === '0' ){return 'not done'};
-  if(charRep === '1') {return '1:false'};
-  if(charRep === '2') {return '2:false'};
-  if(charRep === '3') {return '3:false'};
-  if(charRep === '4') {return '4:false'};
-return ''}
-}
+// reçoit le choix validé par le joueur, 
+// ce choix est 1,2,3 ou 4.
+// compare à la bonne réponse
+// Si la réponse est bonne, il enregistre -choix.
+// sinon il enregistre choix.
+nature(choice:number): number {
+  let result: number;
+  const nameOfItem = this.settingsService.getItem();
+  const item = new Item(nameOfItem);
+  const level = item.level;
+  let goodResponses: Row145 = APP_PARAMS_GOOD_RESPONSES_D;
+  switch (level) {
+      case 'd': { goodResponses = APP_PARAMS_GOOD_RESPONSES_D; break;}
+      case 'c': { goodResponses = APP_PARAMS_GOOD_RESPONSES_C; break;}
+      case 'e': { goodResponses = APP_PARAMS_GOOD_RESPONSES_E;break;}
+      default: { console.error(`Valeur inattendue : ${level}`);break;}
+    }
+    if (choice === goodResponses[item.repPosition]) {result = - choice}
+    else {result = choice}
+  return result}
+  }

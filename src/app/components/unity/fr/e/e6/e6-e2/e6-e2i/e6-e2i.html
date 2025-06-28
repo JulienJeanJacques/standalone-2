@@ -1,0 +1,229 @@
+
+
+
+<BR><B>Relation
+entre la hauteur et l’angle horaire.</B>
+<BR><I><B>a)
+Passage du repère local au repère mixte.</B></I>
+<BR>Pour
+répondre à la question, il nous faut au préalable établir une
+relation entre la hauteur d’un astre et son angle horaire.
+<BR>Autrement
+dit, nous avons besoin de savoir comment l’on passe d’un système
+de coordonnées horizontales (repère local) à un système de
+coordonnées horaires (repère mixte).
+<BR>Toutefois,
+on peut se contenter ici de n’exprimer que la seule coordonnée
+horizontale&nbsp;: «&nbsp;hauteur&nbsp;<I>h</I>
+»,&nbsp;en fonction des deux coordonnées horaires «&nbsp;angle
+horaire H&nbsp;» et «&nbsp;déclinaison &nbsp;»
+(Cf. dans ce Chapitre 6&nbsp;: Astrométrie, Question 2c). La
+relation avec l’&nbsp;«&nbsp;azimut&nbsp;» sera établie
+ultérieurement.
+<BR><I><B>b)
+«&nbsp;Formule des 4 éléments&nbsp;».</B></I>
+<BR>La
+relation cherchée est obtenue grâce à la formule fondamentale du
+groupe de Gauss (Voir dans ce Chapitre 6&nbsp;: Astrométrie
+Question 1c). Cette formule est aussi appelée «&nbsp;formule des 4
+éléments&nbsp;» et elle constitue l’une des formules de
+trigonométrie sphérique les plus utilisées en astrométrie (Il
+est fortement conseillé à tout astronome amateur de la mémoriser
+ou du moins de l’avoir toujours avec soi).
+<BR>Avec
+les notations du dessin suivant, cette formule fondamentale
+s’exprime par :
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e2//e2_src_1.jpg" NAME="Image 14" ALIGN=BOTTOM WIDTH=574 HEIGHT=580 BORDER=0>
+<BR>
+<BR><SUB><SPAN STYLE="background: #ffff00">&lt;$$1&gt;
+</SPAN></SUB>
+
+<BR>Mais
+naturellement, elle reste valable par permutation circulaire des
+lettres, si bien que l’on obtient aussi&nbsp;:
+<BR><SUB>&lt;$2&gt;
+</SUB>
+
+<BR><SUB>&lt;$3&gt;
+</SUB>
+
+<BR>(Une
+démonstration assez élémentaire est proposée en fin de
+paragraphe)
+<BR><I><B>c)
+Usage en pratique.</B></I>
+<BR>Dans
+la pratique astronomique, il suffit de remplacer les sommets A, B et
+C par trois points de la sphère céleste (locale ou non)
+judicieusement choisis et adaptés au problème étudié.
+<BR>Par
+exemple dans le cas qui nous préoccupe, remplaçons A par le Pôle
+Nord N, B par le zénith Z et C par l’étoile E. Les distances
+angulaires&nbsp;: a, b et c deviennent alors respectivement&nbsp;:
+la distance zénithale z = 90° - <I>h</I>,
+la colatitude 90° - 
+et le complémentaire de la déclinaison 90° - .
+<BR>Le
+dessin suivant illustre ce cas.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e2//e2_src_2.jpg" NAME="Image 42" ALIGN=BOTTOM WIDTH=623 HEIGHT=367 BORDER=0>
+<BR>On
+remarque que l’angle horaire H est exactement l’angle issu du
+sommet N dans le triangle sphérique NZE (C’est l’angle formé
+par les deux plans ONE et ONZ). Si bien que nous obtenons la
+relation&nbsp;:
+<BR>&lt;$4&gt;
+<BR>ou
+encore&nbsp;: 
+
+<BR><SPAN STYLE="background: #ffff00">&lt;$$4&gt;</SPAN>
+<BR><I><B>d)
+Remarques.</B></I>
+<BR>Dans
+le cas d’une pratique plus professionnelle, on fait intervenir
+d’autres paramètres qui tiennent compte des conditions
+d’observation, notamment les effets de la réfraction
+atmosphérique.
+<BR>On
+ajoute alors le terme correctif&nbsp;: 
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e2//e2_src_3.jpg"> où 
+
+vaut 
+= p + R +1/2 d&nbsp;;  avec p la parallaxe (que l’on néglige sauf
+pour la Lune qui vaut 57’), R est la réfraction à l'horizon (que
+l’on prendre égale à 34’) et 1/2 d est le demi-diamètre
+apparent de l'astre si nécessaire (Soleil, Lune, etc.). On pourra
+se reporter aux tables publiées dans l'annuaire du Bureau des
+longitudes.
+<BR>
+<BR><B>Corrigé
+de l’exercice.</B>
+<BR>On
+cherche la hauteur <I>h</I>
+de l’astre deux heures après son passage au méridien.
+<BR>On
+peut considérer comme parfaitement négligeable la différence
+entre le temps solaire moyen (celui de la montre) et le temps
+sidéral (celui des étoiles) sur ce très court intervalle de temps
+de deux heures (la différence est de 20 secondes puisque les
+étoiles retardent de 4 minutes par 24h).
+<BR>Ainsi
+est-il légitime d’associer la durée du parcours de l’étoile
+depuis le méridien avec son angle horaire puisque celui-ci a pour
+origine le méridien. Par conséquent&nbsp;: H = 2h (c’est-à-dire
+en réalité, un angle de 2 × 15 = 30°, puisque les étoiles
+avancent approximativement de 15° par heure). Précisons que si
+l’étoile avait été à l’Est, c’est-à-dire deux heures
+avant son passage au méridien, l’angle horaire H aurait été
+compté négativement.
+<BR>Nous
+sommes maintenant en mesure d’utiliser la formule fondamentale et
+d’effectuer l’application numérique. Nous obtenons&nbsp;:
+<BR><SUB>&lt;$6&gt;</SUB>
+<BR><SUB>&lt;$7&gt;
+</SUB>
+
+<BR><SUB>&lt;$8&gt;</SUB>
+<BR>D’où&nbsp;:
+&lt;$9&gt;.  
+
+<BR>Ainsi
+la hauteur <I>h</I>
+de l’astre deux heures après son passage au méridien s’élève
+à&nbsp;:
+<div style="text-align:center;">
+<TABLE WIDTH=208 CELLPADDING=7 CELLSPACING=0>
+<TR VALIGN=TOP>
+<TD WIDTH=96 BGCOLOR="#3366ff" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif">Hauteur</FONT></FONT></P>
+</TD>
+<TD WIDTH=82 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><I>h</I></FONT><FONT FACE="Times New Roman, serif">
+= 65°</FONT></P>
+</TD>
+</TR>
+</TABLE>
+</div>
+<BR><I>Remarque</I>&nbsp;:
+On aurait pu déterminer autrement et plus précisément l’angle
+horaire H, si l’on avait eu connaissance à la fois de l’ascension
+droite 
+de l’astre et le temps sidéral local TSL à l’instant donné,
+car H = TSL - .
+<BR>
+<BR><B>Hauteur
+méridienne.</B>
+<BR>Il
+est agréable de constater que cette formule fondamentale nous
+permet de retrouver la relation donnant la hauteur méridienne d’un
+astre (déjà démontrée d’une autre manière dans ce Chapitre
+6&nbsp;: Astrométrie, Question 3c), c’est-à-dire sa hauteur
+maximale.
+<BR>En
+effet, au passage du méridien supérieur l’angle horaire H de
+l’astre est nul&nbsp;: H = 0h.
+<BR>De&nbsp;:
+&lt;$10&gt;  on tire&nbsp;:
+<BR>&lt;$11&gt;
+<BR><SUB>si
+bien que&nbsp;: &lt;$12&gt; </SUB>ce qui est bien
+l’expression de la hauteur méridienne d’un astre de déclinaison
+, observé à la latitude .
+<BR>
+<BR><B>Démonstration
+de la formule fondamentale.</B>
+<BR>Nous
+allons démontrer la formule&nbsp;: <SPAN STYLE="background: #ffff00">&lt;$13&gt;</SPAN>,
+en n’utilisant que l’outil «&nbsp;produit scalaire&nbsp;»
+(cette démonstration est abordable au niveau secondaire).
+<BR>Rappelons
+que sur la sphère céleste&nbsp;on a : &lt;$14&gt;.
+<BR>D’autre
+part, par définition&nbsp;on a : &lt;$15&gt;.
+<BR>Expression
+que nous pouvons simplifier par&nbsp;: &lt;$16&gt;.
+<BR>Les
+deux plans OAB et OAC sont séquents en la droite (OA).
+<BR>Projetons
+orthogonalement sur cette droite les deux point B et C en,
+respectivement B’ et C’.
+<BR>On
+utilise les notations usuelles rappelées dans le croquis suivant&nbsp;:
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e2//e2_src_0.jpg" NAME="graphics4" ALIGN=BOTTOM WIDTH=529 HEIGHT=534 BORDER=0>
+<BR>Dans
+ce triangle sphérique les angles&nbsp;: a, b et c sont supposés
+tous inférieurs à un angle droit, ce qui n’est pas
+nécessairement le cas pour les angles A, B et C. (Si l’un de ces
+angles est droit, on obtient le fameux «&nbsp;pentagone de
+Neper&nbsp;»).
+<BR>D’après
+ces notations, on peut écrire&nbsp;:
+<BR><SUB>&lt;$17&gt;</SUB>
+<BR>D’après
+la relation de Chasles, on a&nbsp;: 
+
+<BR>&lt;$18&gt;.
+<BR>Calcul
+de &lt;$19&gt; 
+
+<BR>&lt;$20&gt;
+car O, B’ et C’ sont alignés sur la demi droite issue de O.
+<BR>Or,
+&lt;$21&gt; et &lt;$22&gt;
+<BR>D’où&nbsp;:
+&lt;$23&gt;
+<BR>Calcul
+de &lt;$24&gt;
+<BR>&lt;$25&gt;,
+car l’angle A est formé par les deux plans OAB et OAC, autrement
+dit, par les deux plans OB’B et OC’C.
+<BR>Or,
+&lt;$26&gt; et &lt;$27&gt; 
+
+<BR>D’où&nbsp;:
+&lt;$28&gt;.
+<BR>Finalement&nbsp;:
+&lt;$29&gt;
+<BR>
+
+
+

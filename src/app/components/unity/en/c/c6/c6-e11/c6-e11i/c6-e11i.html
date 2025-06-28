@@ -1,0 +1,829 @@
+
+
+
+<BR><B>Avance
+par jour du Temps Sidéral Local</B>.
+<BR>Il
+est intéressant, dans la pratique, de connaître l’avance du TSL
+par jour solaire. Cela permet, par exemple, de savoir à quel moment
+de l’année une étoile, dont on connaît l’ascension droite,
+passera le méridien local à une heure choisie de la nuit.
+<BR>Reprenons
+l’expression donnant le temps sidéral local pour tout <I>n</I>
+heures solaires plus tard (Voir dans ce Chapitre 6&nbsp;:
+Astrométrie, Question 9c), c’est à dire&nbsp;: TSL (<I>n</I>)
+= TSL(<I>0</I>)
++ 1,0027389 <I>n</I>.
+<BR>En
+un jour (solaire), c’est-à-dire pour une durée de <I>n</I>
+= 24h, on a&nbsp;: 
+
+<BR>TSL
+(24) – TSL(0) =<I>
+</I>24×1,00273896
+heures
+= 24,065735 heures.
+<BR>Mais
+comme l’horloge est congrue modulo 24, on obtient&nbsp;:
+<BR>24,065735
+= 24 + 0,065735  = 0,065735 (modulo 24).
+<BR>Autrement
+dit&nbsp;: <SPAN STYLE="background: #00ff00">chaque
+jour le TSL avance de : </SPAN><SPAN STYLE="background: #00ff00">0,065735
+heure</SPAN>.(heure
+solaire, naturellement&nbsp;!)
+<BR>En
+d’autres termes, en un lieu donné mais valable en tout lieu sur
+Terre, à une heure <I>t
+</I>quelconque (0 
+t &lt; 24, heure solaire, heure UTC, heure civile, peu importe) de
+toute journée de l’année, le Temps sidéral local du lendemain à
+la même heure <I>t</I>
+aura augmenté de 0,065735
+heure&nbsp;: <SPAN STYLE="background: #00ff00">TSL(</SPAN><I><SPAN STYLE="background: #00ff00">t</SPAN></I><SPAN STYLE="background: #00ff00">
++ 24h) = TSL(</SPAN><I><SPAN STYLE="background: #00ff00">t)</SPAN></I><SPAN STYLE="background: #00ff00">
++ 0,065735</SPAN>.
+(modulo 24)
+<BR>On
+peut raisonner autrement, si l’on n’est guère familiarisé avec
+les congruences (Pourtant, tout le monde possède une montre et sait
+qu’il y a 7 jours dans une semaine, deux exemples de congruence,
+respectivement modulo 12 et 7).
+<BR>On
+a vu que l’horloge sidérale avance tous les jours de 3min 56s.
+Convertissons ce temps en heure. Nous obtenons : 3min 56s = 0,065735
+heure. Ainsi, chaque jour (solaire) le TSL avance de 0,065735 heure.
+<BR>
+<BR><B>Temps
+Sidéral local entre deux dates</B>.
+<BR>Connaissant
+le temps sidéral d’un lieu à une date donnée et à une heure
+donnée, peut-on connaître le temps sidéral de ce même lieu à
+une autre date de l’année mais à la même heure&nbsp;? La
+réponse est affirmative et le TSL est aisé à calculer, dans la
+mesure où nous connaissons déjà l’avance journalière de
+l’horloge sidérale.
+<BR>En
+effet, au bout de «&nbsp;<I>n</I>&nbsp;»
+jours, le TSL a avancé de&nbsp;: 0,065735<I>n</I>
+heures.
+<BR>Considérons
+alors une date dans l’année que nous noterons t<SUB>0</SUB>,
+qui tient compte de l’heure, du jour et du mois mais pas de
+l’année (l’année n’a pas d’importance ici, puisque
+l’horloge sidérale se réinitialise chaque année).
+<BR>Supposons
+connu TSL(t<SUB>0</SUB>).
+<BR>Soit
+une autre date t<SUB>1
+</SUB>postérieur
+à t<SUB>0</SUB>,
+mais toutes les deux à la même heure de la journée. Un nombre <I>n</I>
+de jours entiers les séparent&nbsp;: <I>n</I>
+= t<SUB>1</SUB>
+– t<SUB>0</SUB>.
+Par exemple, t<SUB>1</SUB>
+= 3 décembre et t<SUB>0</SUB>
+= 21 septembre, d’où <I>n</I>
+= 73 jours séparent ces deux dates.
+<BR>Nous
+avons donc&nbsp;: TSL(t<SUB>1</SUB>)
+= TSL(t<SUB>0</SUB>)
++ 0,065735<I>n</I>.
+Expression donnant les TSL à la même heure (quelconque) de deux
+jours séparés de <I>n</I>
+jours entiers.
+<BR>Par
+conséquent&nbsp;: <SPAN STYLE="background: #00ff00">TSL(t</SPAN><SUB><SPAN STYLE="background: #00ff00">0</SPAN></SUB><SPAN STYLE="background: #00ff00">
++ </SPAN><I><SPAN STYLE="background: #00ff00">n</SPAN></I><SPAN STYLE="background: #00ff00">)
+= TSL(t</SPAN><SUB><SPAN STYLE="background: #00ff00">0</SPAN></SUB><SPAN STYLE="background: #00ff00">)
++ 0,065735</SPAN><I><SPAN STYLE="background: #00ff00">n</SPAN></I>.
+Avec <I>n</I>&nbsp;:
+nombre de jours (solaires) et les TSL en unité d’heure.
+<BR>
+<BR><B>Passage
+au méridien à minuit.</B>
+<BR><I><B>a)
+introduction.</B></I>
+<BR>D’après
+la relation fondamentale du temps sidéral local (par définition,
+d’ailleurs), nous avons en un lieu donné et à tout instant t
+d’une journée&nbsp;: TSL(t) = H(t) + ,
+où H est l’angle horaire d’un astre d’ascension droite .
+<BR>Et
+puisque, lorsque cet astre franchit le méridien local (supérieur,
+car toujours supposé tel sans indication supplémentaire), son
+angle horaire est nul.
+<BR>Par
+conséquent, le passage au méridien d’une étoile donne le temps
+sidéral du lieu qui à cet instant vaut l’ascension droite de
+l’étoile&nbsp;: TSL(t) = .
+<BR>Comment
+connaître alors le TSL à minuit&nbsp;? Il suffit de le connaître
+pour une date précise dans l’année. Nous allons voir comment.
+<BR>Cherchons
+à quelle date le TSL à minuit solaire est nul, ce qui nous
+fournira une origine des TSL à minuit.
+<BR>Les
+équinoxes sont naturellement des points célestes privilégiés. 
+
+<BR><I><B>b)
+Méthode rapide et approximative.</B></I>
+<BR>A
+l’équinoxe du printemps dans l’hémisphère Nord (Mars),
+l’ascension droite du Soleil vaut&nbsp;: 
+= 0. Mais à minuit, son angle horaire vaut H(24) = 12h, puisqu’il
+culmine à midi. Par conséquent à minuit le jour de l’équinoxe
+de printemps, le TSL du lieu vaut&nbsp;: 12h. Ce n’est donc pas le
+bon choix.
+<BR>A
+l’équinoxe d’automne dans l’hémisphère Nord (Septembre)
+l’ascension droite du Soleil vaut&nbsp;: 
+= 12h. A minuit, son angle horaire vaut H(24) = 12h, puisqu’il
+culmine à midi. Par conséquent à minuit le jour de l’équinoxe
+d’automne, le TSL du lieu vaut&nbsp;: 12h + 12h = 24h = 0h. C’est
+donc le bon choix.
+<BR>Notons
+alors, t<SUB>0</SUB>,
+l’instant&nbsp;: minuit le jour de l’équinoxe d’automne, vers
+le 22 septembre.
+<BR>On
+a&nbsp;: TSL(t<SUB>0</SUB>)
+= 0, ainsi ce temps sidéral à la date de l’équinoxe d’automne
+peut servir d’origine de tous les temps sidéraux à minuit.
+<BR>En
+outre, à cette date et à cette heure, le point Vernal culmine,
+puisque par définition de son ascension droite (
+= 0) son angle horaire vaut : H(t<SUB>0</SUB>)
+= TSL(t<SUB>0</SUB>)
+- 
+= 0 – 0 = 0.
+<BR><I><B>c)
+Méthode plus rigoureuse.</B></I>
+<BR>Nous
+avons dit&nbsp;qu’à minuit le jour de l’équinoxe d’automne
+dans l’hémisphère Nord, le TSL du lieu vaut&nbsp;: 12h + 12h =
+24h = 0h. Cela n’est pas rigoureusement exact&nbsp;! 
+
+<BR>Par
+définition l'instant de l'équinoxe d'automne correspond au moment
+où la longitude géocentrique apparente du centre du Soleil est
+égale à 180 degré. Mais à cet instant précis l'ascension droite
+n'est pas exactement égale à 12h, car la latitude apparente du
+centre du Soleil n'est pas exactement nulle. Toutefois, la direction
+du Soleil est très proche de la direction opposée au point Vernal.
+
+
+<BR>Par
+exemple, l'équinoxe d'automne du jeudi 23 septembre 2010, a eut
+lieu exactement à 3h 9m 03,0s et non à minuit. L’ascension
+droite du Soleil était de 12h 0m 0,024s et sa déclinaison de de
+0,82&quot;, certes très proches des valeurs souhaitées (Voir à ce
+sujet l’exercice du Chapitre 4&nbsp;: Observation de la voute
+céleste, Question 12e). 
+
+<BR>Par
+ailleurs, on sait que dans le calendrier grégorien, l'équinoxe
+d'automne peut tomber le 21, 22, 23 ou 24 septembre, ce qui ne
+simplifie pas non plus le problème.
+<BR>Cependant,
+on peut améliorer, en partie, la méthode approximative donnant
+l’origine des temps sidéraux à minuit.
+<BR>On
+reconsidère à nouveau la date de l’équinoxe du printemps dans
+l’hémisphère Nord (Mars), date à laquelle le Soleil se situe
+exactement au point Vernal en franchissant à midi le méridien.
+L’ascension droite du Soleil vaut&nbsp;donc : 
+= 0 à 12h précis (H = 0° = 0h).
+<BR>Notons
+alors, t<SUB>0</SUB>,
+l’instant&nbsp;: midi le jour de l’équinoxe de printemps de
+l’hémisphère Nord (vers le 20 mars).
+<BR>Nous
+avons&nbsp;donc : TSL(t<SUB>0</SUB>)
+= H(t<SUB>0</SUB>)
++ 
+=  0 + 0 = 0.
+<BR>Mais
+nous ne voulons pas le TSL à midi, mais à minuit. Calculons ce
+décalage. Notons ce TSL à minuit par TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>).
+On a&nbsp;: TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>)
+= TSL(t<SUB>0</SUB>)
++ 12×1,002739.
+<BR>D’où&nbsp;:
+TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>)
+= 12,032868 heures.
+<BR>Ainsi
+ce temps sidéral de 12,032868 heures, à la date de l’équinoxe
+du printemps à midi solaire, peut servir d’origine de tous les
+temps sidéraux à minuit. 
+
+<BR>On
+peut constater que la différence entre les 12h du modèle
+approximatif et les 12,032868 heures du modèle amélioré n’est a
+priori guère significative, mais il ne faut pas oublier que cet
+écart s’accumule pendant les six mois qui séparent les deux
+équinoxes. La datation d’une étoile qui passe au méridien à
+minuit pourrait être différente de plusieurs jours selon la
+méthode choisie.
+<BR>Néanmoins,
+pour un usage amateur, nous conserverons la première méthode.
+<BR>
+<BR><B>Solution
+de l’exercice.</B>
+<BR><I><B>Réponse
+1).</B></I>
+L’assertion proposée est fausse, puisque nous venons justement de
+voir que les trois contraintes&nbsp;: 
+= 0, H = 0 (culmination au méridien) et TSL à minuit ne peuvent se
+produire simultanément que le 22 septembre (équinoxe d’automne
+dans l’hémisphère Nord).
+<BR><I><B>Réponse
+2).</B></I>
+L’assertion proposée est fausse comme nous allons le démontrer.
+<BR>A
+la date t<SUB>0</SUB>
+= 22 septembre, le TSL(t<SUB>0</SUB>)
+à minuit est nul.
+<BR>Une
+étoile d’ascension droite&nbsp;: 
+= 18h, passe le méridien à minuit à une certaine date inconnue&nbsp;:
+t<SUB>0</SUB>
++ <I>n</I>
+que nous cherchons (avec <I>n</I>
+un nombre de jours entiers).
+<BR>D’une
+part, nous avons&nbsp;: TSL(t<SUB>0</SUB>
++ <I>n</I>)
+= H(t<SUB>0</SUB>
++ <I>n</I>)
++ ,
+d’après la relation fondamentale. 
+
+<BR>Or,
+H(t<SUB>0</SUB>
++ <I>n</I>)
+= 0 (passage au méridien) et 
+= 18h. Donc, TSL(t<SUB>0</SUB>
++ <I>n</I>)
+= 18h.
+<BR>D’autre
+part, nous savons que&nbsp;: TSL(t<SUB>0</SUB>
++ <I>n</I>)
+= TSL(t<SUB>0</SUB>)
++ 0,065735<I>n</I>
+= 0,065735<I>n</I>&nbsp;;
+puisque TSL(t<SUB>0</SUB>)
+= 0.
+<BR>Par
+conséquent&nbsp;: 18h = 0,065735<I>n</I>.
+Et donc <I>n</I>
+= 18 ÷ 0,065735 = 273,82 jours.
+<BR>Dressons
+un tableau des nombres de jours écoulés depuis le 22 septembre
+(année non bissextile)
+<TABLE WIDTH=593 CELLPADDING=7 CELLSPACING=0>
+<TR VALIGN=TOP>
+<TD WIDTH=53 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>septembre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=40 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>octobre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=53 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>novembre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=51 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>décembre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>janvier</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>février</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=26 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>mars</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>avril</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>mai</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>juin</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=31 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>juillet</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=23 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>aout</FONT></FONT></FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=53 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">8</FONT></FONT></P>
+</TD>
+<TD WIDTH=40 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=53 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">30</FONT></FONT></P>
+</TD>
+<TD WIDTH=51 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">28</FONT></FONT></P>
+</TD>
+<TD WIDTH=26 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">30</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">30</FONT></FONT></P>
+</TD>
+<TD WIDTH=31 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=23 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=53 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">8</FONT></FONT></P>
+</TD>
+<TD WIDTH=40 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">39</FONT></FONT></P>
+</TD>
+<TD WIDTH=53 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">69</FONT></FONT></P>
+</TD>
+<TD WIDTH=51 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">100</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">131</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">159</FONT></FONT></P>
+</TD>
+<TD WIDTH=26 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">190</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">220</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">251</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">281</FONT></FONT></P>
+</TD>
+<TD WIDTH=31 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+<TD WIDTH=23 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+</TABLE>
+<BR>La
+culmination à minuit de l’étoile a lieu aux environs du 30 mai.
+<BR>Pour
+l’exemple, comparons ce résultat avec celui de la méthode plus
+rigoureuse donnant le TSL à minuit le jour de l’équinoxe de
+printemps.
+<BR>Ce
+TSL vaut&nbsp;: TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>)
+= 12,032868 heures, avec cette fois ci&nbsp;: t<SUB>0</SUB>,
+la date du 20 mars à midi. Nous cherchons n (nombre de jours) de
+sorte que TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>
++ <I>n</I>)
+= 18h.
+<BR>Or,
+TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>
++ <I>n</I>)
+= TSL(t<SUB>0</SUB>
++ 12<SUP>h</SUP>)
++ 0,065735<I>n</I>.
+<BR>D’où&nbsp;:
+18 = 12,032868 + 0,065735<I>n</I>.
+<BR>Il
+vient&nbsp;: n = 5,967 ÷ 0,065735 = 90,775 jours.
+<BR>90
+jours à partir du 20 mars, nous conduisent au 18 juin. Plus de 15
+jours nous séparent de la date précédemment calculée. A raison
+de 4 minutes de décalage par jours, cela nous donne un intervalle
+d’incertitude de plus d’une heure du passage au méridien. Pour
+un travail d’amateur, ce n’est pas si mal&nbsp;!
+<BR>D’ailleurs
+pour une estimation honnête de la date du passage au méridien à
+minuit d’une étoile d’ascension droite&nbsp;: &nbsp;,
+il est assez commode de retenir la règle pratique suivante&nbsp;: 
+
+<BR>
+<BR>Exemple&nbsp;:
+
+= 18h donc il faut attendre 18 / 2 = 9 mois à partir de l’équinoxe
+d’automne (21 septembre) pour que l’étoile étoile d’ascension
+droite&nbsp;18h culmine à minuit. Ainsi, cette étoile passera le
+méridien supérieur à minuit aux alentours du 20 juin. 
+
+<BR><I><B>Réponse
+3).</B></I>
+L’assertion proposée est vraie comme nous allons le démontrer.
+<BR>Il
+nous faut d’abord connaître le TSL à 20h.
+<BR>Nous
+savons qu’à la date t<SUB>0</SUB>
+= 22 septembre, le TSL(t<SUB>0</SUB>)
+à minuit est nul. 
+
+<BR>C’est-à-dire&nbsp;:
+TSL(t<SUB>0</SUB>
++ 0<SUP>h</SUP>)
+= 0 heure.
+<BR>Or,
+d’après la Question 9c, nous avons appris comment fonctionne
+l’horloge sidérale dans la journée et en avons déduit le TSL
+après «&nbsp;<I>k</I>&nbsp;»
+heures solaires d’un instant <I>t</I>
+quelconque&nbsp;:
+<BR>TSL(<I>t</I>
++ <I>k</I>)
+= TSL(<I>t</I>)
++ 1,0027389 <I>k</I>.
+<BR>A
+la date t<SUB>0</SUB>
+= 22 septembre, à <I>k</I>
+= 20 h (donc 20 heures après minuit), on a&nbsp;:
+<BR>TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>)
+= TSL(t<SUB>0</SUB>)
++ 1,0027389×20 = 20,054778.
+<BR>Une
+étoile d’ascension droite&nbsp;: 
+= 18h, passe le méridien à 20 h à une certaine date inconnue&nbsp;:
+t<SUB>0</SUB>
++ <I>n</I>
+que nous cherchons.
+<BR>D’une
+part, nous avons&nbsp;: TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ <I>n</I>)
+= H(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ <I>n</I>)
++ ,
+d’après la relation fondamentale. 
+
+<BR>Or,
+H(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ <I>n</I>)
+= 0 (passage au méridien) et 
+= 18h. Donc, TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ <I>n</I>)
+= 18h.
+<BR>D’autre
+part, nous savons que&nbsp;: 
+
+<BR>TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ <I>n</I>)
+= TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>)
++ 0,065735<I>n</I>
+= 20,054778
++
+0,065735<I>n</I>.
+<BR>Par
+conséquent&nbsp;: 18h = 20,054778 +
+0,065735<I>n</I>.
+
+
+<BR>D’où&nbsp;:
+0,065735<I>n</I>
+= 18h
+- 20,054778 = - 2,054778 = 21,94522 (modulo 24).
+<BR>Et
+donc <I>n</I>
+= 21,94522
+÷ 0,065735
+= 333,84 jours.
+<BR>Dressons
+un tableau des nombres de jours écoulés depuis le 22 septembre
+(année non bissextile)
+<TABLE WIDTH=593 CELLPADDING=7 CELLSPACING=0>
+<TR VALIGN=TOP>
+<TD WIDTH=53 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>septembre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=40 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>octobre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=53 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>novembre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=51 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>décembre</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>janvier</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>février</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=26 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>mars</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>avril</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>mai</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>juin</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=31 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>juillet</FONT></FONT></FONT></P>
+</TD>
+<TD WIDTH=23 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2>août</FONT></FONT></FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=53 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">8</FONT></FONT></P>
+</TD>
+<TD WIDTH=40 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=53 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">30</FONT></FONT></P>
+</TD>
+<TD WIDTH=51 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">28</FONT></FONT></P>
+</TD>
+<TD WIDTH=26 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">30</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">30</FONT></FONT></P>
+</TD>
+<TD WIDTH=31 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+<TD WIDTH=23 BGCOLOR="#ccffcc" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">31</FONT></FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=53 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">8</FONT></FONT></P>
+</TD>
+<TD WIDTH=40 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">39</FONT></FONT></P>
+</TD>
+<TD WIDTH=53 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">69</FONT></FONT></P>
+</TD>
+<TD WIDTH=51 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">100</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">131</FONT></FONT></P>
+</TD>
+<TD WIDTH=37 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">159</FONT></FONT></P>
+</TD>
+<TD WIDTH=26 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">190</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">220</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">251</FONT></FONT></P>
+</TD>
+<TD WIDTH=24 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">281</FONT></FONT></P>
+</TD>
+<TD WIDTH=31 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif">312</FONT></FONT></P>
+</TD>
+<TD WIDTH=23 STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><BR>
+</P>
+</TD>
+</TR>
+</TABLE>
+<BR>Ce
+qui nous amène dans les derniers jours d’aout, soit le 21 aout.
+<BR>Ici
+aussi, il est permis d’obtenir
+une estimation honnête de la date du passage au méridien à une
+certaine heure locale <I>h</I>
+d’une étoile d’ascension droite&nbsp;: &nbsp;,
+en appliquant la règle pratique suivante&nbsp;: 
+
+<BR>
+<BR>Exemple&nbsp;:
+
+= 18h et nous savons que l’étoile culmine à minuit vers le 30
+mai. Nous cherchons à quelle date elle culminera à 20h locale,
+c’est-à-dire avec 4h d’avance sur minuit. 
+
+<BR>Il
+faut attendre 4 ÷ 2 = 2 mois à partir du 30 mai, c’est-à-dire
+début août, pour que cette étoile culmine à 20h.
+<BR>Si
+maintenant, nous cherchons à quelle date elle culminera à 3h du
+matin, c’est-à-dire avec 21h d’avance sur minuit.
+<BR>Il
+faut attendre 21 ÷ 2 = 10,5 mois à partir du 30 mai, c’est-à-dire
+mi mars, pour que cette étoile culmine à 3h locale. 
+
+<BR><I><B>Réponse
+4).</B></I>
+L’assertion proposée est fausse comme nous allons le démontrer.
+<BR>Il
+nous faut d’abord connaître le TSL à 22h.
+<BR>Nous
+savons qu’à la date t<SUB>0</SUB>
+= 22 septembre, le TSL(t<SUB>0</SUB>)
+à minuit est nul. 
+
+<BR>A
+la date t<SUB>0</SUB>
+= 22 septembre, à <I>k</I>
+= 22 h (donc 22 heures après minuit), on a&nbsp;: 
+
+<BR>TSL(t<SUB>0</SUB>
++ 22<SUP>h</SUP>)
+= TSL(t<SUB>0</SUB>)
++ 1,0027389×22 = 22,060.
+<BR>Une
+étoile d’ascension droite&nbsp;inconnue : 
+=&nbsp;? h
+que nous cherchons,
+passe le méridien à 22 h le 12 octobre, c’est-à-dire 20 jours
+après le 22 septembre.&nbsp;: <I>n</I>
+= 20
+<BR>D’une
+part, nous avons&nbsp;: TSL(t<SUB>0</SUB>
++ 22<SUP>h</SUP>
++ 20<I>j</I>)
+= H(t<SUB>0</SUB>
++ 22<SUP>h</SUP>
++ 20<I>j</I>)
++ ,
+d’après la relation fondamentale. 
+
+<BR>Or,
+H(t<SUB>0</SUB>
++ 22<SUP>h</SUP>
++ 20<I>j</I>)
+= 0 (passage au méridien) et TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ 20<I>j</I>)
+= .
+<BR>D’autre
+part, nous savons que&nbsp;: 
+
+<BR>TSL(t<SUB>0</SUB>
++ 20<SUP>h</SUP>
++ 20<I>j</I>)
+= TSL(t<SUB>0</SUB>
++ 22<SUP>h</SUP>)
++ 0,065735×20
+= 22,060
++
+1,31147 = 23,3747 h.
+<BR>D’où&nbsp;:
+
+= 23h
+22min 28s
+<BR>
+<BR><B>Différence
+de deux ascensions droites</B>.
+<BR>A
+la Question 12d au niveau débutant de ce chapitre, nous avions
+signalé un aspect pratique de l’usage des ascensions droites des
+astres.
+<BR>En
+effet, la
+différence de deux ascensions droites indique l’intervalle de
+temps qui sépare la culmination de deux étoiles ce qui permet de
+savoir si au cours de l’année, il est possible dans la même
+soirée de voir deux étoiles données.
+<BR>Nous
+démontrons ici ce résultat.
+<BR>Considérons
+deux étoiles respectivement d’ascension
+droite <SUB>1</SUB>
+et <SUB>2</SUB>
+avec <SUB>2</SUB>
+≥ <SUB>1</SUB>.
+<BR>Soit
+l’instant t<SUB>1</SUB>
+où la première étoile culmine et t<SUB>2</SUB>
+l’instant où la seconde étoile culmine. Notons t
+=  t<SUB>2</SUB>
+- t<SUB>1</SUB>.
+<BR>Nous
+avons&nbsp;:
+<BR>TSL(t<SUB>1</SUB>)
+= H<SUB>1</SUB>(t<SUB>1</SUB>)
++ <SUB>1</SUB>
+et TSL(t<SUB>1</SUB>
++ t)
+= H<SUB>2</SUB>(t<SUB>1</SUB>
++ t)
++ <SUB>2</SUB>.
+<BR>Mais
+comme&nbsp;: TSL(t<SUB>1</SUB>
++ t)
+= TSL(t<SUB>1</SUB>)
++ 1,0027389×t,
+on a aussi&nbsp;:
+<BR>H<SUB>2</SUB>(t<SUB>1</SUB>
++ t)
++ <SUB>2</SUB>.
+= H<SUB>1</SUB>(t<SUB>1</SUB>)
++ <SUB>1</SUB>
++ 1,0027389×t.
+D’où&nbsp;:
+<BR>H<SUB>2</SUB>(t<SUB>1</SUB>
++ t)
+- H<SUB>1</SUB>(t<SUB>1</SUB>)
+= <SUB>1</SUB>
+- <SUB>2</SUB>
++ 1,0027389×t.
+<BR>Or
+les deux étoiles culminent respectivement au instant t<SUB>1</SUB>
+et t<SUB>2</SUB>
+= t<SUB>1</SUB>
++ t,
+donc H<SUB>2</SUB>(t<SUB>1</SUB>
++ t)
+= H<SUB>1</SUB>(t<SUB>1</SUB>)
+= 0.
+<BR>Si
+bien que&nbsp;: <SUB>2</SUB>
+- <SUB>1</SUB>
+= 1,0027389×t.
+<BR>Au
+cours d’une seule soirée le facteur 1,0027389
+est négligeable, par conséquent&nbsp;:
+<BR><SPAN STYLE="background: #00ff00"></SPAN><SUB><SPAN STYLE="background: #00ff00">2</SPAN></SUB><SPAN STYLE="background: #00ff00">
+- </SPAN><SPAN STYLE="background: #00ff00"></SPAN><SUB><SPAN STYLE="background: #00ff00">1</SPAN></SUB><SPAN STYLE="background: #00ff00">
+</SPAN><SPAN STYLE="background: #00ff00">≈</SPAN><SPAN STYLE="background: #00ff00">
+</SPAN><SPAN STYLE="background: #00ff00"></SPAN><SPAN STYLE="background: #00ff00">t
+=  t</SPAN><SUB><SPAN STYLE="background: #00ff00">2</SPAN></SUB><SPAN STYLE="background: #00ff00">
+- t</SPAN><SUB><SPAN STYLE="background: #00ff00">1</SPAN></SUB>.
+<BR>La
+probabilité de voir le même soir deux étoiles augmente lorsque la
+différence de leur ascension droite diminue.
+<BR>
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+

@@ -1,0 +1,12 @@
+<div class="fireworks-container">
+  <div *ngFor="let p of particles"
+       class="particle"
+       [ngStyle]="{
+         left: p.x + '%',
+         bottom: p.y + '%',
+         width: p.size,
+         height: p.size,
+         backgroundColor: p.color,
+         opacity: p.opacity
+       }"></div>
+</div>

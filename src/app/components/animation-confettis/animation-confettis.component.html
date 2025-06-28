@@ -1,20 +1,15 @@
-<!-- <div class="confettis-container">
-  <div *ngFor="let c of confettis"
-       class="confetti"
-       [ngStyle]="{
-         width: c.size,
-         height: c.size,
-         backgroundColor: c.color,
-         left: c.x + '%',
-         animation: 'fall ' + c.animationDuration + ' ease-out ' + c.delay + ' forwards',
-         transform: 'rotate(' + c.angle + 'deg)'
-       }">
+<div class="confettis-container">
+  <div *ngFor="let c of confettis" class="confetti"
+    [ngStyle]="{
+      left: c.x + '%',
+      width: c.size,
+      height: c.size,
+      backgroundColor: c.color,
+      animationDuration: c.animationDuration,
+      animationDelay: c.delay,
+      transform: 'rotate(' + c.angle + 'deg)'
+    }">
   </div>
-</div> -->
-<div *ngFor="let c of confettis" class="confetti"
-  [ngStyle]="{
-    left: c.x + '%',
-    animation: 'fall 3s ease-out ' + c.delay + ' forwards'
-}">
 </div>
+
 

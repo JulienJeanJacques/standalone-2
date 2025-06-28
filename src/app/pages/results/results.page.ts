@@ -5,16 +5,11 @@ import { CommonModule } from '@angular/common';
 import { NavController }     from '@ionic/angular';
 import { MenuController }    from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
-//my Classes
-import { Item } from '../../classes/item'
 //my services
-import { SettingsService }              from 'src/app/services/settings.service';
-import { TraductionService }            from 'src/app/services/traduction.service';
-import { GestionConfigEngFrService }     from '../../services/gestion-config-eng-fr.service';
-import { ResultsService}                from '../../services/results.service';
-
-
-
+import { SettingsService }           from 'src/app/services/settings.service';
+import { TraductionService }         from 'src/app/services/traduction.service';
+import { GestionConfigEngFrService } from '../../services/gestion-config-eng-fr.service';
+import { GamerResultsService}        from '../../services/gamer-results.service';
 
 @Component({
   selector: 'app-results',
@@ -49,12 +44,10 @@ export class ResultsPage implements OnInit {
   textResults:        string = 'Your results:';
   textChoiceLevel:    string = 'Choice your level';
   textChoiceChapter:  string = 'Choice your chapter';
-  textChoose:         string = 'Choose'
-  textPercentage:     string = 'Percentage:'
+  textChoose:         string = 'Choose';
+  textPercentage:     string = 'Percentage:';
   //
   k: number = 0.3; // Pourcentage en valeur décimale (par ex. 0.7 pour 70%)
-  //
-  
   //
     constructor(
       private navCtrl:                        NavController,
@@ -62,7 +55,7 @@ export class ResultsPage implements OnInit {
       private settingsService:                SettingsService,
       private traductionService:              TraductionService,
       private gestionConfigEngFrService:     GestionConfigEngFrService,
-      private resultsService:                 ResultsService,
+      private gamerResultsService:            GamerResultsService,
     ) { }
   
   ngOnInit() {
@@ -74,7 +67,7 @@ export class ResultsPage implements OnInit {
     this.theme    = this.settingsService.getTheme();
     //account
     this.accountName = this.gestionConfigEngFrService.getAccountName();
-    this.k = this.resultsService.percentage(this.count,this.itemName);
+    // this.k = this.gamerResultsService.percentage(this.count,this.itemName);
     //item for chapter and level
     this.accountOrItemChange(this.count,this.itemName);
     //
@@ -87,14 +80,12 @@ export class ResultsPage implements OnInit {
     this.textChoiceChapter = this.traductionService.findGoodLabel(this.language,'le chapitre ','the chapter ');
     this.textChoose        = this.traductionService.findGoodLabel(this.language,'Choisissez: ','Choose:');
     this.textPercentage    = this.traductionService.findGoodLabel(this.language,'Pourcentge: ','Percentage:');
-   
   }
 
   accountOrItemChange(account:string,nameOfItem:string)
-  { let results = this.resultsService.percentage(account,nameOfItem)
-
+  { 
+    // let results = this.gamerResultsService.percentage(account,nameOfItem)
   }
-
   applyTheme(theme:string){
   }
   openMenu() {

@@ -1,0 +1,396 @@
+
+
+
+<BR><B>Diagramme
+solaire.</B>
+<BR><I><B>a)
+Qu’appelle-t-on diagramme solaire ?</B></I>
+<BR>Un
+diagramme solaire est un graphique représentant dans un plan la
+course quotidienne du Soleil observée depuis un point de la surface
+terrestre, durant une année complète. En reportant point par point
+la position du Soleil, le tracé donne un aperçu de
+l’ensoleillement dont bénéficie théoriquement un lieu donné,
+en fonction de la date et de l’heure. Ainsi peut-on visualiser sur
+le même graphique la zone du ciel que couvre le Soleil durant toute
+une année, en un lieu donné.
+<BR>Il
+existe principalement deux types de diagramme solaire selon le
+système de coordonnées retenu, les diagrammes en coordonnées
+polaires et les diagrammes en coordonnées cartésiennes&nbsp;; les
+premiers sont obtenus par projection sphérique (gnomonique,
+orthographique, équidistante et  stéréographique) de la voute
+céleste locale, les seconds par projection cylindrique également
+appelée diagramme de Waldram.
+<BR>Ces
+deux types de diagrammes solaires ne se ressemblent pas, comme le
+montrent les deux illustrations ci-dessous, bien qu’ils décrivent
+le trajet apparent du Soleil depuis le même lieu. 
+
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_2.jpg" NAME="Image 49" ALIGN=BOTTOM WIDTH=623 HEIGHT=623 BORDER=0>
+<BR><I>Diagramme
+solaire en coordonnées polaires (azimut géographique&nbsp;: 0° au
+Nord)</I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_3.jpg" NAME="Image 50" ALIGN=BOTTOM WIDTH=623 HEIGHT=345 BORDER=0>
+<BR><I>Diagramme
+solaire en coordonnées cartésiennes (azimut géographique&nbsp;:
+0° au Nord)</I>
+<BR>On
+peut facilement se procurer sur internet ces deux sortes de
+diagrammes solaires pour un lieu donné, notamment sur le site
+remarquable de SunEarthTools, à l’adresse suivante&nbsp;:
+<A HREF="https://www.sunearthtools.com/dp/tools/pos_sun.php?lang=fr"><U>https://www.sunearthtools.com/dp/tools/pos_sun.php?lang=fr</U></A>).
+<BR>Si
+les données numériques de ces courbes dépendent bien entendu de
+la latitude géographique où a lieu la prise de vue, l’allure
+générale du dessin demeure toutefois sensiblement la même&nbsp;d’une
+latitude à une autre&nbsp;; même si les lignes de ces courbes sont
+davantage rassemblées et resserrées à l’Équateur et plus
+étalées aux Pôles.
+<BR>Par
+la suite, nous n’utiliserons que le diagramme en coordonnées
+cartésiennes. 
+
+<BR>Bien
+que ce type de coordonnées soit beaucoup moins bien adapté aux
+études scientifiques de l’ensoleillement, il offre au profane
+l’avantage d’une représentation de la voute céleste plus
+proche de celle qu’il observe réellement sur place. A charge à
+l’utilisateur d’imaginer que l’extrémité gauche du dessin
+rejoint la direction Est de son lieu d’observation et celle de
+droite sa direction Ouest, comme s’il enroulait la planche de
+dessin sur un demi cylindre.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_4.jpg" NAME="Image 51" ALIGN=BOTTOM WIDTH=318 HEIGHT=264 BORDER=0>
+<BR>L’échelle
+portée par l’axe horizontale des azimuts est alors
+proportionnelle au facteur 1-cos2<I>h</I>,
+où <I>h</I>
+désigne la hauteur du Soleil à l’azimut <I>a</I>.
+<BR>Cette
+projection présente l’avantage de recevoir des masques solaires
+(Voir question suivante dans Chapitre 10&nbsp;: Observation du
+Soleil, Question 9c) en respectant la forme des ombres portées.
+<BR><I><B>b)
+Composition et lecture d’un diagramme solaire cartésien.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_5.jpg" NAME="Image 52" ALIGN=BOTTOM WIDTH=623 HEIGHT=443 BORDER=0>
+<BR>Reprenons
+l’exemple du diagramme solaire cartésien présenté dans la
+question pour décrire les éléments qui le composent.
+<BR>Pour
+commencer, un diagramme solaire doit nécessairement indiquer pour
+quelle latitude il a été conçu, car la trajectoire du Soleil est
+localisée par rapport à un horizon. Toute modification de la
+latitude engendre une variation des données numériques du
+graphique. Toutefois, la précision de cette latitude dépend de
+l’usage que l’on souhaite faire du diagramme et dans bien des
+cas une précision de l’ordre du degré suffit largement. Dans
+notre exemple, il importe de constater que l’observation a lieu
+dans l’hémisphère Nord et à une latitude approximative de 45°.
+<BR>Comme
+son nom l’indique, un diagramme cartésien se compose de deux axes
+de coordonnées, généralement orthogonaux. Les deux grandeurs
+astronomiques associées aux axes de coordonnées d’un diagramme
+solaire sont :
+
+<BR>L’Azimut,
+en abscisse.
+
+<BR>L’origine
+de cet axe est centrée sur le méridien supérieur Sud du lieu. On
+remarquera que contrairement aux deux exemples du paragraphe
+précédent, on a adopté ici la convention astronomique et non
+géographique, car dans ce cas l’origine des azimuts (le zéro)
+est placée au Sud et non au Nord.
+<BR>Rappelons
+que l’azimut d’un astre est une grandeur variable dans le temps,
+qui vaut à chaque instant l’angle du secteur angulaire horizontal
+compris entre le point cardinal Sud et le point du projeté
+orthogonal de l’astre sur l’horizon. En d’autres termes,
+l’azimut est l’angle compris entre le vertical de l’astre et
+le plan méridien Sud. Son unité de mesure est donc le degré
+d’arc.
+<BR>Normalement,
+dans l’hémisphère Nord comme dans l’hémisphère Sud, on fait
+varier cet angle de 0° à 360° dans le sens des aiguilles d’une
+montre, mais il est parfois commode de le compter algébriquement,
+c’est-à-dire avec des valeurs négatives dans la direction de
+l’Est et positives dans la direction de l’Ouest&nbsp;; c’est
+justement ce procédé qui a été retenu dans cet exemple (Cf.
+Chapitre 6&nbsp;: Astrométrie, Question 6d, Question 11e et
+Question 12e).
+
+<BR>La
+hauteur, en ordonnée.
+
+<BR>La
+hauteur désigne la seconde coordonnées du système dit&nbsp;:
+«&nbsp;<I>coordonnées
+horizontales</I>&nbsp;».
+La hauteur d’un astre est aussi un angle&nbsp;; c’est en effet
+l’angle, vu depuis l’observateur, compris entre l’astre et sa
+projection orthogonale sur l’horizon. Autrement dit, la hauteur
+d’un astre ou son «&nbsp;altitude&nbsp;» selon la terminologie
+anglaise (d’où l’autre nom, <I>«&nbsp;</I><I>alt-azimutales</I>&nbsp;»
+donné à ce système de coordonnées), est la distance angulaire de
+l’astre mesurée verticalement depuis l’horizon.
+<BR>Si
+l’astre se trouve au-dessus de l’horizon, la hauteur est
+positive, sinon elle est négative. Une hauteur de zéro degré
+indique donc un point de l’horizon. 
+
+<BR>La
+hauteur du Soleil dans la journée comme dans l’année est
+intimement liée à la déclinaison 
+du Soleil. Cette dernière varie très faiblement dans une journée,
+mais fortement dans l’année puisqu’elle passe de + 23°26’ au
+solstice de juin à – 23°26’ au solstice de décembre. 
+
+<BR>La
+hauteur <I>h</I>
+du Soleil se calcule en résolvant l’équation&nbsp;: <I>sinh
+sin</I><I></I>
+= <I>sin</I>
++ <I>cos</I>
+<I>cosh</I>
+<I>cosa</I>,
+avec <I>a</I>
+l’azimut du Soleil et 
+la latitude du lieu (Cf. Chapitre 6&nbsp;: Astrométrie, Question
+3e)&nbsp;; le diagramme solaire se veut justement une représentation
+graphique de cette solution.
+<BR>On
+observe sur le graphique deux sortes de courbes, décrivons les :
+
+<BR>Les
+courbes du trajet quotidien du Soleil.
+
+<BR>Les
+lignes qui s’allongent de gauche à droite représentent les
+trajectoires quotidiennes du Soleil, du lever à l’Est au coucher
+à l’Ouest. Par conséquent, à chaque courbe est associée une
+journée de l’année et chaque point d’une courbe donne, à un
+instant donné, la position du Soleil repérée par son azimut et sa
+hauteur dans le ciel.
+<BR>Naturellement,
+pour la lisibilité du dessin, seules quelques courbes ont été
+tracées, une journée par mois. 
+
+<BR>Celle
+qui grimpe le plus haut et qui est aussi la plus longue représente
+la trajectoire du Soleil le jour du solstice d’été et celle qui
+est à la fois la plus courte et la plus basse matérialise, bien
+entendu, le trajet du Soleil le jour du solstice d’hiver.
+<BR>Entre
+ces deux courbes extrêmes, c’est-à-dire à l’intérieur de la
+zone de couleur jaune, sont réparties toutes les autres courbes de
+tous les autres jours de l’année mais dont on n’a tracé que
+cinq représentants. En remarquant que le Soleil parcourt
+nécessairement deux fois la même courbe dans l’année, puisqu’en
+un an le Soleil fait un aller retour entre un solstice d’été
+d’une année et le solstice d’été de l’année suivante, on
+comprend que deux dates sont alors associées à chaque courbe.
+<BR>Ainsi
+ce diagramme solaire décrit le trajet quotidien du Soleil dont
+seulement 12 jours de l’année sont explicitement indiqués&nbsp;;
+chaque courbe étant espacée d’un mois comme le confirme la
+légende inscrite dans la cartouche de couleur bleu. Pour les autres
+jours de l’année, on pourra procéder par interpolation. 
+
+
+<BR>Les
+courbes horaires.
+
+<BR>D’autres
+courbes complètent le graphique. Plus nombreuses, elles sont
+tracées dans le sens de la verticalité et forment avec les
+précédentes un quadrillage (maillage).
+<BR>Chaque
+ligne indique une heure de la journée. 
+
+<BR>Bien
+que nous n’ayons sur ce graphique aucune indication précise à ce
+sujet, le temps utilisé ici ne peut être celui du Temps Solaire
+moyen de la montre, ni celui de l’heure UTC du lieu considéré.
+Ceci pour deux raisons&nbsp;: d’une part l’heure sur le méridien
+indique 12h tous les jours de l’année, or nous savons que le
+Soleil ne culmine pas tous les jours à 12h de la montre, il est
+tantôt en avance tantôt, en retard sur le méridien (Équation du
+Temps, Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil,
+Question 4c) et d’autre part, la forme de chaque courbe horaire
+devrait épouser celle de la courbe en «&nbsp;8&nbsp;», ce qui
+n’est visiblement pas le cas. Il nous faut donc admettre que
+l’heure inscrite sur ce graphique est l’Heure du Soleil Vrai
+comme sur un cadran solaire&nbsp;; à charge pour l’utilisateur de
+le convertir en heure légale de la montre (Sur certains diagrammes
+solaires plus professionnels, l’heure UTC est automatiquement
+incorporée).
+<BR>Ainsi,
+le mode d’emploi de lecture d’un diagramme solaire est
+finalement assez simple. Chaque intersection d’une courbe de
+trajet avec une courbe horaire nous fournit quatre informations&nbsp;:
+la date, l’heure, l’azimut et la hauteur du Soleil à cette date
+et à cette heure.
+<BR><I><B>c)
+Intérêt du diagramme, pour quels usages&nbsp;?</B></I>
+<BR>Pour
+l’astronome professionnel, ce diagramme solaire, surtout dans sa
+version cartésienne, n’est pas suffisamment précis pour être
+exploité à bon escient dans le cadre d’une étude scientifique,
+d’autant qu’il dispose de moyens plus performants pour établir
+et présenter avec davantage de rigueur, la course du Soleil dans le
+ciel. Pour l’astronome amateur, l’intérêt semble assez limité,
+bien que ce graphique lui offre toutefois une belle opportunité de
+confronter ses propres mesures avec les valeurs théoriques du
+modèle. 
+
+<BR>En
+vérité, ce type de graphique est plutôt destiné aux particuliers
+et aux professionnels de la pose de panneaux solaires dans le cadre
+d’une étude préliminaire de l’ensoleillement d’un lieu.
+D’ailleurs, le diagramme de Waldram est d’un usage courant au
+Royaume-Uni et aux Etats-Unis, notamment pour résoudre les
+problèmes liés à la diffusion et à la radiation de la lumière
+solaire des fenêtres et des surfaces réfléchissantes verticales,
+mais aussi pour étudier le champ de la vision humaine.
+<BR>En
+Europe et en particulier en France, le diagramme solaire commence à
+être bien connu du grand public depuis que les gouvernements
+successifs ont fortement encouragé l’installation de panneaux
+solaires photovoltaïques sur les toitures des bâtiments, tant
+privés que publics.
+<BR>
+<BR><B>Solution
+de l’exercice.</B>
+<BR><I><B>a)
+Première information.</B></I>
+<BR><I>«&nbsp;La
+durée d’ensoleillement du 20 avril est de 13h 30min&nbsp;».</I>
+<BR>Cette
+information est exacte. Pour le vérifier, il suffit de considérer
+la courbe correspondante au trajet du Soleil du 20 avril, de lire
+sur le graphique à quelle heure ce jour là le Soleil se lève et
+se couche à Bordeaux et de calculer la différence.
+<BR>L’illustration
+suivante montre la procédure&nbsp;:
+<BR> 
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_6.jpg" NAME="Image 53" ALIGN=BOTTOM WIDTH=623 HEIGHT=440 BORDER=0>
+<BR>Puisque
+le Soleil se couche à 18h 45min et se lève à 5h 15min, la durée
+d’ensoleillement ce jour là est bien de 18h 45min - 5h 15min =
+13h 30min.
+<BR><I><B>b)
+Deuxième information.</B></I>
+<BR><I>«&nbsp;À
+l’équinoxe du printemps, le Soleil est aussi haut à 9h qu’il
+l’est à 15h à l’équinoxe d’automne&nbsp;».</I>
+<BR>Cette
+information est exacte. Pour le vérifier, on commence par
+considérer les deux trajets communs que parcourt le Soleil aux
+dates du 20 mars et du 23 septembre, respectivement jour de
+l’équinoxe du printemps et jour de l’équinoxe d’automne dans
+l’hémisphère Nord (et vice versa dans l’hémisphère Sud). On
+trace ensuite la droite de hauteur passant à 9h pour constater
+qu’elle coupe aussi la courbe des équinoxes à 15h.
+<BR>Le
+croquis suivant illustre la démarche&nbsp;:
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_7.jpg" NAME="Image 54" ALIGN=BOTTOM WIDTH=623 HEIGHT=440 BORDER=0>
+<BR>Cette
+symétrie, par rapport au méridien, de la hauteur du Soleil 3h
+avant midi et 3h après midi est non seulement respectée à toute
+heure de la journée, mais également tous les jours de l’année
+et pas uniquement les jours d’équinoxe. Ainsi l’ensemble du
+graphe est symétrique par rapport au plan méridien.
+<BR>Une
+configuration qui n’aurait pas lieu si l’on tenait compte des
+heures de la montre qui comme on le sait provoqueraient un décalage
+horaire de la culmination du Soleil et par conséquent rendraient
+asymétrique l’ensemble des courbes de ce graphique.
+<BR>Les
+heures indiquées sur ce diagramme solaire sont donc des Heures du
+Soleil Vrai. 
+
+<BR>Mais
+pourquoi ces heures se répartissent-elles de façon symétrique
+autour du midi solaire tous les jours de l’année alors qu’elles
+ne sont pas régulières durant l’année par rapport aux
+battements réguliers de la montre&nbsp;? Tout simplement parce que
+la durée d’un Jour Solaire Vrai (mesuré avec une montre) ne
+varie que de quelques secondes dans l’année (varie de 24
+h 00 min 30 sec et 23 h 59 min 40 sec) si bien qu’en se remettant
+à l’heure de midi tous les jours de l’année (en franchissant
+le méridien), le Soleil est par conséquent tous les jours à
+l’heure, on devrait plutôt dire à son heure. En outre, il est
+légitime de considérer circulaire la trajectoire du Soleil au
+cours d’une seule journée (à l’échelle d’une année elle
+dessine une hélice que le Soleil parcourt deux fois, en la
+descendant et en la remontant), si bien que sa position de part et
+d’autre du méridien ne peut avoir lieu en des temps égaux par
+rapport à midi solaire qu’à hauteur égale. 
+
+<BR><I><B>c)
+Troisième information.</B></I>
+<BR><I>«&nbsp;Le
+23 octobre à 10h du matin, la hauteur du Soleil atteint 30° à
+l’azimut 30°&nbsp;».</I>
+<BR>Cette
+information est doublement fausse. 
+
+<BR>D’une
+part, à 10h le Soleil n’a pas encore atteint la hauteur de 30°,
+il l’atteindra dans une bonne demie heure et d’autre part, selon
+la convention de ce diagramme solaire, un azimut du matin ne
+peut-être que négatif puisque le Soleil se trouve encore dans une
+direction comprise entre l’Est et le Sud. 
+
+<BR>Comme
+on peut le lire sur le croquis ci-dessous, le 23 octobre à 10h du
+matin, l’azimut du Soleil est de – 34°.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_8.jpg" NAME="Image 55" ALIGN=BOTTOM WIDTH=623 HEIGHT=438 BORDER=0>
+<BR><I><B>d)
+Quatrième information.</B></I>
+<BR><I>«&nbsp;Le
+23 novembre, l’amplitude ortive et occase du Soleil sont de 30°
+chacune ».</I>
+<BR>Cette
+information est exacte.
+<BR>Rappelons
+d’abord ce que l’on entend par l’amplitude ortive et occase
+(Cf. Chapitre 6&nbsp;: Astrométrie, Question 3c et Question 9e).
+<BR>On
+appelle amplitude ortive du Soleil, la distance angulaire mesurée
+depuis un lieu terrestre dans le plan de l’horizon, entre la
+position du Soleil au moment de son lever et le point cardinal Est.
+De même, on appelle amplitude occase du Soleil, la distance
+angulaire entre la position du Soleil au moment de son coucher et le
+point cardinal Ouest.
+<BR>Bien
+que le Soleil puisse se lever (respectivement se coucher) à droite
+ou à gauche du point cardinal Est (respectivement à l’Ouest)
+selon la saison, cette amplitude n’est pourtant généralement pas
+affectée d’un signe, on se contente de préciser si besoin sa
+position par rapport à l’Est (respectivement à l’Ouest).
+<BR>A
+partir d’un diagramme solaire, la mesure de ces deux amplitudes
+est aisée puisqu’il suffit de calculer, en valeur absolue, la
+différence entre l’azimut du lever du Soleil et l’azimut du
+point cardinal Est pour l’amplitude ortive, et pour l’amplitude
+occase, la différence entre l’azimut du coucher du Soleil et
+l’azimut du point cardinal Ouest.
+<BR>Ainsi,
+nous constatons sur le diagramme solaire ci-dessous que le Soleil se
+lève à Bordeaux le 23 novembre avec un azimut de 60° Est et qu’il
+se couche avec un azimut de 60° Ouest. Comme l’Est et l’Ouest
+sont par définition à 90° de part et d’autre du méridien Sud,
+les amplitudes ortive et occase valent toutes les deux 90° - 60° =
+30°. Elles sont nécessairement très élevées puisque le solstice
+d’hiver dans cet hémisphère Nord aura lieu dans seulement un
+mois environ.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//c10//10c8//c8_src_0.jpg" NAME="Image 56" ALIGN=BOTTOM WIDTH=623 HEIGHT=437 BORDER=0>
+<BR>
+<BR>
+
+
+<BR><BR>
+
+
+

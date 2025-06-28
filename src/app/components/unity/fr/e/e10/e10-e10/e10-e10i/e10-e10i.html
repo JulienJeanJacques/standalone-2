@@ -1,0 +1,1180 @@
+
+
+
+<BR><B>PLAN
+DE LECTURE</B>
+<BR><I>Le
+développement de cette Question 10e étant un peu plus long et plus
+technique que de coutume, nous le précédons d’un plan pour en
+faciliter la lecture.</I>
+<BR>
+<BR><B>La
+longueur du jour.</B>
+<BR><I><B>a)
+La durée du jour.</B></I>
+<BR><I><B>b)
+L’objectif de l’exercice.</B></I>
+<BR><I><B>c)
+Les variations annuelles de cette durée.</B></I>
+<BR><I><B>d)
+L’asymétrie de la durée du jour.</B></I>
+<BR>
+<BR><B>Calcul
+de la durée du jour.</B>
+<BR><I><B>a)
+Le cadre théorique du calcul.</B></I>
+<BR><I><B>b)
+Les deux paramètres astronomiques nécessaires au calcul.</B></I>
+<BR><I><B>c)
+Principe et méthodes de calcul.</B></I>
+<BR><I><B>d)
+La méthode par différence de l’heure du lever et du coucher du
+Soleil.</B></I>
+<BR><I><B>e)
+La méthode par soustraction algébrique des angles horaires.</B></I>
+<BR><I><B>f)
+La méthode par projection géométrique.</B></I>
+<BR>
+<BR><B>Calcul
+de la durée du jour par projection géométrique.</B>
+<BR><I><B>a)
+Plantons le décor.</B></I>
+<BR><I><B>b)
+Hypothèses simplificatrices du calcul.</B></I>
+<BR><I><B>c)
+Durée du jour en fonction de latitude et de la déclinaison.</B></I>
+<BR><I><B>d)
+Durée du jour en fonction de latitude et de la date.</B></I>
+<BR><I><B>e)
+Commentaire mathématique.</B></I>
+<BR><I><B>f)
+Graphique récapitulatif pour l’hémisphère Nord.</B></I>
+<BR>
+<BR><B>Solution
+des exercices de la Question 10e.</B>
+<BR><I><B>a)
+Solution de l’exercice 1)</B></I>
+<BR><I><B>b)
+Solution de l’exercice 2)</B></I>
+<BR><I><B>c)
+Solution de l’exercice 3)</B></I>
+<BR><I><B>d)
+Solution de l’exercice 4)</B></I>
+<BR>
+<BR>
+<BR><B>La
+longueur du jour.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_1.jpg" NAME="Image 225" ALIGN=BOTTOM WIDTH=623 HEIGHT=269 BORDER=0>
+<BR><I><B>a)
+La durée du jour.</B></I>
+<BR>On
+appelle «&nbsp;<I>durée
+du jour&nbsp;</I>», que
+les astronomes désignent souvent sous le vocable «&nbsp;<I>longueur
+du jour</I>&nbsp;», le
+temps que prend le Soleil pour parcourir le ciel, entre le moment de
+son lever et de son coucher.
+<BR>Ainsi,
+le mot «&nbsp;jour&nbsp;» doit être compris ici dans le sens de
+«&nbsp;moment de clarté provoqué par la présence du Soleil dans
+le ciel&nbsp;», comme dans l’expression&nbsp;: «&nbsp;il fait
+jour&nbsp;», et s’oppose donc au mot «&nbsp;nuit&nbsp;». Le
+terme «&nbsp;durée du jour&nbsp;» se
+réfère au temps d’insolation théorique d’un lieu géographique
+(on pourrait l’appeler «&nbsp;durée d’ensoleillement&nbsp;»,
+mais ce terme peut aussi prêter à confusion à cause de
+l’éventuelle présence de nuages&nbsp;!). 
+
+<BR>Par
+conséquent, le sens de ce terme employé ici est radicalement
+différent de celui du même nom, que l’on a très souvent utilisé
+dans d’autres chapitres pour désigner la durée
+entre deux passages consécutifs du Soleil sur le méridien d’un
+lieu. Ce dernier définit en effet la période de Rotation de la
+Terre par rapport au Soleil (période dite synodique), qui vaut en
+moyenne 24h&nbsp;; ce n’est donc pas cette durée que l’on
+désire calculer ici.
+<BR><I><B>b)
+L’objectif de l’exercice.</B></I>
+<BR>Obtenir
+une formule générale donnant, en tout lieu de la planète et à
+toute date de l’année, la durée du jour, tel est l’ambitieux
+projet que nous vous proposons ici.
+<BR>Au
+niveau Confirmé de ce
+Chapitre 10&nbsp;: Observation du Soleil, Question 10c, nous avions
+déjà abordé ce sujet, mais de façon expérimentale. En effet, en
+nous appuyant sur les relevés topocentriques des levers et couchers
+du Soleil répertoriés sur certains calendriers, nous avions pu, à
+partir de quelques exemples, mesurer la durée du jour en différents
+endroits du globe et vérifier, de visu, son évolution au gré des
+saisons. 
+
+<BR>Les
+explications de nature astronomique de cette variation ayant été
+aussi fournies, nous envisageons maintenant d’établir un modèle
+théorique qui permettra de calculer de façon formelle cette durée.
+
+
+<BR>Bien
+que nous n’obtiendrons qu’une formule approximative et pourtant
+déjà fort complexe, celle-ci sera néanmoins en mesure de décrire
+avec suffisamment de précision les évolutions de la durée du
+jour, dont il n’est pas inutile d’en rappeler les
+caractéristiques essentielles. 
+
+<BR><I><B>c)
+Les variations annuelles de cette durée.</B></I>
+<BR>La
+durée du jour n’est donc pas constante, ni en temps, ni en lieu.
+Elle varie fortement de 0h à 24h par jour, selon le lieu et
+l’époque de l’année. En particulier, comme chacun le sait, les
+nuits sont plus longues les jours d’hiver et plus courtes les
+jours d’été&nbsp;; du moins aux latitudes moyennes des deux
+hémisphères.
+<BR>Plus
+curieux encore. En suivant jour par jour durant une année, la durée
+du jour sur un calendrier des postes, on constate que cette
+variation est elle-même variable&nbsp;; c’est-à-dire non
+linéaire, mais soumise à des accélérations à certaines époques
+de l’année. En effet, les changements de la durée du jour sont
+beaucoup plus rapides durant la période des équinoxes (variation
+jusqu’à 24 minutes d’arc par jour,) et très lents aux moments
+des solstices. En dehors de ces périodes et aux latitudes moyennes,
+la progression est d’environ 2 minutes de plus ou de moins par
+jour. 
+
+<BR>Par
+exemple, à la latitude de Paris, la journée perd ou gagne selon le
+cas environ 4 à 5 minutes par jour aux voisinages des équinoxes, à
+peine 1 minute au moment des solstices et entre 2 et 3 minutes le
+reste du temps.
+<BR><I><B>d)
+L’asymétrie de la durée du jour.</B></I>
+<BR>Nous
+savons que les jours commencent à raccourcir à partir du solstice
+d’été jusqu’au solstice d’hiver, date à partir de laquelle
+ils se rallongent. 
+
+<BR>Or,
+nous avons vu dans ce Chapitre 10&nbsp;: Observation du Soleil,
+Question 4c, que cette augmentation ou cette diminution de la durée
+du jour, d’un jour à l’autre, n’est pas distribuée de façon
+équitable entre le matin et le soir. Par exemple, si la durée d’un
+certain jour a augmenté de 2 minutes par rapport au jour précédent,
+pour autant le Soleil ne se lève pas nécessairement une minute
+plus tôt, ni ne se couche une minute plus tard que la veille. 
+
+<BR>La
+répartition n’est donc pas toujours symétrique entre le gain
+horaire du matin et celui du soir, bien que la longueur de la course
+du Soleil le soit parfaitement par rapport au midi solaire et cela
+pour tous les jours de l’année.
+<BR>Cet
+éventuel décalage asymétrique de l’horaire, qui s’explique
+par l’Équation du Temps, a cependant peu d’influence sur la
+durée du jour&nbsp;; en revanche, on ne peut pas toujours affirmer
+que cette durée vaut exactement le double d’une demi journée
+(celle du matin ou du soir). Nous reviendrons sur cette remarque
+lorsque nos aborderons la méthode du calcul de la durée du jour
+par&nbsp;le relevé de l’angle horaire du Soleil.
+<BR>
+<BR><B>Calcul
+de la durée du jour.</B>
+<BR><I><B>a)
+Le cadre théorique du calcul.</B></I>
+<BR>Avant
+d’entreprendre tout calcul, il convient d’abord de définir le
+cadre théorique dans lequel nous cherchons à établir une
+expression mathématique de la durée du jour, c’est-à-dire de
+préciser sous quelles hypothèses simplificatrices la formule sera
+élaborée.
+<BR>En
+effet, dans le but de rendre cette expression la plus simple
+possible tout en demeurant suffisamment réaliste, nous allons
+négliger un certain nombre de paramètres physiques qui jouent à
+la marge dans la précision du résultat. Ce sont notamment ceux
+déjà évoqués dans le calcul de l’heure du lever et du coucher
+du Soleil entrepris dans ce chapitre 10&nbsp;: Observation du
+Soleil, Question 9e, dont nous rappelons les éléments essentiels.
+<BR>Pour
+commencer, nous ne considérons pas les effets des lueurs
+crépusculaires du matin et du soir et l’intervalle de temps que
+nous chercherons à calculer sera compris entre les deux moments où
+le centre du Soleil rentre en contact avec l’horizon, d’abord
+vers l’Est puis vers l’Ouest. Ce n’est donc pas la durée de
+la clarté du jour que nous mesurons, mais la durée de la course du
+centre du Soleil d’un horizon à l’autre.
+<BR>La
+déviation des rayons lumineux provoquée par la réfraction
+atmosphérique qui a pour effet de relever légèrement le Soleil
+vers le zénith, sera aussi totalement négligée (Cf. Chapitre 6&nbsp;:
+Astrométrie, Question 1d et Question 5e). Selon le lieu et la date,
+ce phénomène peut toutefois modifier le résultat théorique de
+plusieurs minutes.
+<BR>Le
+phénomène de l’aberration provoqué par le temps de propagation
+que prend la lumière pour parvenir jusqu’à la Terre (Cf.
+Chapitre 5&nbsp;: Les mouvements de la Terre, Question 1e) et qui
+est de l’ordre de 8 minutes, ne sera d’autant pas pris en compte
+dans le calcul que ce retard se compense par effet de symétrie
+entre l’Est et l’Ouest, respectivement durant le lever et le
+coucher du Soleil.
+<BR>La
+parallaxe diurne du Soleil (de 8’’ aux Pôles), qui diminue la
+hauteur apparente du Soleil et donc raccourcit la journée (environ
+17 min aux Pôles), n’est pas non plus pris en compte dans les
+calculs.
+<BR>Enfin,
+comme nous l’avons déjà souvent justifié, il est légitime
+d’admettre que la déclinaison du Soleil est pratiquement
+constante au cours d’une journée (Cf. par exemple dans ce
+Chapitre 10&nbsp;: Observation du Soleil, Question 1e), si bien que
+nous supposerons qu’elle ne varie que de jour en jour.
+<BR><I><B>b)
+Les deux paramètres astronomiques nécessaires au calcul.</B></I>
+<BR>La
+longueur du jour, entre le lever et le coucher du Soleil, ne dépend
+que du lieu géographique et de la date. Le calcul théorique de
+cette longueur nécessite donc de connaître la valeur numérique de
+ces deux paramètres.
+<BR>A
+vrai dire, la localisation du lieu par la latitude suffit, car la
+longitude n’interviendra pas dans le calcul puisque le décalage
+horaire sur le même parallèle ne change pas la durée du jour, à
+quelques dizaines de secondes près.
+<BR>Puisque
+nous supposons la déclinaison du Soleil constante au cours de la
+journée, sa courbe représentative est celle d’une fonction par
+morceau (au sens mathématique du terme), constante entre deux jours
+consécutifs. Réciproquement, à toute date d’un jour J on peut
+lui associer une valeur constante de la déclinaison 
+du Soleil.
+<BR>Les
+deux grandeurs utilisées pour le calcul de la durée du jour sont
+donc&nbsp;:
+
+<BR>La
+latitude 
+du lieu terrestre considéré. Cette grandeur varie de façon
+continue entre -90° et + 90°.
+<BR>La
+déclinaison 
+du Soleil qui se présente sous la forme d’une suite dont le rang
+est le numéro J du jour de l’année et dont il conviendra de
+préciser l’origine J = 0 (1<SUP>er</SUP>
+janvier, équinoxe ou périhélie, par exemple). Cette suite prend
+alors des valeurs discrètes comprises entre – 23,45° à +
+23,45°. 
+
+
+<BR><I><B>c)
+Principe et méthodes de calcul.</B></I>
+<BR>Il
+existe principalement trois méthodes pour mesurer la durée du
+jour. 
+
+<BR>La
+première consiste à relever l’heure du coucher du Soleil et
+celle du lever du Soleil et d’en effectuer la différence. Dans le
+cas d’une procédure purement expérimentale du relevé des
+horaires avec une montre par exemple, cette méthode semble <I>a
+priori</I> la plus
+simple&nbsp;; mais la mesure s’expose alors aux aléas des
+conditions de terrain (horizon dégagé, par exemple). 
+
+<BR>La
+deuxième nécessite la mesure de deux angles, celui de l’angle
+horaire du Soleil à son lever et celui à son coucher. En principe,
+la différence algébrique de ces deux angles donne directement la
+durée du jour, si l’on néglige les effets de la Révolution de
+la Terre. Cependant, l’angle horaire du Soleil est assez difficile
+à obtenir expérimentalement, tandis que sa détermination par un
+calcul théorique est soumise aux inévitables erreurs
+d’approximation. 
+
+<BR>La
+troisième méthode est essentiellement géométrique et purement
+théorique. Par projection de la direction des rayons du Soleil sur
+le plan de l’Équateur on parvient en effet à déterminer la
+longueur du jour en fonction de la latitude et de la date. Cette
+méthode présente l’avantage d’obtenir en une seule formule
+générale la durée du jour en fonction de la latitude et de la
+date.
+<BR>Voyons
+plus en détail ces trois méthodes.
+<BR><I><B>d)
+La méthode par différence de l’heure du lever et du coucher du
+Soleil.</B></I>
+<BR>On
+peut relever l’heure du lever et du coucher du Soleil de deux
+manières, soit de façon expérimentale sur le lieu de
+l’observation, soit par un calcul théorique. Dans les deux cas,
+l’heure relevée est celle du Temps Solaire Moyen et non celle du
+Temps Solaire Vrai (puisque le relevé a lieu avec une horloge
+mécanique). On ne s’étonnera donc pas de constater parfois une
+asymétrie, par rapport au midi de la montre, entre l’heure du
+matin et celle du soir (Voir <I>supra</I>).
+<BR>La
+méthode expérimentale offre l’avantage de recueillir des
+résultats en temps réel et donc, <I>a
+priori</I>, plus
+réalistes que ceux obtenus par le calcul qui dépend de la théorie
+envisagée. En revanche, elle reste difficile à mettre en œuvre
+sur le terrain tant sont nombreux les obstacles (turbulences
+atmosphériques, présence sur les horizons Est ou Ouest d’un
+éventuel masque, fixe comme le relief d’une colline ou provisoire
+comme par exemple un nuage qui passe au mauvais moment). En outre
+elle ne délivre, par essence, que des résultats locaux qu’il
+faut renouveler tous les jours de l’année si l’on désire
+suivre la progression annuelle.
+<BR>La
+méthode par le calcul théorique, qui nécessite toutefois de ne
+connaître pas moins de cinq paramètres astronomiques (Cf. dans ce
+Chapitre 10&nbsp;: Observation du Soleil, Question 9e), présente un
+caractère plus universel, puisqu’elle autorise non seulement de
+faire des prévisions à moyen et long terme, mais permet également
+d’obtenir immédiatement un résultat valable en tout lieu et à
+toute date de l’année.
+<BR>Naturellement,
+chacune des deux méthodes comporte une marge d’incertitude qui ne
+sont pas de même nature. Dans le cas du relevé expérimental,
+l’incertitude est liée à l’imprécision des instruments de
+mesures (œil, astrolabe, octant, quartier de Davis, quarts de
+cercle, sextant, héliographe, etc.) et aux conditions
+atmosphériques et environnementales. Dans le cas du relevé horaire
+par le calcul, la marge d’erreur dépend du nombre d’hypothèses
+admises contenues dans le modèle théorique retenu.
+<BR>Précisons
+enfin que quel que soit la méthode utilisée, il est évidemment
+inutile de convertir l’horaire local des levers et des couchers du
+Soleil en heure UTC, puisque l’on calcule un intervalle de temps
+par différence.
+<BR>De
+même, la durée du jour n’est pas affectée par l’éventuel
+changement de l’heure d’été ou d’hiver, comme on peut s’en
+rendre compte sur le graphique suivant&nbsp;:
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_2.jpg" NAME="Image 169" ALIGN=BOTTOM WIDTH=624 HEIGHT=421 BORDER=0>
+<BR>Questions
+subsidiaires concernant la lecture de ce graphique qui donne, en un
+lieu donné, l’horaire des levers et couchers du Soleil en heure
+en fonction de la date.
+
+<BR><B>1)</B>
+Que représentent les courbes de couleur rouge, bleue et jaune&nbsp;?
+
+<BR>Réponse&nbsp;:
+Respectivement, les heures du coucher du Soleil, la durée des
+jours, les heures du lever du Soleil.
+
+<BR><B>2)</B>
+Dans quel hémisphère a lieu ce relevé&nbsp;?
+
+<BR>Réponse&nbsp;:
+Nord, car le jour le plus long a lieu en juin.
+
+<BR><B>3)</B>
+A quelle latitude&nbsp;? Après le cercle polaire, moyenne,
+équatoriale&nbsp;?
+
+<BR>Réponse&nbsp;:
+Moyenne, car si le lieu était proche de l’Équateur, les lignes
+seraient pratiquement plates et si le lieu se trouvait au-delà du
+cercle polaire, les lignes se croiseraient et certains segments
+seraient horizontaux ou verticaux.
+<BR>(On
+peut voir des graphiques à toutes les latitudes sur le site&nbsp;:
+<A HREF="https://ptaff.ca/soleil/">https://ptaff.ca/soleil/</A>).
+
+<BR><B>4)</B>
+En ce lieu, pratique-t-on le changement d’horaire été –
+hiver&nbsp;?
+
+<BR>Réponse&nbsp;:
+Oui, visible par les «&nbsp;sauts&nbsp;» (fin mars et fin octobre)
+sur la ligne du lever (jaune) et du coucher (rouge). Naturellement,
+la ligne de la durée du jour (bleue) reste, elle, parfaitement
+lisse et continue (le changement d’horaire n’affecte pas la
+durée du jour&nbsp;!).
+
+<BR><B>5)</B>
+Le 1<SUP>er</SUP>
+mars, à quelle heure se lève et se couche le Soleil&nbsp;? Quelle
+est la durée de ce jour&nbsp;?
+
+<BR>Réponse&nbsp;:
+Lever à 7h, coucher à 18h. Durée du jour 18 – 7 = 11h, visible
+sur la courbe bleue.
+
+<BR><B>6)</B>
+A quelles dates la durée du jour vaut 12h&nbsp;?
+
+<BR>Réponse&nbsp;:
+Mi mars et fin septembre, c’est-à-dire aux équinoxes.
+
+<BR><B>7)</B>
+Combien de fois, la même longueur de jour a lieu dans l’année&nbsp;?
+
+<BR>Réponse&nbsp;:
+Deux, pour toutes les durées du jour sauf celles des deux
+solstices. Les trois courbes sont quasiment symétriques par rapport
+à la droite verticale du jour du solstice d’été (et d’hiver).
+
+<BR><B>8)</B>
+En un autre lieu terrestre, la ligne bleue peut-elle couper la
+ligne jaune et se retrouver dessous&nbsp;? 
+
+
+<BR>Réponse&nbsp;:
+Oui, si l’heure du coucher est inférieure à deux fois celle du
+lever. Or cela est tout à fait possible, même en France, à
+certaines latitudes et en en hiver&nbsp;!
+
+<BR><B>9)</B>
+En un autre lieu terrestre, la ligne bleue peut-elle couper la
+ligne rouge&nbsp;?
+
+<BR>Réponse&nbsp;:
+Oui, mais aux latitudes supérieures à celle du cercle polaire où
+la ligne bleue se confond avec la ligne rouge sur la période de la
+nuit polaire.
+
+<BR><B>10)</B>
+Au pôle Nord, comment sont ces courbes&nbsp;?
+
+<BR>Réponse&nbsp;:
+Absence de courbe rouge et jaune (car, pas de lever ou de coucher),
+la courbe bleue est un segment horizontal sur la ligne des
+24h&nbsp;(durée du jour maximale) entre l’équinoxe d’automne
+et de printemps, et un segment horizontal sur la ligne des 0h (durée
+du jour minimale).
+<BR><I><B>e)
+La méthode par soustraction algébrique des angles horaires.</B></I>
+<BR>Rappelons
+que par convention, l’angle horaire H du Soleil est noté
+négativement avant midi, nul à midi et positivement après midi.
+En outre, il est normalement exprimé en heure, sauf dans un calcul
+trigonométrique où il est converti en degré à raison de 15° par
+heure.
+<BR>Naturellement,
+cet angle est variable au cours de la journée et en lui ajoutant
+12h, on obtient directement l’heure locale du lieu en heure du
+Temps Solaire Vrai.
+<BR>En
+désignant par H<SUB>L</SUB>
+l’angle horaire du Soleil au moment exact de son lever et par H<SUB>C</SUB>
+celui du coucher du Soleil, la différence algébrique H<SUB>C</SUB>
+- H<SUB>L</SUB>
+vaut, bien entendu, la durée du jour concerné.
+<BR>Comme
+l’angle horaire est avant tout une mesure d’angle avant d’être
+converti en heure, il donne bien un horaire en heure du Temps
+Solaire Vrai et non en heure du Temps Solaire Moyen. Autrement dit,
+les relevés de l’angle horaire du matin et du soir ne subissent
+pas de décalage asymétrique par rapport au midi, contrairement aux
+relevés horaires du matin et du soir avec une montre. En effet,
+dans le cas d’une mesure par l’angle horaire, la symétrie a
+lieu par rapport au midi vrai&nbsp;; tandis qu’avec l’heure de
+la montre, l’éventuelle asymétrie de l’horaire du matin avec
+celle du soir a lieu à cause du midi de la montre qui par
+définition est calé sur l’heure du Temps Solaire Moyen. La
+coïncidence entre les deux temps n’a évidemment lieu que si
+l’Équation du Temps est nulle (Cf. dans ce Chapitre 10&nbsp;:
+Observation du Soleil, Question 4c).
+<BR>Par
+conséquent, en valeur absolue on a toujours H<SUB>L</SUB>
+= H<SUB>C</SUB>,
+ce qui est rarement le cas avec les relevés horaires de l’heure
+du lever et du coucher du Soleil avec une montre, dont la différence
+rapportée à midi (de la montre) n’est généralement pas nulle.
+<BR>Par
+exemple. Un certain jour on relève avec une montre l’heure du
+lever et du coucher du Soleil. La montre indique alors
+respectivement 7h 15min et 16h 39min. Par rapport au midi de la
+montre (12h), la matinée a durée 4,75 h et l’après midi 4,65
+h&nbsp;; la symétrie n’est pas respectée, la matinée est plus
+longue de 6 minutes. La durée du jour vaut 9,40 h = 9h 24min. Le
+même jour, on mesure les deux angles horaires du lever et du
+coucher du Soleil et l’on trouve respectivement&nbsp;: H<SUB>L</SUB>
+= - 4,70 h et H<SUB>C</SUB>
+= + 4,70 h&nbsp;; la symétrie est respectée. La durée du jour
+vaut toujours&nbsp;: 4,70 – (- 4,70) = 9,40 h = 9h 24min. Le
+Soleil s’est levé à l’heure du Soleil vrai (relevée à l’aide
+d’un cadran solaire) à 7h 21min et couché à 16h 45min. En
+réalité, lorsque le Soleil franchissait le méridien à midi
+solaire, la montre indiquait 12h 3min et non 12h. L’Équation du
+Temps de ce jour est donc de 3 minutes.
+<BR>Ainsi,
+puisque tous les jours de l’année nous avons, en valeur absolue,
+H<SUB>L</SUB>
+= H<SUB>C</SUB>
+(la course du Soleil est symétrique par rapport au méridien en
+première approximation, tous les jours de l’année), la longueur
+du jour vaut d = 2 H<SUB>C</SUB>.
+(en négligeant les effets de la Révolution de la Terre qui tourne
+autour du Soleil de seulement environ 1° par jour).
+<BR><I><B>f)
+La méthode par projection géométrique.</B></I>
+<BR>Cette
+méthode présente deux avantages. D’une part elle est de nature
+purement théorique, c’est-à-dire ne recourt à aucune mesure sur
+le terrain et d’autre part, elle délivre une formule très
+générale de la durée du jour.
+<BR>Bien
+que les outils mathématiques pour traiter ce sujet demeurent très
+élémentaires (projection de lignes sur des plans, inversion de
+lignes trigonométriques, produit scalaire), la méthode mérite
+d’être détaillée dans un exposé à part&nbsp;; ce qui fait
+l’objet du prochain paragraphe.  
+
+<BR>
+<BR><B>Calcul
+de la durée du jour par projection géométrique.</B>
+<BR><I><B>a)
+Plantons le décor.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_3.jpg" NAME="Image 31" ALIGN=BOTTOM WIDTH=624 HEIGHT=350 BORDER=0>
+<BR>Considérons
+le parallèle terrestre de latitude 
+(ligne rouge sur le croquis). Il engendre un plan parallèle au plan
+de l’Équateur dont on a représenté, en rose pâle sur le
+croquis de droite, une coupe vue de dessus du Pôle Nord (après
+avoir retiré la calotte sphérique). Soit O, le centre de ce
+disque. Ce point se trouve naturellement sur l’axe Nord – Sud de
+Rotation de la Terre à une certaine hauteur du centre T de la Terre
+qui dépend de la latitude 
+du parallèle considéré.
+<BR>Fixons
+une date dans l’année&nbsp;; ce jour là le Soleil éclaire la
+Terre selon une déclinaison ,
+c’est-à-dire selon l’angle entre  la direction  du  soleil  et 
+le  plan  équatorial (durant l’année cet angle varie de –
+23,45° à + 23,45°). Comme le Terminateur engendre un plan qui est
+en permanence perpendiculaire aux rayons du Soleil, l’angle 
+se retrouve donc aussi entre l’axe de la Terre et le plan du
+Terminateur (puisque par définition l’axe de la Terre est
+perpendiculaire au plan de l’Équateur).
+<BR>A
+un instant donné de cette journée, le Terminateur coupe notre
+parallèle en deux points, notés L et C sur le croquis. A cet
+instant, le Soleil se lève en L et se couche en C.
+<BR>Lorsque
+que le point L aura parcouru la longueur qui le sépare de C, une
+journée (au sens de&nbsp;: période du Soleil au dessus de
+l’horizon) se sera écoulée. Cette longueur est caractérisée
+par l’angle de rotation ,
+ainsi désigné sur la figure de droite. Le temps que prend la Terre
+pour balayer cet angle est alors égal à la durée du jour en tout
+lieu de ce parallèle et à la date correspondant à la déclinaison
+
+du Soleil.
+<BR>Connaissant
+la vitesse angulaire de la Rotation de la Terre dans le référentiel
+géocentrique dont l’un des axes vise en permanence le Soleil
+(donc le Soleil est fixe et seule la Terre tourne sur elle-même
+dans ce repère), il suffit de calculer la valeur numérique de
+l’angle 
+pour en déduire la durée du jour.
+<BR>Tout
+le problème consiste donc à calculer l’angle ,
+soit en fonction de ,
+soit en fonction de la date du jour.
+<BR><I><B>b)
+Hypothèses simplificatrices du calcul.</B></I>
+<BR>Pour
+obtenir une formule relativement simple (et donc approximative) de
+la durée du jour par une méthode géométrique, il est nécessaire
+d’émettre un certain nombre d’hypothèses de simplification,
+dans les limites du raisonnable.
+<BR>Nous
+convenons donc&nbsp;:
+
+<BR>Que
+la Terre est parfaitement sphérique (en réalité elle est
+légèrement aplatie aux pôles).
+<BR>Que
+l’orbite terrestre est circulaire (en réalité elle est
+elliptique, mais d’excentricité très faible&nbsp;: e = 0,016).
+<BR>Qu’une
+année comporte 365 jours (l’année anomalistique, c’est-à-dire,
+la durée entre deux passages au périhélie, est de 365 jours 6 h
+13 min).
+<BR>Que
+chaque jour comporte 24 heures (vrai en Temps Solaire Moyen à 1
+minute près).
+<BR>Que,
+sur une journée de 24h, la position par rapport au Soleil de l’axe
+de Rotation de la Terre n’a pas changé (déclinaison du Soleil
+supposée constante sur une journée).
+<BR>Que
+le lever et le coucher du Soleil ont lieu au point de contact de
+l’horizon avec le centre du Soleil (disque solaire assimilé à
+un point&nbsp;; pas d’aurore ni de crépuscule).
+<BR>Que
+les rayons du Soleil sont tous parallèles entre eux (Soleil à
+l’infini).
+<BR>Que
+les phénomènes de précession des équinoxes et de nutation sont
+négligeables (l’année tropique, qui tient compte de la
+précession, est de 365 jours 5 h 48 min).
+
+<BR><I><B>c)
+Durée du jour en fonction de latitude et de la déclinaison.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_4.jpg" NAME="Image 26" ALIGN=BOTTOM WIDTH=624 HEIGHT=353 BORDER=0>
+<BR>Commençons
+par intégrer dans le calcul la déclinaison 
+du Soleil.
+<BR>Comme
+les points J (midi) et N (minuit) sont situés à égale distance
+des points C (coucher) et L (lever), la droite (JN) est la
+médiatrice du segment [CL]. On note H le point d’intersection de
+ces deux droites&nbsp;(H est aussi le projeté orthogonal sur le
+plan du parallèle du milieu de l’arc du Terminateur délimité
+par L et C).
+<BR>La
+droite (JN) étant elle-même perpendiculaire à l’axe de Rotation
+(TO), le triangle TOH est rectangle en O. Or l’angle OTH vaut la
+déclinaison 
+du Soleil. Par conséquent, nous avons&nbsp;:
+<BR>OH
+= OT tan().
+<BR>Continuons
+en intégrant cette fois-ci dans le calcul la latitude 
+du parallèle.
+<BR>La
+droite (JN), qui contient O, est parallèle au plan de l’Équateur,
+par conséquent l’angle ONT vaut la latitude&nbsp;: ONT = .
+On en déduit&nbsp;:
+<BR>OT
+= TN sin().
+<BR>En
+reportant cette relation dans l’expression précédente, nous
+obtenons&nbsp;:
+<BR>OH
+= TN sin()
+tan().
+<BR>Introduisons
+maintenant l’angle LOC = ,
+qui sous-tend la partie du parallèle éclairée par le soleil.
+<BR>Remarquons
+d’une part que le triangle OHL est rectangle en H et d’autre
+part que l’angle HOL est le supplémentaire de l’angle JOL qui
+lui vaut, par symétrie, ½ .
+Par conséquent, nous avons la relation&nbsp;:
+<BR><SPAN LANG="en-US">OH
+= OL cos( 180° - ½ </SPAN><SPAN LANG="en-US">)
+= - OL cos(½ </SPAN><SPAN LANG="en-US">).</SPAN>
+<BR>Ce
+second calcul de OH nous conduit à écrire&nbsp;:
+<BR><SPAN LANG="en-US">TN
+sin(</SPAN><SPAN LANG="en-US">)
+tan(</SPAN><SPAN LANG="en-US">)
+= - OL cos(½ </SPAN><SPAN LANG="en-US">).</SPAN>
+<BR>Il
+est clair que la distance OL est proportionnelle à TN. En effet, OL
+= ON car les points L et N appartiennent au cercle de centre O qui
+est par définition le cercle du parallèle à la latitude .
+Or, ON = TN cos (),
+si bien que&nbsp;OL = TN cos ()
+et par conséquent :
+<BR><SPAN LANG="en-US">TN
+sin(</SPAN><SPAN LANG="en-US">)
+tan(</SPAN><SPAN LANG="en-US">)
+= - TN cos (</SPAN><SPAN LANG="en-US">)
+cos(½ </SPAN><SPAN LANG="en-US">).</SPAN>
+<BR>C’est-à-dire&nbsp;:
+sin()
+tan()
+= - cos ()
+cos(½ ).
+<BR>Que
+l’on peut encore simplifier, à condition que 
+≠ ± 90° (autrement dit, en excluant les pôles), pour obtenir
+finalement cette singulière formule&nbsp;:
+<BR>&lt;$1&gt;
+.
+<BR>Puisque
+: &lt;$2&gt;, car  -90° &lt; 
+&lt; +90° et -23,4369° ≤  
+≤ +23,4369° (On peut aussi remarquer que ½ 
+est nécessairement compris entre 0° et 180°), nous pouvons
+obtenir l’angle 
+en fonction de la latitude et de la déclinaison du Soleil selon la
+formule&nbsp;:
+<BR><SPAN LANG="en-US"><SPAN STYLE="background: #00ff00">&lt;$$3&gt;</SPAN></SPAN>
+<BR>Remarquons
+que l’on retrouve l’expression de la longueur du jour en
+fonction de l’angle horaire H du Soleil puisque&nbsp;: &lt;$4&gt;
+(Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil, Question 9e)
+et par suite&nbsp;: λ = 2H. 
+
+<BR>A
+partir de cet angle, il devient alors aisé de calculer la durée du
+jour en cette latitude. Désignons cette durée par la lettre d. 
+
+<BR>Un
+point sur le parallèle fait un tour complet de 360° en 24 heures
+(période synodique de la Terre, c’est-à-dire période du retour
+du Soleil Moyen sur un méridien). Cette vitesse angulaire étant
+supposée constante dans la journée (et dans l’année), il
+vient&nbsp;donc à raison de 15° par heure : d = 24 (λ ÷ 360).
+<BR>Par
+conséquent la durée d du jour vaut&nbsp;en heure&nbsp;:
+<BR>Si
+tous les angles sont exprimés en degré : <SPAN STYLE="background: #00ff00">&lt;$5&gt;</SPAN>
+<BR>
+<BR>Si
+tous les angles sont exprimés en radian&nbsp;: <SPAN STYLE="background: #00ff00">&lt;$6&gt;</SPAN>
+<BR>Exemple&nbsp;1
+: A l’Équateur 
+= 0°, donc d = 12 h. (et ceci à toute époque de l’année
+puisque tan(0°)tan()
+= 0 quel que soit ).
+<BR>Exemple
+2&nbsp;: A l’équinoxe 
+= 0°, donc d = 12 h. (et ceci en tout lieu de la Terre puisque
+tan()tan(0°)
+= 0 quel que soit ).
+<BR><I><B>d)
+Durée du jour en fonction de latitude et de la date.</B></I>
+<BR>La
+déclinaison du Soleil dépend évidemment de la date, si bien que
+pour calculer la durée du jour à toute date de l’année, il
+suffit d’exprimer la déclinaison 
+en fonction de la date.
+<BR>Mais
+ce calcul n’est pas simple à obtenir. Il existe de nombreuses
+méthodes de calcul dont celle obtenue par un développement en
+séries de Fourier proposée par Spencer en 1971, et qui est
+considérée par les spécialistes comme l’une des plus précises.
+Comme nous n’avons pas besoin de cette précision, nous allons
+établir, par des considérations géométriques et avec les mêmes
+hypothèses simplificatrices que précédemment (en particulier, en
+supposant l’orbite de la Terre circulaire), une formule simplifiée
+de la déclinaison du Soleil en fonction de la date.
+<BR>Pour
+mener à terme cette étude, il convient de bien choisir le
+référentiel.
+<BR>Considérons
+le référentiel géocentrique composé de trois axes orthogonaux
+qui ont pour origine commune le centre de la Terre, dont l’un des
+axes pointe en permanence le Soleil (ce qui fixe le centre de la
+Terre par rapport au Soleil), le deuxième se maintenant dans le
+plan de l’Ecliptique et le troisième restant orthogonal à ce
+plan. 
+
+<BR>Dans
+ce référentiel, la Terre tourne sur elle-même selon l’axe de
+rotation TO incliné en permanence durant l’année d’un angle de
+23,45° (obliquité) par rapport à la normale de l’Ecliptique
+passant par le centre T de la Terre (3<SUP>e</SUP>
+axe du repère).
+<BR>Mais
+voyons aussi ce qui se passe dans ce référentiel lorsque la Terre
+tourne autour du Soleil.
+<BR>L’axe
+TO de la Terre se met à pivoter comme une toupie décrivant un cône
+de révolution de sommet le centre T de la Terre et d’axe la
+normale de l’Ecliptique passant par T (<I>i.e</I>.
+le 3<SUP>e</SUP>
+axe du repère). En effet, durant la translation circulaire de la
+Terre autour du Soleil, l’inclinaison de l’axe terrestre TO par
+rapport au plan de l’Ecliptique reste en permanence constante et
+égale à l’obliquité 
+= 23,45°. Dans ce référentiel qui fixe le centre T de la Terre et
+le Soleil, c’est bien l’axe de la Terre qui se met à tourner en
+même temps que le plan de l’Obliquité qui le contient en
+permanence (Cf. dans ce Chapitre 10&nbsp;: Observation du Soleil,
+Question 8e et dans le Chapitre 4&nbsp;: Les mouvements de la voute
+céleste, Question 11d).
+<BR>Tout
+en conservant le même angle d’inclinaison avec l’Écliptique,
+le plan de l’Équateur suit le mouvement de l’axe terrestre TO
+qui lui est orthogonal, et par conséquent, tourne autour du centre
+T avec le plan de l’Obliquité, dans le plan de l’Écliptique,
+qui lui reste fixe dans ce référentiel.
+<BR>A
+un moment donné, la direction des rayons solaires qui frappent la
+Terre, devient parallèle au plan de l’Équateur, c’est le
+moment d’un équinoxe&nbsp;; la déclinaison 
+du Soleil est alors nulle (c’est aussi le moment où la Normale de
+l’Obliquité, c’est-à-dire la droite d’intersection du plan
+de l’Équateur avec le plan de l’Écliptique, se confond avec la
+ligne des équinoxes&nbsp;; Cf. Chapitre 4&nbsp;: Les mouvements de
+la voute céleste, Question 11d).
+<BR>Choisissons
+l’équinoxe de printemps dans l’hémisphère Nord (point vernal)
+comme date de référence pour marquer l’origine du système de
+datation par jour dont nous avons besoin. Ainsi, notons J = 0, le
+jour de l’équinoxe de mars et J le rang du jour après cet
+équinoxe dont dépend la déclinaison 
+du Soleil (J variant de 0 à 365, d’après nos conventions).
+<BR>Le
+croquis suivant illustre les deux situations.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_5.jpg" NAME="Image 226" ALIGN=BOTTOM WIDTH=624 HEIGHT=353 BORDER=0>
+<BR>La
+figure de gauche montre la position initiale au moment d’un
+équinoxe (par exemple celui de mars pour lequel J = 0) de l’axe
+de la Terre, noté ici (TE), confondu en permanence dans le plan de
+l’Obliquité. A ce moment précis, l’axe (TE) est
+perpendiculaire à la direction (TS) des rayons du Soleil&nbsp;; en
+d’autres termes la droite (TS) et la Normale de l’Obliquité
+sont confondues. La déclinaison du Soleil est donc nulle.
+<BR>La
+figure de droite montre la position de la l’axe de la Terre, noté
+(TO), un certain nombre de jours J après un équinoxe. Dans le
+référentiel que nous avons choisi précédemment, le plan de
+l’Obliquité a tourné d’un certain angle 
+(qui dépend du nombre J de jours) autour de l’axe du repère
+(TE<SUB>1</SUB>),
+entrainant dans son mouvement l’axe (TO) de la Terre et le plan de
+l’Équateur qui lui est perpendiculaire. Par conséquent, la
+Normale de l’Obliquité (TN) n’est plus confondue avec la
+direction (TS) des rayons solaires. De même, les droites (TS) et
+(TO) ne sont plus perpendiculaires (le Terminateur ne passe plus par
+les pôles) et la déclinaison 
+du Soleil n’est plus nulle puisque la droite (TS) n’est plus
+dans le plan de l’Équateur (comme le montre la figure). Notons
+(TD) la projection parallèlement à l’axe terrestre (TO) de la
+droite (TS) dans le plan de l’Équateur. L’angle formé par les
+deux droites&nbsp;: (TS) et (TD) se nomme par définition la
+déclinaison du Soleil et nous l’avons désigné par la lettre 
+(remarquons que les 3 droites&nbsp;: (TO), (TS) et (TD) sont dans le
+même plan).
+<BR>Pour
+exprimer la déclinaison 
+en fonction de la date J, nous allons calculer de deux façons le
+produit scalaire des deux vecteurs&nbsp;: &lt;$7&gt;et
+&lt;$8&gt;.
+<BR>Dans
+notre repère orthonormé de centre T, nous choisissons comme
+vecteur unitaire &lt;$9&gt;
+et &lt;$10&gt;, par conséquent&nbsp;: &lt;$11&gt;
+<BR>Il
+est clair que les angles&nbsp;: &lt;$12&gt; et &lt;$13&gt; sont
+complémentaires puisque &lt;$14&gt; et par conséquent&nbsp;:
+&lt;$15&gt;.
+<BR>Première
+façon de calculer le produit scalaire de sorte à introduire la
+déclinaison .
+
+
+<BR>&lt;$16&gt;
+<BR>Seconde
+façon, en décomposant le vecteur &lt;$17&gt; 
+sur les axes orthogonaux
+du plan de l’Obliquité&nbsp;: 
+
+<BR>&lt;$18&gt;
+<BR>En
+effet, les droites (TS) et (TO<SUB>1</SUB>)
+sont perpendiculaires (axes du repère) et les angles &lt;$19&gt; et
+&lt;$20&gt; sont complémentaires.
+<BR>En
+outre, les vecteurs &lt;$21&gt;  et &lt;$22&gt; sont liés à
+l’obliquité 
+par la relation&nbsp;:
+<BR>&lt;$23&gt;
+<BR>Par
+conséquent, le produit scalaire précédent devient&nbsp;:
+<BR>&lt;$24&gt;
+<BR>En
+identifiant avec la première expression du produit scalaire, il
+vient&nbsp;:
+<BR>&lt;$25&gt;
+<BR>c’est-à-dire&nbsp;:
+<SPAN STYLE="background: #ffff00">&lt;$26&gt;</SPAN>
+<BR>Comme
+l’obliquité 
+est une constante (à l’échelle séculaire) et vaut 
+= 23,45°&nbsp;; on simplifie par&nbsp;:  <SPAN STYLE="background: #ffff00">&lt;$27&gt;</SPAN>
+<BR>Il
+ne reste plus qu’à calculer 
+en fonction de la date J. Rien n’est plus simple, si l’on admet
+que la Terre balaye à vitesse constante un angle de 360° en 365
+jours (approximation assez grossière). Dans notre référentiel,
+cette vitesse angulaire est celle de la rotation du plan de
+l’Obliquité, nous avons donc&nbsp;:
+<BR><SPAN STYLE="background: #ffff00">&lt;$28&gt;</SPAN>
+
+
+<BR>Reportant
+cette valeur dans l’expression précédente, il vient&nbsp;:
+<BR>&lt;$29&gt;
+<BR>d’où
+l’on en déduit&nbsp;
+en degré :
+<BR><SPAN STYLE="background: #ffff00">&lt;$30&gt;</SPAN>
+<BR>Naturellement,
+lorsque J = 0, jour d’équinoxe (par exemple celui de mars), on
+vérifie que 
+= 0.
+<BR>Pour
+finir, reprenons le calcul de la durée «&nbsp;d&nbsp;» du jour à
+la latitude 
+du paragraphe précédent, à savoir&nbsp;: &lt;$31&gt;  et
+reportons 
+en fonction de J.
+<BR>Finalement
+nous obtenons «&nbsp;l’horrible&nbsp;» formule suivante&nbsp;(et
+encore n’est-ce qu’une approximation&nbsp;!) :
+<BR><SPAN STYLE="background: #00ff00">&lt;$$32&gt;</SPAN>
+<BR>Mettons-là
+à l’épreuve à partir de quelques exemples&nbsp;:
+<BR><B>1</B><SUP><B>er</B></SUP><B>
+exemple</B>. Choisissons
+le 1<SUP>er</SUP>
+avril (donc J = 11, car généralement selon l’année, 11 jours
+séparent le 21 mars du 1<SUP>er</SUP>
+avril) et calculons la durée du jour à Londres (51° 30' N) ce
+jour là.
+<BR>&lt;$33&gt;
+<BR>Donc
+d = 12h 43min
+<BR>Après
+vérification sur un calendrier, on trouve une durée du jour le 1<SUP>er</SUP>
+avril 2020 à Londres comprise entre 12h 13min et 12h 59 min (selon
+le mode de la mesure&nbsp;: centre du Soleil ou limbe). On ne peut
+que se satisfaire de cette estimation théorique. 
+
+<BR><B>2</B><SUP><B>e</B></SUP><B>
+exemple</B>. Choisissons
+le 9 décembre (donc J = 263, car généralement selon l’année,
+263 jours séparent le 21 mars du 9 décembre) et calculons la durée
+du jour à Buenos Aires (34,60° S) en Argentine ce jour là.
+<BR>&lt;$34&gt;
+<BR>Donc
+d = 14h 16 min 
+
+<BR>Après
+vérification sur un calendrier, on trouve une durée du jour le 9
+décembre 2020 à Buenos Aires de 14h 22min.&nbsp;Ici encore le
+résultat théorique est satisfaisant et cohérent (rappelons
+que&nbsp;c’est l’été en Argentine au mois de décembre&nbsp;!).
+<BR><B>3</B><SUP><B>e</B></SUP><B>
+exemple</B>. Choisissons
+le jour le plus court de l’année à Paris (48,85° N) qui a
+généralement lieu le 21 décembre (donc J = 275). 
+
+<BR>&lt;$35&gt;
+<BR>Donc
+d = 8h 
+
+<BR>Après
+vérification sur un calendrier, on trouve une durée du jour le
+21décembre 2020 à Paris comprise entre 7h 37min et 08h14min, selon
+le mode de calcul de la position du Soleil sur l’horizon.
+<BR><I><B>e)
+Commentaire mathématique.</B></I>
+<BR>En
+dérivant cette fonction «&nbsp;d&nbsp;» par rapport à la
+variable J (avec J en tant que variable réelle et  
+= Cte), on vérifie que les extremums sont bien atteints aux seuls
+moments des solstices. 
+
+<BR>En
+dérivant une seconde fois la fonction «&nbsp;d&nbsp;», on montre
+d’une part, qu’à proximité des solstices les changements se
+font très lentement (donc cohérence avec la réalité) et d’autre
+part, que les équinoxes sont bien des points d’inflexions
+(dérivée seconde nulle) avec d’importantes variations de «&nbsp;d&nbsp;»
+au voisinage de ces points (forte pente de la tangente en ces
+points).
+<BR>De
+même en dérivant d par rapport à la latitude 
+(avec J = Cte) on vérifie que plus on monte en latitude plus la
+durée d varie, la variation étant quasiment nulle au voisinage de
+
+= 0.
+<BR>Le
+graphique suivant illustre toutes ces remarques.
+<BR><I><B>f)
+Graphique récapitulatif pour l’hémisphère Nord.</B></I>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_6.jpg" NAME="Image 224" ALIGN=BOTTOM WIDTH=624 HEIGHT=434 BORDER=0>
+<BR><I>Courbes
+des longueurs du jour dans l’hémisphère Nord.</I>
+<BR>On
+peut constater qu’au Pôle Nord, théoriquement le jour dure sans
+interruption durant les six mois qui séparent l’équinoxe de
+printemps et d’automne. En ce lieu, sa courbe est celle d’une
+fonction dite en escalier.
+<BR>Il
+est aussi intéressant de remarquer que sur le cercle Arctique, le
+Soleil de minuit n’a théoriquement lieu qu’un seul jour, celui
+du solstice d’été. En ce lieu, sa courbe (en jaune) est celle
+d’une fonction affine par morceaux.
+<BR>Entre
+ces deux latitudes, le nombre de jours où le Soleil ne se couche
+jamais augmente avec la latitude&nbsp;; il en est de même du nombre
+de jours où le Soleil ne se lève jamais (segment horizontal au
+niveau de la ligne horaire respectivement des 24h et des 0h).
+<BR>On
+note la parfaite symétrie entre la période estivale et la période
+hivernale, mais elle n’est que théorique, car n’oublions pas
+que la durée des quatre saisons n’est pas tout à fait équitable.
+En effet, la graduation arithmétique de la datation sur ce croquis
+fausse en partie la réalité du phénomène (sans compter les
+effets crépusculaires qui viennent modifier sérieusement la durée
+de la clarté du jour, été comme hiver). 
+
+<BR>Naturellement,
+le graphique de la durée du jour selon les latitudes de
+l’hémisphère Sud, s’obtient par symétrie par rapport à l’axe
+horaire des douze heures de l’Équateur (ligne rouge).
+<BR>
+<BR><B>Solution
+des exercices de la Question 10e.</B>
+<BR><I><B>a)
+Solution de l’exercice 1)</B></I>
+<BR><I>«&nbsp;Au
+solstice de juin, le jour ne dure que 3h à la latitude de 64° 48’
+Sud&nbsp;». </I>
+
+<BR>Au
+solstice de juin, qui est le début de l’hiver dans l’hémisphère
+Sud, la déclinaison 
+du Soleil vaut - 23,4369°. Puisque la déclinaison est connue, la
+durée d du jour peut être calculée par la formule&nbsp;: &lt;$36&gt;.
+<BR>Convertissons
+la latitude en degré décimal, <I></I>
+= 64° 48’ Sud = - 64,8°
+<BR>L’application
+numérique donne&nbsp;: d = 3,05222 h
+<BR>Effectivement
+le jour dure 3h en ce lieu et à cette date.
+<BR><I><B>b)
+Solution de l’exercice 2)</B></I>
+<BR><I>«&nbsp;A
+Saint-Pétersbourg (59° 56′ Nord&nbsp;; 30° 18′ Est) la durée
+du jour le plus court et celle du jour le plus long sont
+respectivement&nbsp;de 5h 31min et de 23h 29min ».</I>
+<BR>Le
+jour le plus court dans l’hémisphère Nord a lieu au solstice de
+décembre, qui est le début de l’hiver, la déclinaison 
+du Soleil vaut - 23,4369°. Puisque la déclinaison δ est connue,
+la durée d du jour peut être calculer par la formule&nbsp;: &lt;$37&gt;.
+<BR>Convertissons
+la latitude en degré décimal, <I></I>
+= 59° 56′ Nord = 59,93°
+<BR>L’application
+numérique donne&nbsp;: d = 5,5358 h = 5h 32min
+<BR>A
+une minute près, le jour au solstice d’hiver à Saint-Pétersbourg
+ne dure bien que 5h 31min. Par symétrie, on en déduit que le jour
+le plus long dure 24h - 5h 31min = 23h 29min. Mais comme le décrit
+si bien Dostoïevski dans l’un de ses romans, la durée de
+l’éclairement est rallongée à Saint-Pétersbourg par le
+crépuscule qui dure toute la nuit (Voir «&nbsp;nuit blanche&nbsp;»
+dans ce Chapitre&nbsp;10 : Observation du Soleil, Question 12e).
+<BR><I><B>c)
+Solution de l’exercice 3)</B></I>
+<BR><I>«&nbsp;En
+tout lieu du cercle polaire arctique, il n’existe théoriquement
+qu’un seul jour dans l’année où le Soleil se maintient au
+dessus de l’horizon durant 24 heures d'affilée&nbsp;».</I>
+<BR>Puisque
+la latitude du cercle polaire arctique et connue et vaut
+nécessairement&nbsp;:
+<BR> =
+90° - 
+= 90° - 23,4369 = 66,5630° où  
+= 23,4369° est l’obliquité de la Terre, nous allons d’abord
+montrer qu’il existe bien une position du Soleil dans le ciel dont
+la déclinaison est positive lorsque la durée du jour vaut 24h, en
+résolvant l’équation&nbsp;: &nbsp;&lt;$38&gt;.
+<BR>Cette
+dernière s’écrit&nbsp;<I><B>:</B></I>
+
+
+<BR>&lt;$39&gt;
+<BR>D’où&nbsp;:
+l’unique solution (la fonction tangente est bijective) δ = 
+= 23,4369°.
+<BR>A
+cette latitude, il n’existe donc bien qu’un seul jour où la
+durée du jour vaut 24h, ce jour a lieu lorsque la déclinaison du
+Soleil vaut l’obliquité de la terre, autrement dit le jour du
+solstice d’été dans l’hémisphère Nord.
+<BR><I><B>d)
+Solution de l’exercice 4)</B></I>
+<BR><I>«&nbsp;Il
+faut attendre 30 jours après l’équinoxe de printemps pour que
+les parisiens puissent bénéficier de la clarté du jour&nbsp;durant
+au moins 15h ».</I>
+<BR>Il
+n’est pas difficile de se procurer la latitude de Paris qui vaut
+<I></I>
+= 48,85° Nord.
+<BR>Calculons
+la durée du jour à Paris 30 jours après l’équinoxe de mars
+grâce à la formule établie précédemment :
+<BR>&lt;$40&gt;
+<BR>Prenons
+J = 30 et <I></I>
+= 48,85°.
+<BR>Il
+vient : &lt;$41&gt;<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_7.jpg" NAME="Image 51" ALIGN=BOTTOM WIDTH=13 HEIGHT=20 BORDER=0>
+<BR>Ainsi
+la durée du jour est de&nbsp;: 13,7674 h = 13h 46 min.
+<BR>Trente
+jours après l’équinoxe de printemps ne sont donc pas suffisants
+pour qu’à Paris la journée dure au moins 15h. Cherchons en
+combien de jours J cette condition peut-être réalisée, car bien
+entendu plus l’on se rapproche du solstice d’été plus la durée
+du jour augmente.
+<BR>Il
+nous faut exprimer J en fonction de d.
+<BR>Nous
+avons&nbsp;:
+<BR>&lt;$42&gt;
+<BR>Puis&nbsp;:
+&lt;$43&gt;
+<BR>Et
+par inversion de la fonction tangente&nbsp;:
+<BR>&lt;$44&gt;
+<BR>Sous
+réserve des conditions existence&nbsp;:
+<BR>&lt;$45&gt;
+<BR>Et
+enfin&nbsp;:
+<BR>&lt;$46&gt;
+<BR>Calculons
+maintenant J pour d = 15h et <I></I>
+= 48,85°.
+<BR>&lt;$47&gt;
+<BR>Ainsi,
+il faut attendre au moins 54 jours après l’équinoxe de mars pour
+que les parisiens puissent bénéficier de journées qui durent au
+moins 15h. En d’autres termes, les parisiens doivent patienter
+jusqu’à la mi-mai pour disposer de 15h entre le lever et le
+coucher du Soleil. Ce résultat théorique et approximatif (avec une
+année de 365 jours) ne tient pas compte des effets crépusculaires
+qui allongent sensiblement la durée d’éclairement du ciel (Voir
+«&nbsp;nuit blanche&nbsp;» dans ce Chapitre 10&nbsp;: Observation
+du Soleil, Question 12e).
+<BR>Les
+jours suivants, l’augmentation de cette durée sera d’abord de 2
+minutes environ par jour jusqu’au début de juin, ensuite elle
+passera à 1 minute pour s’annuler complètement à l’approche
+du solstice de juin.
+<BR>Remarquons
+enfin que dans la formule théorique, la valeur d = 16h est
+impossible (car l’argument de la fonction arcsin n’est plus
+compris entre -1 et +1). Cela signifie qu’à Paris, il n’existe
+aucune journée d’été et <I>a
+fortiori</I> d’hiver,
+dont la durée atteint 16h. En réalité, ce n’est pas tout à
+fait exact, car dans les faits, le maximum de la durée du jour
+dépasse 16h durant pratiquement tout le mois de juin pour culminer
+pendant plus d’une semaine autour du solstice à 16h 10min. Ce
+dépassement de plus de 10 minutes par rapport au calcul théorique
+s’explique par les hypothèses simplificatrices et parce que la
+plupart des calendriers ne comptent pas le lever et le coucher du
+Soleil à partir de son centre, mais à partir du limbe supérieur.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e10//10e10//e10_src_0.jpg" NAME="Image 227" ALIGN=BOTTOM WIDTH=624 HEIGHT=392 BORDER=0>
+<BR><I>Prévision
+pour l’an 2040 montrant l’évolution de la durée du jour à
+Paris au mois de juin.</I>
+<BR>
+
+
+

@@ -1,0 +1,110 @@
+
+
+
+<BR><B>Horloge
+sidérale.</B>
+<BR>Rappelons
+d’abord qu’une horloge sidérale est une horloge réglée selon
+l’écoulement du Temps Sidéral (angle horaire du point vernal) et
+non sur celui du Temps Solaire, comme dans le cas d’une montre. 
+
+<BR>Elle
+indique, à un instant <I>t</I>
+donné, l'ascension droite d’un point de la voute céleste qui
+culmine sur le méridien local d’un lieu. Par conséquent une
+horloge sidérale est tributaire du lieu, elle donne l’heure
+sidérale du lieu sur lequel elle est implantée.
+<BR>Par
+ailleurs, on sait que l’horloge sidérale avance de près de 4
+minutes par rapport à une horloge classique (solaire). Ainsi, les
+deux horloges indiqueront exactement la même heure le jour de
+l’équinoxe du d’automne dans l’hémisphère Nord (Il est
+minuit heure solaire et minuit heure sidérale le jour de l’équinoxe
+du d’automne).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e7//7e9//e9_src_1.jpg" NAME="Image 7" ALIGN=BOTTOM WIDTH=623 HEIGHT=469 BORDER=0>
+<BR><I>Sur
+cette magnifique horloge (la célébrissime horloge astronomique de
+Prague), on peut lire qu’il est 5h 30min, heures sidérales
+(petite étoile) quand il est 9h, heure solaire (main dorée sur les
+chiffres romains)</I>
+<BR><I>Sources&nbsp;:
+</I><I>Andrew
+Shiva.</I>
+<BR>
+<BR><B>Solution
+de l’exercice.</B>
+<BR>On
+sait (Cf. Chapitre 6&nbsp;: Astrométrie, Question 8e) que le Temps
+Sidéral Local à une heure donnée <I>n</I>
+(UTC) et à une longitude L donnée (longitude comptée positivement
+vers l'Est), vaut&nbsp;: TSL(<I>n</I>)
+= TSGreen(0) + L + 1,00273896 <I>n</I>.
+<BR>A
+l’heure <I>n</I>
+(UTC), inconnue au moment de l’observation sur l’île du
+naufrage, (mais qu’importe finalement l’heure <I>n</I>
+exacte en ce lieu&nbsp;!) on a les temps sidéraux locaux suivants&nbsp;:
+<BR>A
+Rotterdam&nbsp;: TSL(Rotterdam)(<I>n</I>)
+= TSGreen(0) + L(Rotterdam) + 1,00273896 <I>n</I>.
+<BR>Sur
+l’île&nbsp;: TSL(île)(<I>n</I>)
+= TSGreen(0) + L(île) + 1,00273896 <I>n</I>.
+<BR>Par
+soustraction&nbsp;: TSL(Rotterdam)(<I>n</I>)
+- TSL(île)(<I>n</I>)
+= L(Rotterdam) - L(île).
+<BR>Par
+conséquent&nbsp;: L(île) = TSL(île)(<I>n</I>)
+- TSL(Rotterdam)(<I>n</I>)
++ L(Rotterdam).
+<BR>Puisque
+Bételgeuse passe au zénith à l’heure <I>n</I>,
+elle se trouve donc dans le plan méridien. Le temps sidéral local
+du lieu d’observation sur île est donc égal à l’ascension
+droite de Bételgeuse. Le Cherche-étoiles permet de déterminer les
+coordonnées équatoriales de cette étoile (ce sont quasiment des
+constantes, donc qu’importe la latitude du Cherche-étoiles&nbsp;!).
+Bételgeuse se trouve dans la constellation d’Orion et on
+lit&nbsp;approximativement sur le Cherche-étoiles : Ascension
+droite 
+= 5h54min et déclinaison 
+= 7°50’ (en réalité&nbsp;: 
+= 5h55min et 
+= 7°24’).
+<BR>Ainsi&nbsp;:
+TSL(île)(<I>n</I>)
+= 5h54min.
+<BR>Puisque
+l’horloge sidérale de Rotterdam n’a pas cessé de fonctionner
+pendant le voyage, l’heure sidérale de Rotterdam à l’instant
+de l’observation sur l’île est de 8h43min.
+<BR>En
+convertissant toutes ces données en degré (le temps sidéral est
+un angle) avec approximativement 1heure = 15°, on a&nbsp;:
+TSL(Rotterdam)(<I>n</I>)
+= 8h43min = 130,75° et TSL(île)(<I>n</I>)
+= 5h54min = 88,50°. 
+
+<BR>Puis
+en tenant compte de la longitude de Rotterdam qui est à l’Est de
+Greenwich, on a&nbsp;: L(Rotterdam) =  +4°29’ = + 4,48°.
+<BR>Il
+est maintenant possible de déterminer la longitude de l’île&nbsp;:
+<BR>L(île)
+= TSL(île)(<I>n</I>)
+- TSL(Rotterdam)(<I>n</I>)
++ L(Rotterdam) = 88,50° - 130,75° + 4,48° = - 37,77° = -
+37°46’. Donc l’île se trouve à&nbsp;: à 37°46 Ouest.
+<BR>La
+mesure de la latitude du lieu est immédiate puisque Bételgeuse se
+trouvant au zénith, la latitude du lieu vaut la déclinaison de
+Bételgeuse&nbsp;; c’est-à-dire&nbsp;: 7°50’ Nord.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e7//7e9//e9_src_0.jpg" NAME="Image 19" ALIGN=BOTTOM WIDTH=209 HEIGHT=340 BORDER=0>
+<BR>
+
+
+<BR><BR>
+
+
+

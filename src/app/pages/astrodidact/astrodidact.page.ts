@@ -13,7 +13,9 @@ import { GestionConfigEngFrService}    from 'src/app/services/gestion-config-eng
 import { AstrodidactFrComponent }  from 'src/app/components/astrodidact-fr/astrodidact.fr.component';
 import { AstrodidactEnComponent  } from 'src/app/components/astrodidact-en/astrodidact.en.component';
 // my interfaces
-import { ChoiceMenuSide,ConfigService } from '../../interfaces/types';
+import { ChoiceMenuSide, }         from '../../interfaces/types';
+//my constantes
+import { APP_PARAMS_VERSION }  from '../../interfaces/constantes'
 @Component({
   selector: 'app-astrodidact',
   standalone: true,
@@ -33,7 +35,7 @@ theme:                string = 'light';
 textGoHome:           string = 'Go to Play';
 language:             string = 'en';
 version:              string = 'v.1.0';
-private configService = new ConfigService(); // création manuelle
+
 
   constructor(
     private navCtrl:                  NavController,
@@ -47,7 +49,7 @@ private configService = new ConfigService(); // création manuelle
       this.theme        = this.settingsService.getTheme();
       this.language     = this.settingsService.getLanguage();
       this.goodTextGoHome(this.settingsService.getLanguage()); // Mettez à jour textGoHome ici
-      this.version      = this.configService.appVersion;
+      this.version      = APP_PARAMS_VERSION;
       this.colorTitle   = this.gestionConfigEngFrService.getColorTitle('AstroDidact');
     };
 

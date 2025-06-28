@@ -6,18 +6,21 @@ export class Item {
         nature:           string;// q=question r=réponse i=information
         beforeUnderScore: string;// d1
         afterUnderScore:  string;//2q
-        repPosition    :  string;//
+        repPosition    :  number;//
+        isDone:           boolean;//
 
   constructor(nameOfItem:string) {
       this.name             = nameOfItem;
-      this.level            = 'd';
-      this.chapter          = '1';
-      this.question         = '1';
-      this.nature           = 'q';
-      this.beforeUnderScore = 'd1';
-      this.afterUnderScore  = '1q';
-      this.repPosition      = '1'; 
-      if  (nameOfItem !==""){
+      this.level            = '';
+      this.chapter          = '';
+      this.question         = '';
+      this.nature           = '';
+      this.beforeUnderScore = '';
+      this.afterUnderScore  = '';
+      this.repPosition      = 1; 
+      this.isDone           = false;
+
+      if  (nameOfItem !== ""){
       let indexOfUnderscore:number;
       indexOfUnderscore = this.findFirstOccurrence(nameOfItem,'_');
       //
@@ -32,10 +35,9 @@ export class Item {
       this.beforeUnderScore = this.level   + this.chapter;
       this.afterUnderScore = this.question + this.nature; 
       //
-      if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-      if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-      if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-      }
+      this.repPosition = parseInt(this.chapter, 10)*parseInt(this.question, 10) };
+      //
+      this.isDone = false;
     }
 
     
@@ -44,36 +46,36 @@ changeChapter(newChapter:string)
   this.beforeUnderScore =this.level + this.chapter;
   this.name = this.beforeUnderScore + '_'+this.afterUnderScore;
   //
-  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };     
+  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };     
 }
 
 changeLevel(newLevel:string)
 { this.level = newLevel;
   this.beforeUnderScore =this.level + this.chapter;
   this.name = this.beforeUnderScore + '_'+this.afterUnderScore; 
-  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };         
+  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };         
 }
 
 changeQuestion(newQuestion:string)
 { this.question = newQuestion;
   this.afterUnderScore =this.question + this.nature;
   this.name = this.beforeUnderScore + '_'+this.afterUnderScore;
-  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };          
+  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };          
 }
 
 changeNature(newNature:string)
 { this.nature = newNature;
   this.afterUnderScore  = this.question + this.nature;  
   this.name = this.beforeUnderScore + '_'+this.afterUnderScore;
-  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };      
+  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };      
 }
 
 changeItemFor(nameOfNewItem:string){
@@ -85,9 +87,9 @@ changeItemFor(nameOfNewItem:string){
   this.nature   = newItem.nature;
   this.beforeUnderScore = newItem.beforeUnderScore;
   this.afterUnderScore  = newItem.afterUnderScore; 
-  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };
-  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10) +''  };     
+  if (this.level === 'd'){this.repPosition = 1*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'c'){this.repPosition = 2*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };
+  if (this.level === 'e'){this.repPosition = 3*parseInt(this.chapter, 10)*parseInt(this.question, 10)  };     
 }
 
 
@@ -116,4 +118,4 @@ private getFirstCharacter(inputString: string): string {
   }
   return inputString.charAt(0); // Retourne la première lettre
 }
-    }
+}

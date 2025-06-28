@@ -1,0 +1,290 @@
+
+
+
+<BR><B>Préambule</B><B>.</B>
+<BR><I><B>a)
+Objectif de l’exercice.</B></I>
+<BR>L’exercice
+proposé est un problème classique de transformation d’un système
+de coordonnées équatoriales en coordonnées horizontales (ou
+réciproquement).
+<BR>Connaissant
+les coordonnées&nbsp;: ascension droite ()
+et déclinaison ()
+d’un astre (obtenues à partir d’un catalogue) on cherche à le
+repérer dans le ciel à une heure donnée, c’est-à-dire que l’on
+souhaite déterminer par le calcul son azimut et sa hauteur.
+<BR><I><B>b)
+La «&nbsp;formule fondamentale&nbsp;» un outil </B></I><I><B>multifonction.</B></I>
+<BR>La
+trigonométrie sphérique permet de résoudre tous les problèmes de
+transformations de système de coordonnées. Il existe de nombreuses
+formules qui s’adaptent à toutes les situations, mais la clé de
+voute de tout l’édifice tient en une seule formule, la «&nbsp;formule
+fondamentale&nbsp;» de la trigonométrie sphérique. 
+
+<BR>En
+effet, toutes les autres formules dérivent de cette dernière,
+comme nous le démontrerons ci après. Celle-ci se décline
+d’ailleurs sous trois formes, ce qui élargit le choix des
+paramètres utilisés afin d’ajuster la formule aux données du
+problème. Il suffit pour cela de permuter, dans la formule, les
+sommets et les cotés du triangle sphérique.
+<BR>Néanmoins,
+pour des raisons pratiques de calculs, car les équations
+trigonométriques ne sont pas toujours très simples à résoudre,
+en particulier lors de l’inversion des lignes trigonométriques
+(fonctions réciproques), il est d’usage de jongler avec au moins
+deux autres formules dérivées de la formule fondamentale. Ce
+groupe de trois formules constitue ce que l’on appelle le «&nbsp;groupe
+de Gauss&nbsp;».
+<BR><I><B>c)
+La «&nbsp;relation fondamentale&nbsp;» pour gérer le temps.</B></I>
+<BR>Par
+ailleurs puisque le temps joue un rôle dans la recherche d’une
+position d’un astre sur la voute céleste, il est nécessaire
+d’utiliser également une autre formule dite «&nbsp;relation
+fondamentale&nbsp;»&nbsp;de l’astronomie. Celle-ci est
+particulièrement simple, elle relie les trois paramètres que
+sont&nbsp;: le temps sidéral local (TSL), l’angle horaire H et
+l’ascension droite 
+et s’exprime par TSL = H + 
+(cf. au niveau confirmé dans ce Chapitre 6&nbsp;: Astrométrie,
+Question 2c).
+<BR>Comme
+généralement l’angle horaire H est une mesure assez difficile à
+obtenir expérimentalement, on le détermine à partir du TSL et de
+&nbsp;:
+H = TSL - .
+<BR>Comme
+son nom l’indique le Temps Sidéral Local est local et varie avec
+l'heure et le jour. Nous verrons plus loin comment on le détermine
+à partir du temps sidéral de Greenwich (TSG) et de la longitude du
+lieu de l’observation.
+<BR>
+<BR><B>Groupe
+de Gauss.</B>
+<BR><I><B>a)
+Triangle sphérique.</B></I>
+<BR>Afin
+de pouvoir résoudre l’exercice proposé, nous allons établir le
+groupe de Gauss adapté aux données du problème.
+<BR>Considérons
+de nouveau le triangle sphérique NZE, où N désigne le Pôle Nord,
+Z le zénith et E la position de l’étoile (Ce triangle est
+généralement appelé&nbsp;: «&nbsp;<I>triangle
+de position&nbsp;</I>»).
+<BR>Les
+formules du groupe de Gauss, que nous démontrerons à la fin de
+cette section, sont formulées dans le cas général d’un triangle
+sphérique ABC.
+
+
+<SPAN STYLE="background: #00ff00">&lt;$$1&gt;</SPAN>
+
+<BR><I><B>b)
+Adaptation au problème.</B></I>
+<BR>Aussi
+allons-nous remplacer les sommets A, B et C par trois points de la
+sphère céleste (locale ou non) judicieusement choisis et adaptés
+au problème étudié.
+<BR>Par
+exemple dans le cas qui nous préoccupe, remplaçons&nbsp;:
+
+<BR>A
+par le Pôle Nord N, 
+
+<BR>B
+par le zénith Z 
+
+<BR>C
+par l’étoile E. 
+
+<BR>La
+distance angulaire&nbsp;: a par la distance zénithale z = 90° - <I>h</I>
+<BR>La
+distance angulaire&nbsp;: b par la distance polaire&nbsp; 90° - 
+(i.e. le complémentaire de la déclinaison).
+<BR>La
+distance angulaire&nbsp;: c par la colatitude 90° - .
+
+<BR>Le
+dessin suivant illustre ce cas.
+<BR>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e3//e3_src_0.jpg" NAME="Image 324" ALIGN=BOTTOM WIDTH=623 HEIGHT=382 BORDER=0>
+<BR><I><B>c)
+Commentaire et précision sur les angles.</B></I>
+<BR>On
+remarque que l’angle issu du sommet N dans le triangle sphérique
+NZE a pour valeur l’angle horaire H (C’est l’angle formé par
+les deux plans ONE et ONZ). 
+
+<BR>De
+même, on remarque que l’angle de sommet Z a pour valeur&nbsp;: 
+- <I>a</I>,
+où <I>a</I>
+est l’azimut de l’astre. Rappelons qu’en astronomie l’azimut
+<I>a</I>
+est mesuré à partir du méridien Sud dans la direction de l’Ouest
+et non pas à partir du méridien Nord comme le font les marins et
+les géomètres. 
+
+<BR><I><B>d)
+Application de la «&nbsp;formule fondamentale&nbsp;».</B></I>
+<BR>A
+la question précédente de ce chapitre (Chapitre 6&nbsp;:
+Astrométrie, Question 2e), nous avons déjà établit la formule
+fondamentale de la trigonométrie sphérique adaptée à ce triangle
+sphérique et avons obtenue sa forme simplifiée&nbsp;:
+<BR><SUB>&lt;$2&gt;</SUB>
+<BR>La
+loi des sinus donne dans ce cas&nbsp;:
+<BR>&lt;$3&gt;
+<BR>qui
+après simplification donne&nbsp;:
+<BR><SUB>&lt;$4&gt;</SUB>
+<BR>Enfin
+la formule dite des cinq éléments donne&nbsp;:
+<BR>&lt;$5&gt;
+<BR>qui
+après simplification donne&nbsp;:
+<BR><SUB>&lt;$6&gt;</SUB>
+<BR>Ces
+trois formules constituent le <I>groupe
+de Gauss</I> de ce
+triangle qui prend la forme&nbsp;:
+<BR>&lt;$7&gt; 
+
+<BR>
+<BR><B>Résolution
+de l’exercice.</B>
+<BR><I><B>a)
+Calcul de la hauteur h.</B></I>
+<BR>Pour
+calculer la hauteur <I>h</I>,
+on peut utiliser la formule fondamentale. Mais elle nécessite la
+connaissance de l’angle horaire H.
+<BR>Ce
+paramètre fait intervenir le temps que nous contrôlons grâce à
+la donnée du Temps Sidéral local à l’heure de l’observation.
+Le TSL vaut ici&nbsp;: 11h17min.
+<BR>Or,
+H = TLS - .
+<BR>Ainsi,
+H = 11h17min – 5h17min = 6h que l’on converti en degré. H =
+90°.
+<BR>Comme
+cos (90°) = 0, on obtient avec 
+= 45° et 
+= 46°&nbsp;:
+<BR><SUB>&lt;$8&gt;</SUB>.
+<BR>D’où
+&lt;$9&gt;. 
+
+<BR><I><B>b)
+Calcul de l’azimut a.</B></I>
+<BR>Nous
+disposons de plusieurs formules faisant intervenir le paramètre
+azimut <I>a</I>.
+Généralement, on utilise en même temps les deux dernières
+formules du groupe de Gauss afin de lever l’indétermination des
+signes rencontrés au cours de la résolution des équations
+trigonométriques (particulièrement au moment de l’inversion)<A CLASS="sdfootnoteanc" NAME="sdfootnote2anc" HREF="#sdfootnote2sym"><SUP>2</SUP></A>.
+<BR>En
+tenant compte des données du problème, nous obtenons&nbsp;:
+<BR>&lt;$10&gt;. 
+
+<BR>Ce
+qui nous conduit à&nbsp;: &lt;$11&gt;
+<BR>Littéralement
+on trouve <I>a</I>
+= -34,3270° (modulo 360°), mais comme généralement on compte
+positif l’azimut <I>a</I>,
+on ajoute 360°, d’où <I>a</I>
+= 325,6730°
+<BR><I><B>c)
+Bilan.</B></I>
+<BR>Les
+coordonnées horizontales de l’étoile Capella (
+= 5h17’&nbsp;; 
+= 46°) observable en un lieu de latitude 
+= 45° (Nord) à l’heure TSL 11h17min sont&nbsp;:
+
+<BR><BR>
+
+<TABLE WIDTH=208 CELLPADDING=7 CELLSPACING=0>
+<TR VALIGN=TOP>
+<TD WIDTH=96 BGCOLOR="#3366ff" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif">Hauteur</FONT></FONT></P>
+</TD>
+<TD WIDTH=82 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><I>h</I></FONT><FONT FACE="Times New Roman, serif">
+= 30,53°</FONT></P>
+</TD>
+</TR>
+<TR VALIGN=TOP>
+<TD WIDTH=96 BGCOLOR="#3366ff" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT COLOR="#ffffff"><FONT FACE="Times New Roman, serif">Azimut</FONT></FONT></P>
+</TD>
+<TD WIDTH=82 BGCOLOR="#ffff00" STYLE="border: 1px solid #000001; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><I>a</I></FONT><FONT FACE="Times New Roman, serif">
+= 325,67°</FONT></P>
+</TD>
+</TR>
+</TABLE>
+<BR><BR>
+
+
+<BR>En
+toute rigueur, il faudrait ajouter dans les équations un terme
+correctif pour tenir compte de la réfraction atmosphérique.
+<BR>
+<BR><B>Démonstration
+de la loi des sinus.</B>
+<BR>De
+la formule fondamentale&nbsp;:
+&lt;$12&gt;, on tire&nbsp;: 
+
+<BR>&lt;$13&gt;.
+<BR>Puis,
+&lt;$14&gt;
+<BR>&lt;$15&gt;
+<BR>D’où&nbsp;:
+<BR>&lt;$16&gt;
+<BR>Expression
+invariante par permutation circulaire des lettres, par conséquent&nbsp;:
+<BR>&lt;$17&gt;
+<BR>et
+comme tous ces angles sont compris dans l’intervalle&nbsp;: &lt;$18&gt;
+leurs sinus sont positifs, d’où&nbsp;: <SPAN STYLE="background: #ffff00">&lt;$19&gt;</SPAN>.
+
+
+<BR>
+<BR><B>Démonstration
+de la formule des cinq éléments.</B>
+<BR>Démontrons
+dans le cas général la formule&nbsp;:
+<BR><SUB>&lt;$20&gt;</SUB>
+<BR>Pour
+cela, on écrit trois fois la formule fondamentale par permutation
+circulaire des lettres&nbsp;: &lt;$21&gt;.
+<BR>Par
+substitution progressive, il vient&nbsp;: 
+
+<BR>&lt;$22&gt;
+
+
+<BR>et
+finalement&nbsp;: <SPAN STYLE="background: #ffff00">&lt;$23&gt;</SPAN>.
+<BR>
+
+
+<BR><BR>
+
+
+
+<A CLASS="sdfootnotesym" NAME="sdfootnote2sym" HREF="#sdfootnote2anc">2</A><I></I><I>
+Bien entendu on peut aussi comparer le signe du sinus et du cosinus
+lorsque les conditions du problème le permettent.</I>
+
+

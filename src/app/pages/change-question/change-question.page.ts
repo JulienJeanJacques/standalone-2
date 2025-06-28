@@ -87,7 +87,6 @@ export class ChangeQuestionPage implements OnInit{
     this.colorTitle = this.gestionConfigEngFRService.getColorTitle('Change question');
   }
 
-
   whatAreChapterLevelQuestion(itemName:string)
   { let item = new Item(itemName);
     this.selectedChapter = Number(item.chapter);
@@ -114,18 +113,15 @@ export class ChangeQuestionPage implements OnInit{
     item.changeQuestion(String(question));
     this.settingsService.setItem(item.name); 
   }
+
   updateNature(nature: string) {
     let item = new Item(this.itemName);
     this.selectedNature = nature;
     item.changeNature(nature);
     this.settingsService.setItem(item.name); 
   }
-  submitChoices() {
-    console.log('Chapitre sélectionné:',  this.selectedChapter);
-    console.log('Niveau sélectionné:',    this.selectedLevel);
-    console.log('Question sélectionnée:', this.selectedQuestion);
-    console.log('nature sélectionnée:',  this.selectedNature);
-  }
+
+  
   applyTheme(theme: string) {
     if (theme === 'dark') {
       document.body.classList.add('dark-theme');
@@ -135,6 +131,7 @@ export class ChangeQuestionPage implements OnInit{
       document.body.classList.remove('dark-theme');
     }
   }
+
   openMenu() {
     this.menu.open('sideMenu');
   }

@@ -9,12 +9,19 @@
   z-index: 9999;
 }
 
-// .confetti {
-//   position: absolute;
-//   top: -20px; /* Démarre légèrement au-dessus de la fenêtre */
-//   will-change: transform, opacity;
-//   display: block; /* essentiel pour animate correctement */
-// }
+.confetti {
+  position: absolute;
+  top: -20px; /* Démarre au-dessus */
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: red; /* Couleur par défaut si jamais la ngStyle échoue */
+  will-change: transform, opacity;
+  animation-name: fall;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 @keyframes fall {
   0% {
@@ -22,21 +29,9 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(110vh) rotate(360deg);
+    transform: translateY(110vh) rotate(720deg);
     opacity: 0;
   }
 }
-
-
-
-
-.confetti {
-  position: absolute;
-  display: inline-block;
-  top: -20px;
-  will-change: transform, opacity;
-}
-
-
 
 

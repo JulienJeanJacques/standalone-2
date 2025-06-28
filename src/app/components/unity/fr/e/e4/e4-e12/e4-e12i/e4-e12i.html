@@ -1,0 +1,271 @@
+
+
+
+<BR><B>Le
+jour du printemps.</B>
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e4//4e12//e12_src_1.jpg" NAME="Image 31" ALIGN=BOTTOM WIDTH=603 HEIGHT=200 BORDER=0>
+<BR><I><B>a)
+Dates du printemps.</B></I>
+<BR>Les
+dates du début et de fin du printemps calendaire varient selon les
+pays, les époques et les traditions. Généralement dans les pays
+aux climats tempérés de l’hémisphère Nord, comme la France par
+exemple, le début du printemps calendaire coïncide avec l’équinoxe
+de printemps de l’hémisphère Nord.
+<BR>Ainsi,
+dans ces régions, le printemps dans l’hémisphère Nord commence
+un jour du mois de mars, généralement le 20 ou le 21 et plus
+rarement le 19 (Le XX<SUP>e</SUP>
+siècle privilégiait le 21 mars, le XXI<SUP>e</SUP>
+siècle favorisera davantage le 20 mars, et il faudra attendre 2044
+pour que le début de l’équinoxe de printemps tombe un 19 mars).
+Ces légères variations de dates sont naturellement dues aux
+petites irrégularités de la Rotation de la Terre.
+<BR>Comme
+les équinoxes sont des phénomènes astronomiques, ils ont lieu à
+un instant précis dans l’année. On peut donc indiquer exactement
+à quelle heure ils se produisent&nbsp;; par exemple, l'équinoxe de
+printemps de l'hémisphère
+Nord le 20
+mars 2012, a eu lieu à 05h14min  UTC. C’est justement l’objet
+de cet exercice que d’estimer cet horaire&nbsp;; les calculs sont
+forts simples même si les mesures à l’œil nu le sont moins.
+<BR>Naturellement,
+l’heure des équinoxes n’est jamais exactement la même d’une
+année à l’autre pour les mêmes raisons que la date des
+équinoxes change.
+<BR>Rappelons
+d’abord les caractéristiques essentielles de ce phénomène
+astronomique.
+<BR><I><B>b)
+Point de vue héliocentrique.</B></I>
+<BR>D’un
+point de vue héliocentrique, les équinoxes ont lieu à l’instant
+précis où la Terre se trouve exactement sur la ligne dite des
+équinoxes, à savoir sur la droite d’intersection entre le plan
+de l’Équateur céleste et celui de l’Écliptique. 
+
+<BR>Or
+cette ligne des équinoxes coupe l’orbite de la Terre deux fois
+dans l’année, une première fois en mars, une seconde en
+septembre. On nomme ces deux points d’intersection, des nœuds, le
+nœud ascendant pour mars et le nœud descendant pour septembre. 
+
+<BR>La
+projection à l’infini du nœud ascendant (mars), dans la
+direction opposée au Soleil, porte le nom bien connu de «&nbsp;point
+Vernal&nbsp;», dit encore «&nbsp;point gamma&nbsp;».   
+
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e4//4e12//e12_src_2.jpg" NAME="Image 24" ALIGN=BOTTOM WIDTH=603 HEIGHT=431 BORDER=0>
+<BR><I><B>c)
+Point de vue géocentrique.</B></I>
+<BR>D’un
+point de vue géocentrique, les équinoxes ont lieu à l’instant
+précis où le Soleil rencontre l’Équateur céleste, autrement
+dit, le prolongement de l’Équateur terrestre. Cet événement se
+produit évidemment deux fois dans l’année, en mars et en
+septembre et pour ces deux dates la durée du jour est exactement
+égale à la durée de la nuit en tout lieu de la Terre.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e4//4e12//e12_src_3.jpg" NAME="Image 25" ALIGN=BOTTOM WIDTH=603 HEIGHT=555 BORDER=0>
+<BR><I><B>d)
+Le Soleil et le point Vernal se donnent rendez-vous.</B></I>
+<BR>L’intersection
+sur la voute céleste de l’Écliptique et de l’Équateur
+céleste, le jour de l’équinoxe de mars, nous indique la position
+exacte du point Vernal. Repérer ce point dans le ciel est essentiel
+pour le calcul des coordonnées donnant la position de tous les
+astres (Ascension droite). 
+
+<BR>En
+outre, la rencontre du Soleil avec ce point marque précisément le
+début du printemps dans l’hémisphère Nord.
+<BR>Naturellement,
+le point Vernal n’est pas matérialisé par la présence d’une
+étoile, par conséquent on ne peut le pointer ni à l’œil nu, ni
+avec un instrument. Aussi devons-nous le localiser par rapport aux
+étoiles et en particulier par rapport au Soleil (A l’époque
+actuelle, le point Vernal se trouve quelque part dans la
+constellation du Poisson).
+<BR><I><B>e)
+Principe de la méthode.</B></I>
+<BR>Pour
+localiser le point Vernal dans le ciel, on peut se servir du
+mouvement apparent du Soleil dans la journée. Une méthode consiste
+à déterminer à quelle heure, en un lieu donné, le Soleil et ce
+point se superposent dans le ciel. 
+
+<BR>Puisque
+le point Vernal est immatériel, l’heure de la superposition ne
+peut être obtenue directement. Aussi va-t-on procéder
+indirectement en mesurant la déclinaison du Soleil en deux moments
+judicieusement choisis.
+<BR>À
+l’approche de l’équinoxe de mars, le Soleil se trouve sous
+l’équateur céleste avant de franchir le nœud ascendant (passage
+de l'hémisphère Sud à l'hémisphère Nord), puis, l’ayant
+franchi se retrouve au dessus l’équateur céleste. Par
+conséquent, sa déclinaison est négative avant le nœud ascendant,
+nulle au nœud ascendant et positive après le nœud ascendant.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e4//4e12//e12_src_4.jpg" NAME="Image 26" ALIGN=BOTTOM WIDTH=603 HEIGHT=555 BORDER=0>
+<BR>Comme
+la rotation de la Terre est très régulière, sa vitesse angulaire
+de rotation peut être considérée comme constante sur une courte
+période, en particulier sur une période de 24 heures.
+<BR>Au
+voisinage d’un équinoxe et dans un intervalle de temps de l’ordre
+de 24h, il est tout à fait légitime de considérer la déclinaison
+du Soleil comme une fonction linéaire du temps (C’est évidemment
+faux sur l’intervalle d’une année. <I>Cf.</I>
+Chapitre 10&nbsp;: Observation du Soleil).
+<BR>Il
+suffit donc de mesurer la déclinaison du Soleil une première fois
+au moment de son passage au méridien du lieu, puis une seconde fois
+le lendemain lors de son nouveau passage au méridien du même lieu.
+Si la première mesure procure une valeur négative et la seconde
+une valeur positive, alors nécessairement il existe un instant dans
+cet intervalle de temps pour lequel la déclinaison du Soleil est
+bien nulle<A CLASS="sdfootnoteanc" NAME="sdfootnote1anc" HREF="#sdfootnote1sym"><SUP>0</SUP></A>&nbsp;;
+autrement dit, où à cet instant le Soleil se confond avec le point
+Vernal.
+<BR>
+<BR><B>Solution
+de l’exercice.</B>
+<BR><I><B>a)
+Mise en œuvre de la méthode.</B></I>
+<BR>Soit
+<I>D(t)</I>
+la déclinaison du Soleil à un instant t, mesurée en un lieu de
+latitude et de longitude quelconques de l’hémisphère Nord. 
+
+<BR>Sur
+un intervalle de temps d’environ 24h, centré sur l’équinoxe de
+mars, la déclinaison du Soleil croît uniformément (cela revient à
+confondre localement sa courbe avec l’une de ses tangentes). Par
+conséquent, la déclinaison du Soleil est une fonction affine du
+temps (en heure) de la forme&nbsp;: <I>D(t)
+= at + b.</I> Sa
+représentation graphique dans un repère orthogonal est donc une
+droite.
+<BR>D’après
+l’énoncé de l’exercice, l’équinoxe de printemps a lieu
+entre le 19 et le 20 mars de l’année considérée.
+<BR>Soient
+<I>t</I><SUB><I>1</I></SUB>
+l’instant de passage du Soleil au méridien local le 19 mars et <I>t</I><SUB><I>2</I></SUB>
+celui du 20 mars (en heure). Entre deux passages du Soleil au
+méridien, il s’est écoulé 24h du temps solaire moyen (Jour
+solaire moyen). Ainsi, <I>t</I><SUB><I>2</I></SUB><I>
+– t</I><SUB><I>1</I></SUB>
+= 24 h.
+<BR>En
+mesurant sur place, les déclinaisons  <I>D(t</I><SUB><I>1</I></SUB><I>)</I>
+et <I>D(t</I><SUB><I>2</I></SUB><I>)</I>,
+nous avons donc&nbsp;:
+<BR><I>D(t</I><SUB><I>1</I></SUB><I>)
+= at</I><SUB><I>1</I></SUB><I>
++ b</I>
+<BR><I>D(t</I><SUB><I>2</I></SUB><I>)
+= at</I><SUB><I>2</I></SUB><I>
++ b</I>
+<BR>D’où&nbsp;:
+<I>D(t</I><SUB><I>2</I></SUB><I>)
+- D(t</I><SUB><I>1</I></SUB><I>)
+= a(t</I><SUB><I>2</I></SUB><I>
+– t</I><SUB><I>1</I></SUB><I>)
+= 24a.</I>
+<BR>Soit
+<I>t</I><SUB><I>0</I></SUB>,
+l’instant de passage du Soleil au point Vernal. Par définition,
+nous avons&nbsp;:
+<BR><I>D(t</I><SUB><I>0</I></SUB><I>)
+=0</I>.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e4//4e12//e12_src_0.jpg" NAME="Image 28" ALIGN=BOTTOM WIDTH=603 HEIGHT=449 BORDER=0>
+<BR>Nous
+pouvons maintenant déterminer la durée qui sépare le moment du
+passage du Soleil au méridien le 20 mars, du moment de son passage
+au point Vernal, c’est-à-dire le temps  <I>t</I><SUB><I>2</I></SUB><I>
+– t</I><SUB><I>0</I></SUB><SUB>.</SUB>
+<BR>On
+a&nbsp;: <I>D(t</I><SUB><I>2</I></SUB><I>)
+= at</I><SUB><I>2</I></SUB><I>
++ b</I> et  0 = <I>at</I><SUB><I>0</I></SUB><I>
++ b</I>. Donc&nbsp;: <I>a(t</I><SUB><I>2</I></SUB><I>
+– t</I><SUB><I>0</I></SUB><I>)
+= D(t</I><SUB><I>2</I></SUB><I>)</I>.
+<BR>Par
+conséquent&nbsp;: <I>t</I><SUB><I>2</I></SUB><I>
+– t</I><SUB><I>0</I></SUB><I>
+= D(t</I><SUB><I>2</I></SUB><I>)
+/ a = 24 D(t</I><SUB><I>2</I></SUB><I>)
+/ ( D(t</I><SUB><I>2</I></SUB><I>)
+- D(t</I><SUB><I>1</I></SUB><I>)
+)</I>.
+<BR><I><B>b)
+Application numérique.</B></I>
+<BR>La
+déclinaison du Soleil au moment de son passage au méridien était
+de  - 0° 26’ le 19 mars et de + 0° 12’ le 20 mars de cette
+année. 
+
+<BR>Ainsi&nbsp;:
+<I>D(t</I><SUB><I>2</I></SUB><I>)
+- D(t</I><SUB><I>1</I></SUB><I>)</I>
+= 0° 12’ +  0° 26’ = 0° 38’.
+<BR>Pour
+effectuer les opérations, convertissons tous les angles de degré
+sexagésimal (base 60) en fraction décimale de degré. 
+
+<BR>0°
+38’ =  0° 38’  =  0° + 38/60° =  0,633°
+<BR>0°
+12’ =  0° + 12/60°  =  0,2°
+<BR>On
+a alors&nbsp;: <I>t</I><SUB><I>2</I></SUB><I>
+– t</I><SUB><I>0</I></SUB><I>
+= 24 </I><I></I><I>
+</I>0,2  
+0,633 = 7,58 h.
+<BR>(Evidemment,
+la précision à la seconde près, voire à la minute près, est
+assez dérisoire, dans ce genre de calcul simplifié, mais qui
+délivre tout de même un ordre de grandeur très satisfaisant&nbsp;!).
+<BR><I><B>c)
+Conclusion.</B></I>
+<BR>Le
+début du printemps dans l’hémisphère Nord de l’année
+considérée a eu lieu 7,58 h avant le passage du Soleil au méridien
+local du lieu considéré.
+<BR>Naturellement,
+ce résultat est indépendant du méridien choisi, car à un instant
+t, la déclinaison du Soleil (par définition de la déclinaison
+d’un astre, voir Chapitre 6&nbsp;: Astrométrie, Question 10d,
+Question 11d, Question 2c, Question 5c, Question 7c, Question 2e,
+Question 4e, Question 9e, Question 10e) ne dépend ni de la latitude
+ni de la longitude terrestre (mais il existe une infime variation en
+seconde d’arc de la mesure selon le lieu, due entre autre à la
+non sphéricité parfaite de la Terre).
+<BR>A
+l’heure locale du lieu considéré, il est midi solaire lorsque le
+Soleil franchit le méridien local le 20 mars. Ainsi, sept heures et
+trente quatre minutes (7,58 h) avant midi (12h, heure solaire
+vraie), le Soleil occulte le point Vernal.
+<BR>En
+ce lieu, le printemps commence donc à 4h 25 min, heure locale
+solaire.
+<BR> 
+
+<BR>
+
+
+<A CLASS="sdfootnotesym" NAME="sdfootnote1sym" HREF="#sdfootnote1anc">0</A><SUP></SUP>
+<I>Ce résultat
+fait implicitement référence au théorème mathématique
+fondamental bien connu, dit «&nbsp;théorème des valeurs
+intermédiaires&nbsp;». En effet, au voisinage de l’équinoxe de
+mars, la déclinaison du Soleil est une fonction continue du temps
+et de plus croissante&nbsp;; elle réalise donc une bijection sur ce
+voisinage. Le passage d’une valeur négative à une valeur
+positive permet alors d’affirmer qu’il existe un instant t et un
+seul, pour lequel la déclinaison est nulle.</I>
+<BR>
+

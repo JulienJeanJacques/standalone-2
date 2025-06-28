@@ -6,9 +6,9 @@ import { AlertController} from '@ionic/angular';
 //my services
 import { FindTheNextItem }       from 'src/app/services/find-the-next-item.service';
 import { SettingsService }       from 'src/app/services/settings.service';
-import { StringsService }        from 'src/app/services/strings.service';
+import { AnalyseResponseService }from '../../services/analyse-response.service'
 import { SeeInMyConsoleService } from 'src/app/services/seeInMyConsole.service';
-
+import { GamerResultsService }   from '../../services/gamer-results.service'
 @Component({
   selector: 'footer-question',
   standalone: true,
@@ -24,19 +24,20 @@ export class FooterQuestionComponent  {
     cssClass: 'my-select-popover'
   };
 
-  selectedValue:string;
+  selectedValue:string = '';
 
   constructor(
     private alertController:        AlertController, 
     private findTheNextItem:        FindTheNextItem,
     private settingsService:        SettingsService,
-    private stringsService:         StringsService,
+    private analyseResponseService: AnalyseResponseService,
+    private gamerResultsService:    GamerResultsService,
     private seeInMyConsoleService:  SeeInMyConsoleService,
   ) 
-  {this.selectedValue = ''}
-  selectValue(value: string) {
-  console.log('Valeur sélectionnée:', value); 
-  }
+{}
+  // {this.selectedValue = ''}
+  selectValue(value: string) {}
+
   async validateChoice() {
     if (this.selectedValue === null) {
       const alert = await this.alertController.create({
@@ -88,33 +89,19 @@ async promptValidation() {
     buttons: [
       {
         text: 'Annuler',
-        role: 'cancel'
+        role: 'cancel',
       },
       {
         text: 'Valider',
         handler: () => {
-          let nameOfItem:string = this.settingsService.getItem();
-          let enreg:string = '';
           //Retrieve the selected value:
-          const choix = this.selectedValue; 
-          console.log('footer-question.component',choix,'***',choix.length)
-          // Save this response: 
-          // 1.we compare with RESULTS (constante) 
-          // Nous enregistrons -1 si c'est une bonne réponse car c'est le premier passage. 
-          // Nous enregistrons choix  si la réponse est fausse
-          // Ceci permet d'envoyer les animations.
-          if (this.stringsService.isGoodResponse(choix,nameOfItem)) {enreg = '-1';} else {enreg = choix};
-          // 2.we save  in  settingsService.results (One or Two or Three )
-          let results = this.settingsService.getResults();
-          console.log('footer-question-promptValidation------------1',results);
-          this.settingsService.setResponse(enreg);
-          console.log('footer-question-promptValidation------------2',this.settingsService.getResults())
-          //this.seeInMyConsoleService.params('footer-question-promptValidation-1');
-          this.settingsService.setReinitAllResults();
-          //this.seeInMyConsoleService.params('footer-question-promptValidation-2');
-          // 3.we call ifForward de find-the-next-item
-          nameOfItem = this.settingsService.getItem(); 
-          this.findTheNextItem.ifForward(nameOfItem);
+          // récupère la valeur sélectionnée
+          const choix:number = this.analyseResponseService.nature(parseInt(this.selectedValue,10)); 
+          console.log('footer-question-pop-up-choix après analyse',choix)
+          this.settingsService.setGamerResponse(choix);
+          console.log('footer-question-pop-up-choix après analyse',this.settingsService.getGamerResults())
+          //this.settingsService.setReinitAllResults();// only for the developpement
+          this.findTheNextItem.ifForward(this.settingsService.getItem());
         }
       }
     ]

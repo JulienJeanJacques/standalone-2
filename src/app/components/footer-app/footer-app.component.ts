@@ -61,23 +61,7 @@ export class FooterAppComponent  implements OnInit {
       }
       )
     }
-  // private async alert() {
-  //   const alert = await this.alertController.create({
-  //     header:  this.textTitle,              // Titre de l'alerte
-  //     message: this.textAlert ,  
-  //     cssClass: 'custom-alert',     // IMPORTANT : la classe personnalisée ici           // Texte à afficher
-  //     buttons: [
-  //       {
-  //         text: this.textButton,                // Texte du bouton
-  //         role: 'cancel',                   // Ferme l'alerte
-  //         handler: () => {
-  //           console.log('Popup fermée');
-  //         }
-  //       }
-  //     ]
-  //   });
-  //   await alert.present();
-  // }
+
 async alert() {
   const alert = await this.alertController.create({
     header: this.textTitle,
@@ -109,8 +93,8 @@ async alert() {
     const nameOfItem = this.settingsService.getItem();
     const item = new Item(nameOfItem);
     let ok:boolean = true;
-    if (item.nature === 'q' && !this.settingsService. getIsThisAnserWasDone()) {this.alert()}
-    if (ok) {
+    if (item.nature === 'q' && !this.settingsService.getIsThisAnswerWasDone()) {this.alert()}
+    else {
     const  currentItemName = this.settingsService.getItem(); 
     const newItemName = this.findTheNextItem.ifForward(currentItemName);
     this.settingsService.setItem(newItemName);

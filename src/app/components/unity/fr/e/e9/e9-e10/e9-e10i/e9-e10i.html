@@ -1,0 +1,312 @@
+
+
+
+<BR><B>Bref
+rappel des propriétés de l’ellipse.</B>
+<BR><I><B>a)
+Définition.</B></I>
+<BR>Il
+existe plusieurs définitions d’une ellipse, toutes équivalentes,
+dont celle-ci&nbsp;: 
+
+<BR>On
+appelle ellipse l’ensemble des points M du plan dont la somme des
+distances à deux points fixes, appelés foyers (notés ici S et
+S'), est constante. 
+
+<BR>Autrement
+dit, une ellipse est l’ensemble des points M tel que&nbsp;: SM +
+S’M = Constante.
+<BR>La
+figure suivante montre la représentation graphique d’une telle
+courbe, dans le cas où le point M indique la position d’une
+planète (à un instant donné), en orbite elliptique autour du
+Soleil qui occupe l’un des foyers.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e9//9e10//e10_src_1.jpg" NAME="Image 35" ALIGN=BOTTOM WIDTH=623 HEIGHT=440 BORDER=0>
+<BR>La
+distance PO = AO = a est appelée&nbsp;: demi grand axe.
+<BR>La
+distance BO = B’O = b est appelée&nbsp;: demi petit axe.
+<BR>La
+distance SO = S’O = c est appelée&nbsp;: demi distance focale.
+<BR><I><B>b)
+Périhélie et Aphélie.</B></I>
+<BR>Lorsque
+la planète se trouve au point P, on dit qu’elle se trouve au
+<I>périhélie</I>,<B>
+</B>c’est-à-dire au
+point de l’orbite le plus proche du Soleil.
+<BR>Lorsque
+la planète se trouve au point A, on dit qu’elle se trouve à
+<I>l’</I><I>aphélie</I><B>,
+</B>c’est-à-dire au
+point de l’orbite le plus éloigné du Soleil.
+<BR>(Voir
+Chapitre 5&nbsp;: Les mouvements de la Terre, Question 6c).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e9//9e10//e10_src_2.jpg" NAME="Image 180" ALIGN=BOTTOM WIDTH=623 HEIGHT=346 BORDER=0>
+<BR><I><B>c)
+Constante = 2a.</B></I>
+<BR>Comme
+en tout point M de l’ellipse on a&nbsp;: SM + S’M = Constante,
+donc en particulier en M = A. D’où SA + S’A = Constante. Or SA
+= c + a et S’A = a – c, par conséquent la constante vaut&nbsp;:
+SM + S’M = SA + S’A = 2a.
+<BR>De
+même au point B on a&nbsp;: SB + S’B = 2a et comme, par symétrie,
+on a&nbsp;: SB = SB’ on en déduit que SB = S’B = a.
+<BR><I><B>d)
+Relation entre a, b et c.</B></I>
+<BR>Ainsi
+il existe une relation entre a, b et c qui est&nbsp;: a<SUP>2
+</SUP> = b<SUP>2</SUP>
++ c<SUP>2</SUP>.
+<BR><I><B>e)
+Excentricité.</B></I>
+<BR>Pour
+mesurer «&nbsp;l’aplatissement du cercle&nbsp;» on introduit un
+rapport qui le caractérise&nbsp;; il est appelé excentricité,
+généralement noté e et vaut&nbsp;: e = c/a. (on remarque que
+lorsque e = 0, la courbe est un cercle et que nécessairement e &lt;
+1).
+<BR><I><B>f)
+Distance Planète - Soleil.</B></I>
+<BR>Considérons
+l’angle&nbsp;: <I></I>,
+compris entre les droites (SP) et (SM), c’est-à-dire, la droite
+Soleil-périhélie de la planète et la droite Soleil-planète.
+<BR>On
+montre que la distance, notée <I>r</I>,
+entre un point M de l’ellipse et le foyer S varie en fonction de
+l’angle <I></I>
+de la façon suivante&nbsp;: &lt;$1&gt;
+<BR><I><B>g)
+Distance de la planète au périhélie.</B></I>
+<BR>Pour
+terminer, calculons la distance au Soleil de la planète au
+périhélie, notée d, en fonction de l’excentricité e et du demi
+grand axe a.
+<BR>d
+= a – c = a – ea = a(1-e). (Remarque, on retrouve bien d =
+<I>r</I>(0).).
+<BR>
+<BR><B>Calcul
+du plus grand diamètre apparent de Mars.</B>
+<BR><I><B>a)
+Un problème complexe.</B></I>
+<BR>Le
+diamètre apparent de Mars sera maximum lorsque Mars sera au plus
+près de la Terre. 
+
+<BR>En
+toute rigueur, il faudrait donc calculer la distance Terre – Mars
+et la minimiser, c’est-à-dire déterminer à quel moment et où,
+a lieu cette distance minimale, afin d’en calculer sa valeur
+numérique. 
+
+<BR>L’exercice
+n’est pas immédiat et s’avère même assez complexe dans la
+mesure où les deux orbites elliptiques ne sont pas tout à fait
+dans le même plan. En outre, les deux centres de symétrie des
+ellipses ne sont pas confondus, et si elles ont bien un foyer commun
+(le Soleil) l’autre ne l’est pas&nbsp;!
+<BR>Aussi,
+allons-nous chercher à simplifier du mieux possible ce problème,
+quitte à trouver une distance minimale bien inférieure à la
+valeur possible et réelle. Il nous restera alors plus qu’à
+démontrer que même avec cette valeur utopique et sous estimée, le
+diamètre apparent de Mars n’est toujours pas visible à l’œil
+nu.
+<BR><I><B>b)
+Première hypothèse.</B></I>
+<BR>Abordons
+cette étude avec pour première hypothèse que les plans orbitaux
+des deux planètes sont confondus&nbsp;; autrement dit, supposons
+que les deux ellipses sont situées dans le même plan, avec pour
+foyer commun le Soleil.
+<BR>Cette
+approximation reste très raisonnable, car l’inclinaison de
+l’orbite de Mars n’est que de 1,85° par rapport à
+l’Écliptique. Par exemple, à l’aphélie, Mars n’est qu’à
+8 millions de km du plan de l’orbite terrestre.
+<BR><I><B>c)
+Seconde hypothèse.</B></I>
+<BR>Que
+les plans orbitaux soient confondus ne signifie pas que les axes des
+deux ellipses le soient également&nbsp;! Rien n’indique que le
+périhélie de Mars soit dans la même direction que celui de la
+Terre. Les variations séculaires de la ligne des apsides de la
+Terre sont de l’ordre de 21 000 ans, or, pour l’époque
+actuelle, le périhélie de Mars et de la Terre ne coïncident pas
+comme le montre le dessin (à l’échelle) suivant&nbsp;:<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e9//9e10//e10_src_3.jpg" NAME="Image 3164" ALIGN=BOTTOM WIDTH=623 HEIGHT=622 BORDER=0>
+<BR><I>Lignes
+des apsides, non confondues, de Mars et de la Terre (Echelle
+respectée).</I>
+<BR>Cependant,
+pour simplifier de façon substantielle le calcul de notre étude,
+faisons l’hypothèse osée que les deux périhélies,
+respectivement de la Terre et de Mars, se retrouvent alignés avec
+le Soleil et, en outre, du même coté.
+<BR>L’hypothèse
+ne semble pas si déraisonnable, si l’on tient compte de la faible
+excentricité de l’orbite terrestre. En considérant l’orbite de
+la Terre comme un cercle centré sur le Soleil, la distance minimale
+qui sépare Mars de la Terre est bien obtenue lorsque Mars et la
+Terre se retrouvent simultanément sur la ligne des apsides de Mars,
+au moment du périhélie de cette dernière.
+<BR>Il
+existe même un cas théorique encore plus favorable qui se produira
+dans plusieurs centaines de milliers d’années, lorsque l’Aphélie
+de la Terre sera aligné avec le périhélie de Mars.
+<BR>Mais
+contentons-nous de notre approximation, valable pour l’époque
+actuelle et dont l’estimation sera largement suffisante pour ce
+que nous voulons prouver.
+<BR><I><B>d)
+Estimation de la distance minimale.</B></I>
+<BR>D’après
+nos deux hypothèses, la géométrie des orbites des deux planètes
+se présente de la façon suivante&nbsp;(avec des excentricités
+fortement exagérées) :
+
+<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e9//9e10//e10_src_4.jpg" NAME="graphics7" ALIGN=BOTTOM WIDTH=623 HEIGHT=395 BORDER=0>
+
+
+<BR><I>Excentricités
+des deux planètes fortement exagérées et échelle des distances
+non respectée.</I>
+<BR>Sous
+l’hypothèse de cette disposition très favorable, la distance
+minimale entre les deux planètes a lieu lorsque Mars et la Terre
+franchissent simultanément leur périhélie respectif. 
+
+<BR>Autrement
+dit, elle a lieu au cours d’une opposition de Mars (qui a lieu
+environ tous les deux ans) particulièrement proche de la Terre (ce
+qui est encore plus rare).
+<BR>Dans
+ses conditions, calculons les distances de Mars et de la Terre qui
+les séparent du Soleil à cet instant. 
+
+<BR>Ainsi
+au périhélie, on&nbsp;a&nbsp;: 
+
+<BR>d<SUB>Eart</SUB>
+= a<SUB>Earth</SUB>(1
+-  e<SUB>Earth</SUB>)
+= 1×0,983 = 0,983 au.<I>
+</I>
+
+<BR>d<SUB>Mars</SUB>
+= a<SUB>Mars</SUB>(1
+-  e<SUB>Mars</SUB>)
+= 1,5 × 0,907 = 1,3605
+au.
+<BR>Ainsi
+la distance minimale Terre – Mars est&nbsp;donnée par la
+différence : 
+
+<BR>d
+= d<SUB>Mars</SUB>
+- d<SUB>Eart</SUB>
+= 0,3775 ua = 5 6474 000
+km.
+<BR><I><B>e)
+Estimation du plus grand diamètre apparent de Mars.</B></I>
+<BR>Le
+diamètre apparent de Mars est, par définition, l’angle D<SUB>Mars</SUB>
+sous lequel Mars est
+aperçue depuis la Terre.
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e9//9e10//e10_src_5.jpg" NAME="graphics8" ALIGN=BOTTOM WIDTH=623 HEIGHT=200 BORDER=0>
+<BR>On
+sait que cet angle vérifie&nbsp;: (<I>Cf.</I>
+Chapitre 8&nbsp;: Observation des planètes, Question 7d).
+<BR>2×
+R<SUB>Mars</SUB>
+= d×tan(D<SUB>Mars</SUB>).
+
+
+<BR>Et
+en utilisant l’approximation classique pour les faibles angles en
+radian&nbsp;: tan()
+
+&nbsp;;
+on obtient&nbsp;:
+<BR>D<SUB>Mars</SUB>
+= 2×
+R<SUB>Mars</SUB>
+/ d = 2×3393,4
+/ 5 6474 000 = 0,00012 radian = 0,0068 degré. 
+
+<TABLE WIDTH=161 CELLPADDING=7 CELLSPACING=0 BGCOLOR="#ffff00">
+<TR>
+<TD WIDTH=144 VALIGN=TOP BGCOLOR="#ffff00" STYLE="border-top: 2.25pt solid #000001; border-bottom: none; border-left: 2.25pt solid #000001; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.09in; padding-right: 0in">
+<UL>
+<BR><P><FONT FACE="Times New Roman, serif">D</FONT><SUB><FONT FACE="Times New Roman, serif">Mars</FONT></SUB><FONT FACE="Times New Roman, serif">
+= </FONT><FONT FACE="Times New Roman, serif">0,0068 degré</FONT></P>
+</UL>
+</TD>
+</TR>
+</TABLE>
+<BR><I><B>f)
+Conclusion.</B></I>
+<BR>On
+sait que le diamètre apparent de la Lune varie entre: 29,3 et 33,5
+minutes d’arc, donc autour de 0,5 degré. Celui de Mars varie
+autour de 0,007 degré, dans le meilleur des cas. Un facteur 100 les
+sépare, on est donc très loin du compte&nbsp;!
+<BR>Jamais
+Mars n’apparaitra aussi grosse que la Lune&nbsp;! Certes, cette
+planète est environ deux fois plus grosse, mais cent fois plus
+loin.
+<BR>À
+l'œil nu, Mars apparaitra toujours comme une simple étoile rouge
+brillante, ainsi que le montre la photo suivante&nbsp;:
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e9//9e10//e10_src_0.jpg" NAME="Image 33" ALIGN=BOTTOM WIDTH=480 HEIGHT=360 BORDER=0>
+<BR><I><B>Taille
+respective de la Lune et de Mars dans le ciel.</B></I>
+<BR>Crédit
+: Nasa / C&amp;E Photos.
+<BR>
+<BR><B>Naissance
+et longue vie d’un canular.</B>
+<BR>Depuis
+le 27 aout 2003 circule sur internet un message, annonçant un
+phénomène astronomique exceptionnel&nbsp;: «&nbsp;<I>ce
+soir dans le ciel nocturne, la planète Mars apparaitra aussi grosse
+que la Lune</I>&nbsp;».
+Ce canular, devenu récurrent tous les 27 aout, malgré les
+inlassables démentis des spécialistes, a inondé de très
+nombreuses boites e-mail du monde entier, avec souvent pour titres
+«&nbsp;Mars la spectaculaire&nbsp;» ou «&nbsp;Les deux Lunes du
+27&nbsp;août&nbsp;».
+<BR>A
+l’origine, le premier message du 27 août 2003 nous informait
+d’une opposition particulièrement avantageuse, puisque Mars ne se
+trouvait alors qu’à seulement 55 millions de kilomètres de nous.
+La Planète rouge n'avait jamais été aussi proche depuis 60 000
+ans et il faudrait attendre près de 25 000 ans pour retrouver une
+configuration aussi favorable.
+<BR>L’article
+poursuivait qu’avec un petit télescope doté d’un oculaire
+grossissant 75 fois, on apercevrait Mars aussi grosse que la Pleine
+Lune à l’œil nu.
+<BR>Toutes
+ces informations étaient parfaitement exactes, mais immédiatement
+reproduites en oubliant le «&nbsp;petit&nbsp;» détail du
+télescope&nbsp;! On colporta alors la rumeur que l’on pouvait
+apercevoir Mars, sous entendu à l’œil nu, aussi grosse que la
+Lune. Très vite, on oublia aussi l’année de référence 2003, si
+bien que la rumeur réapparaissait chaque 27 aout et réapparait
+encore tous les ans.
+<BR>Bel
+exemple de canulars informatiques appelés <I>hoax</I>,
+dans le jargon informatique (terme dérivé de l'expression «&nbsp;<I>Hocus
+pocus&nbsp;</I>» qui
+signifie arnaque en argot anglo-américain)&nbsp;!
+<BR>
+
+
+<BR><BR>
+
+
+

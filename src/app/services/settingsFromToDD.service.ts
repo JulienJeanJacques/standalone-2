@@ -2,7 +2,7 @@ import { Injectable }  from '@angular/core';
 import { Preferences } from '@capacitor/preferences';
 // my interfaces
 import { AppSettings }      from '../interfaces/types';
-import { DEFAULT_SETTINGS } from '../interfaces/types'; 
+import { DEFAULT_SETTINGS } from '../interfaces/constantes'; 
 
 @Injectable({ providedIn: 'root' })
 export class SettingsFromToDDService {

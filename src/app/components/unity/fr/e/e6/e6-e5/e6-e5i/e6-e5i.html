@@ -1,0 +1,445 @@
+
+
+
+<BR><B>Déviation
+par réfraction.</B>
+<BR>La
+réfraction est un phénomène physique qui concerne les ondes
+électromagnétiques en général, mais également certaines ondes
+mécaniques. Ce phénomène apparaît lorsque ces ondes se propagent
+dans un milieu hétérogène.
+<BR>Un
+milieu est dit hétérogène lorsqu’un certains nombres de
+paramètres, comme sa composition chimique, sa densité, sa pression
+et sa température varient de manière significative, donnant à
+l’ensemble un aspect chaotique difficilement mesurable. Mais ce
+milieu hétérogène peut souvent se décomposer en une multitude de
+couches superposables, présentant chacune une structure
+suffisamment stable pour être considérée comme homogène.
+<BR>Le
+phénomène dit de «&nbsp;réfraction&nbsp;» apparait justement
+lorsqu’une onde passe d’une couche homogène à une autre. Ce
+phénomène se manifeste par un changement de direction de la
+propagation de l’onde à chaque transition d’une zone homogène
+à une autre.
+<BR>Le
+cas le plus courant est celui de la lumière qui traverse deux
+milieux homogènes bien distincts, par exemple l’air et l’eau. 
+
+<BR>L’expérience
+classique du crayon déposé dans un verre d’eau illustre bien ce
+phénomène de déviation de la lumière&nbsp;; le crayon semble
+coudé, sa partie hors de l’eau ne renvoie pas la lumière
+réfléchie dans la même direction que sa partie plongée immergée
+(réfraction augmentée aussi par le verre lui-même). Or la lumière
+se propage toujours en ligne droite dans un milieu homogène, c’est
+donc bien le changement de milieu qui provoque cette déviation.<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e5//e5_src_1.jpg" NAME="Image 510" ALIGN=LEFT HSPACE=12 WIDTH=138 HEIGHT=121 BORDER=0>
+<BR>Cette
+réfraction de la lumière est d’ailleurs fort utile pour
+l’astronome, puisqu’il en tire pleinement profit lorsque la
+lumière traverse les lentilles (convergentes ou divergentes) de ses
+appareils optiques, afin de guider et de concentrer toute la lumière
+émise par l’objet observé.
+<BR>
+<BR><B>Réfraction
+atmosphérique.</B>
+<BR>Mais
+la réfraction lumineuse n’offre pas que des avantages pour
+l’astronome. La réfraction causée par l’atmosphère terrestre
+qui entoure notre globe est plutôt vécue comme une gêne qu’il
+se doit de contrôler.
+<BR>Même
+si l'atmosphère terrestre présente une enveloppe gazeuse de
+seulement 500 km environ d'épaisseur, donc mince par rapport au
+rayon du globe terrestre, il n’en demeure pas moins que ce milieu
+est fort hétérogène.
+<BR>Sa
+composition chimique, sa température, sa pression, sa densité
+subissent d’énormes variations. Mais fort heureusement, ces
+paramètres dépendent essentiellement de l’altitude si bien qu’il
+est possible de décomposer l’atmosphère en couches plus ou moins
+homogènes.
+<BR>Ainsi
+a-t-on stratifié verticalement l’atmosphère terrestre en cinq
+couches principales&nbsp;: la Troposphère, la Stratosphère, la
+Mésosphère, la Thermosphère et l’Ionosphère (indiqué ici dans
+l’ordre d’altitude croissante). Certes, chacune de ces zones
+présente encore de sérieuses variations, notamment de température,
+mais elles sont progressives et continues à l’intérieur de
+chaque zone. Par exemple, on passe progressivement de 15° à -60°
+dans la Troposphère, de -60° à -5° dans la Stratosphère, de -5°
+à -100° dans la Mésosphère, de -100° à +1000°  dans la
+Thermosphère et plus de 2000° dans l’Ionosphère.
+<BR>La
+lumière du Soleil et des étoiles subit alors de nombreuses
+réfractions lorsqu’elle pénètre dans l’atmosphère, qu’il
+semble <I>a priori</I>
+difficile de contrôler d’autant que ces cinq couches ne
+présentent pas encore chacune un milieu suffisamment homogène pour
+y effectuer des mesures de réfraction.
+<BR>Toutefois,
+nous allons montrer comment on a pu construire un modèle théorique
+simple, mais suffisamment réaliste, permettant d’estimer la
+déviation de la lumière pénétrant dans cette atmosphère si
+complexe.
+<BR>L’idée
+principale consiste à stratifier encore davantage l’épaisseur de
+cette atmosphère afin d’obtenir des couches si fines qu’il
+devient légitime de les considérer chacune comme homogènes. Ainsi
+considère-t-on qu’entre deux altitudes suffisamment rapprochées,
+la couche de gaz qui entoure la Terre présente le même indice de
+réfraction. 
+
+<BR>Le
+modèle proposé est donc de type discret (discret s’opposant à
+continu) et s’appuie sur les fameuses lois de Descartes (1637)
+concernant la réfraction (qui elles-mêmes se déduisent
+entièrement des équations de Maxwell).
+<BR>
+<BR><B>Lois
+de Descartes.</B>
+<BR>Dans
+son traité <I>La
+Dioptrique</I> (en annexe
+du <I>Discours de la
+méthode</I>) Descartes
+établit deux lois concernant la réflexion et la réfraction de la
+lumière.
+<BR>La
+loi sur la réfraction lumineuse indique comment quantifier le
+changement de direction d'un faisceau lumineux lorsque celui-ci
+rencontre un milieu différent.
+<BR>En
+effet, la vitesse de la lumière dépend du milieu dans lequel elle
+se propage. Dans le vide, sa vitesse est maximale et on la désigne
+par la lettre <I>c</I>
+(célérité). Dans un milieu non vide, elle est moins rapide et sa
+vitesse, notée v, dépend du milieu. Cette modification de la
+vitesse provoque un changement de direction du faisceau lumineux en
+restant toutefois dans le même plan.
+<BR>Aussi
+désigne-t-on par «&nbsp;<I>indice
+de réfraction&nbsp;</I>»,
+noté <I>n</I>,
+le rapport&nbsp;: <I>n</I>
+= <I>c</I>
+/ v. Cet indice, sans dimension et toujours supérieur ou égal à
+1, caractérise le milieu du point de vue de la propagation de la
+lumière dans ce milieu. Par exemple, l’indice de réfraction de
+l’air est&nbsp;: <I>n</I>
+= 1,0003, celui de l’eau&nbsp;: <I>n</I>
+= 1,33&nbsp;; du verre&nbsp;: <I>n</I>
+= 1,5&nbsp;; du diamant&nbsp;: <I>n</I>
+= 2,42 (L’indice de réfraction se mesure expérimentalement à
+l’aide d’un <SPAN LANG="en-GB"><I>réfractomètre</I></SPAN><SPAN LANG="en-GB">).</SPAN>
+<BR>On
+appelle «&nbsp;<I>rayon
+d’incidence&nbsp;</I>»
+le rayon lumineux dans son état avant de subir sa déviation et on
+nomme «&nbsp;<I>rayon
+réfracté&nbsp;</I>» le
+rayon dévié. Tous les deux se propagent en ligne droite dans le
+même plan, appelé «&nbsp;plan d’incidence&nbsp;».
+<BR>Le
+plan séparant les deux milieux d’indices de réfraction distincts
+se nomme «&nbsp;<I>dioptre</I>&nbsp;».
+<BR>Lorsque
+l’indice n<SUB>1</SUB>
+du milieu dans lequel le rayon d’incidence se propage est
+inférieur à l’indice n<SUB>2</SUB>
+du milieu dans lequel le rayon réfracté poursuit sa course, ce
+dernier se rapproche de la normale du dioptre, dans le cas contraire
+il s’en éloigne.<IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e5//e5_src_2.jpg" NAME="Image 503" ALIGN=LEFT HSPACE=12 WIDTH=312 HEIGHT=246 BORDER=0>
+<BR>Descartes
+a formulé de manière plus précise ce phénomène.
+<BR>En
+appelant «&nbsp;angle d’incidence&nbsp;», noté <SUB>1</SUB>,
+l’angle formé entre le rayon incident et la normale au dioptre et
+«&nbsp;angle de réfraction&nbsp;», noté <SUB>2</SUB>,
+l’angle formé entre le rayon réfracté et la normale au dioptre,
+sa loi s’exprime simplement par&nbsp;: 
+
+<BR><SPAN STYLE="background: #00ff00">&lt;$$1&gt;</SPAN>
+<BR>On
+remarque que si <SUB>1</SUB>
+= 0 (Lumière tombant à la verticale) alors le rayon n’est pas
+dévié car <SUB>2</SUB>
+= 0. Ce que confirme naturellement l’expérience.
+<BR>
+<BR><B>Estimation
+du coefficient de correction</B>
+<BR><I><B>a)
+Principe.</B></I>
+<BR>Puisque
+la lumière provenant des astres de l’Univers est déviée par
+réfraction en entrant dans l’atmosphère terrestre, il existe un
+écart entre la position apparente d’un astre aperçu par
+l’observateur et sa position réelle. C’est cet écart que nous
+cherchons à estimer.
+<BR>Subdivisons
+l’épaisseur de l’atmosphère en une multitude de sous couches
+superposées, suffisamment fines pour être supposées homogènes.
+Ce nombre peut dépasser des centaines de milliard, mais est fini.
+<BR>Chacune
+couche est affectée d’un indice de réfraction, il y a donc
+autant de réfractions que de couches.
+<BR>Nous
+allons démontrer qu’une seule couche compte pour la mesure de la
+déviation. Plus précisément, seule la première couche au raz du
+sol (ou au niveau de l’œil de l’observateur) est décisive&nbsp;!
+C’est un résultat surprenant et plutôt agréable, il permet de
+ne faire qu’une seule mesure d’indice, qui en outre est plus
+accessible à hauteur d’homme.
+<BR><I><B>b)
+Application de la loi de Descartes.</B></I>
+<BR>Considérons
+un rayon lumineux provenant d’une étoile. Il rencontre la
+première couche de l’atmosphère terrestre sous un angle
+d’incidence, noté <SUB><I>k</I></SUB>
+(<I>k</I>
+est le nombre de sous couches homogènes de l’atmosphère). Ce
+rayon s’est propagé en ligne droite dans un milieu (le vide)
+d’indice de réfraction noté&nbsp;: <I>n</I><SUB><I>k</I></SUB>
+, avant de frapper la première couche atmosphérique d’indice de
+réfraction&nbsp;: <I>n</I><SUB><I>k-1</I></SUB>.
+<BR>En
+franchissant cette couche, le rayon dévie d’un angle de
+réfraction de <SUB><I>k-1</I></SUB>.
+<BR>D’après
+la loi de Descartes, nous avons la relation&nbsp;:
+<BR>&lt;$2&gt;.
+
+
+<BR>Cependant
+l’angle de réfraction <SUB><I>k-1</I></SUB>
+devient l’angle d’incidence du rayon qui vient frapper la
+deuxième couche de l’atmosphère (angles alternes internes).
+<BR>De
+proche en proche, on obtient une suite d’angles d’incidence et
+de réfraction de sorte que&nbsp;:
+<BR>&lt;$3&gt;
+<BR>Le
+croquis ci-dessous illustre le phénomène dans le cas de trois
+couches atmosphériques (<I>k</I>
+= 3).
+<BR><IMG SRC="//Users//julien//Travail//Charles_Projet//2_Informatic_gestion_project//treatement_area//5_dashboard_python//assets//rscUnity//e6//6e5//e5_src_0.jpg" NAME="Image 512" ALIGN=BOTTOM WIDTH=622 HEIGHT=544 BORDER=0>
+<BR>De
+cette suite d’égalités nous tirons&nbsp;immédiatement : 
+
+<BR><SPAN STYLE="background: #ffff00">&lt;$5&gt;</SPAN>
+; et ceci quel que soit le nombre <I>k</I>
+de couches envisagées.
+<BR><I><B>c)
+Ecart de direction.</B></I>
+<BR>Notons
+,
+l’angle mesurant l’écart entre la direction apparente de
+l’étoile et sa direction réelle. Cet écart peut s’exprimer en
+fonction de la distance zénithale de l’étoile, notée <I>z</I>,
+c’est-à-dire, la distance zénithale apparente telle que la
+mesure l’observateur. 
+
+<BR>Par
+définition, on a donc <I>z</I>
+= <SUB>0</SUB>.
+<BR>Or,
+il est clair que&nbsp;: <SUB>k
+</SUB> =  <SUB>0</SUB>.
++  
+(pour k = 3, les deux droites dessinées en vert sur le croquis sont
+des droites orientées dans la direction de l’étoile supposée à
+l’infini, et sont donc par définition parallèles. Ainsi, a-t-on,
+sur ce croquis,&nbsp; <SUB>3
+</SUB> =  <SUB>0</SUB>.
++  ).
+<BR>Ainsi
+l’angle 
+apparaît comme la correction qu’il faut apporter à la distance
+zénithale <I>z</I>
+= <SUB>0</SUB>,
+pour situer correctement l’étoile observée. Naturellement&nbsp;:
+0  
+
+
+90°.
+<BR>D’autre
+part, l’indice de réfraction <I>n</I><SUB><I>k</I></SUB>
+, est l’indice dans le vide et donc égal à 1 (<I>n</I><SUB><I>k</I></SUB>
+= c&nbsp;/ c =1).
+<BR>Par
+conséquent, on tire de&nbsp;: &lt;$5&gt;
+<BR>&lt;$6&gt;,
+c’est-à-dire&nbsp;: 
+
+<BR>&lt;$7&gt;
+<BR>Pour
+<I>z</I>
+= 0, on a la solution évidente 
+= 0.
+<BR>Pour
+<I>z</I>
+
+0, divisons l’expression par cos <I>z</I>.
+Il vient&nbsp;: 
+
+<BR><SPAN STYLE="background: #ffff00">&lt;$8&gt;</SPAN>,
+relation qui lie la correction 
+à la distance zénithale apparente <I>z</I>.
+<BR><I><B>d)
+Traitement mathématique.</B></I>
+<BR>Déterminons
+l’angle 
+en fonction de <I>z</I>
+et de <I>n</I><SUB><I>0</I></SUB>
+.
+<BR>Le
+traitement mathématique formel donne&nbsp;:
+<BR>Posons&nbsp;:
+&lt;$9&gt; .
+<BR>L’équation
+devient&nbsp;: &lt;$10&gt; 
+
+<BR>&lt;$11&gt;
+qui n’admet des solutions que si&nbsp;: &lt;$12&gt;.
+<BR>Mais
+compte tenu que&nbsp;: &lt;$13&gt;, on sait que &lt;$14&gt;
+<BR>D’où&nbsp;:
+&lt;$15&gt;.  
+
+<BR>Or
+l’indice de réfraction de l’air au niveau du sol est de l’ordre
+de 1,0003 à une température de 0° et décroit encore avec
+l’altitude. Par conséquent on obtient une majoration de la
+distance zénithale au delà de laquelle ce modèle théorique n’a
+pas de solution. Ainsi est-t-il nécessaire que&nbsp;: &lt;$16&gt;,
+donc proche de l’horizon. Mais il ne viendrait à aucun astronome
+amateur l’idée de pointer son télescope sur un astre à une
+hauteur inférieure à 20°&nbsp;!
+<BR>La
+condition d’existence étant résolue, l’équation&nbsp;: &lt;$17&gt;,
+a pour solution&nbsp;: 
+
+<BR>&lt;$18&gt;.
+<BR>Or
+&lt;$19&gt;  et donc&nbsp;: &lt;$20&gt;. 
+
+<BR><I><B>e)
+Solution.</B></I>
+<BR>Finalement&nbsp;la
+solution est (sous réserve que : <I>z</I>
+
+80°, pour être large)
+<BR><SPAN STYLE="background: #00ff00">&lt;$$21&gt;</SPAN>
+<BR>Un
+traitement moins formel, en supposant une très faible correction de
+la distance azimutale (ce qui est le cas en pratique) conduit à
+l’approximation suivante&nbsp;:
+<BR>&lt;$22&gt;
+, d’où &lt;$23&gt;.
+<BR>c’est-à-dire
+pour z 
+0 et z 
+90° , &lt;$24&gt;
+<BR>et
+donc&nbsp;: <SPAN STYLE="background: #00ff00">&lt;$25&gt;</SPAN>
+
+
+<BR><I><B>f)
+Bilan.</B></I>
+<BR>On
+a donc démontré, d’une part, que la correction apportée ne
+dépend pas du nombre de couches atmosphériques considérées mais
+uniquement de la première (Par conséquent peu importe l’épaisseur
+totale de la couche atmosphérique) et d’autre part, que cette
+correction augmente à mesure que la distance zénithale augmente
+(plus la hauteur de l’étoile est faible, plus grande est la
+correction à apporter, sans atteindre le seuil d’environ 20° au
+delà duquel la correction n’est plus valable). En outre, dans le
+cas limite d’un astre situé exactement au zénith (distance
+zénithale nulle, z = 0), la théorie prévoit une absence totale de
+déviation ce que confirment de nombreuses expériences. 
+
+<BR><I><B>g)
+Surestimation de la hauteur.</B></I>
+<BR>Cette
+correction étant un nombre positif, on en déduit que l’on
+surestime toujours la hauteur d’un astre, celui-ci se trouvant en
+réalité un peu plus bas.
+<BR>En
+effet, en notant&nbsp;: z<SUB>réel</SUB>
+et z<SUB>app</SUB>
+la distance zénithale respectivement réelle et apparente de
+l’astre, ainsi que h<SUB>réel</SUB>
+et h<SUB>app</SUB>
+la hauteur respectivement réelle et apparente de l’astre, nous
+avons les relations&nbsp;:
+<BR>D’une
+part&nbsp;: z<SUB>réel</SUB>
+= 90° - <I>h</I><SUB>réel</SUB>
+et z<SUB>app</SUB>
+= 90° - <I>h</I><SUB>app</SUB>.
+<BR>Et
+d’autre part&nbsp;: z<SUB>réel</SUB>
+= z<SUB>app</SUB>
++ μ.
+<BR>Si
+bien que&nbsp;: <SPAN STYLE="background: #00ff00">
+</SPAN><I><SPAN STYLE="background: #00ff00">h</SPAN></I><SUB><SPAN STYLE="background: #00ff00">réel</SPAN></SUB><SPAN STYLE="background: #00ff00">
+=  </SPAN><I><SPAN STYLE="background: #00ff00">h</SPAN></I><SUB><SPAN STYLE="background: #00ff00">app</SPAN></SUB><SPAN STYLE="background: #00ff00">
+– </SPAN><SPAN STYLE="background: #00ff00">μ
+. </SPAN>
+
+<BR>On
+peut remarquer aussi, que plus l’inclinaison du rayon initial est
+importante (astre se rapprochant de l’horizon) plus le décalage
+se fait sentir. Plus précisément, l’amplitude de cette déviation
+augmente avec la distance zénithale, non de façon linéaire mais
+selon une croissance tangentielle. C’est ainsi que la correction
+peut atteindre le diamètre apparent du Soleil ou de la Lune (0,5°),
+si bien qu’un Soleil qui se couche à l’horizon est un soleil
+qui est déjà en réalité sous l’horizon.
+<BR><I><B>h)
+Critiques.</B></I>
+<BR>Naturellement
+ce modèle empirique est assez simpliste, par exemple il suppose
+planes les couches qui se superposent, ce qui est audacieux...
+D’autre part, l’indice de réfraction dépend de l’altitude
+(donc de la pression et de la température) et également de la
+longueur d’onde.
+<BR>Les
+professionnels utilisent une formule empirique plus précise tenant
+compte de la température <I>T</I>
+(en °c), de la pression <I>P</I>
+(en hPa) donnant l’angle de déviation μ
+(en degré) en fonction de la hauteur <I>h</I>
+(en degré) de l’étoile au dessus de l’horizon&nbsp;: 
+
+<BR><SPAN STYLE="background: #00ff00">&lt;$26&gt;</SPAN><BR><BR><BR>
+
+<BR>Dans
+des conditions atmosphériques normales, cet angle atteint 36’ à
+l’horizon (réfraction de Radau).
+<BR>Cependant,
+dans le domaine visible, la longueur de ce spectre est du même
+ordre que l’amplitude moyenne de l’agitation des images
+provoquée par la turbulence atmosphérique, si bien que cette
+dernière est bien plus gênante que la déviation dans le cas d’une
+observation avec un instrument optique.
+<BR><I><B>i)
+</B></I><I><B>Conclusion</B></I><I><B>.</B></I>
+<BR>À
+condition d’obtenir une bonne mesure de l’indice <I>n</I><SUB><I>0</I></SUB>
+de réfraction de l’air ambiant, ce modèle de correction de
+déviation des étoiles offre,
+tout de même, une excellente approximation.
+<BR>Pour
+des astres dont la hauteur atteint au moins 20°, il est acceptable
+de corriger la hauteur apparente <I>h</I><SUB>app</SUB>.
+par la hauteur réelle <I>h</I><SUB>réel</SUB>
+selon la formule&nbsp;: 
+
+<BR><SPAN STYLE="background: #00ff00">&lt;$$27&gt;</SPAN>
+<BR>
+
+
+
