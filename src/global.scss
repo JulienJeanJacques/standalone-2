@@ -15,4 +15,11 @@
 /* Palette sombre activable via classe */
 @import "@ionic/angular/css/palettes/dark.class.css";
 
-
+/* Style pour le header de l'alerte avec classe custom */
+ion-alert.custom-alert-header-red .alert-title {
+  color: red !important;
+  font-weight: bold;
+}
+ion-alert.center-button .alert-button-group {
+  justify-content: center !important;
+}

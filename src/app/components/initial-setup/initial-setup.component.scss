@@ -1,53 +1,7 @@
-// :host {
-//   display: block;
-//   width: 100%;
-//   min-height: 300px; /* ou 200px pour voir si ça prend de la place */
-//   background-color: #f0f0f0; /* couleur pour vérifier l’affichage */
-// }
-// :host {
-//   display: block;
-//   min-height: 100vh; /* couvre toute la hauteur de l'écran */
-//   background-color: #fff; /* couleur claire pour éviter le Noir */
-// }
-
-// ion-item.noActive {
-//   --background-color: #e0f7fa; /* couleur très claire, par exemple */
-//   --color: #FF6F00; /* couleur du texte si besoin */
-// }
-
-// ion-item.active.noSelect {
-//   --background-color: blue; /* par exemple, bleu plus foncé */
-//   --color: #fff; /* texte clair */
-// }
-// ion-item.active.select {
-//   --background-color: blue; /* couleur plus foncée ou plus claire selon le besoin */
-//   --color: #000; /* texte en noir */
-// }
 :host {
   display: block;
   min-height: 100vh;
   background-color: #fff;
 }
 
-/* 🔍 Traverser encapsulation pour cibler le shadow DOM */
-:host ::ng-deep ion-item::part(native) {
-  transition: background 0.3s, color 0.3s;
-}
 
-/* cas chapitre non sélectionné */
-:host ::ng-deep ion-item.noActive::part(native) {
-  --background: #E3F2FD;//#e0f7fa;
-  --color: #FF6F00;
-}
-
-/* cas chapitre sélectionné mais pas confirmé */
-:host ::ng-deep ion-item.active.noSelect::part(native) {
-  --background: #90CAF9 
-  --color: #fff;
-}
-
-/* cas chapitre sélectionné et confirmé */
-:host ::ng-deep ion-item.active.select::part(native) {
-  --background: blue;;
-  --color: #fff;
-}

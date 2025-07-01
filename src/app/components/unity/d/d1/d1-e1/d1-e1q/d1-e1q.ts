@@ -42,6 +42,7 @@ export class D1E1qComponent implements AfterViewInit, OnInit {
     this.item.changeItemFor(this.itemName)
     this.localPath = this.item.beforeUnderScore + '/' + this.item.chapter + this.item.level + this.item.question + '/'
   }
+  
   pauseVideo() {
     if (this.videoPlayer) {
       this.videoPlayer.nativeElement.pause(); // Pause la vidéo si déjà en cours

@@ -1,96 +1,82 @@
 <ion-content class="ion-padding">
-
-  <!-- Étape 1 : Choix langue -->
+  <!-- Étape 1 : Langue -->
   <div *ngIf="currentStep === 1">
     <ion-card>
-      <img [src]="'assets/images/splahScreen_BG_W.jpeg'" alt="astroDidact-image" />
+       <img src="assets/images/splahScreen_BG_W.jpeg" >
       <ion-card-header>
         <ion-card-title>AstroDidact</ion-card-title>
-        <ion-card-subtitle style = 'color:blue'>Language</ion-card-subtitle>
+        <ion-card-subtitle style="color:blue">Language</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
+       
+        <div *ngFor="let lang of ['fr','en']"
+             (click)="selectLanguage(lang)"
+             [ngStyle]="getLanguageStyles(lang)">
+          {{ lang === 'fr' ? 'Français' : 'English' }}
+        </div>
+        <ion-button expand="block" (click)="confirmLanguageSelection()">{{ textConfirmChoice }}</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
-       <ion-list>
-          <ion-item [class.active]="selectedLanguage === 'fr' " 
-                    (click)="selectLanguage('fr')">
-                          <ion-label style='color:#FF6F00 ' > Français</ion-label>
-          </ion-item>
-          <ion-item [class.active]="selectedLanguage === 'en' " 
-                    (click)="selectLanguage('en')">
-                          <ion-label style='color:#FF6F00 '> English</ion-label>
-          </ion-item>
-      </ion-list>       
-      <ion-button (click)="confirmLanguageSelection()">{{ textConfirmChoice }}</ion-button>
-   </ion-card-content>
-  </ion-card>
-</div>
-
-  <!-- Étape 2 : Choix du chapitre -->
+  <!-- Étape 2 : Chapitre -->
   <div *ngIf="currentStep === 2">
     <ion-card>
-      <img [src]="'assets/images/splahScreen_BG_W.jpeg'" alt="astroDidact-image" />
+       <img src="assets/images/splahScreen_BG_W.jpeg" >
       <ion-card-header>
         <ion-card-title>AstroDidact</ion-card-title>
-        <ion-card-subtitle style = 'color:blue'>{{textChooseChapter}}</ion-card-subtitle>
+        <ion-card-subtitle style="color:blue">{{textChooseChapter}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-   <ion-list>
-  <ion-item *ngFor="let chapter of chapters"
-            (click)="selectChapter(chapter.num)"
-            [ngClass]="{
-              'active select': chapter.num === selectedChapter && chapterChoiceIsDone,
-              'active noSelect': chapter.num === selectedChapter && !chapterChoiceIsDone,
-              'noActive': chapter.num !== selectedChapter
-            }">
-    <ion-label style='color:#FF6F00 '>{{chapter.num}}.{{chapter.name}}</ion-label>
-  </ion-item>
-
-
-        </ion-list>
-        <ion-button  (click)="confirmChapterSelection()">{{ textConfirmChoice}}</ion-button>
+        <div *ngFor="let chapter of chapters"
+             (click)="selectChapter(chapter.num)"
+             [ngStyle]="getChapterStyles(chapter)">
+          {{chapter.num}}. {{chapter.name}}
+        </div>
+        <ion-button expand="block" (click)="confirmChapterSelection()">{{ textConfirmChoice }}</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
 
-  <!-- Étape 3 : Sélection du niveau -->
+  <!-- Étape 3 : Niveau -->
   <div *ngIf="currentStep === 3">
     <ion-card>
-      <img [src]="'assets/images/splahScreen_BG_W.jpeg'" alt="astroDidact-image" />
+       <img src="assets/images/splahScreen_BG_W.jpeg" >
       <ion-card-header>
         <ion-card-title>AstroDidact</ion-card-title>
-        <ion-card-subtitle style = 'color:blue'>{{textChooseLevel}}</ion-card-subtitle>
+        <ion-card-subtitle style="color:blue">{{textChooseLevel}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <ion-list>
-          <ion-item *ngFor = "let lvl of levels"
-            [class.active] = "lvl.index === selectedLevel"
-            (click)="selectLevel(lvl.index)">
-              <ion-label style = 'color:#FF6F00 '>{{ lvl.name }}</ion-label>
-          </ion-item>
-        </ion-list>
-        <ion-button  (click)="confirmLevelSelection()">{{ textConfirmChoice}}</ion-button>
+       
+        <div *ngFor="let lvl of levels"
+             (click)="selectLevel(lvl.index)"
+             [ngStyle]="getLevelStyles(lvl)">
+          {{ lvl.name }}
+        </div>
+        <ion-button expand="block" (click)="confirmLevelSelection()">{{ textConfirmChoice }}</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
 
-  <!-- Étape 4 : Choix du compte -->
+  <!-- Étape 4 : Compte -->
   <div *ngIf="currentStep === 4">
     <ion-card>
-      <img [src]="'assets/images/splahScreen_BG_W.jpeg'" alt="astroDidact-image" />
+      <img src="assets/images/splahScreen_BG_W.jpeg" >
       <ion-card-header>
         <ion-card-title>AstroDidact</ion-card-title>
-        <ion-card-subtitle style = 'color:blue'>{{textChooseCount}}</ion-card-subtitle>
+        <ion-card-subtitle style="color:blue">{{textChooseCount}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <ion-list>
-          <ion-item *ngFor = "let c of account"
-            [class.active] = "c.num === selectedCount"
-            (click)="selectCount(c.num)">
-              <ion-label style = 'color:#FF6F00 '>{{c.num}}.{{ c.name }}</ion-label>
-          </ion-item>
-        </ion-list>
-        <ion-button  (click)="confirmCountSelection()">{{ textConfirmChoice}}</ion-button>
+        <div *ngFor="let c of account"
+             (click)="selectCount(c.num)"
+             [ngStyle]="getCountStyles(c)">
+          {{c.num}}. {{ c.name }}
+        </div>
+        <ion-button expand="block" (click)="confirmCountSelection()">{{ textConfirmChoice }}</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
+
+
+
