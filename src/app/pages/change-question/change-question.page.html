@@ -20,7 +20,10 @@
   </ion-toolbar>
 </ion-header>
 
-      <div class="account"  [ngStyle]="{'color': theme === 'light' ? 'blue' : 'white'}" [ngStyle]="{'text-align': 'center'}">
+      <div [ngStyle]="{
+    'color': theme === 'light' ? 'blue' : 'white',
+    'text-align': 'center',
+    'background-color': theme === 'light' ? 'white' : 'black'}"> 
           {{ textAccount }} : {{ accountName }}
       </div>
 

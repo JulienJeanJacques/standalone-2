@@ -47,3 +47,7 @@ ion-toolbar {
 .k {
   margin-left: 80px; /* déplace k un peu vers la gauche, ajustez cette valeur */
 }
+ion-header, ion-toolbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}

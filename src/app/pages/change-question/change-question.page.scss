@@ -32,7 +32,10 @@ ion-toolbar {
   position: relative; /* pour positionner si besoin */
   text-align: center; /* pour le texte en bloc si nécessaire */
 }
-
+ion-header, ion-toolbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}
 /* cette div prend toute la place pour garantir le centrage */
 .content {
   width: 100%;
@@ -41,13 +44,39 @@ ion-toolbar {
   align-items: center;
 }
 .account {
-  .account.light-theme {
+  text-align: center;
+  margin-top: 8px; /* valeur par défaut */
+}
+
+.account.light-theme {
   --ion-background-color: #ffffff;
   --ion-text-color: #000000;
-  }
-  .account.dark-theme {
-  --ion-background-color: black;
-  --ion-text-color:white;
-  // Ajoute d'autres variables si besoin
 }
+
+.account.dark-theme {
+  --ion-background-color: black;
+  --ion-text-color: white;
+}
+  
+
+
+/* Sur petits écrans (mobile) : un peu moins d'espace */
+@media (max-width: 600px) {
+  .account {
+    margin-top: 6px;
   }
+}
+
+/* Sur très petits écrans (ex: <= 400px) : encore un peu moins */
+@media (max-width: 400px) {
+  .account {
+    margin-top: 4px;
+  }
+}
+
+/* Sur grands écrans (tablettes, desktop) : plus d'espace */
+@media (min-width: 768px) {
+  .account {
+    margin-top: 12px;
+  }
+}

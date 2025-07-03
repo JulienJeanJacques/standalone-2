@@ -23,3 +23,18 @@ ion-alert.custom-alert-header-red .alert-title {
 ion-alert.center-button .alert-button-group {
   justify-content: center !important;
 }
+:root {
+  --header-height: 70px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-height: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --header-height: 50px;
+  }
+}

@@ -1,14 +1,14 @@
           <ion-header>
-                <ion-toolbar>
-                    <ion-buttons slot="start">
-                        <ion-menu-button menu="sideMenu" autoHide="false"></ion-menu-button>
-                    </ion-buttons>
-                  <ion-title>Menu</ion-title>
+              <ion-toolbar>
+                  <ion-buttons slot="start">
+                        <ion-menu-button [style.color]="'blue'" menu="sideMenu" autoHide="false"></ion-menu-button>
+                  </ion-buttons>
+                  <ion-title [style.color]="'blue'" >Menu</ion-title>
                 </ion-toolbar>
-              </ion-header>
-            <ion-content>
+          </ion-header>
+          <ion-content>
               <ion-list id="inbox-list">
-                <ion-list-header>Navigation</ion-list-header>
+                <ion-list-header [style.color]="'blue'">Navigation</ion-list-header>
                 <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
                   <ion-item [routerLink]="p.url" button menuToggle>
                     <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
@@ -16,4 +16,4 @@
                   </ion-item>
                 </ion-menu-toggle>
               </ion-list>
-            </ion-content>
+          </ion-content>

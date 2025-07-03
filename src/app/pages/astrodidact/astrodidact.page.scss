@@ -22,3 +22,7 @@ ion-toolbar {
 .title-text {
   font-size: 1.2em; /* Ajustez si besoin */
 }
+ion-header, ion-toolbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}

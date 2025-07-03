@@ -79,7 +79,7 @@ export class ResultsPage implements OnInit {
     this.textChoiceLevel   = this.traductionService.findGoodLabel(this.language,'le niveau','the level');
     this.textChoiceChapter = this.traductionService.findGoodLabel(this.language,'le chapitre ','the chapter ');
     this.textChoose        = this.traductionService.findGoodLabel(this.language,'Choisissez: ','Choose:');
-    this.textPercentage    = this.traductionService.findGoodLabel(this.language,'Pourcentge: ','Percentage:');
+    this.textPercentage    = this.traductionService.findGoodLabel(this.language,'Pourcentage: ','Percentage:');
   }
 
   accountOrItemChange(account:string,nameOfItem:string)

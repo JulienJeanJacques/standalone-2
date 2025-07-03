@@ -25,14 +25,9 @@ ion-toolbar {
   font-size: 1.2em; /* Ajustez si besoin */
 }
 
-// .custom-select-dark {
-//   background-color: #121212;
-//   color: #ffffff;
-// }
-
-// .custom-select-light {
-//   background-color: #ffffff;
-//   color: #000000;
-// }
+ion-header, ion-toolbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}
 
 

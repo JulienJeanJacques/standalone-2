@@ -1,1 +1,5 @@
 
+ion-header, ion-toolbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+}

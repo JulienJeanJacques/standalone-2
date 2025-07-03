@@ -19,10 +19,37 @@
   </ion-toolbar>
 </ion-header>
 
-    <div class="title-text" [ngStyle]="{'color': theme === 'light' ? 'grey' : 'white'}"> {{textResults}} {{accountName}} </div>
+    <!-- <div 
+  class="title-text" 
+  [ngStyle]="{
+    'color': theme === 'light' ? 'grey' : 'white',
+    'background-color': theme === 'light' ? 'white' : 'black'
+  }">
+  {{textResults}} {{accountName}}
+</div> -->
 
+<!-- <div class="title-text"
+     [ngStyle]="{
+       'color': theme === 'light' ? 'grey' : 'white',
+       'text-align': 'center',
+       'margin-top': '8px'
+     }">
+  {{textResults}} {{accountName}}
+</div> -->
 
+<!-- <div 
+  class="title-text"
+  [ngClass]="theme === 'light' ? 'light-theme' : 'dark-theme'"
+  style="text-align: center; width: 100%; margin-top: 8px;">
+  {{ textResults }} {{ accountName }}
+</div> -->
 
+   <div [ngStyle]="{
+    'color': theme === 'light' ? 'blue' : 'white',
+    'text-align': 'center',
+    'background-color': theme === 'light' ? 'white' : 'black'}"> 
+          {{ textResults }} : {{ accountName }}
+      </div> 
 
 <ion-content>
   <!-- <ion-item class="textChoose">{{textChoose}} </ion-item> -->
