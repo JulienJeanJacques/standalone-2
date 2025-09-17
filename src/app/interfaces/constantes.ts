@@ -35,11 +35,10 @@ export const DEFAULT_SETTINGS: AppSettings = (() => {
   };
 
   return {
-    count: '0',
-    language: 'en',
-    item: '',
-    theme: 'light',
-    results: fn,
+    count:     '0',
+    item:      '',
+    theme:     'light',
+    results:   fn,
     firstTime: true,
   };
 })();

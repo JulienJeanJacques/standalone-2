@@ -6,7 +6,7 @@ import { ChoiceMenuSide }       from '../interfaces/types';
 import { ConfigEngService }     from '../services/config-eng.service'; // ajustez le chemin si nécessaire
 import { ConfigFrService  }     from '../services/config-fr.service';
 import { SettingsService  }     from '../services/settings.service';
-
+import { ItemService     }      from './item.service'; 
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +14,9 @@ export class GestionConfigEngFrService {
   
   constructor(
     private  configEngService:ConfigEngService ,
-    private  configFrService:ConfigFrService,
-    private settingsService:SettingsService,
+    private  configFrService: ConfigFrService,
+    private settingsService:  SettingsService,
+    private itemService:      ItemService,
             )
             {
     // Accéder au menu latéral
@@ -27,24 +28,27 @@ export class GestionConfigEngFrService {
   return item ? item.name : ''; // retourne le nom si trouvé, sinon une chaîne vide
  }
 
+  getNumByName(appCount: Count[],name: string): string {
+    const item = appCount.find(c => c.name === name);
+    return item ? item.num : ''; // retourne le num si trouvé, sinon une chaîne vide
+  }
+
   // on récupère le nom du compte
   // we take name of account
-  getAccountName(){
+  getAccountName(language:string,indexCount:string){
     let accountName:  string = 'Galilée';
-    const count:      string = this.settingsService.getCount();
-    const language:   string = this.settingsService.getLanguage();
-    if (language === 'en') {accountName = this.getNameByNum(this.configEngService.appCount,count)};
-    if (language === 'fr') {accountName = this.getNameByNum(this.configFrService.appCount,count)};
+    if (language === 'en') {accountName = this.getNameByNum(this.configEngService.appCount,indexCount)};
+    if (language === 'fr') {accountName = this.getNameByNum(this.configFrService.appCount,indexCount)};
     return accountName
   }
   //
-   getAccountNameOfCount(count:string){
-    let accountName:  string = 'Galilée';
-    const language:   string = this.settingsService.getLanguage();
-    if (language === 'en') {accountName = this.getNameByNum(this.configEngService.appCount,count)};
-    if (language === 'fr') {accountName = this.getNameByNum(this.configFrService.appCount,count)};
-    return accountName
+  getAccountIndex(language:string, nameCount:string){
+    let accountIndex: string = '0';
+    if (language === 'en') {accountIndex = this.getNumByName(this.configEngService.appCount,nameCount)};
+    if (language === 'fr') {accountIndex = this.getNumByName(this.configFrService.appCount, nameCount)};
+    return accountIndex
   }
+  //
   // Vous pouvez créer une méthode pour récupérer ou manipuler le menu
   getSideMenu(): ChoiceMenuSide[] {
     return this.configEngService.sideMenu;

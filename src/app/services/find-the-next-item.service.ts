@@ -25,6 +25,8 @@ export class FindTheNextItem {
       question = Number( currentItem.question)+1 +''; //!!!!il ne faut pas dépasser 12
       nameOfForwardItem = currentItem.beforeUnderScore + '_' + question + 'q'}
       this.settingService.setItem(nameOfForwardItem); //mettre dans settings
+    nameOfForwardItem = nameOfForwardItem + '_' + currentItem.language
+    console.log('find-the-next-item.service',nameOfForwardItem)
       return  nameOfForwardItem
   }
 //'d1_1r'

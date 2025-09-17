@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 import { Item } from 'src/app/classes/item';
 //my services
 import { SettingsService   }      from '../../services/settings.service';
+import { ItemService }            from 'src/app/services/item.service';
 import { TraductionService }      from '../../services/traduction.service';
 import { FindTheNextItem }        from '../../services/find-the-next-item.service';
 import { SeeInMyConsoleService }  from 'src/app/services/seeInMyConsole.service';
@@ -28,15 +29,16 @@ export class FooterAppComponent  implements OnInit {
   public footerBackward:   string ='Backward';
   public footerForward:    string = 'Forward';
   public footerLeave:      string = 'Leave';
-  public count:            string = '1';
-  public item:             string = 'd1_1q';
-  public language:         string = 'fr';
+  public count:            string = '';
+  public item:             string = '';
+  public language:         string = '';
   public theme:    'light'|'dark' = 'light';  
   private textTitle:      string = 'Alert';  
   private textAlert:      string = 'You did not answer';
   private textButton:     string = 'Continue';
   constructor(
     private settingsService :   SettingsService,
+    private itemService:        ItemService,
     private traductionService:  TraductionService,
     private findTheNextItem:    FindTheNextItem,
     private seeInMyConsole:     SeeInMyConsoleService,
@@ -49,45 +51,45 @@ export class FooterAppComponent  implements OnInit {
     // 1. On s'abonne au service 
       this.settingsSubscription = this.settingsService.settingsObs$.subscribe(newSettings => {
       // Réagir à la mise à jour de la configuration
-      this.language = this.settingsService.getLanguage();
       this.item     = this.settingsService.getItem();
+      this.language = this.itemService.language(this.item);
       this.count    = this.settingsService.getCount();
       this.theme    = this.settingsService.getTheme() 
       this.updateAppFooter(this.language)// Mettre à jour les pages lorsque la langue change
       this.upDateTheme(this.settingsService.getTheme());
-      this.textAlert = this.traductionService.findGoodLabel(this.language,"Votre n'avez pas répondu",'You did not answer');
-      this.textTitle = this.traductionService.findGoodLabel(this.language,"Attention",'Alert');
+      this.textAlert  = this.traductionService.findGoodLabel(this.language,"Votre n'avez pas répondu",'You did not answer');
+      this.textTitle  = this.traductionService.findGoodLabel(this.language,"Attention",'Alert');
       this.textButton = this.traductionService.findGoodLabel(this.language,"Continuer","Continue");
       }
       )
     }
 
-async alert() {
-  const alert = await this.alertController.create({
-    header: this.textTitle,
-    message: this.textAlert ,
-    buttons: [
-      {
-        text: this.textButton,  
-        role: 'cancel',
-        handler: () => {
-          console.log('Popup fermée');
+  async alert() {
+    const alert = await this.alertController.create({
+      header: this.textTitle,
+      message: this.textAlert ,
+      buttons: [
+        {
+          text: this.textButton,  
+          role: 'cancel',
+          handler: () => {
+            console.log('Popup fermée');
+          }
         }
-      }
-    ]
-  });
-  await alert.present();
-}
+      ]
+    });
+    await alert.present();
+  }
 
 
   upDateTheme(theme: 'light' | 'dark'){
     this.themeService.applyTheme(theme)// Ajoutez ici si besoin
   }
   updateAppFooter(language:string) {
-    this.footerContent  = this.traductionService.findGoodLabel(language,'Aller en','Go to');
-    this.footerBackward = this.traductionService.findGoodLabel(language,'Arrière','Backward');
-    this.footerForward  = this.traductionService.findGoodLabel(language,'Avant','Forward');
-    this.footerLeave    = this.traductionService.findGoodLabel(language,'Quitter','Leave');
+    this.footerContent  = this.traductionService.findGoodLabel(language,'Aller en', 'Go to');
+    this.footerBackward = this.traductionService.findGoodLabel(language,'Arrière',  'Backward');
+    this.footerForward  = this.traductionService.findGoodLabel(language,'Avant',    'Forward');
+    this.footerLeave    = this.traductionService.findGoodLabel(language,'Quitter',   'Leave');
   }
   goForward() {
     const nameOfItem = this.settingsService.getItem();
@@ -96,7 +98,7 @@ async alert() {
     if (item.nature === 'q' && !this.settingsService.getIsThisAnswerWasDone()) {this.alert()}
     else {
     const  currentItemName = this.settingsService.getItem(); 
-    const newItemName = this.findTheNextItem.ifForward(currentItemName);
+    const newItemName      = this.findTheNextItem.ifForward(currentItemName);
     this.settingsService.setItem(newItemName);
     }
   }

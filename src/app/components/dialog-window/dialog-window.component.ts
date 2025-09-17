@@ -2,8 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ModalController }          from '@ionic/angular';
 import { IonicModule }              from '@ionic/angular';
 // my service 
-import { SettingsService } from 'src/app/services/settings.service';
-import { TraductionService } from 'src/app/services/traduction.service';
+import { SettingsService }        from 'src/app/services/settings.service';
+import { ItemService }            from 'src/app/services/item.service';
+import { TraductionService }      from 'src/app/services/traduction.service';
 
 @Component({
   selector: 'app-dialog-window-modal',
@@ -20,11 +21,14 @@ export class DialogWindowModal implements OnInit{
   constructor(
     private modalCtrl         : ModalController,
     private settingsService   : SettingsService,
+    private itemService       : ItemService,
     private traductionService : TraductionService,
   ) {}
 
 ngOnInit(): void {
-  this.textCloseButton = this.traductionService.findGoodLabel(this.settingsService.getLanguage(),'Fermer','Close');
+  const language = this.itemService.language(this.settingsService.getItem());
+  console.log('dialog-window.component-ngOnInit-language',language);
+  this.textCloseButton = this.traductionService.findGoodLabel(language,'Fermer','Close');
 }
   close() {
     this.modalCtrl.dismiss();

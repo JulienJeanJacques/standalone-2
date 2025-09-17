@@ -7,6 +7,7 @@ import { MenuController }    from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
 //my services
 import { SettingsService }             from 'src/app/services/settings.service';
+import { ItemService}                  from '../../services/item.service'
 import { TraductionService }           from 'src/app/services/traduction.service';
 import { GestionConfigEngFrService}    from 'src/app/services/gestion-config-eng-fr.service';
 //my component
@@ -33,24 +34,26 @@ sideMenu:   ChoiceMenuSide[] = [];
 colorTitle:           string = '';
 theme:                string = 'light';
 textGoHome:           string = 'Go to Play';
-language:             string = 'en';
 version:              string = 'v.1.0';
-
+nameItem:             string = 'd1_1q_en'; 
+language:             string = 'en';
 
   constructor(
     private navCtrl:                  NavController,
     private menu:                     MenuController,
     private settingsService:          SettingsService,
+    private itemService:              ItemService,
     private traductionService:        TraductionService,
     private gestionConfigEngFrService:GestionConfigEngFrService,
   ) { }
 
   ngOnInit() {
-      this.theme        = this.settingsService.getTheme();
-      this.language     = this.settingsService.getLanguage();
-      this.goodTextGoHome(this.settingsService.getLanguage()); // Mettez à jour textGoHome ici
-      this.version      = APP_PARAMS_VERSION;
-      this.colorTitle   = this.gestionConfigEngFrService.getColorTitle('AstroDidact');
+      this.nameItem       = this.settingsService.getItem();
+      this.language       = this.itemService.language(this.nameItem);
+      this.theme          = this.settingsService.getTheme();
+      this.goodTextGoHome(this.itemService.language(this.nameItem)); // Mettez à jour textGoHome ici
+      this.version        = APP_PARAMS_VERSION;
+      this.colorTitle     = this.gestionConfigEngFrService.getColorTitle('AstroDidact');
     };
 
   goodTextGoHome(language:string){

@@ -1,5 +1,4 @@
 <app-initial-setup *ngIf="showInitScreen" (setupFinished)="onSetupFinished()"></app-initial-setup>
-
 <div *ngIf="!showInitScreen" class="page-wrapper">
   <ion-header>
     <ion-toolbar>
@@ -11,10 +10,10 @@
         </div>
         <div class="header-center">
           <div class="accountAndLevel">
-            <div>{{ accountName }}</div>
-            <div>{{ levelName }}</div>
+            <div>{{ textAccountName }}</div>
+            <div>{{ textLevel }}</div>
           </div>
-          <div class="chapter-title">{{ titleOfChapter }}</div>
+          <div class="chapter-title">{{ textTitleOfChapter }}</div>
         </div>
         <div class="header-right">
           <img src="assets/icons/astrodidactIcon.png" alt="Astrodidact Icon" class="header-image" />
@@ -26,11 +25,11 @@
   <div class="page-wrapper">
     <ion-content>
       <div class="scroll-container">
-        <div [ngClass]="getColorClass(item.nature)">
-          {{ natureOfItem }}{{ item.question }}:
-        </div>
-        <app-response *ngIf="item.nature === 'r'"></app-response>
+        <div [ngClass]="getColorClass()"> {{ textNatureOfItem }}{{ textItemQuestion }}: </div>
         <ng-container #dynamicComponentContainer></ng-container>
+        <app-response-good  *ngIf="showGoodResponse$  | async"></app-response-good>
+        <app-response-false *ngIf="showFalseResponse$ | async"></app-response-false>
+        <app-response       *ngIf="showResponse$      | async"></app-response>
         <footer-question *ngIf="showFooter()"></footer-question>
       </div>
     </ion-content>

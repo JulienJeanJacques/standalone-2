@@ -111,15 +111,13 @@ export class InitialSetupComponent {
   }
 
   validate() {
-    let nameItem = this.selectedLevel + this.selectedChapter + '_1q';
-    this.settingsService.setFirstTime(true);
-    this.settingsService.setLanguage(this.selectedLanguage);
+    let nameItem = this.selectedLevel + this.selectedChapter + '_1q_' + this.selectedLanguage;
+    this.settingsService.setFirstTime(true);// must be false in developpement mode
     this.settingsService.setItem(nameItem);
     this.settingsService.setCount(this.selectedCount);
-    console.log('initial-setup-validate',this.settingsService.getFirstTime());
-    console.log('initial-setup-validate',this.settingsService.getLanguage());
-    console.log('initial-setup-validate',this.settingsService.getItem());
-    console.log('initial-setup-validate',this.settingsService.getCount());
+    console.log('initial-setup.component-validate',this.settingsService.getFirstTime());
+    console.log('initial-setup.component-validate',this.settingsService.getItem());
+    console.log('initial-setup.component-validate',this.settingsService.getCount());
     this.setupFinished.emit();
   }
 

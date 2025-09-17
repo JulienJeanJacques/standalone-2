@@ -1,9 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router }       from '@angular/router';
+//import { Router }       from '@angular/router';
 import { NgIf }         from '@angular/common';
 //
 import { IonApp,IonContent,IonSplitPane,IonMenu,IonRouterOutlet, } from '@ionic/angular/standalone';
+import { NavController } from '@ionic/angular';
 // my components
 import { SideMenuRouterLinkComponent}  from './components/side-menu-router-link/side-menu-router-link.component'
 import { WelcomeImageComponent}        from './components/welcome-image/welcome-image.component'
@@ -28,7 +29,8 @@ export class AppComponent implements OnInit{
   showWelcomeImage = true; // Variable pour contrôler l'affichage de la page d'accueil
   
   constructor(
-    private router: Router,
+    //private router: Router,
+     private navCtrl: NavController,
    ) {
   }
 
@@ -42,7 +44,8 @@ initializeApp() {
   // Après 3 secondes, cacher l'image et naviguer
   setTimeout(() => {
     this.showWelcomeImage = false;
-    this.router.navigate(['home']);
+    //this.router.navigate(['home']);
+    this.navCtrl.navigateRoot(['home']);
   }, 6000);
 }
 }

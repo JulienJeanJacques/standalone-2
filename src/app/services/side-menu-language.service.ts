@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { SettingsService }  from './settings.service';
 import { ConfigFrService }  from './config-fr.service';
 import { ConfigEngService } from './config-eng.service';
-import { Subscription } from 'rxjs';
+import { ItemService }      from '../services/item.service'
+
 // my interfaces
 import { ChoiceMenuSide } from '../interfaces/types'
 @Injectable({
@@ -15,10 +16,11 @@ sideMenu:ChoiceMenuSide[] = [];
 constructor(
     private configFrService: ConfigFrService,
     private configEngService:ConfigEngService,
-    private settingsService: SettingsService // Injection du SettingsService
+    private settingsService: SettingsService, // Injection du SettingsService
+    private itemService:     ItemService,
   ) 
   { // Initialiser le menu latéral à la langue par défaut
-    this.sideMenu = this.updateLanguageSideMenu(this.settingsService.getLanguage());
+    this.sideMenu = this.updateLanguageSideMenu(this.itemService.language(this.settingsService.getItem()));
     };
 
   updateLanguageSideMenu(language: string) {

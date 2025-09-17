@@ -23,6 +23,7 @@ export interface NatureItem{
 }
 
 export type IndexLevel = 'd' | 'c' | 'e';
+
 export type Row145 = number[] & { length: 145 };
 
 export interface Results {
@@ -33,12 +34,12 @@ export interface Results {
 }
 
 export interface AppSettings {
-  count: string;
-  language: string;
-  item: string;
-  theme:  "light" | "dark";
-  results: Results;
-  firstTime:boolean;
+  count:      string;
+  // language:   string;
+  item:       string;
+  theme:      "light" | "dark";
+  results:    Results;
+  firstTime:  boolean;
 }
 
 // types for animations *****************************************

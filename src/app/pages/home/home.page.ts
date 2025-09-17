@@ -1,19 +1,30 @@
-import { Component, inject, OnInit, OnDestroy,ViewChild, ViewContainerRef, AfterViewInit, ChangeDetectorRef } from '@angular/core';
-import { CommonModule }                 from '@angular/common';
-import { Subscription }                 from 'rxjs';
-import { MenuController, IonicModule }  from '@ionic/angular';
-// classes et services
-import { Item } from '../../classes/item';
-import { ComponentLoaderService }    from '../../services/component-loader.service';
-import { SettingsService }           from '../../services/settings.service';
-import { ConfigThemeService }        from '../../services/config-theme.service';
-import { TraductionService }         from '../../services/traduction.service';
-import { GestionConfigEngFrService } from 'src/app/services/gestion-config-eng-fr.service';
-// components
-import { ResponseComponent }         from 'src/app/components/response/response.component';
-import { FooterAppComponent }        from '../../components/footer-app/footer-app.component';
-import { FooterQuestionComponent }   from '../../components/footer-question/footer-question.component';
-import { InitialSetupComponent }     from 'src/app/components/initial-setup/initial-setup.component';
+import { Component, OnInit, OnDestroy, ViewChild, ViewContainerRef, ChangeDetectorRef } from '@angular/core';
+import { CommonModule }                  from '@angular/common';
+// ionic
+import { IonicModule, MenuController }   from '@ionic/angular';
+//rxjs
+import { Subscription, Observable } from 'rxjs';
+import { skip, map } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
+// my interfaces 
+import { AppSettings }                   from '../../interfaces/types';
+// my services
+import { SettingsService}               from '../../services/settings.service';
+import { TraductionService }            from '../../services/traduction.service';
+import { ConfigThemeService }           from '../../services/config-theme.service';
+import { GestionConfigEngFrService }    from '../../services/gestion-config-eng-fr.service';
+import { ItemService }                  from '../../services/item.service';
+import { IonButtons } from "@ionic/angular/standalone";
+// my components
+import { ResponseGoodComponent }         from '../../components/response-good/response-good.component';
+import { ResponseFalseComponent }        from '../../components/response-false/response-false.component';
+import { ResponseComponent }             from '../../components/response/response.component';
+
+import { FooterAppComponent }            from '../../components/footer-app/footer-app.component';
+import { FooterQuestionComponent }       from '../../components/footer-question/footer-question.component';
+import { InitialSetupComponent }         from '../../components/initial-setup/initial-setup.component';
+// map component
+import { ComponentMap }                  from '../../../app/component-map';
 
 @Component({
   selector: 'app-home',
@@ -21,146 +32,269 @@ import { InitialSetupComponent }     from 'src/app/components/initial-setup/init
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   imports: [
-    IonicModule, 
+    IonicModule,
     CommonModule,
-    ResponseComponent, 
-    FooterAppComponent, 
-    FooterQuestionComponent, 
+    ResponseGoodComponent,
+    ResponseFalseComponent,
+    ResponseComponent,
+    FooterAppComponent,
+    FooterQuestionComponent,
     InitialSetupComponent,
   ],
 })
-export class HomePage implements OnInit, OnDestroy, AfterViewInit {
-  private settingsSubscription!: Subscription;
-  componentName = 'd1_1q';
-  item = new Item('d1_1q');
-  accountName = 'Galilé';
-  levelName = 'débutant';
-  natureOfItem = 'Question :';
-  titleOfChapter = 'Titre du chapitre';
-  showInitScreen = false;
-  private initialized = false; // pour éviter les doublons
+export class HomePage implements OnInit, OnDestroy {
 
-  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef })
+  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef, static: false })
   container!: ViewContainerRef;
 
+  textAccountName      = '';
+  textLevel            = '';
+  textNatureOfItem     = '';
+  textTitleOfChapter   = '';
+  textItemQuestion     = '';
+
+  // public repGoodAndFirstTime  : boolean = false;
+  public showInitScreen      = false;
+ 
+  componentMap = ComponentMap;
+
+  private initialized = false;
+  private settingsSubscription!: Subscription;
+
+  private currentComponentRef: any;
+  private currentItemName: string | null = null;
+
+  // ⚡ Observables réactifs pour les réponses
+  showGoodResponse$!:   Observable<boolean>;
+  showFalseResponse$!:  Observable<boolean>;
+  showResponse$!:       Observable<boolean>;
+
   constructor(
-    private menuCtrl: MenuController,
-    private componentLoader: ComponentLoaderService,
-    private settingsService: SettingsService,
-    private traductionService: TraductionService,
-    private themeService: ConfigThemeService,
+    private menuCtrl:                  MenuController,
+    private settingsService:           SettingsService,
+    private traductionService:         TraductionService,
+    private themeService:              ConfigThemeService,
     private gestionConfigEngFrService: GestionConfigEngFrService,
-    private cdr: ChangeDetectorRef
+    private itemService:               ItemService,
+    private cdr:                       ChangeDetectorRef,
   ) {}
 
-  async ngOnInit() {
-    this.showInitScreen = this.settingsService.getFirstTime();
-  }
+  // ================== ngOnInit ==================
+  // async ngOnInit() {
+  //   // this.showInitScreen = true;
+  //   this.showInitScreen = false;
+  //   // this.showInitScreen = this.settingsService.getFirstTime();//est toujours à false sauf la première fois
+  //   this.settingsService.initializeApp();
 
-  async ngAfterViewInit() {
-    // Si ce n’est PAS le premier setup, initialiser directement
+  //   // ⚡ Streams réactifs pour afficher ou non les réponses
+  //   this.showGoodResponse$ = this.settingsService.settingsObs$.pipe(
+  //     map(() => {
+  //       return this.settingsService.getItemNature() === 'r' &&
+  //              this.settingsService.getIsFirstPassageForResponse() &&
+  //              this.settingsService.getGamerResponseIsGood();
+  //     })
+  //   );
+
+  //   this.showFalseResponse$ = this.settingsService.settingsObs$.pipe(
+  //     map(() => {
+  //       const isFalse = this.settingsService.getItemNature() === 'r' &&
+  //                       this.settingsService.getIsFirstPassageForResponse() &&
+  //                       !this.settingsService.getGamerResponseIsGood();
+  //       if (isFalse) {
+  //         this.settingsService.setGamerResponseIsDone();
+  //       }
+  //       return isFalse;
+  //     }),
+  //   );
+
+  //   // Abonnement aux changements de settings
+  //   this.settingsSubscription = this.settingsService.settingsObs$
+  //     .pipe(skip(1)) // ignore la première valeur initiale
+  //     .subscribe(async (params: AppSettings) => {
+  //       if (this.initialized) {
+  //         await this.reloadPage(params);
+  //       }
+  //     });
+
+  //   // Les quatre lignes qui suivent sont là pour éviter que le scroll ne fonctionne pas.
+  //   const ionContents = document.querySelectorAll('ion-content');
+  //   ionContents.forEach((el) => {
+  //     el.addEventListener('touchstart', () => {}, { passive: true });
+  //     el.addEventListener('touchmove',  () => {}, { passive: true });
+  //   });
+  // } 
+// ================== ngOnInit ==================
+async ngOnInit() {
+  // this.showInitScreen = true;
+  this.showInitScreen = false;
+  // this.showInitScreen = this.settingsService.getFirstTime();// est toujours à false sauf la première fois
+  this.settingsService.initializeApp();
+
+  // ⚡ Streams réactifs pour afficher ou non les réponses
+
+  // Réponse correcte au premier passage
+  this.showGoodResponse$ = this.settingsService.settingsObs$.pipe(
+    map(() => {
+      return this.settingsService.getItemNature() === 'r' &&
+             this.settingsService.getIsFirstPassageForResponse() &&
+             this.settingsService.getGamerResponseIsGood();
+    })
+  );
+
+  // Réponse fausse au premier passage
+  this.showFalseResponse$ = this.settingsService.settingsObs$.pipe(
+    map(() => {
+      const isFalse = this.settingsService.getItemNature() === 'r' &&
+                      this.settingsService.getIsFirstPassageForResponse() &&
+                      !this.settingsService.getGamerResponseIsGood();
+      if (isFalse) {
+        this.settingsService.setGamerResponseIsDone();
+      }
+      return isFalse;
+    })
+  );
+
+  // Réponse fausse mais ce n'est PLUS le premier passage
+  this.showResponse$ = this.settingsService.settingsObs$.pipe(
+    map(() => {
+      return this.settingsService.getItemNature() === 'r' &&
+             !this.settingsService.getIsFirstPassageForResponse() &&
+             !this.settingsService.getGamerResponseIsGood();
+    })
+  );
+
+  // Abonnement aux changements de settings
+  this.settingsSubscription = this.settingsService.settingsObs$
+    .pipe(skip(1)) // ignore la première valeur initiale
+    .subscribe(async (params: AppSettings) => {
+      if (this.initialized) {
+        await this.reloadPage(params);
+      }
+    });
+
+  // Les quatre lignes qui suivent sont là pour éviter que le scroll ne fonctionne pas.
+  const ionContents = document.querySelectorAll('ion-content');
+  ionContents.forEach((el) => {
+    el.addEventListener('touchstart', () => {}, { passive: true });
+    el.addEventListener('touchmove',  () => {}, { passive: true });
+  });
+}
+
+  // ================== ionViewDidEnter ==================
+  async ionViewDidEnter() {
     if (!this.showInitScreen && !this.initialized) {
       await this.initializePage();
     }
   }
 
-  async initializePage() {
+  // ================== initializePage ==================
+  private async initializePage() {
     this.initialized = true;
-    const params = await this.settingsService.initialize();
-    this.settingsService.initialiseApp();
-    this.loadLanguage();
-    this.loadTheme(params.theme);
-    this.accountName = this.gestionConfigEngFrService.getAccountName();
-    if (this.settingsSubscription) this.settingsSubscription.unsubscribe();
-    this.loadComponent();
+    const params = await this.settingsService.initializeApp();
+    this.loadPagePresentation(params);
+    // Ne pas appeler loadComponent ici : reloadPage via settingsObs$ gère la création
   }
 
-  loadComponent() {
-    if (!this.container) {console.warn('container is not yet available');return;}
-    this.item = new Item(this.settingsService.getItem());
-    this.container.clear();
-    const component = this.componentLoader.getComponent(this.item.name);
-    if (component) {
-      this.container.createComponent(component);
-    } else {
-      console.log(`Aucun composant trouvé pour: ${this.item.name}`);
-    }
-    const language = this.settingsService.getLanguage();
-    this.loadLevel();
-    this.loadNatureOfItem();
-    this.loadTitleOfChapter(this.item.chapter, language);
+  // ================== reloadPage ==================
+  private async reloadPage(params?: AppSettings) {
+    const effectiveParams = params ?? this.settingsService.getCurrentSettings();
+    // Evite de recréer le composant si l'item n'a pas changé
+    if (this.currentItemName === effectiveParams.item) return;
+    this.loadPagePresentation(effectiveParams);
+    this.loadComponent(effectiveParams.item);
+    this.currentItemName = effectiveParams.item;
     this.cdr.detectChanges();
   }
 
+  // ================== loadComponent ==================
+  private loadComponent(itemName: string) {
+    if (!this.container) {
+      console.warn('home.page-loadComponent: container not yet available');
+      return;
+    }
+    if (this.currentComponentRef) {
+      this.currentComponentRef.destroy();
+      this.currentComponentRef = null;
+    }
+    this.container.clear();
+    const loader = this.componentMap[itemName];
+    if (loader) {
+      loader()
+        .then(cmpType => {
+          this.currentComponentRef = this.container.createComponent(cmpType);
+        })
+        .catch(err => console.error('Erreur import dynamique pour', itemName, err));
+    }
+  }
+
+  // ================== onSetupFinished ==================
   onSetupFinished() {
     this.showInitScreen = false;
-    this.initialized = false;
     this.cdr.detectChanges();
-    setTimeout(() => { this.initializePage();}, 0);
+    this.initializePage();
   }
 
-  loadLanguage() {
-    const language = this.settingsService.getLanguage();
-    this.loadLevel();
-    this.loadNatureOfItem();
-    this.loadTitleOfChapter(this.item.chapter, language);
+  ///////////////////// Présentation de la page Home /////////////////////
+  private loadPagePresentation(params: AppSettings) {
+    this.loadLanguage(params.item);
+    this.loadTheme(params.theme);
+    this.loadAccountName(params.item, params.count);
   }
 
-  loadNatureOfItem() {
-    this.item = new Item(this.settingsService.getItem());
-    const language = this.settingsService.getLanguage();
-    if (this.item.nature === 'q') this.natureOfItem = 'Question';
-    if (this.item.nature === 'i') this.natureOfItem = 'Information';
-    if (this.item.nature === 'r') {this.natureOfItem = language === 'fr' ? 'Réponse' : 'Answer';}
+  private loadLanguage(itemName: string) {
+    const language = this.itemService.language(itemName);
+    const nature = this.itemService.nature(itemName);
+    const level = this.itemService.level(itemName);
+    const chapter = this.itemService.chapter(itemName);
+
+    this.loadLevel(level, language);
+    this.loadNatureOfItem(nature, language);
+    this.loadTitleOfChapter(chapter, language);
   }
 
-  loadTitleOfChapter(chapter: string, language: string) {
-    this.titleOfChapter = this.traductionService.findTitleChapter(chapter, language);
+  private loadAccountName(itemName: string, count: string) {
+    const language = this.itemService.language(itemName);
+    this.textAccountName = this.gestionConfigEngFrService.getAccountName(language, count);
   }
 
-  loadTheme(theme: 'light' | 'dark') {
+  private loadNatureOfItem(nature: string, language: string) {
+    if      (nature === 'q') this.textNatureOfItem = 'Question';
+    else if (nature === 'i') this.textNatureOfItem = 'Information';
+    else if (nature === 'r' || language === 'fr') this.textNatureOfItem = 'Réponse';
+    else this.textNatureOfItem = 'Answer';
+  }
+
+  private loadTitleOfChapter(chapter: string, language: string) {
+    this.textTitleOfChapter = this.traductionService.findTitleChapter(chapter, language);
+  }
+
+  private loadTheme(theme: 'light' | 'dark') {
     this.themeService.applyTheme(theme);
   }
 
-  loadLevel() {
-    const item = new Item(this.settingsService.getItem());
-    const language = this.settingsService.getLanguage();
-    this.levelName = this.traductionService.findLevelName(language, item.level);
+  private loadLevel(level: string, language: string) {
+    this.textLevel = this.traductionService.findLevelName(language, level);
   }
 
-  getColorClass(itemNature: string): string {
-    return itemNature === 'q' ? 'red' : itemNature === 'r' ? 'green' : 'blue';
+  // Couleur qui dépend de la nature de l'item
+  getColorClass(): string {
+    const nature = this.itemService.nature(this.settingsService.getItem());
+    if (nature === 'q') return 'red';
+    if (nature === 'r') return 'green';
+    if (nature === 'i') return 'blue';
+    return '';
   }
 
+  //  Le pied de page
   showFooter(): boolean {
-    const item = new Item(this.settingsService.getItem());
-    return item.nature === 'q' && !this.settingsService.getIsThisAnswerWasDone();
+    return this.settingsService.getItemNature() === 'q' && !this.settingsService.getIsThisAnswerWasDone();
   }
 
+  // Sortie de l'application
   ngOnDestroy() {
-    if (this.settingsSubscription) this.settingsSubscription.unsubscribe();
+    if (this.settingsSubscription) {
+      this.settingsSubscription.unsubscribe();
+    }
   }
 }
-// Pour gérer les textes en anglais et en français il faudra 
-// mettre à jour cette procédure.
-// To manage french and english texts you will need to update this procedure.
-//
-// loadComponentEnFr() {
-//     let enORfr: string = this.settingsService.getLanguage()
-//     this.item = new Item(this.settingsService.getItem());
 
-//     if (this.container) { this.container.clear(); }
-
-//     let component = this.componentLoaderFr.getComponent(this.item.name);//pour l'initialisation
-//     if (enORfr === 'en') {component = this.componentLoaderEn.getComponent(this.item.name);}
-    
-//     if (component && this.container) {this.container.createComponent(component);} 
-//     else {console.log(`Aucun composant trouvé pour le nom: ${this.item.name}`);}
-    
-    
-//     // Mise à jour du niveau, nature, titre automatiques
-//     const language = this.settingsService.getLanguage();
-//     this.loadLevel();
-//     this.loadNatureOfItem();
-//     this.loadTitleOfChapter(this.item.chapter, language);
-//   }

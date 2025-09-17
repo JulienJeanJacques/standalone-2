@@ -16,7 +16,6 @@ params(where:string){
 
   let allParams : AppSettings = this.settingsService.getCurrentSettings();
     console.log(where)
-    console.log('language: '    ,allParams.language);
     console.log('item: '        ,allParams.item);
     console.log('thème: '       ,allParams.theme);
     console.log('compte: '      ,allParams.count);

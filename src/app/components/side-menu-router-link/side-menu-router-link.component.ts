@@ -8,8 +8,9 @@ import { Subscription } from 'rxjs';
 import { IonicModule }     from '@ionic/angular';
 import { MenuController }  from '@ionic/angular';
 // my services
-import { SideMenuLanguageService } from '../../services/side-menu-language.service';
-import {SettingsService}           from '../../services/settings.service';
+import { SideMenuLanguageService }    from '../../services/side-menu-language.service';
+import { SettingsService }            from '../../services/settings.service';
+import { ItemService }                from '../../services/item.service';
 //my interfaces
 import { ChoiceMenuSide } from '../../interfaces/types';
 @Component({
@@ -26,25 +27,26 @@ import { ChoiceMenuSide } from '../../interfaces/types';
 export class SideMenuRouterLinkComponent  implements OnInit,OnDestroy{
 private settingsSubscription!: Subscription;
 public appPages: ChoiceMenuSide[] = [];
-public count:    string = '1';
-public item:     string = 'd1_1q';
-public language: string = 'fr';
-public theme:    string = 'light';
+public count:    string = '';
+public item:     string = '';
+public language: string = '';
+public theme:    string = '';
 constructor(
-  private router: Router,
-  private menuCtrl: MenuController,
-  private sideMenuLanguageService: SideMenuLanguageService,
-  private settingsService: SettingsService,
+  private router:                   Router,
+  private menuCtrl:                 MenuController,
+  private sideMenuLanguageService:  SideMenuLanguageService,
+  private settingsService:          SettingsService,
+  private itemservice:              ItemService,
   ) {}
 
 ngOnInit() {
  // 1. On s'abonne au service 
       this.settingsSubscription = this.settingsService.settingsObs$.subscribe(newSettings => {
       // Réagir à la mise à jour de la configuration
-      this.language = this.settingsService.getLanguage();
       this.item     = this.settingsService.getItem();
       this.count    = this.settingsService.getCount();
       this.theme    = this.settingsService.getTheme();
+      this.language = this.itemservice.language(this.item)
       this.appPages = this.updateAppPages(this.language); // Mettre à jour les pages lorsque la langue change
   }
       )

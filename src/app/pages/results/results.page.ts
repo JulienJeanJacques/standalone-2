@@ -7,6 +7,7 @@ import { MenuController }    from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
 //my services
 import { SettingsService }           from 'src/app/services/settings.service';
+import { ItemService  }              from '../../services/item.service'
 import { TraductionService }         from 'src/app/services/traduction.service';
 import { GestionConfigEngFrService } from '../../services/gestion-config-eng-fr.service';
 import { GamerResultsService}        from '../../services/gamer-results.service';
@@ -35,7 +36,7 @@ export class ResultsPage implements OnInit {
   // for level -To choose
   level:string = 'd';
   //item
-  itemName: string = '1d_1q';
+  itemName: string = '1d_1q_en';
   //theme
   theme:string = 'ligth'
   // for language: text
@@ -53,8 +54,9 @@ export class ResultsPage implements OnInit {
       private navCtrl:                        NavController,
       private menu:                           MenuController,
       private settingsService:                SettingsService,
+      private itemService:                    ItemService,
       private traductionService:              TraductionService,
-      private gestionConfigEngFrService:     GestionConfigEngFrService,
+      private gestionConfigEngFrService:      GestionConfigEngFrService,
       private gamerResultsService:            GamerResultsService,
     ) { }
   
@@ -62,24 +64,25 @@ export class ResultsPage implements OnInit {
     // on récupère les paramètres actuels 
     // we load App-params
     this.itemName = this.settingsService.getItem();
+    this.language = this.itemService.language(this.itemName); 
     this.count    = this.settingsService.getCount();
-    this.language = this.settingsService.getLanguage();
+   
     this.theme    = this.settingsService.getTheme();
     //account
-    this.accountName = this.gestionConfigEngFrService.getAccountName();
+    this.accountName = this.gestionConfigEngFrService.getAccountName(this.language,this.count);
     // this.k = this.gamerResultsService.percentage(this.count,this.itemName);
     //item for chapter and level
     this.accountOrItemChange(this.count,this.itemName);
     //
     this.colorTitle = this.gestionConfigEngFrService.getColorTitle('Your results');
     //language
-    this.textTitle         = this.traductionService.findGoodLabel(this.language,'Vos résultats','Your results');
-    this.textGoHome        = this.traductionService.findGoodLabel(this.language,'Retour au jeu','Go to play');
+    this.textTitle         = this.traductionService.findGoodLabel(this.language,'Vos résultats',  'Your results');
+    this.textGoHome        = this.traductionService.findGoodLabel(this.language,'Retour au jeu',  'Go to play');
     this.textResults       = this.traductionService.findGoodLabel(this.language,'Avec le compte:','With the account:');
-    this.textChoiceLevel   = this.traductionService.findGoodLabel(this.language,'le niveau','the level');
-    this.textChoiceChapter = this.traductionService.findGoodLabel(this.language,'le chapitre ','the chapter ');
-    this.textChoose        = this.traductionService.findGoodLabel(this.language,'Choisissez: ','Choose:');
-    this.textPercentage    = this.traductionService.findGoodLabel(this.language,'Pourcentage: ','Percentage:');
+    this.textChoiceLevel   = this.traductionService.findGoodLabel(this.language,'le niveau',      'the level');
+    this.textChoiceChapter = this.traductionService.findGoodLabel(this.language,'le chapitre ',   'the chapter ');
+    this.textChoose        = this.traductionService.findGoodLabel(this.language,'Choisissez: ',   'Choose:');
+    this.textPercentage    = this.traductionService.findGoodLabel(this.language,'Pourcentage: ',  'Percentage:');
   }
 
   accountOrItemChange(account:string,nameOfItem:string)

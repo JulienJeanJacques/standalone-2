@@ -9,6 +9,7 @@ import { SettingsService }           from '../../services/settings.service';
 import { MenuController }            from '@ionic/angular';
 import { TraductionService }         from 'src/app/services/traduction.service';
 import { GestionConfigEngFrService } from 'src/app/services/gestion-config-eng-fr.service';
+import { ItemService }               from 'src/app/services/item.service';
 //my classes
 import {Item} from '../../classes/item';
 // my interfaces
@@ -57,16 +58,17 @@ export class ChangeQuestionPage implements OnInit{
     private settingsService:          SettingsService,
     private traductionService:        TraductionService,
     private gestionConfigEngFRService:GestionConfigEngFrService,
+    private itemService               :ItemService,
    ) {}
 
   ngOnInit() {
     //mon récupère les paramètres actuels 
     this.itemName = this.settingsService.getItem();
     this.count    = this.settingsService.getCount();
-    this.language = this.settingsService.getLanguage();
     this.theme    = this.settingsService.getTheme();
+    this.language = this.itemService.language(this.settingsService.getItem());
     //
-    this.accountName = this.gestionConfigEngFRService.getAccountName();
+    this.accountName = this.gestionConfigEngFRService.getAccountName(this.language,this.count);
     //
     this.whatAreChapterLevelQuestion(this.itemName);
     //
@@ -94,31 +96,24 @@ export class ChangeQuestionPage implements OnInit{
     this.selectedQuestion= Number(item.question);
   }
 
-  updateChapter(itemName:string) {
-    let item = new Item(itemName);
-    item.changeChapter(item.chapter);
-    this.settingsService.setItem(item.name); 
+  updateChapter(chapter:string) {
+    const newItemName = this.itemService.changeChapter(this.itemName,chapter);
+    this.settingsService.setItem(newItemName); 
   }
 
   updateLevel(level: string) {
-    let item = new Item(this.itemName);
-    this.selectedLevel = level;
-    item.changeLevel(level);
-    this.settingsService.setItem(item.name); 
+    const newItemName = this.itemService.changeLevel(this.itemName,level);
+    this.settingsService.setItem(newItemName); 
   }
 
   updateQuestion(question: number) {
-    let item = new Item(this.itemName);
-    this.selectedQuestion = question;
-    item.changeQuestion(String(question));
-    this.settingsService.setItem(item.name); 
+    const newItemName = this.itemService.changeQuestion(this.itemName,String(question));
+    this.settingsService.setItem(newItemName); 
   }
 
   updateNature(nature: string) {
-    let item = new Item(this.itemName);
-    this.selectedNature = nature;
-    item.changeNature(nature);
-    this.settingsService.setItem(item.name); 
+    const newItemName = this.itemService.changeNature(this.itemName,nature);
+    this.settingsService.setItem(newItemName); 
   }
 
   

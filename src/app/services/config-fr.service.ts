@@ -46,6 +46,7 @@ export class ConfigFrService {
         color : 'red'
       }
     ];
+
   public appNameChapters: Chapter[] = [
     {num:1,name:'Contemplation du ciel'},
     {num:2,name:'Observation du ciel'},
@@ -60,6 +61,7 @@ export class ConfigFrService {
     {num:11,name:'Les éclipses'},
     {num:12,name:"Autres objets visibles à l'oeil nu"},
   ];
+  
   public appNameLevels: Level[] = [
      { index:'d',name:'débutant'},
      { index:'c',name:'confirmé'},
