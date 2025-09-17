@@ -68,6 +68,7 @@ export class HomePage implements OnInit, OnDestroy {
   showGoodResponse$!:   Observable<boolean>;
   showFalseResponse$!:  Observable<boolean>;
   showResponse$!:       Observable<boolean>;
+  showFooter$!:         Observable<boolean>;
 
   constructor(
     private menuCtrl:                  MenuController,
@@ -162,7 +163,13 @@ async ngOnInit() {
              !this.settingsService.getGamerResponseIsGood();
     })
   );
-
+  // Affichage du footer question 
+  this.showFooter$ = this.settingsService.settingsObs$.pipe(
+  map(() => {
+    return this.settingsService.getItemNature() === 'q' &&
+           !this.settingsService.getIsThisAnswerWasDone();
+  })
+);
   // Abonnement aux changements de settings
   this.settingsSubscription = this.settingsService.settingsObs$
     .pipe(skip(1)) // ignore la première valeur initiale
@@ -286,9 +293,9 @@ async ngOnInit() {
   }
 
   //  Le pied de page
-  showFooter(): boolean {
-    return this.settingsService.getItemNature() === 'q' && !this.settingsService.getIsThisAnswerWasDone();
-  }
+  // showFooter(): boolean {
+  //   return this.settingsService.getItemNature() === 'q' && !this.settingsService.getIsThisAnswerWasDone();
+  // }
 
   // Sortie de l'application
   ngOnDestroy() {

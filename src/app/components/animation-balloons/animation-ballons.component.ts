@@ -25,7 +25,7 @@ export class AnimationBalloonsComponent implements OnInit {
 
   ngOnInit() {
       this.generateBalloons();
-      this.musicService.playMusic('forGoodResponse-1.mp3', 30, 10);
+      this.musicService.playMusic('forGoodResponse-1.mp3', 30, 23);// le dernier paramètre est la durée 
   }
 
   generateBalloons() {
