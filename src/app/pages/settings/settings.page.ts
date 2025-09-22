@@ -10,8 +10,8 @@ import { MenuController }     from '@ionic/angular';
 import { SettingsService }             from '../../services/settings.service';
 import { TraductionService }           from '../../services/traduction.service'
 import { ConfigThemeService }          from '../../services/config-theme.service';
-import { GestionConfigEngFrService}    from 'src/app/services/gestion-config-eng-fr.service';
-import { ItemService }                 from 'src/app/services/item.service';
+import { GestionConfigEngFrService}    from '../../services/gestion-config-eng-fr.service';
+import { ItemService }                 from '../../services/item.service';
 
 @Component({
   selector: 'app-settings',

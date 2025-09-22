@@ -9,7 +9,6 @@ export class MusicService {
   constructor() {}
 
   playMusic(filename: string, startTime: number = 0, duration?: number) {
-    console.log('music.service');
     if (this.audio) {
       this.audio.pause();
       this.audio = null;
@@ -17,7 +16,6 @@ export class MusicService {
     this.audio = new Audio(`assets/music/${filename}`);
     this.audio.currentTime = startTime;
 
-    console.log('Tentative de lecture');
     const playPromise = this.audio.play();
 
     if (playPromise !== undefined) {

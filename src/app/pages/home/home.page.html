@@ -29,7 +29,7 @@
         <ng-container #dynamicComponentContainer></ng-container>
         <app-response-good  *ngIf="showGoodResponse$  | async"></app-response-good>
         <app-response-false *ngIf="showFalseResponse$ | async"></app-response-false>
-        <app-response       *ngIf="showResponse$      | async"></app-response>
+        <app-response       *ngIf="showResponse$      | async"></app-response> 
         <footer-question    *ngIf="showFooter$        | async"></footer-question>
       </div>
     </ion-content>

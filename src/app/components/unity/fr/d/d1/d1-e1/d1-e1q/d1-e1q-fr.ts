@@ -1,13 +1,13 @@
 import { Component, ViewChild, ElementRef, OnInit, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule }     from '@angular/common';
 //
-import { IonicModule }  from '@ionic/angular';
+import { IonicModule }      from '@ionic/angular';
 // my services
 import { MathJaxService }   from '../../../../../../../services/mathjax.service';
 // my services
 import { PathService }      from '../../../../../../../services/path-images.service';
 import { SettingsService }  from '../../../../../../../services/settings.service';
-import { Item } from '../../../../../../../classes/item';
+import { Item }             from '../../../../../../../classes/item';
 //
 @Component({
   selector: 'app-d1-e1q-fr',

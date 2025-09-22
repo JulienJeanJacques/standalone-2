@@ -13,7 +13,6 @@ import { SettingsService   }      from '../../services/settings.service';
 import { ItemService }            from 'src/app/services/item.service';
 import { TraductionService }      from '../../services/traduction.service';
 import { FindTheNextItem }        from '../../services/find-the-next-item.service';
-import { SeeInMyConsoleService }  from 'src/app/services/seeInMyConsole.service';
 import { ConfigThemeService }     from 'src/app/services/config-theme.service';
 
 @Component({
@@ -41,7 +40,6 @@ export class FooterAppComponent  implements OnInit {
     private itemService:        ItemService,
     private traductionService:  TraductionService,
     private findTheNextItem:    FindTheNextItem,
-    private seeInMyConsole:     SeeInMyConsoleService,
     private themeService:       ConfigThemeService,
     private alertController:    AlertController,
 
@@ -55,13 +53,15 @@ export class FooterAppComponent  implements OnInit {
       this.language = this.itemService.language(this.item);
       this.count    = this.settingsService.getCount();
       this.theme    = this.settingsService.getTheme() 
+      //
       this.updateAppFooter(this.language)// Mettre à jour les pages lorsque la langue change
       this.upDateTheme(this.settingsService.getTheme());
       this.textAlert  = this.traductionService.findGoodLabel(this.language,"Votre n'avez pas répondu",'You did not answer');
       this.textTitle  = this.traductionService.findGoodLabel(this.language,"Attention",'Alert');
       this.textButton = this.traductionService.findGoodLabel(this.language,"Continuer","Continue");
       }
-      )
+    )
+    //if (this.settingsService.getItemNature() === 'q'){this.settingsService.setGamerResponseBef();}
     }
 
   async alert() {
@@ -81,7 +81,6 @@ export class FooterAppComponent  implements OnInit {
     await alert.present();
   }
 
-
   upDateTheme(theme: 'light' | 'dark'){
     this.themeService.applyTheme(theme)// Ajoutez ici si besoin
   }
@@ -92,15 +91,15 @@ export class FooterAppComponent  implements OnInit {
     this.footerLeave    = this.traductionService.findGoodLabel(language,'Quitter',   'Leave');
   }
   goForward() {
-    const nameOfItem = this.settingsService.getItem();
-    const item = new Item(nameOfItem);
+    const itemNature = this.settingsService.getItemNature();
     let ok:boolean = true;
-    if (item.nature === 'q' && !this.settingsService.getIsThisAnswerWasDone()) {this.alert()}
+    if (itemNature === 'q' && !this.settingsService.getIsThisAnswerWasDone()) {this.alert()}
     else {
-    const  currentItemName = this.settingsService.getItem(); 
-    const newItemName      = this.findTheNextItem.ifForward(currentItemName);
-    this.settingsService.setItem(newItemName);
-    }
+          if (itemNature === 'r') {this.settingsService.setGamerResponseAfterSolutionView();}
+          const newItemName      = this.findTheNextItem.ifForward();
+          this.settingsService.setItem(newItemName);
+  }
+  console.log('footer-app.component-forward',this.settingsService.getGamerResults());
   }
   // Nouvelle méthode pour gérer le clic sur l'icône "arrow-back"
   goBackward() {
@@ -109,7 +108,6 @@ export class FooterAppComponent  implements OnInit {
     this.settingsService.setItem(newItemName);
   }
   saveAndQuitApp(){
-  this.seeInMyConsole.params('footer-app.component-saveAndQuit')
   this.settingsService.setAll(this.settingsService.getCurrentSettings())
   // Pour quitter l'application sur mobile
   //App.exitApp();

@@ -49,16 +49,15 @@ constructor(
   }
 
   ngAfterViewInit(): void { 
-    console.log('response.component-ngAfterViewInit-settingsService.getGamerResponseIsGood()',this.settingsService.getGamerResponseIsGood())
-    if (this.settingsService.getGamerResponseIsGood()) {this.throwAnimation();}; 
+    if (this.settingsService.getGamerResponseIsGoodForFirstTime()) {this.throwAnimation();}; 
   };
   
 
   throwAnimation(): void {
     // 🔀 Choisir un composant d’animation (ici : ballons en dur ou aléatoire)
-    //const randomIndex = Math.floor(Math.random() * this.animations.length);
-    //const animationComponent = this.animations[randomIndex]; // ← change vers [randomIndex] si tu veux l’aléatoire
-    const animationComponent = this.animations[2]; // ← envoi l'animation souhaitée
+    const randomIndex = Math.floor(Math.random() * this.animations.length);
+    const animationComponent = this.animations[randomIndex]; // ← change vers [randomIndex] si tu veux l’aléatoire
+    //const animationComponent = this.animations[2]; // ← envoi l'animation souhaitée
     // 🧹 Vider le container
     this.animationContainer.clear();
     // 🧱 Créer dynamiquement le composant

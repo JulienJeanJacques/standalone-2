@@ -6,8 +6,6 @@ import { SettingsFromToDDService }      from './settingsFromToDD.service';
 import { ConversionTypeService }        from './conversion-types.service';
 import { GamerResultsService }          from './gamer-results.service';
 import { GoodResponsesService }         from './good-responses.service';
-
-
 // Interfaces & classes
 import { AppSettings, Row145 }  from '../interfaces/types';
 import { Item }                 from '../classes/item';
@@ -58,11 +56,21 @@ export class SettingsService {
     return this.settings$.value.item;
   }
 
+   getItemBeforeUnderScore():string {
+    const item = new Item(this.settings$.value.item);
+    return item.beforeUnderScore;
+  }
+  
   getItemNature():string {
      const item = new Item(this.settings$.value.item);
-    return item.nature
+    return item.nature;
   }
 
+  
+   getItemQuestion():string {
+     const item = new Item(this.settings$.value.item);
+    return item.question;
+  }
   getLanguage(): string {
     const item = new Item(this.settings$.value.item);
     return item.language;
@@ -85,6 +93,12 @@ export class SettingsService {
     const level = this.cts.strToIndexLevel(parsedItem.level);
     return results?.get?.(level, index) ?? 0;
   }
+  getGamerResponseInClear(): number {
+    let response: number = this.getGamerResponse();
+    if ( response < 0) { response = Math.abs(response);};
+    if ( response > 9) { response =  Math.floor(response/10); }
+    return response
+  }
   //gives all the gamer responses by level
   getGamerResults(): Row145 {
     const { item, results } = this.settings$.value;
@@ -96,15 +110,20 @@ export class SettingsService {
     return this.getGamerResponse() !== 0;
   }
   // said if the gamer response is good
-  getGamerResponseIsGood(): boolean {
+  getGamerResponseIsGoodForFirstTime(): boolean {
     let result:boolean = false;
     const item = new Item(this.settings$.value.item);
     const gamerResponse = this.getGamerResponse();
     if (Math.abs(gamerResponse) === this.goodResponsesService.getValue(item.level,item.repPosition)) {result = true;};
     return result
   }
+  getGamerResponseIsGoodForAllTime():boolean{
+    let result:boolean = false;
+    if (this.getGamerResponse() > 9) {result = true}
+    return result
+  }
+
   getIsFirstPassageForResponse(){
-    console.log('settingsService-getIsFirstPassage',this.getGamerResponse())
     let result:boolean = false;
     if (this.getGamerResponse()<0){result = true};
     return result
@@ -136,7 +155,7 @@ export class SettingsService {
     this.updateSettings({ firstTime: newFirstTime });
   }
 
-  setGamerResponse(responseValue: number): void {
+  setGamerResponseBeforeSolutionView(responseValue: number): void {
     const { item, results } = this.settings$.value;
     const parsedItem = new Item(item);
     const index = parseInt(parsedItem.question, 10);
@@ -144,11 +163,12 @@ export class SettingsService {
     results.set(level, index, responseValue);
     this.emitAndSave(this.settings$.value); // settings déjà modifié
   }
-  setGamerResponseIsDone(){
+
+  setGamerResponseAfterSolutionView(): void{
      let gamerResponse = this.getGamerResponse();
-     if ( this.getGamerResponseIsGood()){gamerResponse = Math.abs(gamerResponse)*10}
+     if ( this.getGamerResponseIsGoodForFirstTime()){gamerResponse = Math.abs(gamerResponse)*10}
      else {gamerResponse = Math.abs(gamerResponse) };
-    this.setGamerResponse(gamerResponse);
+    this.setGamerResponseBeforeSolutionView(gamerResponse);
   }
 
   async initializeApp(): Promise<AppSettings> {

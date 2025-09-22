@@ -1,14 +1,14 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 //
 import { IonicModule }    from '@ionic/angular';
 import { AlertController} from '@ionic/angular';
+//
+import { Subscription } from 'rxjs';
 //my services
 import { FindTheNextItem }       from 'src/app/services/find-the-next-item.service';
 import { SettingsService }       from 'src/app/services/settings.service';
-// import { AnalyseResponseService }from '../../services/analyse-response.service'
-// import { SeeInMyConsoleService } from 'src/app/services/seeInMyConsole.service';
-// import { GamerResultsService }   from '../../services/gamer-results.service'
+
 @Component({
   selector: 'footer-question',
   standalone: true,
@@ -23,26 +23,44 @@ export class FooterQuestionComponent implements OnInit {
     alignment: 'center',
     cssClass: 'my-select-popover'
   };
-  lng:          string = '' ;
-  selectedValue:string = '';
-  textValidate: string  = '';
-
+  lng:            string = '' ;
+  selectedValue:  string = '';
+  textValidate:   string = '';
+  textYourChoice: string = '';
+  //
+  private settingsSub?: Subscription;
+  //
   constructor(
     private alertController:        AlertController, 
     private findTheNextItem:        FindTheNextItem,
     private settingsService:        SettingsService,
-    // private analyseResponseService: AnalyseResponseService,
-    // private gamerResultsService:    GamerResultsService,
-    // private seeInMyConsoleService:  SeeInMyConsoleService,
   ) 
 {}
- async ngOnInit() {
-  this.lng = this.settingsService.getLanguage();
-  if (this.lng == 'en') {this.textValidate = 'Validate';}
-  if (this.lng == 'fr') {this.textValidate = 'Valider';}
- }
+  ngOnInit() {
+    // 🔗 on s'abonne aux changements de settings
+      this.settingsSub = this.settingsService.settingsObs$.subscribe(settings => {
+      const lng = this.settingsService.getLanguage(); 
+      this.lng = lng;
+      this.updateTexts(lng);
+    });
+  }
+
+  private updateTexts(lng: string) {
+    if (lng === 'en') {
+      this.textValidate   = 'Validate';
+      this.textYourChoice = 'Your choice:';
+    }
+    if (lng === 'fr') {
+      this.textValidate   = 'Valider';
+      this.textYourChoice = 'Votre choix:';
+    }
+  }
+
+  selectValue(value: string) {
+    this.selectedValue = value;
+  }
   // {this.selectedValue = ''}
-  selectValue(value: string) {}
+  // selectValue(value: string) {}
 
   async validateChoice() {
     if (this.selectedValue === null) {
@@ -96,7 +114,8 @@ async promptValidation() {
     validationMessage = 'Veuillez sélectionner une option avant de valider.';
     aHeader           = 'Aucun choix';
     annulation        = 'Annuler';
-  validate            = 'validation';}
+    validate          = 'validation';
+}
   
 
   if (!this.selectedValue) {
@@ -128,22 +147,23 @@ async promptValidation() {
           //const choix:number = this.analyseResponseService.nature(parseInt(this.selectedValue,10)); 
           // récupère la valeur sélectionnée
           const choix:number = -this.selectedValue; 
-          console.log('footer-question-pop-up-choix  analyse-1',this.selectValue)
           // enregistre la réponse dans l'ensemble des réponses du joueur
-          this.settingsService.setGamerResponse(choix);
+          this.settingsService.setGamerResponseBeforeSolutionView(choix);
           // affiche toutes les réponses du joueur
-          console.log('footer-question-pop-up-choix  analyse-2',this.settingsService.getGamerResults())
           //
           // this.settingsService.setReinitAllResults();// only for the developpement
           // trouve l'item suivant
           // et change l'item suivant 
-          console.log('footer-question.component-promptValidation',this.settingsService.getItem())
-          this.settingsService.setItem(this.findTheNextItem.ifForward(this.settingsService.getItem()));
-          console.log('footer-question.component-promptValidation',this.settingsService.getItem())
+          this.settingsService.setItem(this.findTheNextItem.ifForward());
         }
       }
     ]
   });
   await confirmAlert.present();
 }
+
+  ngOnDestroy() {
+    this.settingsSub?.unsubscribe();
+  }
+
 }

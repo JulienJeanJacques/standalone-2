@@ -1,1 +1,15 @@
-{{textYourChoice}} {{response}}
+<!-- {{textYourChoice}} {{response}} <img [src]="imageSrc"
+       [width] ="imageWidth"
+       [height]="imageHeight"
+       alt="Image aléatoire" />
+
+ -->
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <img [src]="imageSrc"
+       [width]="imageWidth"
+       [height]="imageHeight"
+       alt="Image aléatoire" />
+  <div>
+    {{ textYourChoice }} {{ response }}
+  </div>
+</div>

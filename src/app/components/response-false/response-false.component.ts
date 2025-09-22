@@ -18,7 +18,7 @@ export class ResponseFalseComponent implements OnInit {
 
   response: number = 0;
   // largeur et hauteur désirées
-  imageWidth: number = 150;  // en pixels
+  imageWidth:  number = 150;  // en pixels
   imageHeight: number = 150; // en pixels
 
   constructor(  private traductionService: TraductionService,
@@ -26,11 +26,11 @@ export class ResponseFalseComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.response = this.settingsService.getGamerResponse();
-    console.log('response-false-ngOnInit-----',this.response)
+    this.response = Math.abs(this.settingsService.getGamerResponse());
     this.textYourChoice = this.traductionService.findGoodLabel(this.settingsService.getLanguage(),this.textFrench,this.textEnglish);
     const n = Math.floor(Math.random() * 6) + 1;
     this.imageSrc = `assets/images/desappointed-${n}.jpeg`;
+}
   }
 
-}
+

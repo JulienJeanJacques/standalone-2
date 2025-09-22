@@ -3,18 +3,17 @@ import { CommonModule }                  from '@angular/common';
 // ionic
 import { IonicModule, MenuController }   from '@ionic/angular';
 //rxjs
-import { Subscription, Observable } from 'rxjs';
-import { skip, map } from 'rxjs/operators';
-import { tap } from 'rxjs/operators';
+import { Subscription, Observable }     from 'rxjs';
+import { skip, map }                    from 'rxjs/operators';
 // my interfaces 
 import { AppSettings }                   from '../../interfaces/types';
 // my services
 import { SettingsService}               from '../../services/settings.service';
+import { WhatCaseOfTheAnswerService}    from '../../services/what-case-of-the-answer.service';
 import { TraductionService }            from '../../services/traduction.service';
 import { ConfigThemeService }           from '../../services/config-theme.service';
 import { GestionConfigEngFrService }    from '../../services/gestion-config-eng-fr.service';
 import { ItemService }                  from '../../services/item.service';
-import { IonButtons } from "@ionic/angular/standalone";
 // my components
 import { ResponseGoodComponent }         from '../../components/response-good/response-good.component';
 import { ResponseFalseComponent }        from '../../components/response-false/response-false.component';
@@ -71,59 +70,14 @@ export class HomePage implements OnInit, OnDestroy {
   showFooter$!:         Observable<boolean>;
 
   constructor(
-    private menuCtrl:                  MenuController,
-    private settingsService:           SettingsService,
-    private traductionService:         TraductionService,
-    private themeService:              ConfigThemeService,
-    private gestionConfigEngFrService: GestionConfigEngFrService,
-    private itemService:               ItemService,
-    private cdr:                       ChangeDetectorRef,
+    private settingsService:            SettingsService,
+    private whatCaseOfTheAnswerService: WhatCaseOfTheAnswerService,
+    private traductionService:          TraductionService,
+    private themeService:               ConfigThemeService,
+    private gestionConfigEngFrService:  GestionConfigEngFrService,
+    private itemService:                ItemService,
+    private cdr:                        ChangeDetectorRef,
   ) {}
-
-  // ================== ngOnInit ==================
-  // async ngOnInit() {
-  //   // this.showInitScreen = true;
-  //   this.showInitScreen = false;
-  //   // this.showInitScreen = this.settingsService.getFirstTime();//est toujours à false sauf la première fois
-  //   this.settingsService.initializeApp();
-
-  //   // ⚡ Streams réactifs pour afficher ou non les réponses
-  //   this.showGoodResponse$ = this.settingsService.settingsObs$.pipe(
-  //     map(() => {
-  //       return this.settingsService.getItemNature() === 'r' &&
-  //              this.settingsService.getIsFirstPassageForResponse() &&
-  //              this.settingsService.getGamerResponseIsGood();
-  //     })
-  //   );
-
-  //   this.showFalseResponse$ = this.settingsService.settingsObs$.pipe(
-  //     map(() => {
-  //       const isFalse = this.settingsService.getItemNature() === 'r' &&
-  //                       this.settingsService.getIsFirstPassageForResponse() &&
-  //                       !this.settingsService.getGamerResponseIsGood();
-  //       if (isFalse) {
-  //         this.settingsService.setGamerResponseIsDone();
-  //       }
-  //       return isFalse;
-  //     }),
-  //   );
-
-  //   // Abonnement aux changements de settings
-  //   this.settingsSubscription = this.settingsService.settingsObs$
-  //     .pipe(skip(1)) // ignore la première valeur initiale
-  //     .subscribe(async (params: AppSettings) => {
-  //       if (this.initialized) {
-  //         await this.reloadPage(params);
-  //       }
-  //     });
-
-  //   // Les quatre lignes qui suivent sont là pour éviter que le scroll ne fonctionne pas.
-  //   const ionContents = document.querySelectorAll('ion-content');
-  //   ionContents.forEach((el) => {
-  //     el.addEventListener('touchstart', () => {}, { passive: true });
-  //     el.addEventListener('touchmove',  () => {}, { passive: true });
-  //   });
-  // } 
 // ================== ngOnInit ==================
 async ngOnInit() {
   // this.showInitScreen = true;
@@ -135,48 +89,32 @@ async ngOnInit() {
 
   // Réponse correcte au premier passage
   this.showGoodResponse$ = this.settingsService.settingsObs$.pipe(
-    map(() => {
-      return this.settingsService.getItemNature() === 'r' &&
-             this.settingsService.getIsFirstPassageForResponse() &&
-             this.settingsService.getGamerResponseIsGood();
-    })
+    map(() => { return this.whatCaseOfTheAnswerService.caseIsGoodResponse();}),
   );
 
   // Réponse fausse au premier passage
   this.showFalseResponse$ = this.settingsService.settingsObs$.pipe(
     map(() => {
-      const isFalse = this.settingsService.getItemNature() === 'r' &&
-                      this.settingsService.getIsFirstPassageForResponse() &&
-                      !this.settingsService.getGamerResponseIsGood();
-      if (isFalse) {
-        this.settingsService.setGamerResponseIsDone();
-      }
-      return isFalse;
-    })
+      const isFalse = this.whatCaseOfTheAnswerService.caseIsFalseResponse();
+      if (isFalse) { } // this.settingsService.setGamerResponseIsDone();
+      return isFalse;}),
   );
 
   // Réponse fausse mais ce n'est PLUS le premier passage
   this.showResponse$ = this.settingsService.settingsObs$.pipe(
-    map(() => {
-      return this.settingsService.getItemNature() === 'r' &&
-             !this.settingsService.getIsFirstPassageForResponse() &&
-             !this.settingsService.getGamerResponseIsGood();
-    })
+    map(() => { return this.whatCaseOfTheAnswerService.caseIsResponse();}),
   );
+
   // Affichage du footer question 
   this.showFooter$ = this.settingsService.settingsObs$.pipe(
-  map(() => {
-    return this.settingsService.getItemNature() === 'q' &&
-           !this.settingsService.getIsThisAnswerWasDone();
-  })
-);
+  map(() => { return this.settingsService.getItemNature() === 'q' && !this.settingsService.getIsThisAnswerWasDone();})
+  );
+
   // Abonnement aux changements de settings
   this.settingsSubscription = this.settingsService.settingsObs$
     .pipe(skip(1)) // ignore la première valeur initiale
     .subscribe(async (params: AppSettings) => {
-      if (this.initialized) {
-        await this.reloadPage(params);
-      }
+      if (this.initialized) { await this.reloadPage(params);}
     });
 
   // Les quatre lignes qui suivent sont là pour éviter que le scroll ne fonctionne pas.
@@ -291,11 +229,6 @@ async ngOnInit() {
     if (nature === 'i') return 'blue';
     return '';
   }
-
-  //  Le pied de page
-  // showFooter(): boolean {
-  //   return this.settingsService.getItemNature() === 'q' && !this.settingsService.getIsThisAnswerWasDone();
-  // }
 
   // Sortie de l'application
   ngOnDestroy() {
